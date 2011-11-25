@@ -33,7 +33,7 @@ void logtrace ( const char *str );
     }
 #define tracelog( LVL, S, ... ) 																	\
     {																	\
-            if( Config::getGonfig()->dbg_lvl >= LVL )													\
+            if( Config::getSingletonPtr()->getParam(Config::LS_DBG_LVL) >= LVL )							\
             {																\
                     char __BUF__[32736];										\
                     snprintf( __BUF__, sizeof(__BUF__)-1,						\
@@ -53,11 +53,11 @@ void logtrace ( const char *str );
                                                                                             __LINE__,				\
                                                                                             __FUNCTION__,			\
                                                                                             ## __VA_ARGS__ );		\
-            logerror( __BUF__ );											\
+            logError( __BUF__ );											\
     }
 #define tracelog( LVL, S, ... ) 																	\
     {																	\
-            if( Config::getGonfig()->dbg_lvl >= LVL )													\
+            if( Config::getSingletonPtr()->getParam(Config::LS_DBG_LVL) >= LVL )											\
             {																\
                     char __BUF__[32736];										\
                     snprintf( __BUF__, sizeof(__BUF__)-1,						\
@@ -65,13 +65,14 @@ void logtrace ( const char *str );
                                                                                                     __LINE__,			\
                                                                                                     __FUNCTION__,		\
                                                                                                     ## __VA_ARGS__ );	\
-                    logtrace( __BUF__ );\
+                    logTrace( __BUF__ );\
             }																\
     }
 #endif
 
 #define ASSERT_FAIL( EXPR ) if (!(EXPR)) { traceerr("ASSERT fail! EXPR = \"%s\"",#EXPR); assert(EXPR); ((void(*)())0)(); }
 #define ASSERT_CONTINUE( EXPR ) if (!(EXPR)) { traceerr("ASSERT_CONTINUE fail! EXPR = \"%s\"",#EXPR); }
+#define ASSERT_RETURN( EXPR ) if (!(EXPR)) { traceerr("ASSERT_CONTINUE fail! EXPR = \"%s\"",#EXPR); return false; }
 #define ASSERT ASSERT_FAIL
 
 /**
@@ -163,83 +164,16 @@ inline void reverseArray ( uint* pointer, size_t count )
         pointer[x] = temp[count-x-1];
     free ( temp );
 }
-/**
- * @brief convert string to timestamp
- *
- * @param str source string containing time
- * @return int timestamp
- **/
 int getTimeFromString ( const char * str );
-/**
- * @brief convert timestamp to string
- *
- * @param timestamp timestamp value
- * @return :string resulting string
- **/
 string getStringFromTimeStamp ( uint timestamp );
-/**
- * @brief convert timestamp to DataTime string
- *
- * @param timestamp timestamp value
- * @return :string resulting string
- **/
 string getDataTimeFromTimeStamp ( uint timestamp );
-/**
- * @brief converts decimal number to mask value.
- *
- * @param dec mask bit
- * @return uint value where "dec" bit is set to "1"
- **/
 uint decimalToMask ( uint dec );
-/**
- * @brief test string for containing utf8 characters
- *
- * @param str const char pointer to string to test
- * @return bool true - contain UTF8 chars, false - not
- **/
 bool isStringUTF8 ( const char *str );
-/**
- * @brief fast round float
- *
- * @param f value to round
- * @return float
- **/
 float round ( float f );
-/**
- * @brief fast round double
- *
- * @param d value to round
- * @return double
- **/
 double round ( double d );
-/**
- * @brief fast round long double
- *
- * @param ld value to round
- * @return long double
- **/
 long double round ( long double ld );
-/**
- * @brief atomic increment
- *
- * @param value value to increment
- * @return volatile long int
- **/
 volatile long atomicIncrement ( volatile long* value );
-/**
- * @brief atomic decrement
- *
- * @param value value to decrement
- * @return volatile long int
- **/
 volatile long atomicDecrement ( volatile long* value );
-/**
- * @brief split string into tokens
- *
- * @param src source string to split
- * @param sep seporator - string containing the delimiter
- * @return vector< string > vector of tokens
- **/
 vector<string> strSplit ( const string &src, const string &sep );
 /**
  * @brief NEED DESC
@@ -252,21 +186,7 @@ inline uint secsToTimeBitFields ( time_t secs )
     tm* lt = localtime ( &secs );
     return ( lt->tm_year - 100 ) << 24 | lt->tm_mon  << 20 | ( lt->tm_mday - 1 ) << 14 | lt->tm_wday << 11 | lt->tm_hour << 6 | lt->tm_min;
 }
-/**
- * @brief NEED DESC
- *
- * @param dLength ...
- * @param dType ...
- * @return time_t
- **/
 time_t convTimePeriod ( uint dLength, char dType );
-/**
- * @brief converts int to string. NOT SAFE!
- *
- * @param buf buffer where converted string will store
- * @param num number value to convert
- * @return void
- **/
 void intToString ( char * buf, int num );
 
 #endif

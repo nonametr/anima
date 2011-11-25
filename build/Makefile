@@ -180,6 +180,126 @@ shared/config.cpp.s:
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/config.cpp.s
 .PHONY : shared/config.cpp.s
 
+shared/netcore.o: shared/netcore.cpp.o
+.PHONY : shared/netcore.o
+
+# target to build an object file
+shared/netcore.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/netcore.cpp.o
+.PHONY : shared/netcore.cpp.o
+
+shared/netcore.i: shared/netcore.cpp.i
+.PHONY : shared/netcore.i
+
+# target to preprocess a source file
+shared/netcore.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/netcore.cpp.i
+.PHONY : shared/netcore.cpp.i
+
+shared/netcore.s: shared/netcore.cpp.s
+.PHONY : shared/netcore.s
+
+# target to generate assembly for a file
+shared/netcore.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/netcore.cpp.s
+.PHONY : shared/netcore.cpp.s
+
+shared/periodicthreadcaller.o: shared/periodicthreadcaller.cpp.o
+.PHONY : shared/periodicthreadcaller.o
+
+# target to build an object file
+shared/periodicthreadcaller.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o
+.PHONY : shared/periodicthreadcaller.cpp.o
+
+shared/periodicthreadcaller.i: shared/periodicthreadcaller.cpp.i
+.PHONY : shared/periodicthreadcaller.i
+
+# target to preprocess a source file
+shared/periodicthreadcaller.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.i
+.PHONY : shared/periodicthreadcaller.cpp.i
+
+shared/periodicthreadcaller.s: shared/periodicthreadcaller.cpp.s
+.PHONY : shared/periodicthreadcaller.s
+
+# target to generate assembly for a file
+shared/periodicthreadcaller.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.s
+.PHONY : shared/periodicthreadcaller.cpp.s
+
+shared/socket.o: shared/socket.cpp.o
+.PHONY : shared/socket.o
+
+# target to build an object file
+shared/socket.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/socket.cpp.o
+.PHONY : shared/socket.cpp.o
+
+shared/socket.i: shared/socket.cpp.i
+.PHONY : shared/socket.i
+
+# target to preprocess a source file
+shared/socket.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/socket.cpp.i
+.PHONY : shared/socket.cpp.i
+
+shared/socket.s: shared/socket.cpp.s
+.PHONY : shared/socket.s
+
+# target to generate assembly for a file
+shared/socket.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/socket.cpp.s
+.PHONY : shared/socket.cpp.s
+
+shared/thread.o: shared/thread.cpp.o
+.PHONY : shared/thread.o
+
+# target to build an object file
+shared/thread.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread.cpp.o
+.PHONY : shared/thread.cpp.o
+
+shared/thread.i: shared/thread.cpp.i
+.PHONY : shared/thread.i
+
+# target to preprocess a source file
+shared/thread.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread.cpp.i
+.PHONY : shared/thread.cpp.i
+
+shared/thread.s: shared/thread.cpp.s
+.PHONY : shared/thread.s
+
+# target to generate assembly for a file
+shared/thread.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread.cpp.s
+.PHONY : shared/thread.cpp.s
+
+shared/threadcore.o: shared/threadcore.cpp.o
+.PHONY : shared/threadcore.o
+
+# target to build an object file
+shared/threadcore.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/threadcore.cpp.o
+.PHONY : shared/threadcore.cpp.o
+
+shared/threadcore.i: shared/threadcore.cpp.i
+.PHONY : shared/threadcore.i
+
+# target to preprocess a source file
+shared/threadcore.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/threadcore.cpp.i
+.PHONY : shared/threadcore.cpp.i
+
+shared/threadcore.s: shared/threadcore.cpp.s
+.PHONY : shared/threadcore.s
+
+# target to generate assembly for a file
+shared/threadcore.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/threadcore.cpp.s
+.PHONY : shared/threadcore.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,6 +318,21 @@ help:
 	@echo "... shared/config.o"
 	@echo "... shared/config.i"
 	@echo "... shared/config.s"
+	@echo "... shared/netcore.o"
+	@echo "... shared/netcore.i"
+	@echo "... shared/netcore.s"
+	@echo "... shared/periodicthreadcaller.o"
+	@echo "... shared/periodicthreadcaller.i"
+	@echo "... shared/periodicthreadcaller.s"
+	@echo "... shared/socket.o"
+	@echo "... shared/socket.i"
+	@echo "... shared/socket.s"
+	@echo "... shared/thread.o"
+	@echo "... shared/thread.i"
+	@echo "... shared/thread.s"
+	@echo "... shared/threadcore.o"
+	@echo "... shared/threadcore.i"
+	@echo "... shared/threadcore.s"
 .PHONY : help
 
 

@@ -50,15 +50,15 @@ public:
     void loadFromDB();
     const int &getParam ( CONFIG_PARAMS_INT int_param )
     {
-        return data_int[int_param];
+        return _data_int[int_param];
     };
     const std::string &getParam ( CONFIG_PARAMS_STR str_param )
     {
-        return data_str[str_param];
+        return _data_str[str_param];
     };
 private:
-    std::string data_str[SIZE_STR];
-    int data_int[SIZE_INT];
+    std::string _data_str[SIZE_STR];
+    int _data_int[SIZE_INT];
 };
 
 #endif // CONFIG_H

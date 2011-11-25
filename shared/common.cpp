@@ -1,6 +1,11 @@
 #include "common.h"
 #include "config.h"
-
+/**
+ * @brief converts decimal number to mask value.
+ *
+ * @param dec mask bit
+ * @return uint value where "dec" bit is set to "1"
+ **/
 uint decimalToMask ( uint dec )
 {
     return ( ( uint ) 1 << ( dec - 1 ) );
@@ -17,18 +22,43 @@ long double round ( long double ld )
 {
     return floor ( ld + 0.5 );
 }
+/**
+ * @brief atomic increment
+ *
+ * @param value value to increment
+ * @return volatile long int
+ **/
 volatile long atomicIncrement ( volatile long* value )
 {
     return __sync_add_and_fetch ( value, 1 );
 }
+/**
+ * @brief atomic decrement
+ *
+ * @param value value to decrement
+ * @return volatile long int
+ **/
 volatile long atomicDecrement ( volatile long* value )
 {
     return __sync_sub_and_fetch ( value, 1 );
 }
+/**
+ * @brief converts int to string. NOT SAFE!
+ *
+ * @param buf buffer where converted string will store
+ * @param num number value to convert
+ * @return void
+ **/
 void intToString ( char * buf, int num )
 {
     sprintf ( buf,"%u",num );
 }
+/**
+ * @brief convert string to timestamp
+ *
+ * @param str source string containing time
+ * @return int timestamp
+ **/
 int getTimeFromString ( const char * str )
 {
     uint time_res = 0;
@@ -79,6 +109,12 @@ int getTimeFromString ( const char * str )
     }
     return time_res;
 }
+/**
+ * @brief convert timestamp to string
+ *
+ * @param timestamp timestamp value
+ * @return :string resulting string
+ **/
 string getStringFromTimeStamp ( uint timestamp )
 {
     int seconds = ( int ) timestamp;
@@ -185,7 +221,12 @@ const char * szMonthNames[12] =
 {
     "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
 };
-
+/**
+ * @brief convert timestamp to DataTime string
+ *
+ * @param timestamp timestamp value
+ * @return :string resulting string
+ **/
 string getDataTimeFromTimeStamp ( uint timestamp )
 {
     char szTempBuf[100];
@@ -217,7 +258,12 @@ string getDataTimeFromTimeStamp ( uint timestamp )
 
     return szResult;
 }
-
+/**
+ * @brief test string for containing utf8 characters
+ *
+ * @param str const char pointer to string to test
+ * @return bool true - contain UTF8 chars, false - not
+ **/
 bool isStringUTF8 ( const char *str )
 {
     int   i;
@@ -263,7 +309,13 @@ bool isStringUTF8 ( const char *str )
         return false;
     return true;
 }
-
+/**
+ * @brief split string into tokens
+ *
+ * @param src source string to split
+ * @param sep seporator - string containing the delimiter
+ * @return vector< string > vector of tokens
+ **/
 vector<string> strSplit ( const string &src, const string &sep )
 {
     vector<string> res;
@@ -313,7 +365,7 @@ time_t convTimePeriod ( uint dLength, char dType )
     }
     return mktime ( ti );
 }
-void logerror ( const char *str )
+void logError ( const char *str )
 {
     FILE *logfile;
     if ( ( logfile = fopen ( Config::getSingletonPtr()->getParam(Config::LS_ERROR_LOG_PATH).c_str(), "a+" ) ) )
@@ -331,7 +383,7 @@ void logerror ( const char *str )
     }
 }
 
-void logtrace ( const char *str )
+void logTrace ( const char *str )
 {
     FILE *logfile;
     if ( ( logfile = fopen ( Config::getSingletonPtr()->getParam(Config::LS_ERROR_LOG_PATH).c_str(), "a+" ) ) )
