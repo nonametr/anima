@@ -117,7 +117,6 @@ void ThreadCore::shutdown()
     {
         ThreadController *t_control = *itr;
         t_control->stop();
-
     }
     for ( ThreadSet::iterator itr = _active_threads.begin(); itr != _active_threads.end(); ++itr)
     {

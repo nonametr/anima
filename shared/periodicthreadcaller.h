@@ -27,7 +27,7 @@ public:
 private:
     PeriodicThreadMap _periodic_threads;///uint - time when need to resume thread
 
-    bool _runing;
+    AtomicBoolean _runing;
     Mutex _pt_mutex;
     pthread_cond_t _sleep_cond;
     pthread_mutex_t _sleep_mutex;

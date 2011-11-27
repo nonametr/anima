@@ -4,6 +4,8 @@
 CMakeFiles/anima_login.dir/main_login.cpp.o
  /home/nonametr/projects/anima/./shared/common.h
  /home/nonametr/projects/anima/./shared/config.h
+ /home/nonametr/projects/anima/./shared/json.h
+ /home/nonametr/projects/anima/./shared/jsonvalue.h
  /home/nonametr/projects/anima/./shared/netcore.h
  /home/nonametr/projects/anima/./shared/periodicthreadcaller.h
  /home/nonametr/projects/anima/./shared/singleton.h
@@ -14,6 +16,8 @@ CMakeFiles/anima_login.dir/main_login.cpp.o
  /home/nonametr/projects/anima/./shared/thread_controller.h
  /home/nonametr/projects/anima/./shared/threadcore.h
  /home/nonametr/projects/anima/main_login.cpp
+ /home/nonametr/projects/anima/shared/json.h
+ /home/nonametr/projects/anima/shared/jsonvalue.h
 CMakeFiles/anima_login.dir/shared/common.cpp.o
  /home/nonametr/projects/anima/shared/common.cpp
  /home/nonametr/projects/anima/shared/common.h
@@ -24,6 +28,14 @@ CMakeFiles/anima_login.dir/shared/config.cpp.o
  /home/nonametr/projects/anima/shared/config.cpp
  /home/nonametr/projects/anima/shared/config.h
  /home/nonametr/projects/anima/shared/singleton.h
+CMakeFiles/anima_login.dir/shared/json.cpp.o
+ /home/nonametr/projects/anima/shared/json.cpp
+ /home/nonametr/projects/anima/shared/json.h
+ /home/nonametr/projects/anima/shared/jsonvalue.h
+CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o
+ /home/nonametr/projects/anima/shared/json.h
+ /home/nonametr/projects/anima/shared/jsonvalue.cpp
+ /home/nonametr/projects/anima/shared/jsonvalue.h
 CMakeFiles/anima_login.dir/shared/netcore.cpp.o
  /home/nonametr/projects/anima/shared/common.h
  /home/nonametr/projects/anima/shared/netcore.cpp

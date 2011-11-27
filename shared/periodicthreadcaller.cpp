@@ -6,12 +6,19 @@ PeriodicThreadCaller::PeriodicThreadCaller()
 {
     pthread_mutex_init( &_sleep_mutex, NULL );
     pthread_cond_init( &_sleep_cond, NULL );
-    _runing = true;
+    _runing.SetVal(true);
     iThreadCore->startThread(this);
 }
 PeriodicThreadCaller::~PeriodicThreadCaller()
 {
-
+    for ( PeriodicThreadMap::iterator it_pt = _periodic_threads.begin(); it_pt != _periodic_threads.end(); ++it_pt)
+    {
+        for (uint i = 0; i < it_pt->second.threads_to_run.size(); ++i)
+        {
+            delete it_pt->second.threads_to_run[i];
+        }
+        it_pt->second.threads_to_run.clear();
+    }
 }
 void PeriodicThreadCaller::run()
 {
@@ -25,7 +32,7 @@ void PeriodicThreadCaller::run()
     while (true)
     {
         _pt_mutex.lock();
-        if (!_runing)
+        if (!_runing.GetVal())
         {
             _pt_mutex.unlock();
             break;
@@ -44,7 +51,7 @@ void PeriodicThreadCaller::run()
                     _periodic_threads[exam_time] = it_exam->second;
                     sleeping_time = it_exam->second.call_interval;
                 }
-		_periodic_threads.erase(it_exam);
+                _periodic_threads.erase(it_exam);
             }
             else
                 sleeping_time = exam_time - current_time;
@@ -62,17 +69,7 @@ void PeriodicThreadCaller::run()
 }
 void PeriodicThreadCaller::onShutdown()
 {
-    _pt_mutex.lock();
-    _runing = false;
-    for ( PeriodicThreadMap::iterator it_pt = _periodic_threads.begin(); it_pt != _periodic_threads.end(); ++it_pt)
-    {
-        for (uint i = 0; i < it_pt->second.threads_to_run.size(); ++i)
-        {
-            delete it_pt->second.threads_to_run[i];
-        }
-        it_pt->second.threads_to_run.clear();
-    }
-    _pt_mutex.unlock();
+    _runing.SetVal(false);
     pthread_cond_signal( &_sleep_cond );///waiking up periodic thread callback checks
 }
 void PeriodicThreadCaller::startPeriodicThread(Thread * thread, uint call_interval)
@@ -85,11 +82,11 @@ void PeriodicThreadCaller::startPeriodicThread(Thread * thread, uint call_interv
     _pt_mutex.lock();
     PeriodicThreadMap::iterator it_th = _periodic_threads.find(exam_time);
     if (it_th == _periodic_threads.end())
-         _periodic_threads[exam_time] = period_th;
+        _periodic_threads[exam_time] = period_th;
     else
         _periodic_threads[exam_time].threads_to_run.push_back(thread);
     _pt_mutex.unlock();
-     pthread_cond_signal( &_sleep_cond );///waiking up periodic thread callback checks
+    pthread_cond_signal( &_sleep_cond );///waiking up periodic thread callback checks
 }
 
 

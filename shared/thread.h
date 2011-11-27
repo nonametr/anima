@@ -13,7 +13,7 @@ public:
     Thread() {};
     virtual ~Thread() {};
     virtual void run() = 0;
-    virtual void onShutdown() = 0;
+    virtual void onShutdown() = 0;///it should be almost atomic. no general mutex locks 
 private:
     pthread_t _tid;
 };

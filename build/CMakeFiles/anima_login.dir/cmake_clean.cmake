@@ -7,6 +7,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/anima_login.dir/shared/thread.cpp.o"
   "CMakeFiles/anima_login.dir/shared/threadcore.cpp.o"
   "CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o"
+  "CMakeFiles/anima_login.dir/shared/json.cpp.o"
+  "CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o"
   "anima_login.pdb"
   "anima_login"
 )

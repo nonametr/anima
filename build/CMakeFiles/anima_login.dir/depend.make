@@ -3,6 +3,8 @@
 
 CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/common.h
 CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/config.h
+CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/json.h
+CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/jsonvalue.h
 CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/netcore.h
 CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/periodicthreadcaller.h
 CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/singleton.h
@@ -13,6 +15,8 @@ CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/thread.h
 CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/thread_controller.h
 CMakeFiles/anima_login.dir/main_login.cpp.o: .././shared/threadcore.h
 CMakeFiles/anima_login.dir/main_login.cpp.o: ../main_login.cpp
+CMakeFiles/anima_login.dir/main_login.cpp.o: ../shared/json.h
+CMakeFiles/anima_login.dir/main_login.cpp.o: ../shared/jsonvalue.h
 
 CMakeFiles/anima_login.dir/shared/common.cpp.o: ../shared/common.cpp
 CMakeFiles/anima_login.dir/shared/common.cpp.o: ../shared/common.h
@@ -23,6 +27,14 @@ CMakeFiles/anima_login.dir/shared/config.cpp.o: ../shared/common.h
 CMakeFiles/anima_login.dir/shared/config.cpp.o: ../shared/config.cpp
 CMakeFiles/anima_login.dir/shared/config.cpp.o: ../shared/config.h
 CMakeFiles/anima_login.dir/shared/config.cpp.o: ../shared/singleton.h
+
+CMakeFiles/anima_login.dir/shared/json.cpp.o: ../shared/json.cpp
+CMakeFiles/anima_login.dir/shared/json.cpp.o: ../shared/json.h
+CMakeFiles/anima_login.dir/shared/json.cpp.o: ../shared/jsonvalue.h
+
+CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o: ../shared/json.h
+CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o: ../shared/jsonvalue.cpp
+CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o: ../shared/jsonvalue.h
 
 CMakeFiles/anima_login.dir/shared/netcore.cpp.o: ../shared/common.h
 CMakeFiles/anima_login.dir/shared/netcore.cpp.o: ../shared/netcore.cpp

@@ -180,6 +180,54 @@ shared/config.cpp.s:
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/config.cpp.s
 .PHONY : shared/config.cpp.s
 
+shared/json.o: shared/json.cpp.o
+.PHONY : shared/json.o
+
+# target to build an object file
+shared/json.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json.cpp.o
+.PHONY : shared/json.cpp.o
+
+shared/json.i: shared/json.cpp.i
+.PHONY : shared/json.i
+
+# target to preprocess a source file
+shared/json.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json.cpp.i
+.PHONY : shared/json.cpp.i
+
+shared/json.s: shared/json.cpp.s
+.PHONY : shared/json.s
+
+# target to generate assembly for a file
+shared/json.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json.cpp.s
+.PHONY : shared/json.cpp.s
+
+shared/jsonvalue.o: shared/jsonvalue.cpp.o
+.PHONY : shared/jsonvalue.o
+
+# target to build an object file
+shared/jsonvalue.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o
+.PHONY : shared/jsonvalue.cpp.o
+
+shared/jsonvalue.i: shared/jsonvalue.cpp.i
+.PHONY : shared/jsonvalue.i
+
+# target to preprocess a source file
+shared/jsonvalue.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.i
+.PHONY : shared/jsonvalue.cpp.i
+
+shared/jsonvalue.s: shared/jsonvalue.cpp.s
+.PHONY : shared/jsonvalue.s
+
+# target to generate assembly for a file
+shared/jsonvalue.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.s
+.PHONY : shared/jsonvalue.cpp.s
+
 shared/netcore.o: shared/netcore.cpp.o
 .PHONY : shared/netcore.o
 
@@ -318,6 +366,12 @@ help:
 	@echo "... shared/config.o"
 	@echo "... shared/config.i"
 	@echo "... shared/config.s"
+	@echo "... shared/json.o"
+	@echo "... shared/json.i"
+	@echo "... shared/json.s"
+	@echo "... shared/jsonvalue.o"
+	@echo "... shared/jsonvalue.i"
+	@echo "... shared/jsonvalue.s"
 	@echo "... shared/netcore.o"
 	@echo "... shared/netcore.i"
 	@echo "... shared/netcore.s"
