@@ -13,7 +13,7 @@ public:
     Thread() {};
     virtual ~Thread() {};
     virtual void run() = 0;
-    virtual void OnShutdown() {};
+    virtual void onShutdown() = 0;
 private:
     pthread_t _tid;
 };

@@ -16,7 +16,10 @@ public:
     virtual ~ThreadCore();
 
     /// tries to use precreated thread, if not found free one than creates a new thread
-    void startThread(Thread * thread);
+    ThreadController *startThread(Thread * thread);
+    void startThreadNoDel(Thread * thread);
+    bool threadExit(ThreadController * t_control);
+    void shutdown();
 private:
     void initThread();
     int _getNumCpus();
@@ -27,5 +30,7 @@ private:
     ThreadSet _active_threads;
     Mutex _mutex;
 };
+
+#define iThreadCore ThreadCore::getSingletonPtr()
 
 #endif // THREADCORE_H

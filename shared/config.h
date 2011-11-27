@@ -61,4 +61,5 @@ private:
     int _data_int[SIZE_INT];
 };
 
+#define iConfig Config::getSingletonPtr()
 #endif // CONFIG_H
