@@ -56,7 +56,7 @@ CMAKE_BINARY_DIR = /home/nonametr/projects/anima/build
 CMakeFiles/anima_login.dir/all:
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/depend
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12
 	@echo "Built target anima_login"
 .PHONY : CMakeFiles/anima_login.dir/all
 
@@ -66,7 +66,7 @@ all: CMakeFiles/anima_login.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/anima_login.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/anima/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/anima/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/anima_login.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/anima/build/CMakeFiles 0
 .PHONY : CMakeFiles/anima_login.dir/rule
@@ -83,6 +83,36 @@ CMakeFiles/anima_login.dir/clean:
 # clean rule for target.
 clean: CMakeFiles/anima_login.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory login_server
+
+# Convenience name for "all" pass in the directory.
+login_server/all:
+.PHONY : login_server/all
+
+# Convenience name for "clean" pass in the directory.
+login_server/clean:
+.PHONY : login_server/clean
+
+# Convenience name for "preinstall" pass in the directory.
+login_server/preinstall:
+.PHONY : login_server/preinstall
+
+#=============================================================================
+# Directory level rules for directory game_server
+
+# Convenience name for "all" pass in the directory.
+game_server/all:
+.PHONY : game_server/all
+
+# Convenience name for "clean" pass in the directory.
+game_server/clean:
+.PHONY : game_server/clean
+
+# Convenience name for "preinstall" pass in the directory.
+game_server/preinstall:
+.PHONY : game_server/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nonametr/projects/anima/./shared/common.h
+/home/nonametr/projects/anima/login_server/../shared/common.h
 stdio.h
 -
 iostream
@@ -26,13 +26,13 @@ vector
 assert.h
 -
 
-/home/nonametr/projects/anima/./shared/config.h
+/home/nonametr/projects/anima/login_server/../shared/config.h
 string
 -
 singleton.h
-/home/nonametr/projects/anima/./shared/singleton.h
+/home/nonametr/projects/anima/login_server/../shared/singleton.h
 
-/home/nonametr/projects/anima/./shared/json.h
+/home/nonametr/projects/anima/login_server/../shared/json.h
 vector
 -
 string
@@ -40,47 +40,49 @@ string
 map
 -
 jsonvalue.h
-/home/nonametr/projects/anima/./shared/jsonvalue.h
+/home/nonametr/projects/anima/login_server/../shared/jsonvalue.h
 
-/home/nonametr/projects/anima/./shared/jsonvalue.h
+/home/nonametr/projects/anima/login_server/../shared/jsonvalue.h
 vector
 -
 string
 -
 json.h
-/home/nonametr/projects/anima/./shared/json.h
+/home/nonametr/projects/anima/login_server/../shared/json.h
 
-/home/nonametr/projects/anima/./shared/netcore.h
+/home/nonametr/projects/anima/login_server/../shared/netcore.h
 singleton.h
-/home/nonametr/projects/anima/./shared/singleton.h
+/home/nonametr/projects/anima/login_server/../shared/singleton.h
 socket.h
-/home/nonametr/projects/anima/./shared/socket.h
+/home/nonametr/projects/anima/login_server/../shared/socket.h
 thread.h
-/home/nonametr/projects/anima/./shared/thread.h
+/home/nonametr/projects/anima/login_server/../shared/thread.h
 
-/home/nonametr/projects/anima/./shared/periodicthreadcaller.h
+/home/nonametr/projects/anima/login_server/../shared/periodicthreadcaller.h
 singleton.h
-/home/nonametr/projects/anima/./shared/singleton.h
+/home/nonametr/projects/anima/login_server/../shared/singleton.h
 thread.h
-/home/nonametr/projects/anima/./shared/thread.h
+/home/nonametr/projects/anima/login_server/../shared/thread.h
 map
 -
 threadcore.h
-/home/nonametr/projects/anima/./shared/threadcore.h
+/home/nonametr/projects/anima/login_server/../shared/threadcore.h
 
-/home/nonametr/projects/anima/./shared/singleton.h
+/home/nonametr/projects/anima/login_server/../shared/singleton.h
 common.h
-/home/nonametr/projects/anima/./shared/common.h
+/home/nonametr/projects/anima/login_server/../shared/common.h
 
-/home/nonametr/projects/anima/./shared/socket.h
+/home/nonametr/projects/anima/login_server/../shared/socket.h
 common.h
-/home/nonametr/projects/anima/./shared/common.h
+/home/nonametr/projects/anima/login_server/../shared/common.h
 socket_base.h
-/home/nonametr/projects/anima/./shared/socket_base.h
+/home/nonametr/projects/anima/login_server/../shared/socket_base.h
 socket_operations.h
-/home/nonametr/projects/anima/./shared/socket_operations.h
+/home/nonametr/projects/anima/login_server/../shared/socket_operations.h
+thread.h
+/home/nonametr/projects/anima/login_server/../shared/thread.h
 
-/home/nonametr/projects/anima/./shared/socket_base.h
+/home/nonametr/projects/anima/login_server/../shared/socket_base.h
 netinet/in.h
 -
 netinet/tcp.h
@@ -98,47 +100,71 @@ sys/socket.h
 netdb.h
 -
 
-/home/nonametr/projects/anima/./shared/socket_operations.h
+/home/nonametr/projects/anima/login_server/../shared/socket_operations.h
 socket_base.h
-/home/nonametr/projects/anima/./shared/socket_base.h
+/home/nonametr/projects/anima/login_server/../shared/socket_base.h
 
-/home/nonametr/projects/anima/./shared/thread.h
+/home/nonametr/projects/anima/login_server/../shared/thread.h
 pthread.h
 -
 string
 -
 
-/home/nonametr/projects/anima/./shared/thread_controller.h
+/home/nonametr/projects/anima/login_server/../shared/thread_controller.h
 
-/home/nonametr/projects/anima/./shared/threadcore.h
+/home/nonametr/projects/anima/login_server/../shared/threadcore.h
 set
 -
 thread.h
-/home/nonametr/projects/anima/./shared/thread.h
+/home/nonametr/projects/anima/login_server/../shared/thread.h
 common.h
-/home/nonametr/projects/anima/./shared/common.h
+/home/nonametr/projects/anima/login_server/../shared/common.h
 config.h
-/home/nonametr/projects/anima/./shared/config.h
+/home/nonametr/projects/anima/login_server/../shared/config.h
 thread_controller.h
-/home/nonametr/projects/anima/./shared/thread_controller.h
+/home/nonametr/projects/anima/login_server/../shared/thread_controller.h
 
-/home/nonametr/projects/anima/main_login.cpp
+/home/nonametr/projects/anima/login_server/main_login.cpp
 iostream
 -
-./shared/common.h
-/home/nonametr/projects/anima/./shared/common.h
-./shared/config.h
-/home/nonametr/projects/anima/./shared/config.h
-./shared/netcore.h
-/home/nonametr/projects/anima/./shared/netcore.h
-./shared/threadcore.h
-/home/nonametr/projects/anima/./shared/threadcore.h
-./shared/periodicthreadcaller.h
-/home/nonametr/projects/anima/./shared/periodicthreadcaller.h
-./shared/json.h
-/home/nonametr/projects/anima/./shared/json.h
-shared/jsonvalue.h
-/home/nonametr/projects/anima/shared/jsonvalue.h
+../shared/common.h
+/home/nonametr/projects/anima/login_server/../shared/common.h
+../shared/config.h
+/home/nonametr/projects/anima/login_server/../shared/config.h
+../shared/netcore.h
+/home/nonametr/projects/anima/login_server/../shared/netcore.h
+../shared/threadcore.h
+/home/nonametr/projects/anima/login_server/../shared/threadcore.h
+../shared/periodicthreadcaller.h
+/home/nonametr/projects/anima/login_server/../shared/periodicthreadcaller.h
+../shared/json.h
+/home/nonametr/projects/anima/login_server/../shared/json.h
+../shared/jsonvalue.h
+/home/nonametr/projects/anima/login_server/../shared/jsonvalue.h
+
+/home/nonametr/projects/anima/shared/../shared/json.h
+vector
+-
+string
+-
+map
+-
+jsonvalue.h
+/home/nonametr/projects/anima/shared/../shared/jsonvalue.h
+
+/home/nonametr/projects/anima/shared/../shared/jsonvalue.h
+vector
+-
+string
+-
+json.h
+/home/nonametr/projects/anima/shared/../shared/json.h
+
+/home/nonametr/projects/anima/shared/common.cpp
+common.h
+/home/nonametr/projects/anima/shared/common.h
+config.h
+/home/nonametr/projects/anima/shared/config.h
 
 /home/nonametr/projects/anima/shared/common.h
 stdio.h
@@ -160,29 +186,19 @@ vector
 assert.h
 -
 
+/home/nonametr/projects/anima/shared/config.cpp
+config.h
+/home/nonametr/projects/anima/shared/config.h
+../shared/json.h
+/home/nonametr/projects/anima/shared/../shared/json.h
+../shared/jsonvalue.h
+/home/nonametr/projects/anima/shared/../shared/jsonvalue.h
+
 /home/nonametr/projects/anima/shared/config.h
 string
 -
 singleton.h
 /home/nonametr/projects/anima/shared/singleton.h
-
-/home/nonametr/projects/anima/shared/json.h
-vector
--
-string
--
-map
--
-jsonvalue.h
-/home/nonametr/projects/anima/shared/jsonvalue.h
-
-/home/nonametr/projects/anima/shared/jsonvalue.h
-vector
--
-string
--
-json.h
-/home/nonametr/projects/anima/shared/json.h
 
 /home/nonametr/projects/anima/shared/periodicthreadcaller.cpp
 periodicthreadcaller.h
@@ -209,6 +225,12 @@ string
 -
 
 /home/nonametr/projects/anima/shared/thread_controller.h
+
+/home/nonametr/projects/anima/shared/threadcore.cpp
+threadcore.h
+/home/nonametr/projects/anima/shared/threadcore.h
+unistd.h
+-
 
 /home/nonametr/projects/anima/shared/threadcore.h
 set

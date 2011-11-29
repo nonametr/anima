@@ -1,11 +1,12 @@
 #include <iostream>
-#include "./shared/common.h"
-#include "./shared/config.h"
-#include "./shared/netcore.h"
-#include "./shared/threadcore.h"
-#include "./shared/periodicthreadcaller.h"
-#include "./shared/json.h"
-#include "shared/jsonvalue.h"
+
+#include "../shared/common.h"
+#include "../shared/config.h"
+#include "../shared/netcore.h"
+#include "../shared/threadcore.h"
+#include "../shared/periodicthreadcaller.h"
+#include "../shared/json.h"
+#include "../shared/jsonvalue.h"
 
 // Just some sample JSON text, feel free to change but could break demo
 const char* EXAMPLE = "\
@@ -54,9 +55,9 @@ int main ( int argc, char **argv )
     iPeriodicThreadCaller->startPeriodicThread(aaa, 1);
     JSONValue *value = JSON::Parse(EXAMPLE);
     JSONObject root;
-    root = value->AsObject();
+    root = value->asObject();
     
-    std::cout << "Hello, world! TEST GIT -------->" << root["user_name"]->AsString().c_str() << std::endl;
+    std::cout << "Hello, world! TEST GIT -------->" << root["user_name"]->asString().c_str() << std::endl;
     delete value;
      sleep(1);
     destroy();

@@ -1,0 +1,15 @@
+#ifndef LOGINSERVERHANDLER_H
+#define LOGINSERVERHANDLER_H
+
+
+#include "../shared/socket.h"
+
+class LoginServerHandler : public Socket
+{
+public:
+      /// Called when data is received
+    virtual bool onRead() {};
+private:
+};
+
+#endif // LOGINSERVERHANDLER_H

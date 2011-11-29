@@ -4,6 +4,7 @@
 #include <string>
 #include "singleton.h"
 
+#define DEFAULT_CONFIG_PATH "./anima_login.cfg"
 /**
  * @brief server configuration data store
  **/
@@ -28,7 +29,7 @@ public:
         ///database connection configuration for login server. LSD = LOGIN SERVER DATABASE
         LSD_PORT,
         ///login server general configuration, this configuration loads from LSD
-        LS_DBG_LVL, LS_PORT, SIZE_INT
+        LS_DBG_LVL, LS_PORT, LS_NUM_EPOLLS_WORKER_THREADS, LS_NUM_LOGIN_PROCCESSING_THREADS, SIZE_INT
     };
     /**
      * @brief constructor performs loading all configurations params
@@ -57,6 +58,9 @@ public:
         return _data_str[str_param];
     };
 private:
+    bool readFile(const string str_file);
+    bool parseFileData(const char* file_data);
+  
     std::string _data_str[SIZE_STR];
     int _data_int[SIZE_INT];
 };

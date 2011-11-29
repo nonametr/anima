@@ -17,6 +17,8 @@ class SocketBase
 public:
   SocketBase(){};
   virtual ~SocketBase(){};
+  
+  inline SOCKET getSockDescriptor() { return _sock; }
 protected:
     SOCKET _sock;
 };

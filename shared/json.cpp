@@ -61,7 +61,7 @@ JSONValue *JSON::Parse(const char *data)
 std::string JSON::Stringify(const JSONValue *value)
 {
     if (value != NULL)
-        return value->Stringify();
+        return value->stringify();
     else
         return "";
 }

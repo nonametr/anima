@@ -5,42 +5,65 @@
 #include "socket.h"
 #include "thread.h"
 
+#define THREAD_EVENT_MAX_SIZE 128  /// This is the number of socket events each thread can receieve at once.
+                                     /// This default value should be more than enough.
 #define SOCKET_LISTEN_MAX_COUNT 128
-#define SOCKET_RW_MAX_COUNT 16384	    /// This number dont need to be too big, otherwise you're gonna be eating
-/// memory. 16384 = 128KB, so thats no big issue for now, and I really can't
-/// see anyone wanting to have more than 16384 concurrent connections.
+#define SOCKET_MAX_COUNT 8192	    /// This number dont need to be too big, otherwise it's gonna be eating
+ 					    /// memory. 8192 = 64KB per 1 thread, so thats no big issue for now
+
+//#define ANTI_DDOS 8//DONT WORK BEHIND PROXY SUCH AS NGINX
+
+class ListenSocketBase;
+class NetCoreWorkerThread;
+
 class NetCore : public Singleton<NetCore>
 {
-
 public:
     NetCore();
     virtual ~NetCore();
 
     /// add a new socket to the r/w epoll set and to the sock mapping
     void addSocket(Socket * s);
-    void addListenSocket(Socket * s);
+    void addListenSocket(ListenSocketBase * s);
 
+    int getEpollInst(){ return _epoll_inst; };
     /// remove a socket from epoll r/w set/sock mapping
     void removeSocket(Socket * s);
-private:
-    // fd -> pointer binding.
-    Socket * _rw_sock[SOCKET_RW_MAX_COUNT];
-    Socket * _listen_sock[SOCKET_LISTEN_MAX_COUNT];
+    /// closes all sockets
+    void closeAll();
+    void addToEpoll(SOCKET sock);
+    void removeFromEpoll(SOCKET sock);
+    Socket *getSock(SOCKET sock){ return _rw_sock[sock]; };
+    ListenSocketBase *getListenSock(SOCKET sock){ return _listen_sock[sock]; };
+private:  
+      int _epoll_inst;
+      
+    uint _listen_sock_count;
+    uint _sock_count;
+    uint _max_sock_desc;
+    NetCoreWorkerThread *_worker_thread;
+    Socket* _rw_sock[SOCKET_MAX_COUNT];
+    ListenSocketBase* _listen_sock[SOCKET_LISTEN_MAX_COUNT];
 };
 
-// class SocketReaderThread : public Thread
-// {
-// public:
-//     bool run();
-//     void OnShutdown()
-//     {
-//         _running = false;
-//     }
-// private:
-//     /// epoll event struct
-//     struct epoll_event _events[THREAD_EVENT_SIZE];
-//     bool _running;
-// };
+class NetCoreWorkerThread : public Thread
+{
+  friend class NetCore;
+public:
+    NetCoreWorkerThread();
+    virtual ~NetCoreWorkerThread(){ close(_epoll_inst); };
+    void run();
+    void OnShutdown()
+    {
+        _running = false;
+    }
+private:
+    /// epoll event struct
+    int _epoll_inst;
+    struct epoll_event _events[THREAD_EVENT_MAX_SIZE];
+    bool _running;
+};
+
 #define iNetCore NetCore::getSingletonPtr()
 
 #endif // NETCORE_H

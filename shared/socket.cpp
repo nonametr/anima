@@ -1,4 +1,5 @@
 #include "socket.h"
+#include "netcore.h"
 
 Socket::Socket() : _connected(false)
 {
@@ -17,7 +18,7 @@ bool Socket::connect(const char * address, uint port)
     _client.sin_port = ntohs((u_short)port);
     memcpy(&_client.sin_addr.s_addr, host->h_addr_list[0], host->h_length);
 
-    //disableBlocking();
+    //disableBlocking();//in _onConnect
     ASSERT_RETURN(::connect(_sock, (const sockaddr*)&_client, sizeof(_client)) != -1);
     _onConnect();
     return true;
@@ -32,7 +33,7 @@ bool Socket::accept(sockaddr_in * address)
     memcpy(&_client, address, sizeof(*address));
     _onConnect();
 }
-bool Socket::send()
+bool Socket::send(std::string out_packet)
 {
 
     return true;
@@ -43,18 +44,18 @@ bool Socket::_onConnect()
     disableBlocking();
     disableBuffering();
 
-    _connected = true;
+    _connected.SetVal(true);
 
-    //sSocketMgr.AddSocket(this);
+    iNetCore->addSocket(this);
 
     /// Call virtual onconnect
     onConnect();
 }
 bool Socket::_onDisconnect()
 {
-    _connected = false;
-    // remove from mgr
-    //sSocketMgr.RemoveSocket(this);
+    _connected.SetVal(false);
+    /// remove from netcore
+    iNetCore->removeSocket(this);
     onDisconnect();
 }
 string Socket::getRemoteIP()

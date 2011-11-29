@@ -46,272 +46,324 @@ include CMakeFiles/anima_login.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/anima_login.dir/flags.make
 
-CMakeFiles/anima_login.dir/main_login.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/main_login.cpp.o: ../main_login.cpp
+CMakeFiles/anima_login.dir/login_server/main_login.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/main_login.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/main_login.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/main_login.cpp.o -c /home/nonametr/projects/anima/main_login.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/login_server/main_login.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/login_server/main_login.o -c /home/nonametr/projects/anima/login_server/main_login.cpp
 
-CMakeFiles/anima_login.dir/main_login.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/main_login.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/main_login.cpp > CMakeFiles/anima_login.dir/main_login.cpp.i
+CMakeFiles/anima_login.dir/login_server/main_login.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/login_server/main_login.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/login_server/main_login.cpp > CMakeFiles/anima_login.dir/login_server/main_login.i
 
-CMakeFiles/anima_login.dir/main_login.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/main_login.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/main_login.cpp -o CMakeFiles/anima_login.dir/main_login.cpp.s
+CMakeFiles/anima_login.dir/login_server/main_login.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/login_server/main_login.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/login_server/main_login.cpp -o CMakeFiles/anima_login.dir/login_server/main_login.s
 
-CMakeFiles/anima_login.dir/main_login.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/main_login.cpp.o.requires
+CMakeFiles/anima_login.dir/login_server/main_login.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/login_server/main_login.o.requires
 
-CMakeFiles/anima_login.dir/main_login.cpp.o.provides: CMakeFiles/anima_login.dir/main_login.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/main_login.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/main_login.cpp.o.provides
+CMakeFiles/anima_login.dir/login_server/main_login.o.provides: CMakeFiles/anima_login.dir/login_server/main_login.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/main_login.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/login_server/main_login.o.provides
 
-CMakeFiles/anima_login.dir/main_login.cpp.o.provides.build: CMakeFiles/anima_login.dir/main_login.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/main_login.cpp.o.provides.build
+CMakeFiles/anima_login.dir/login_server/main_login.o.provides.build: CMakeFiles/anima_login.dir/login_server/main_login.o
+.PHONY : CMakeFiles/anima_login.dir/login_server/main_login.o.provides.build
 
-CMakeFiles/anima_login.dir/shared/common.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/shared/common.cpp.o: ../shared/common.cpp
+CMakeFiles/anima_login.dir/shared/common.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/common.o: ../shared/common.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/common.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/common.cpp.o -c /home/nonametr/projects/anima/shared/common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/common.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/common.o -c /home/nonametr/projects/anima/shared/common.cpp
 
-CMakeFiles/anima_login.dir/shared/common.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/common.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/common.cpp > CMakeFiles/anima_login.dir/shared/common.cpp.i
+CMakeFiles/anima_login.dir/shared/common.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/common.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/common.cpp > CMakeFiles/anima_login.dir/shared/common.i
 
-CMakeFiles/anima_login.dir/shared/common.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/common.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/common.cpp -o CMakeFiles/anima_login.dir/shared/common.cpp.s
+CMakeFiles/anima_login.dir/shared/common.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/common.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/common.cpp -o CMakeFiles/anima_login.dir/shared/common.s
 
-CMakeFiles/anima_login.dir/shared/common.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/shared/common.cpp.o.requires
+CMakeFiles/anima_login.dir/shared/common.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/common.o.requires
 
-CMakeFiles/anima_login.dir/shared/common.cpp.o.provides: CMakeFiles/anima_login.dir/shared/common.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/common.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/shared/common.cpp.o.provides
+CMakeFiles/anima_login.dir/shared/common.o.provides: CMakeFiles/anima_login.dir/shared/common.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/common.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/common.o.provides
 
-CMakeFiles/anima_login.dir/shared/common.cpp.o.provides.build: CMakeFiles/anima_login.dir/shared/common.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/shared/common.cpp.o.provides.build
+CMakeFiles/anima_login.dir/shared/common.o.provides.build: CMakeFiles/anima_login.dir/shared/common.o
+.PHONY : CMakeFiles/anima_login.dir/shared/common.o.provides.build
 
-CMakeFiles/anima_login.dir/shared/config.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/shared/config.cpp.o: ../shared/config.cpp
+CMakeFiles/anima_login.dir/shared/config.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/config.o: ../shared/config.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/config.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/config.cpp.o -c /home/nonametr/projects/anima/shared/config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/config.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/config.o -c /home/nonametr/projects/anima/shared/config.cpp
 
-CMakeFiles/anima_login.dir/shared/config.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/config.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/config.cpp > CMakeFiles/anima_login.dir/shared/config.cpp.i
+CMakeFiles/anima_login.dir/shared/config.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/config.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/config.cpp > CMakeFiles/anima_login.dir/shared/config.i
 
-CMakeFiles/anima_login.dir/shared/config.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/config.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/config.cpp -o CMakeFiles/anima_login.dir/shared/config.cpp.s
+CMakeFiles/anima_login.dir/shared/config.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/config.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/config.cpp -o CMakeFiles/anima_login.dir/shared/config.s
 
-CMakeFiles/anima_login.dir/shared/config.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/shared/config.cpp.o.requires
+CMakeFiles/anima_login.dir/shared/config.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/config.o.requires
 
-CMakeFiles/anima_login.dir/shared/config.cpp.o.provides: CMakeFiles/anima_login.dir/shared/config.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/config.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/shared/config.cpp.o.provides
+CMakeFiles/anima_login.dir/shared/config.o.provides: CMakeFiles/anima_login.dir/shared/config.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/config.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/config.o.provides
 
-CMakeFiles/anima_login.dir/shared/config.cpp.o.provides.build: CMakeFiles/anima_login.dir/shared/config.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/shared/config.cpp.o.provides.build
+CMakeFiles/anima_login.dir/shared/config.o.provides.build: CMakeFiles/anima_login.dir/shared/config.o
+.PHONY : CMakeFiles/anima_login.dir/shared/config.o.provides.build
 
-CMakeFiles/anima_login.dir/shared/socket.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/shared/socket.cpp.o: ../shared/socket.cpp
+CMakeFiles/anima_login.dir/shared/socket.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/socket.o: ../shared/socket.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/socket.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/socket.cpp.o -c /home/nonametr/projects/anima/shared/socket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/socket.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/socket.o -c /home/nonametr/projects/anima/shared/socket.cpp
 
-CMakeFiles/anima_login.dir/shared/socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/socket.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/socket.cpp > CMakeFiles/anima_login.dir/shared/socket.cpp.i
+CMakeFiles/anima_login.dir/shared/socket.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/socket.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/socket.cpp > CMakeFiles/anima_login.dir/shared/socket.i
 
-CMakeFiles/anima_login.dir/shared/socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/socket.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/socket.cpp -o CMakeFiles/anima_login.dir/shared/socket.cpp.s
+CMakeFiles/anima_login.dir/shared/socket.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/socket.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/socket.cpp -o CMakeFiles/anima_login.dir/shared/socket.s
 
-CMakeFiles/anima_login.dir/shared/socket.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/shared/socket.cpp.o.requires
+CMakeFiles/anima_login.dir/shared/socket.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/socket.o.requires
 
-CMakeFiles/anima_login.dir/shared/socket.cpp.o.provides: CMakeFiles/anima_login.dir/shared/socket.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/socket.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/shared/socket.cpp.o.provides
+CMakeFiles/anima_login.dir/shared/socket.o.provides: CMakeFiles/anima_login.dir/shared/socket.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/socket.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/socket.o.provides
 
-CMakeFiles/anima_login.dir/shared/socket.cpp.o.provides.build: CMakeFiles/anima_login.dir/shared/socket.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/shared/socket.cpp.o.provides.build
+CMakeFiles/anima_login.dir/shared/socket.o.provides.build: CMakeFiles/anima_login.dir/shared/socket.o
+.PHONY : CMakeFiles/anima_login.dir/shared/socket.o.provides.build
 
-CMakeFiles/anima_login.dir/shared/netcore.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/shared/netcore.cpp.o: ../shared/netcore.cpp
+CMakeFiles/anima_login.dir/shared/netcore.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/netcore.o: ../shared/netcore.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/netcore.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/netcore.cpp.o -c /home/nonametr/projects/anima/shared/netcore.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/netcore.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/netcore.o -c /home/nonametr/projects/anima/shared/netcore.cpp
 
-CMakeFiles/anima_login.dir/shared/netcore.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/netcore.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/netcore.cpp > CMakeFiles/anima_login.dir/shared/netcore.cpp.i
+CMakeFiles/anima_login.dir/shared/netcore.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/netcore.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/netcore.cpp > CMakeFiles/anima_login.dir/shared/netcore.i
 
-CMakeFiles/anima_login.dir/shared/netcore.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/netcore.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/netcore.cpp -o CMakeFiles/anima_login.dir/shared/netcore.cpp.s
+CMakeFiles/anima_login.dir/shared/netcore.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/netcore.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/netcore.cpp -o CMakeFiles/anima_login.dir/shared/netcore.s
 
-CMakeFiles/anima_login.dir/shared/netcore.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/shared/netcore.cpp.o.requires
+CMakeFiles/anima_login.dir/shared/netcore.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/netcore.o.requires
 
-CMakeFiles/anima_login.dir/shared/netcore.cpp.o.provides: CMakeFiles/anima_login.dir/shared/netcore.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/netcore.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/shared/netcore.cpp.o.provides
+CMakeFiles/anima_login.dir/shared/netcore.o.provides: CMakeFiles/anima_login.dir/shared/netcore.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/netcore.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/netcore.o.provides
 
-CMakeFiles/anima_login.dir/shared/netcore.cpp.o.provides.build: CMakeFiles/anima_login.dir/shared/netcore.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/shared/netcore.cpp.o.provides.build
+CMakeFiles/anima_login.dir/shared/netcore.o.provides.build: CMakeFiles/anima_login.dir/shared/netcore.o
+.PHONY : CMakeFiles/anima_login.dir/shared/netcore.o.provides.build
 
-CMakeFiles/anima_login.dir/shared/thread.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/shared/thread.cpp.o: ../shared/thread.cpp
+CMakeFiles/anima_login.dir/shared/thread.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/thread.o: ../shared/thread.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/thread.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/thread.cpp.o -c /home/nonametr/projects/anima/shared/thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/thread.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/thread.o -c /home/nonametr/projects/anima/shared/thread.cpp
 
-CMakeFiles/anima_login.dir/shared/thread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/thread.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/thread.cpp > CMakeFiles/anima_login.dir/shared/thread.cpp.i
+CMakeFiles/anima_login.dir/shared/thread.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/thread.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/thread.cpp > CMakeFiles/anima_login.dir/shared/thread.i
 
-CMakeFiles/anima_login.dir/shared/thread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/thread.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/thread.cpp -o CMakeFiles/anima_login.dir/shared/thread.cpp.s
+CMakeFiles/anima_login.dir/shared/thread.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/thread.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/thread.cpp -o CMakeFiles/anima_login.dir/shared/thread.s
 
-CMakeFiles/anima_login.dir/shared/thread.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/shared/thread.cpp.o.requires
+CMakeFiles/anima_login.dir/shared/thread.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/thread.o.requires
 
-CMakeFiles/anima_login.dir/shared/thread.cpp.o.provides: CMakeFiles/anima_login.dir/shared/thread.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/shared/thread.cpp.o.provides
+CMakeFiles/anima_login.dir/shared/thread.o.provides: CMakeFiles/anima_login.dir/shared/thread.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/thread.o.provides
 
-CMakeFiles/anima_login.dir/shared/thread.cpp.o.provides.build: CMakeFiles/anima_login.dir/shared/thread.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/shared/thread.cpp.o.provides.build
+CMakeFiles/anima_login.dir/shared/thread.o.provides.build: CMakeFiles/anima_login.dir/shared/thread.o
+.PHONY : CMakeFiles/anima_login.dir/shared/thread.o.provides.build
 
-CMakeFiles/anima_login.dir/shared/threadcore.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/shared/threadcore.cpp.o: ../shared/threadcore.cpp
+CMakeFiles/anima_login.dir/shared/threadcore.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/threadcore.o: ../shared/threadcore.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/threadcore.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/threadcore.cpp.o -c /home/nonametr/projects/anima/shared/threadcore.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/threadcore.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/threadcore.o -c /home/nonametr/projects/anima/shared/threadcore.cpp
 
-CMakeFiles/anima_login.dir/shared/threadcore.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/threadcore.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/threadcore.cpp > CMakeFiles/anima_login.dir/shared/threadcore.cpp.i
+CMakeFiles/anima_login.dir/shared/threadcore.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/threadcore.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/threadcore.cpp > CMakeFiles/anima_login.dir/shared/threadcore.i
 
-CMakeFiles/anima_login.dir/shared/threadcore.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/threadcore.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/threadcore.cpp -o CMakeFiles/anima_login.dir/shared/threadcore.cpp.s
+CMakeFiles/anima_login.dir/shared/threadcore.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/threadcore.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/threadcore.cpp -o CMakeFiles/anima_login.dir/shared/threadcore.s
 
-CMakeFiles/anima_login.dir/shared/threadcore.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/shared/threadcore.cpp.o.requires
+CMakeFiles/anima_login.dir/shared/threadcore.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/threadcore.o.requires
 
-CMakeFiles/anima_login.dir/shared/threadcore.cpp.o.provides: CMakeFiles/anima_login.dir/shared/threadcore.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/threadcore.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/shared/threadcore.cpp.o.provides
+CMakeFiles/anima_login.dir/shared/threadcore.o.provides: CMakeFiles/anima_login.dir/shared/threadcore.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/threadcore.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/threadcore.o.provides
 
-CMakeFiles/anima_login.dir/shared/threadcore.cpp.o.provides.build: CMakeFiles/anima_login.dir/shared/threadcore.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/shared/threadcore.cpp.o.provides.build
+CMakeFiles/anima_login.dir/shared/threadcore.o.provides.build: CMakeFiles/anima_login.dir/shared/threadcore.o
+.PHONY : CMakeFiles/anima_login.dir/shared/threadcore.o.provides.build
 
-CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o: ../shared/periodicthreadcaller.cpp
+CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o: ../shared/periodicthreadcaller.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o -c /home/nonametr/projects/anima/shared/periodicthreadcaller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o -c /home/nonametr/projects/anima/shared/periodicthreadcaller.cpp
 
-CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/periodicthreadcaller.cpp > CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.i
+CMakeFiles/anima_login.dir/shared/periodicthreadcaller.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/periodicthreadcaller.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/periodicthreadcaller.cpp > CMakeFiles/anima_login.dir/shared/periodicthreadcaller.i
 
-CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/periodicthreadcaller.cpp -o CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.s
+CMakeFiles/anima_login.dir/shared/periodicthreadcaller.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/periodicthreadcaller.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/periodicthreadcaller.cpp -o CMakeFiles/anima_login.dir/shared/periodicthreadcaller.s
 
-CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o.requires
+CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o.requires
 
-CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o.provides: CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o.provides
+CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o.provides: CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o.provides
 
-CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o.provides.build: CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o.provides.build
+CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o.provides.build: CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o
+.PHONY : CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o.provides.build
 
-CMakeFiles/anima_login.dir/shared/json.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/shared/json.cpp.o: ../shared/json.cpp
+CMakeFiles/anima_login.dir/shared/json.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/json.o: ../shared/json.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/json.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/json.cpp.o -c /home/nonametr/projects/anima/shared/json.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/json.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/json.o -c /home/nonametr/projects/anima/shared/json.cpp
 
-CMakeFiles/anima_login.dir/shared/json.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/json.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/json.cpp > CMakeFiles/anima_login.dir/shared/json.cpp.i
+CMakeFiles/anima_login.dir/shared/json.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/json.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/json.cpp > CMakeFiles/anima_login.dir/shared/json.i
 
-CMakeFiles/anima_login.dir/shared/json.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/json.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/json.cpp -o CMakeFiles/anima_login.dir/shared/json.cpp.s
+CMakeFiles/anima_login.dir/shared/json.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/json.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/json.cpp -o CMakeFiles/anima_login.dir/shared/json.s
 
-CMakeFiles/anima_login.dir/shared/json.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/shared/json.cpp.o.requires
+CMakeFiles/anima_login.dir/shared/json.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/json.o.requires
 
-CMakeFiles/anima_login.dir/shared/json.cpp.o.provides: CMakeFiles/anima_login.dir/shared/json.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/shared/json.cpp.o.provides
+CMakeFiles/anima_login.dir/shared/json.o.provides: CMakeFiles/anima_login.dir/shared/json.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/json.o.provides
 
-CMakeFiles/anima_login.dir/shared/json.cpp.o.provides.build: CMakeFiles/anima_login.dir/shared/json.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/shared/json.cpp.o.provides.build
+CMakeFiles/anima_login.dir/shared/json.o.provides.build: CMakeFiles/anima_login.dir/shared/json.o
+.PHONY : CMakeFiles/anima_login.dir/shared/json.o.provides.build
 
-CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o: CMakeFiles/anima_login.dir/flags.make
-CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o: ../shared/jsonvalue.cpp
+CMakeFiles/anima_login.dir/shared/jsonvalue.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/jsonvalue.o: ../shared/jsonvalue.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o -c /home/nonametr/projects/anima/shared/jsonvalue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/jsonvalue.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/jsonvalue.o -c /home/nonametr/projects/anima/shared/jsonvalue.cpp
 
-CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/jsonvalue.cpp > CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.i
+CMakeFiles/anima_login.dir/shared/jsonvalue.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/jsonvalue.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/jsonvalue.cpp > CMakeFiles/anima_login.dir/shared/jsonvalue.i
 
-CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/jsonvalue.cpp -o CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.s
+CMakeFiles/anima_login.dir/shared/jsonvalue.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/jsonvalue.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/jsonvalue.cpp -o CMakeFiles/anima_login.dir/shared/jsonvalue.s
 
-CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o.requires:
-.PHONY : CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o.requires
+CMakeFiles/anima_login.dir/shared/jsonvalue.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/jsonvalue.o.requires
 
-CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o.provides: CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o.provides
+CMakeFiles/anima_login.dir/shared/jsonvalue.o.provides: CMakeFiles/anima_login.dir/shared/jsonvalue.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/jsonvalue.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/jsonvalue.o.provides
 
-CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o.provides.build: CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o
-.PHONY : CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o.provides.build
+CMakeFiles/anima_login.dir/shared/jsonvalue.o.provides.build: CMakeFiles/anima_login.dir/shared/jsonvalue.o
+.PHONY : CMakeFiles/anima_login.dir/shared/jsonvalue.o.provides.build
+
+CMakeFiles/anima_login.dir/login_server/loginserver.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/login_server/loginserver.o: ../login_server/loginserver.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/login_server/loginserver.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/login_server/loginserver.o -c /home/nonametr/projects/anima/login_server/loginserver.cpp
+
+CMakeFiles/anima_login.dir/login_server/loginserver.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/login_server/loginserver.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/login_server/loginserver.cpp > CMakeFiles/anima_login.dir/login_server/loginserver.i
+
+CMakeFiles/anima_login.dir/login_server/loginserver.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/login_server/loginserver.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/login_server/loginserver.cpp -o CMakeFiles/anima_login.dir/login_server/loginserver.s
+
+CMakeFiles/anima_login.dir/login_server/loginserver.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/login_server/loginserver.o.requires
+
+CMakeFiles/anima_login.dir/login_server/loginserver.o.provides: CMakeFiles/anima_login.dir/login_server/loginserver.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/loginserver.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/login_server/loginserver.o.provides
+
+CMakeFiles/anima_login.dir/login_server/loginserver.o.provides.build: CMakeFiles/anima_login.dir/login_server/loginserver.o
+.PHONY : CMakeFiles/anima_login.dir/login_server/loginserver.o.provides.build
+
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/loginserverhandler.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/login_server/loginserverhandler.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/login_server/loginserverhandler.o -c /home/nonametr/projects/anima/login_server/loginserverhandler.cpp
+
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/login_server/loginserverhandler.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/login_server/loginserverhandler.cpp > CMakeFiles/anima_login.dir/login_server/loginserverhandler.i
+
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/login_server/loginserverhandler.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/login_server/loginserverhandler.cpp -o CMakeFiles/anima_login.dir/login_server/loginserverhandler.s
+
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.requires
+
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.provides: CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.provides
+
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.provides.build: CMakeFiles/anima_login.dir/login_server/loginserverhandler.o
+.PHONY : CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.provides.build
 
 # Object files for target anima_login
 anima_login_OBJECTS = \
-"CMakeFiles/anima_login.dir/main_login.cpp.o" \
-"CMakeFiles/anima_login.dir/shared/common.cpp.o" \
-"CMakeFiles/anima_login.dir/shared/config.cpp.o" \
-"CMakeFiles/anima_login.dir/shared/socket.cpp.o" \
-"CMakeFiles/anima_login.dir/shared/netcore.cpp.o" \
-"CMakeFiles/anima_login.dir/shared/thread.cpp.o" \
-"CMakeFiles/anima_login.dir/shared/threadcore.cpp.o" \
-"CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o" \
-"CMakeFiles/anima_login.dir/shared/json.cpp.o" \
-"CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o"
+"CMakeFiles/anima_login.dir/login_server/main_login.o" \
+"CMakeFiles/anima_login.dir/shared/common.o" \
+"CMakeFiles/anima_login.dir/shared/config.o" \
+"CMakeFiles/anima_login.dir/shared/socket.o" \
+"CMakeFiles/anima_login.dir/shared/netcore.o" \
+"CMakeFiles/anima_login.dir/shared/thread.o" \
+"CMakeFiles/anima_login.dir/shared/threadcore.o" \
+"CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o" \
+"CMakeFiles/anima_login.dir/shared/json.o" \
+"CMakeFiles/anima_login.dir/shared/jsonvalue.o" \
+"CMakeFiles/anima_login.dir/login_server/loginserver.o" \
+"CMakeFiles/anima_login.dir/login_server/loginserverhandler.o"
 
 # External object files for target anima_login
 anima_login_EXTERNAL_OBJECTS =
 
-anima_login: CMakeFiles/anima_login.dir/main_login.cpp.o
-anima_login: CMakeFiles/anima_login.dir/shared/common.cpp.o
-anima_login: CMakeFiles/anima_login.dir/shared/config.cpp.o
-anima_login: CMakeFiles/anima_login.dir/shared/socket.cpp.o
-anima_login: CMakeFiles/anima_login.dir/shared/netcore.cpp.o
-anima_login: CMakeFiles/anima_login.dir/shared/thread.cpp.o
-anima_login: CMakeFiles/anima_login.dir/shared/threadcore.cpp.o
-anima_login: CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o
-anima_login: CMakeFiles/anima_login.dir/shared/json.cpp.o
-anima_login: CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o
+anima_login: CMakeFiles/anima_login.dir/login_server/main_login.o
+anima_login: CMakeFiles/anima_login.dir/shared/common.o
+anima_login: CMakeFiles/anima_login.dir/shared/config.o
+anima_login: CMakeFiles/anima_login.dir/shared/socket.o
+anima_login: CMakeFiles/anima_login.dir/shared/netcore.o
+anima_login: CMakeFiles/anima_login.dir/shared/thread.o
+anima_login: CMakeFiles/anima_login.dir/shared/threadcore.o
+anima_login: CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o
+anima_login: CMakeFiles/anima_login.dir/shared/json.o
+anima_login: CMakeFiles/anima_login.dir/shared/jsonvalue.o
+anima_login: CMakeFiles/anima_login.dir/login_server/loginserver.o
+anima_login: CMakeFiles/anima_login.dir/login_server/loginserverhandler.o
 anima_login: CMakeFiles/anima_login.dir/build.make
 anima_login: CMakeFiles/anima_login.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable anima_login"
@@ -321,16 +373,18 @@ anima_login: CMakeFiles/anima_login.dir/link.txt
 CMakeFiles/anima_login.dir/build: anima_login
 .PHONY : CMakeFiles/anima_login.dir/build
 
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/main_login.cpp.o.requires
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/common.cpp.o.requires
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/config.cpp.o.requires
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/socket.cpp.o.requires
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/netcore.cpp.o.requires
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/thread.cpp.o.requires
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/threadcore.cpp.o.requires
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/periodicthreadcaller.cpp.o.requires
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/json.cpp.o.requires
-CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/jsonvalue.cpp.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/login_server/main_login.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/common.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/config.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/socket.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/netcore.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/thread.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/threadcore.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/json.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/jsonvalue.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/login_server/loginserver.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.requires
 .PHONY : CMakeFiles/anima_login.dir/requires
 
 CMakeFiles/anima_login.dir/clean:

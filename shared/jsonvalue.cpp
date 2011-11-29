@@ -54,7 +54,7 @@
 */
 JSONValue *JSONValue::Parse(const char **data)
 {
-// Is it a string?
+// is it a string?
     if (**data == '"')
     {
         std::string str;
@@ -64,7 +64,7 @@ JSONValue *JSONValue::Parse(const char **data)
             return new JSONValue(str);
     }
 
-// Is it a boolean?
+// is it a boolean?
     else if ((simplejson_wcsnlen(*data, 4) && strncasecmp(*data, "true", 4) == 0) || (simplejson_wcsnlen(*data, 5) && strncasecmp(*data, "false", 5) == 0))
     {
         bool value = strncasecmp(*data, "true", 4) == 0;
@@ -72,14 +72,14 @@ JSONValue *JSONValue::Parse(const char **data)
         return new JSONValue(value);
     }
 
-// Is it a null?
+// is it a null?
     else if (simplejson_wcsnlen(*data, 4) && strncasecmp(*data, "null", 4) == 0)
     {
         (*data) += 4;
         return new JSONValue();
     }
 
-// Is it a number?
+// is it a number?
     else if (**data == '-' || (**data >= '0' && **data <= '9'))
     {
 // Negative?
@@ -426,7 +426,7 @@ JSONValue::~JSONValue()
 *
 * @return bool Returns true if it is a NULL value, false otherwise
 */
-bool JSONValue::IsNull() const
+bool JSONValue::isNull() const
 {
     return type == JSONType_Null;
 }
@@ -438,7 +438,7 @@ bool JSONValue::IsNull() const
 *
 * @return bool Returns true if it is a String value, false otherwise
 */
-bool JSONValue::IsString() const
+bool JSONValue::isString() const
 {
     return type == JSONType_String;
 }
@@ -450,7 +450,7 @@ bool JSONValue::IsString() const
 *
 * @return bool Returns true if it is a Bool value, false otherwise
 */
-bool JSONValue::IsBool() const
+bool JSONValue::isBool() const
 {
     return type == JSONType_Bool;
 }
@@ -462,7 +462,7 @@ bool JSONValue::IsBool() const
 *
 * @return bool Returns true if it is a Number value, false otherwise
 */
-bool JSONValue::IsNumber() const
+bool JSONValue::isNumber() const
 {
     return type == JSONType_Number;
 }
@@ -474,7 +474,7 @@ bool JSONValue::IsNumber() const
 *
 * @return bool Returns true if it is an Array value, false otherwise
 */
-bool JSONValue::IsArray() const
+bool JSONValue::isArray() const
 {
     return type == JSONType_Array;
 }
@@ -486,7 +486,7 @@ bool JSONValue::IsArray() const
 *
 * @return bool Returns true if it is an Object value, false otherwise
 */
-bool JSONValue::IsObject() const
+bool JSONValue::isObject() const
 {
     return type == JSONType_Object;
 }
@@ -499,7 +499,7 @@ bool JSONValue::IsObject() const
 *
 * @return std::string Returns the string value
 */
-const std::string &JSONValue::AsString() const
+const std::string &JSONValue::asString() const
 {
     return string_value;
 }
@@ -512,7 +512,7 @@ const std::string &JSONValue::AsString() const
 *
 * @return bool Returns the bool value
 */
-bool JSONValue::AsBool() const
+bool JSONValue::asBool() const
 {
     return bool_value;
 }
@@ -525,7 +525,7 @@ bool JSONValue::AsBool() const
 *
 * @return double Returns the number value
 */
-double JSONValue::AsNumber() const
+double JSONValue::asNumber() const
 {
     return number_value;
 }
@@ -538,7 +538,7 @@ double JSONValue::AsNumber() const
 *
 * @return JSONArray Returns the array value
 */
-const JSONArray &JSONValue::AsArray() const
+const JSONArray &JSONValue::asArray() const
 {
     return array_value;
 }
@@ -551,7 +551,7 @@ const JSONArray &JSONValue::AsArray() const
 *
 * @return JSONObject Returns the object value
 */
-const JSONObject &JSONValue::AsObject() const
+const JSONObject &JSONValue::asObject() const
 {
     return object_value;
 }
@@ -563,7 +563,7 @@ const JSONObject &JSONValue::AsObject() const
 *
 * @return std::string Returns the JSON string
 */
-std::string JSONValue::Stringify() const
+std::string JSONValue::stringify() const
 {
     std::string ret_string;
 
@@ -600,7 +600,7 @@ std::string JSONValue::Stringify() const
         JSONArray::const_iterator iter = array_value.begin();
         while (iter != array_value.end())
         {
-            ret_string += (*iter)->Stringify();
+            ret_string += (*iter)->stringify();
 
 // Not at the end - add a separator
             if (++iter != array_value.end())
@@ -618,7 +618,7 @@ std::string JSONValue::Stringify() const
         {
             ret_string += StringifyString((*iter).first);
             ret_string += ":";
-            ret_string += (*iter).second->Stringify();
+            ret_string += (*iter).second->stringify();
 
 // Not at the end - add a separator
             if (++iter != object_value.end())

@@ -30,20 +30,20 @@ public:
     JSONValue(const JSONObject &m_object_value);
     ~JSONValue();
 
-    bool IsNull() const;
-    bool IsString() const;
-    bool IsBool() const;
-    bool IsNumber() const;
-    bool IsArray() const;
-    bool IsObject() const;
+    bool isNull() const;
+    bool isString() const;
+    bool isBool() const;
+    bool isNumber() const;
+    bool isArray() const;
+    bool isObject() const;
 
-    const std::string &AsString() const;
-    bool AsBool() const;
-    double AsNumber() const;
-    const JSONArray &AsArray() const;
-    const JSONObject &AsObject() const;
+    const std::string &asString() const;
+    bool asBool() const;
+    double asNumber() const;
+    const JSONArray &asArray() const;
+    const JSONObject &asObject() const;
 
-    std::string Stringify() const;
+    std::string stringify() const;
 
 protected:
     static JSONValue *Parse(const char **data);
