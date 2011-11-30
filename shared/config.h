@@ -4,7 +4,7 @@
 #include <string>
 #include "singleton.h"
 
-#define DEFAULT_CONFIG_PATH "./anima_login.cfg"
+#define DEFAULT_CONFIG_PATH "/home/nonametr/projects/anima/build/anima_login.cfg"
 /**
  * @brief server configuration data store
  **/
@@ -61,6 +61,8 @@ private:
     bool readFile(const string str_file);
     bool parseFileData(const char* file_data);
   
+    char *buf;
+    
     std::string _data_str[SIZE_STR];
     int _data_int[SIZE_INT];
 };

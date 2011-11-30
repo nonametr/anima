@@ -13,7 +13,7 @@ NetCore::NetCore()
     }
     /// null out the pointer array
     memset(_rw_sock, 0, sizeof(void*) * SOCKET_MAX_COUNT);
-    memset(_listen_sock, 0, sizeof(void*) * SOCKET_MAX_COUNT);
+    memset(_listen_sock, 0, sizeof(void*) * SOCKET_LISTEN_MAX_COUNT);
     _max_sock_desc = 0;
 }
 NetCore::~NetCore()

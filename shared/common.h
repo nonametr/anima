@@ -17,8 +17,8 @@ using namespace std;
 
 enum DBG_LVL { DISABLED = 0, VERY_LOW = 1, LOW = 2, MEDIUM = 3, OPTIMAL = 4, GOOD = 5, TOP = 6, EXTREAM = 7, CRAZY = 8, INSANE = 9, GODLIKE = 10  };
 
-void logerror ( const char *str );
-void logtrace ( const char *str );
+void logError ( const char *str );
+void logTrace ( const char *str );
 
 #ifndef RELEASE
 #define traceerr( S, ... ) \
@@ -41,7 +41,7 @@ void logtrace ( const char *str );
                                                                                                     __LINE__,			\
                                                                                                     __FUNCTION__,		\
                                                                                                     ## __VA_ARGS__ );	\
-                    printf( "\e[1;32m---%s\e[0m\n", __BUF__ );\
+                    perror(__BUF__);\
             }																\
     }
 #else

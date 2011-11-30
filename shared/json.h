@@ -12,7 +12,8 @@
 #include <map>
 
 /// Simple function to check a string 's' has at least 'n' characters
-static inline bool simplejson_wcsnlen(const char *s, size_t n) {
+static inline bool simplejson_wcsnlen(const char *s, size_t n) 
+{
     if (s == 0)
         return false;
 
