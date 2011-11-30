@@ -5,11 +5,38 @@ initialiseSingleton ( LoginServer );
 LoginServer::LoginServer()
 {
 }
+/*** Signal Handler ***/
+void _onSignal(int s)
+{
+    switch (s)
+    {
+    case SIGHUP:
+    {
+        tracelog(OPTIMAL, "Received SIGHUP signal, reloading login server.");
+        //THERE WILL BE RELOADING SERVER CODE
+    }
+    break;
+    case SIGINT:
+    case SIGTERM:
+    case SIGABRT:
+        iLoginServer->stop();
+        break;
+    }
+
+    signal(s, _onSignal);
+}
 void LoginServer::ininializeObjects()
 {
     new NetCore;
     new ThreadCore;
     new PeriodicThreadCaller;///no need to delete at exit - it's auto runing thread and as all threads its managed by ThreadCore
+    
+    /// hook signals
+    tracelog(OPTIMAL, "Hooking signals...");
+    signal(SIGINT, _onSignal);
+    signal(SIGTERM, _onSignal);
+    signal(SIGABRT, _onSignal);
+    signal(SIGHUP, _onSignal);
 }
 void LoginServer::destroyObjects()
 {

@@ -106,10 +106,6 @@ config.h
 thread_controller.h
 /home/nonametr/projects/anima/login_server/../shared/thread_controller.h
 
-/home/nonametr/projects/anima/login_server/loginserver.cpp
-loginserver.h
-/home/nonametr/projects/anima/login_server/loginserver.h
-
 /home/nonametr/projects/anima/login_server/loginserver.h
 ../shared/singleton.h
 /home/nonametr/projects/anima/login_server/../shared/singleton.h
@@ -127,4 +123,14 @@ loginserver.h
 /home/nonametr/projects/anima/login_server/../shared/periodicthreadcaller.h
 signal.h
 -
+
+/home/nonametr/projects/anima/login_server/main_login.cpp
+iostream
+-
+signal.h
+-
+sys/resource.h
+-
+loginserver.h
+/home/nonametr/projects/anima/login_server/loginserver.h
 

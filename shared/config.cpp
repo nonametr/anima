@@ -20,9 +20,11 @@ Config::~Config()
 {
 
 }
-void Config::loadFromFile()
+void Config::loadFromFile(const char *cfg_file)
 {
-    readFile(DEFAULT_CONFIG_PATH);
+    if (cfg_file == NULL)
+        cfg_file = DEFAULT_CONFIG_PATH;
+    readFile(cfg_file);
     parseFileData(buf);
     free(buf);
 }

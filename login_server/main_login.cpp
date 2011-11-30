@@ -4,32 +4,28 @@
 
 #include "loginserver.h"
 
-/*** Signal Handler ***/
-void _onSignal(int s)
-{
-    switch (s)
-    {
-    case SIGHUP:
-    {
-        tracelog(OPTIMAL, "Received SIGHUP signal, reloading login server.");
-        //THERE WILL BE RELOADING SERVER CODE
-    }
-    break;
-    case SIGINT:
-    case SIGTERM:
-    case SIGABRT:
-        iLoginServer->stop();
-        break;
-    }
-
-    signal(s, _onSignal);
-}
 int main ( int argc, char **argv )
 {
     new Config;
-    iConfig->loadFromFile();///it will use default path to configuration file
     
-    tracelog(OPTIMAL, "Starting login server");
+    const char *cfg_file = NULL;
+    int c = 1;
+    while (c < argc)
+    {
+        if (strcmp(argv[c], "-c") == 0)
+        {
+            if (++c >= argc)
+            {
+                traceerr("Error: -c option requires an input argument");
+                return -1;
+            }
+            else
+                cfg_file = argv[c];
+        }
+        ++c;
+    }
+    
+    iConfig->loadFromFile(cfg_file);///it will use default path to configuration file if no -c option passed
 
     rlimit rl;
     if (getrlimit(RLIMIT_CORE, &rl) == -1)
@@ -42,19 +38,13 @@ int main ( int argc, char **argv )
         if (setrlimit(RLIMIT_CORE, &rl) == -1)
             traceerr("Setrlimit failed. Server may not save core.dump files.\n");
     }
-    
-    /// hook signals
-    tracelog(OPTIMAL, "Hooking signals...");
-    signal(SIGINT, _onSignal);
-    signal(SIGTERM, _onSignal);
-    signal(SIGABRT, _onSignal);
-    signal(SIGHUP, _onSignal);
-    
+
+    tracelog(OPTIMAL, "Starting login server");
     new LoginServer;
     iLoginServer->run();
-    
+
     delete iLoginServer;
     delete iConfig;
-    
+
     return EXIT_SUCCESS;
 }

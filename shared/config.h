@@ -42,7 +42,7 @@ public:
      *
      * @return void
      **/
-    void loadFromFile();
+    void loadFromFile(const char *cfg_file);
     /**
      * @brief performs loading configuration data from database
      *
