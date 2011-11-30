@@ -3,6 +3,7 @@
 
 
 #include "../shared/socket.h"
+#include "../shared/listensocket.h"
 
 class LoginServerHandler : public Socket
 {

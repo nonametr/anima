@@ -15,9 +15,6 @@ Config::Config()
         _data_int[i] = 0;
     }
     _data_int[LS_DBG_LVL] = GODLIKE;
-    
-    loadFromFile();
-    loadFromDB();
 }
 Config::~Config()
 {
@@ -96,7 +93,7 @@ bool Config::readFile(const string str_file)
         len=ftell(fp) + 2; ///get position at end (length) + reserved 2 bytes
         fseek(fp, 0, SEEK_SET); ///go to begin.
         buf=(char *)malloc(len); ///malloc buffer
-	memset(buf, 0, len);
+        memset(buf, 0, len);
         fread(buf, len, 1, fp); ///read into buffer
         fclose(fp);
         tracelog(4, "Loading configuration file from = %s", str_file.c_str());

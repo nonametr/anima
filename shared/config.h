@@ -4,7 +4,7 @@
 #include <string>
 #include "singleton.h"
 
-#define DEFAULT_CONFIG_PATH "/home/nonametr/projects/anima/build/anima_login.cfg"
+#define DEFAULT_CONFIG_PATH "/home/nonametr/projects/anima/build/login.cfg"
 /**
  * @brief server configuration data store
  **/

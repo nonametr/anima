@@ -3,12 +3,14 @@
 
 
 #include "../shared/socket.h"
+#include "../shared/listensocket.h"
 
-class LoginServerHandler : public Socket
+class LoginServerHandler : public ListenSocket
 {
 public:
-      /// Called when data is received
     virtual bool onRead() {};
+    virtual bool onConnect() {};
+    virtual bool onDisconnect() {};
 private:
 };
 

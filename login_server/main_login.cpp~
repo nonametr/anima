@@ -1,65 +1,60 @@
 #include <iostream>
+#include <signal.h>
+#include <sys/resource.h>
 
-#include "../shared/common.h"
-#include "../shared/config.h"
-#include "../shared/netcore.h"
-#include "../shared/threadcore.h"
-#include "../shared/periodicthreadcaller.h"
-#include "../shared/json.h"
-#include "../shared/jsonvalue.h"
+#include "loginserver.h"
 
-// Just some sample JSON text, feel free to change but could break demo
-const char* EXAMPLE = "\
-{ \
-\"user_name\" : \"NONAMETR\", \
-\"bool_name\" : true, \
-\"bool_second\" : FaLsE, \
-\"null_name\" : nULl, \
-\"negative\" : -34.276, \
-\"sub_object\" : { \
-\"foo\" : \"abc\", \
-\"bar\" : 1.35e2, \
-\"blah\" : { \"a\" : \"A\", \"b\" : \"B\", \"c\" : \"C\" } \
-}, \
-\"array_letters\" : [ \"a\", \"b\", \"c\", [ 1, 2, 3 ] ] \
-} ";
-
-bool ininializeSingletons()
+/*** Signal Handler ***/
+void _onSignal(int s)
 {
-    new Config;
-    new NetCore;
-    new ThreadCore;
-    new PeriodicThreadCaller;///no need to delete at exit - it's auto runing thread and as all threads its managed by ThreadCore
+    switch (s)
+    {
+    case SIGHUP:
+    {
+        tracelog(OPTIMAL, "Received SIGHUP signal, reloading login server.");
+        //THERE WILL BE RELOADING SERVER CODE
+    }
+    break;
+    case SIGINT:
+    case SIGTERM:
+    case SIGABRT:
+        iLoginServer->stop();
+        break;
+    }
+
+    signal(s, _onSignal);
 }
-bool destroy()
-{
-    delete iThreadCore;
-    delete iConfig;
-    delete iNetCore;
-}
-class TST : public Thread
-{
-public:
-    void run() {
-        traceerr("YOYO");
-    };
-    void onShutdown() {};
-};
 int main ( int argc, char **argv )
 {
-    ininializeSingletons();
-    tracelog(4, "dasd %u", 213);
-    TST *aaa = new TST();
-    TST *vvv = new TST();
-    iThreadCore->startThread(vvv);
-    iPeriodicThreadCaller->startPeriodicThread(aaa, 1);
-    JSONValue *value = JSON::Parse(EXAMPLE);
-    JSONObject root;
-    root = value->asObject();
+    new Config;
+    iConfig->loadFromFile();///it will use default path to configuration file
     
-    std::cout << "Hello, world! TEST GIT -------->" << root["user_name"]->AsString().c_str() << std::endl;
-    delete value;
-     sleep(1);
-    destroy();
-    return 1;
+    tracelog(OPTIMAL, "Starting login server");
+
+    rlimit rl;
+    if (getrlimit(RLIMIT_CORE, &rl) == -1)
+    {
+        traceerr("Getrlimit failed. This could be problem.\n");
+    }
+    else
+    {
+        rl.rlim_cur = rl.rlim_max;
+        if (setrlimit(RLIMIT_CORE, &rl) == -1)
+            traceerr("Setrlimit failed. Server may not save core.dump files.\n");
+    }
+    
+    /// hook signals
+    tracelog("Hooking signals...");
+    signal(SIGINT, _onSignal);
+    signal(SIGTERM, _onSignal);
+    signal(SIGABRT, _onSignal);
+    signal(SIGHUP, _onSignal);
+    
+    new LoginServer;
+    iLoginServer->run();
+    
+    delete iLoginServer;
+    delete iConfig;
+    
+    return EXIT_SUCCESS;
 }
