@@ -15,7 +15,7 @@ template<class SocketClass>
 class ListenSocket : public ListenSocketBase
 {
 public:
-    ListenSocket(const char* listen_address, uint port) : Socket()
+    ListenSocket(const char* listen_address, uint port) : ListenSocketBase()
     {
         reuseAddr();
         disableBlocking();
@@ -34,14 +34,14 @@ public:
         }
 
         // bind.. well attempt to.
-        int ret = ::bind(listen_socket, (const sockaddr*)&listen_socket_address, sizeof(listen_socket_address));
+        int ret = ::bind(_sock, (const sockaddr*)&listen_socket_address, sizeof(listen_socket_address));
         if (ret != 0)
         {
             traceerr("Bind unsuccessful on port %u.", (unsigned int)port);
             return;
         }
 
-        ret = listen(listen_socket, 5);
+        ret = listen(_sock, 5);
         if (ret != 0)
         {
             traceerr("Unable to listen on port %u.", (unsigned int)port);
@@ -59,22 +59,21 @@ public:
     }
     void onAccept()
     {
-        accept_socket = ::accept(listen_socket, (sockaddr*)&accept_socket_address, (socklen_t*)&len);
+        accept_socket = ::accept(_sock, (sockaddr*)&accept_socket_address, (socklen_t*)&len);
         if (accept_socket == -1)
             return;
 
-        rw_socket = new Socket(accept_socket);
+        rw_socket = new SocketClass(accept_socket);
         rw_socket->accept(&accept_socket_address);
     }
 
     void close()
     {
         if (listen_socket_opened)
-            close();
+            closeSocket();
         listen_socket_opened = false;
     }
 private:
-    SOCKET listen_socket;
     SOCKET accept_socket;
     struct sockaddr_in listen_socket_address;
     struct sockaddr_in accept_socket_address;

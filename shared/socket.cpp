@@ -4,7 +4,8 @@
 Socket::Socket() : _connected(false)
 {
     _sock = create();
-    ASSERT_CONTINUE(_sock < 0);
+    _connected.SetVal(false);
+    ASSERT_CONTINUE(_sock > 0);
 }
 Socket::~Socket()
 {

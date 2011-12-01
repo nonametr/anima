@@ -8,6 +8,8 @@
 #include "../shared/threadcore.h"
 #include "../shared/periodicthreadcaller.h"
 
+#include "loginserverhandler.h"
+
 #include <signal.h>
 
 class LoginServer : public Singleton<LoginServer>

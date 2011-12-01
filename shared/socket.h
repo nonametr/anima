@@ -34,10 +34,10 @@ public:
     /// Called when the socket is disconnected from the client (either forcibly or by the connection dropping)
     virtual bool onDisconnect() {};
 
+    bool isConnected(){ return _connected.GetVal(); };
     string getRemoteIP();
     inline uint getRemotePort() { return ntohs(_client.sin_port); }
     inline in_addr getRemoteAddress() { return _client.sin_addr; }
-
 protected:
     bool _onConnect();
     bool _onDisconnect();

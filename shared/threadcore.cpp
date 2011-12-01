@@ -6,7 +6,7 @@ initialiseSingleton ( ThreadCore );
 static void * thread_proc(void * param)
 {
     ThreadController * t_control = (ThreadController*)param;
-    tracelog(OPTIMAL, "Thread %u started.", t_control->GetId());
+    tracelog(OPTIMAL, "Thread %u started.", t_control->getId());
 
     while (true)
     {
@@ -39,13 +39,13 @@ bool ThreadCore::threadExit(ThreadController * t_control)
     /// enter the "suspended" pool
     _free_threads.insert(t_control);
 
-    tracelog(4,"Thread %u entered suspend state.", t_control->GetId());
+    tracelog(4,"Thread %u entered suspend state.", t_control->getId());
     _mutex.unlock();
     return false;
 }
 ThreadCore::ThreadCore()
 {
-    uint thread_count = _getNumCpus()*2;
+    uint thread_count = _getNumCpus()*4;
 
     for (int i= 0; i < thread_count; ++i)
         initThread();
@@ -99,7 +99,7 @@ ThreadController * ThreadCore::startThread(Thread * thread)
 
         /// resume the thread, and it should start working
         t_control->resume();
-        tracelog(4, "Precreated thread %u now in use", t_control->GetId());
+        tracelog(4, "Precreated thread %u now in use", t_control->getId());
     }
     else
     {

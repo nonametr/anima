@@ -5,7 +5,7 @@
 #include "../shared/socket.h"
 #include "../shared/listensocket.h"
 
-class LoginServerHandler : public ListenSocket
+class LoginServerHandler : public Socket
 {
 public:
     virtual bool onRead() {};

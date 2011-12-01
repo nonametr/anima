@@ -16,11 +16,13 @@ int main ( int argc, char **argv )
         {
             if (++c >= argc)
             {
-                traceerr("Error: -c option requires an input argument");
                 return -1;
             }
             else
+	    {
                 cfg_file = argv[c];
+		break;
+	    }
         }
         ++c;
     }

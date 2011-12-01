@@ -8,6 +8,7 @@
 class LoginServerHandler : public Socket
 {
 public:
+    LoginServerHandler(SOCKET sock) : Socket(sock) {};
     virtual bool onRead() {};
     virtual bool onConnect() {};
     virtual bool onDisconnect() {};
