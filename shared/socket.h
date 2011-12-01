@@ -11,9 +11,9 @@ class Socket : public SocketOperations
 public:
     Socket(int sock)
     {
-      ASSERT_CONTINUE(sock < 0);
-      _connected.SetVal(true);
-      _sock = sock;
+        ASSERT_CONTINUE(sock > 0);
+        _connected.SetVal(true);
+        _sock = sock;
     }
     Socket();
     virtual ~Socket();
@@ -28,16 +28,22 @@ public:
     bool send(std::string out_packet);
 
     /// Called when data is received
-    virtual bool onRead() {};
+    virtual bool onRead( const string &data ) {};
     /// Called when a connection is first successfully established
     virtual bool onConnect() {};
     /// Called when the socket is disconnected from the client (either forcibly or by the connection dropping)
     virtual bool onDisconnect() {};
 
-    bool isConnected(){ return _connected.GetVal(); };
+    bool isConnected() {
+        return _connected.GetVal();
+    };
     string getRemoteIP();
-    inline uint getRemotePort() { return ntohs(_client.sin_port); }
-    inline in_addr getRemoteAddress() { return _client.sin_addr; }
+    inline uint getRemotePort() {
+        return ntohs(_client.sin_port);
+    }
+    inline in_addr getRemoteAddress() {
+        return _client.sin_addr;
+    }
 protected:
     bool _onConnect();
     bool _onDisconnect();

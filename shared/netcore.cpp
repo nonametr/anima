@@ -96,8 +96,8 @@ void NetCore::addSocket ( Socket * s )
             _rw_sock[s->getSockDescriptor() ]->disconnect();
             return;
         }
-        ///clearing old sock obj. we clear it only if system returns same desc(system nows that its not in use long time ago :) )
-        delete _rw_sock[s->getSockDescriptor() ];
+        ///clearing old sock obj. we clear it only if system returns same desc(system nows that its not in use long time ago :)
+        delete _rw_sock[s->getSockDescriptor()];
     }
     _rw_sock[s->getSockDescriptor() ] = s;
     ++_sock_count;
@@ -106,12 +106,11 @@ void NetCore::addSocket ( Socket * s )
 }
 void NetCore::removeSocket ( Socket* s )
 {
-    if ( _rw_sock[s->getSockDescriptor() ] != s )
+    if ( _rw_sock[s->getSockDescriptor()] != s )
     {
         traceerr ( "Could not remove sock_desc %u from the set due to it not existing?", s->getSockDescriptor() );
         return;
     }
-    _rw_sock[s->getSockDescriptor() ] = NULL;
     --_sock_count;
 
     removeFromEpoll ( s->getSockDescriptor() );
@@ -131,6 +130,8 @@ void NetCoreWorkerThread::run()
 {
     int sock_count;
     Socket* ptr;
+    char rcv_buf[RECIVE_BUFFER_SIZE];
+    int bytes_recv;
 
     while ( _running.GetVal() )
     {
@@ -171,7 +172,9 @@ void NetCoreWorkerThread::run()
                     traceerr ( "Invalid sock obj (disconnected) of sock %u", _events[i].data.fd );
                     continue;
                 }
-                ptr->onRead();
+                int bytes_recv = recv(ptr->getSockDescriptor(), rcv_buf, RECIVE_BUFFER_SIZE, 0);
+		string recv_str(rcv_buf, bytes_recv);
+                ptr->onRead(recv_str);
             }
         }
     }

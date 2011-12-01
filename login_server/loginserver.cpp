@@ -5,6 +5,7 @@ initialiseSingleton ( LoginServer );
 LoginServer::LoginServer()
 {
     _running.SetVal(true);
+    _need_restart.SetVal(false);
 }
 /*** Signal Handler ***/
 void _onSignal(int s)
@@ -14,7 +15,7 @@ void _onSignal(int s)
     case SIGHUP:
     {
         tracelog(OPTIMAL, "Received SIGHUP signal, reloading login server.");
-        //THERE WILL BE RELOADING SERVER CODE
+        iLoginServer->restart();
     }
     break;
     case SIGINT:
@@ -52,7 +53,15 @@ void LoginServer::destroyObjects()
 }
 LoginServer::~LoginServer()
 {
-
+    while (true)
+    {
+        Packet *pkt = _data.pop();
+        if (pkt)
+            delete pkt;
+        else
+            break;
+        tracelog(OPTIMAL, "Clearing request queue... %u req. left", _data.get_size());
+    }
 }
 void LoginServer::run()
 {
@@ -70,16 +79,23 @@ void LoginServer::run()
 
     uint listen_port = iConfig->getParam(Config::LS_PORT);
     string listen_ip = iConfig->getParam(Config::LS_IP);
-    
-    new ListenSocket<LoginServerHandler>(listen_ip.c_str(), listen_port);
+
+    new ListenSocket<LSHandlerSocket>(listen_ip.c_str(), listen_port);
 
     tracelog(OPTIMAL, "Success! Ready for connections");
 
     ///entering infinity loop state
-//     while (_running.GetVal())
-//     {
-         sleep(10);
-//     }
+    while (_running.GetVal())
+    {
+        ///Some periodic checks possible here
+        sleep(20);
+    }
     destroyObjects();
+}
+void LoginServer::performPacket(Packet *pkt)
+{
+    tracelog(OPTIMAL, "performPacket = %s", pkt->data.c_str());
+    pkt->connect->send("recved and processed");
+    pkt->connect->disconnect();
 }
 

@@ -36,7 +36,7 @@ bool Socket::accept(sockaddr_in * address)
 }
 bool Socket::send(std::string out_packet)
 {
-
+    ::send(_sock, out_packet.c_str(), out_packet.length()*sizeof(char), MSG_NOSIGNAL);
     return true;
 }
 bool Socket::_onConnect()

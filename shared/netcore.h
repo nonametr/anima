@@ -5,6 +5,7 @@
 #include "socket.h"
 #include "thread.h"
 
+#define RECIVE_BUFFER_SIZE 65536
 #define THREAD_EVENT_MAX_SIZE 128  /// This is the number of socket events each thread can receieve at once.
 /// This default value should be more than enough.
 #define SOCKET_LISTEN_MAX_COUNT 128

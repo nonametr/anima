@@ -14,16 +14,36 @@
 
 class LoginServer : public Singleton<LoginServer>
 {
+    friend class LSHandlerSocket;
+    friend class LSWorkerThread;
 public:
     LoginServer();
     virtual ~LoginServer();
+    
     void run();
-    void stop() { _running.SetVal(false); };
+    void restart()
+    {
+	_need_restart.SetVal(true);
+	stop();
+    }
+    bool isRestating(){ return _need_restart.GetVal(); }
+    void stop() 
+    {
+        _running.SetVal(false);
+    };
 private:
-  void ininializeObjects();
-  void destroyObjects();
-  
-  AtomicBoolean _running;
+    void performPacket(Packet *pkt);
+    void ininializeObjects();
+    void destroyObjects();
+
+    AtomicBoolean _running;
+    AtomicBoolean _need_restart;
+
+    FQueue<Packet*> *getQueuePtr()
+    {
+        return &_data;
+    }
+    FQueue<Packet*> _data;
 };
 
 #define iLoginServer LoginServer::getSingletonPtr()
