@@ -1,0 +1,85 @@
+\hypertarget{classSocketOperations}{
+\section{SocketOperations Class Reference}
+\label{classSocketOperations}\index{SocketOperations@{SocketOperations}}
+}
+Inheritance diagram for SocketOperations:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classSocketOperations}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+SOCKET \hyperlink{classSocketOperations_a542d416133a25018961be5703cc82d8f}{create} ()
+\begin{DoxyCompactList}\small\item\em Create file descriptor for socket i/o operations. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocketOperations_a342adc61aee2904e6b6b2b650ee30c64}{
+bool \hyperlink{classSocketOperations_a342adc61aee2904e6b6b2b650ee30c64}{disableBlocking} ()}
+\label{classSocketOperations_a342adc61aee2904e6b6b2b650ee30c64}
+
+\begin{DoxyCompactList}\small\item\em Disable blocking send/recv calls. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocketOperations_afa7bbc20f36191bb502975072f1c1bcf}{
+bool \hyperlink{classSocketOperations_afa7bbc20f36191bb502975072f1c1bcf}{disableBuffering} ()}
+\label{classSocketOperations_afa7bbc20f36191bb502975072f1c1bcf}
+
+\begin{DoxyCompactList}\small\item\em Disable nagle buffering algorithm. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocketOperations_a136fe3ab807a04ae165f90f034d27628}{
+bool \hyperlink{classSocketOperations_a136fe3ab807a04ae165f90f034d27628}{enableBuffering} ()}
+\label{classSocketOperations_a136fe3ab807a04ae165f90f034d27628}
+
+\begin{DoxyCompactList}\small\item\em Enable nagle buffering algorithm. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocketOperations_ac45f369202e3d1a2e245a5b9909632da}{
+bool \hyperlink{classSocketOperations_ac45f369202e3d1a2e245a5b9909632da}{setSendBufferSize} (uint size)}
+\label{classSocketOperations_ac45f369202e3d1a2e245a5b9909632da}
+
+\begin{DoxyCompactList}\small\item\em Set internal buffer size to socket. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocketOperations_a0f02acac6224201db807f5038bf415ae}{
+bool \hyperlink{classSocketOperations_a0f02acac6224201db807f5038bf415ae}{setRecvBufferSize} (uint size)}
+\label{classSocketOperations_a0f02acac6224201db807f5038bf415ae}
+
+\begin{DoxyCompactList}\small\item\em Set internal buffer size to socket. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocketOperations_a759b3da0e2b800e9e568b74f52c0dd75}{
+bool \hyperlink{classSocketOperations_a759b3da0e2b800e9e568b74f52c0dd75}{setTimeout} (uint timeout)}
+\label{classSocketOperations_a759b3da0e2b800e9e568b74f52c0dd75}
+
+\begin{DoxyCompactList}\small\item\em Set internal timeout. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocketOperations_a9ab40fe87bfbcbe324b2138be424f00f}{
+bool \hyperlink{classSocketOperations_a9ab40fe87bfbcbe324b2138be424f00f}{setKeepAlive} ()}
+\label{classSocketOperations_a9ab40fe87bfbcbe324b2138be424f00f}
+
+\begin{DoxyCompactList}\small\item\em Set socket keep alive. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocketOperations_aab33b81b1521f6bb1085b893b3d5ae52}{
+void \hyperlink{classSocketOperations_aab33b81b1521f6bb1085b893b3d5ae52}{closeSocket} ()}
+\label{classSocketOperations_aab33b81b1521f6bb1085b893b3d5ae52}
+
+\begin{DoxyCompactList}\small\item\em Closes a socket fully. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocketOperations_a1f5834a875fd7588196a412402b7ac2b}{
+void \hyperlink{classSocketOperations_a1f5834a875fd7588196a412402b7ac2b}{reuseAddr} ()}
+\label{classSocketOperations_a1f5834a875fd7588196a412402b7ac2b}
+
+\begin{DoxyCompactList}\small\item\em Sets reuseaddr. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSocketOperations_a542d416133a25018961be5703cc82d8f}{
+\index{SocketOperations@{SocketOperations}!create@{create}}
+\index{create@{create}!SocketOperations@{SocketOperations}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}SOCKET SocketOperations::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classSocketOperations_a542d416133a25018961be5703cc82d8f}
+
+
+Create file descriptor for socket i/o operations. 
+
+
+
+create a socket for use with overlapped i/o 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/home/nonametr/projects/anima/shared/socket\_\-operations.h\end{DoxyCompactItemize}

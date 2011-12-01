@@ -1,0 +1,77 @@
+\hypertarget{classNetCore}{
+\section{NetCore Class Reference}
+\label{classNetCore}\index{NetCore@{NetCore}}
+}
+Inheritance diagram for NetCore:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNetCore}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNetCore_ad10840be05aa99314c59ca10f067b2da}{NetCore} ()
+\item 
+void \hyperlink{classNetCore_a427f3577c790d9199e9e976172e32ea3}{addSocket} (\hyperlink{classSocket}{Socket} $\ast$s)
+\begin{DoxyCompactList}\small\item\em add a new socket to the r/w epoll set and to the sock mapping \item\end{DoxyCompactList}\item 
+\hypertarget{classNetCore_a017906522bcb380b937d3f6dfc780184}{
+void {\bfseries addListenSocket} (\hyperlink{classListenSocketBase}{ListenSocketBase} $\ast$s)}
+\label{classNetCore_a017906522bcb380b937d3f6dfc780184}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetCore_ae0585299ab7c2a563b1aeabf73ea2c21}{
+class \hyperlink{classNetCore_ae0585299ab7c2a563b1aeabf73ea2c21}{NetCoreWorkerThread}}
+\label{classNetCore_ae0585299ab7c2a563b1aeabf73ea2c21}
+
+\item 
+\hypertarget{classNetCore_ab510887d735ee73ab1cb598c66260e87}{
+class \hyperlink{classNetCore_ab510887d735ee73ab1cb598c66260e87}{Socket}}
+\label{classNetCore_ab510887d735ee73ab1cb598c66260e87}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNetCore_ad10840be05aa99314c59ca10f067b2da}{
+\index{NetCore@{NetCore}!NetCore@{NetCore}}
+\index{NetCore@{NetCore}!NetCore@{NetCore}}
+\subsubsection[{NetCore}]{\setlength{\rightskip}{0pt plus 5cm}NetCore::NetCore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classNetCore_ad10840be05aa99314c59ca10f067b2da}
+
+
+null out the pointer array 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNetCore_a427f3577c790d9199e9e976172e32ea3}{
+\index{NetCore@{NetCore}!addSocket@{addSocket}}
+\index{addSocket@{addSocket}!NetCore@{NetCore}}
+\subsubsection[{addSocket}]{\setlength{\rightskip}{0pt plus 5cm}void NetCore::addSocket (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{classNetCore_a427f3577c790d9199e9e976172e32ea3}
+
+
+add a new socket to the r/w epoll set and to the sock mapping 
+
+
+
+clearing old sock obj. we clear it only if system returns same desc(system nows that its not in use long time ago :) 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/home/nonametr/projects/anima/shared/netcore.h\item 
+/home/nonametr/projects/anima/shared/netcore.cpp\end{DoxyCompactItemize}

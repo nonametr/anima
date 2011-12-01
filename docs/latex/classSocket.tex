@@ -1,0 +1,117 @@
+\hypertarget{classSocket}{
+\section{Socket Class Reference}
+\label{classSocket}\index{Socket@{Socket}}
+}
+Inheritance diagram for Socket:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classSocket}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSocket_acba9bcb13219372b3236ebd45edc29fb}{
+{\bfseries Socket} (int sock)}
+\label{classSocket_acba9bcb13219372b3236ebd45edc29fb}
+
+\item 
+\hypertarget{classSocket_a3af2e8cbacea68672534fee333b1f676}{
+bool \hyperlink{classSocket_a3af2e8cbacea68672534fee333b1f676}{connect} (const char $\ast$address, uint port)}
+\label{classSocket_a3af2e8cbacea68672534fee333b1f676}
+
+\begin{DoxyCompactList}\small\item\em Open a connection to another machine. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocket_af4e3f3b8001460ae2871f5374b70e3b8}{
+bool \hyperlink{classSocket_af4e3f3b8001460ae2871f5374b70e3b8}{disconnect} ()}
+\label{classSocket_af4e3f3b8001460ae2871f5374b70e3b8}
+
+\begin{DoxyCompactList}\small\item\em Disconnect the socket. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocket_ab2acb0737506e2be16477b22ecec924f}{
+bool \hyperlink{classSocket_ab2acb0737506e2be16477b22ecec924f}{accept} (sockaddr\_\-in $\ast$address)}
+\label{classSocket_ab2acb0737506e2be16477b22ecec924f}
+
+\begin{DoxyCompactList}\small\item\em Accept from connection. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocket_a633a2e7c9b017befb018d52688e3d79b}{
+bool \hyperlink{classSocket_a633a2e7c9b017befb018d52688e3d79b}{send} (std::string out\_\-packet)}
+\label{classSocket_a633a2e7c9b017befb018d52688e3d79b}
+
+\begin{DoxyCompactList}\small\item\em Locks sending mutex, send bytes, unlocks mutex. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocket_a919d8108f9418f85fbeb4ec772b13c10}{
+virtual bool \hyperlink{classSocket_a919d8108f9418f85fbeb4ec772b13c10}{onRead} (const string \&data)}
+\label{classSocket_a919d8108f9418f85fbeb4ec772b13c10}
+
+\begin{DoxyCompactList}\small\item\em Called when data is received. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocket_aaffd9bd4957e367504e7ddf5922d2e46}{
+virtual bool \hyperlink{classSocket_aaffd9bd4957e367504e7ddf5922d2e46}{onConnect} ()}
+\label{classSocket_aaffd9bd4957e367504e7ddf5922d2e46}
+
+\begin{DoxyCompactList}\small\item\em Called when a connection is first successfully established. \item\end{DoxyCompactList}\item 
+\hypertarget{classSocket_a5b9025afbd7a8f3b79128f371d7a7bd1}{
+virtual bool \hyperlink{classSocket_a5b9025afbd7a8f3b79128f371d7a7bd1}{onDisconnect} ()}
+\label{classSocket_a5b9025afbd7a8f3b79128f371d7a7bd1}
+
+\begin{DoxyCompactList}\small\item\em Called when the socket is disconnected from the client (either forcibly or by the connection dropping) \item\end{DoxyCompactList}\item 
+\hypertarget{classSocket_a60c76a4c1e26192218d598b63cbb97b9}{
+bool {\bfseries isConnected} ()}
+\label{classSocket_a60c76a4c1e26192218d598b63cbb97b9}
+
+\item 
+\hypertarget{classSocket_ab54ab05b7088f40f9b9c9704d313cc68}{
+string {\bfseries getRemoteIP} ()}
+\label{classSocket_ab54ab05b7088f40f9b9c9704d313cc68}
+
+\item 
+\hypertarget{classSocket_a51a7d030a6a561b53be1c8bf2c2de552}{
+uint {\bfseries getRemotePort} ()}
+\label{classSocket_a51a7d030a6a561b53be1c8bf2c2de552}
+
+\item 
+\hypertarget{classSocket_a7d9eae997fba47664fdc87227f3ed2e8}{
+in\_\-addr {\bfseries getRemoteAddress} ()}
+\label{classSocket_a7d9eae997fba47664fdc87227f3ed2e8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classSocket_af4bdee68ba070ca8e80aa61a93823924}{\_\-onConnect} ()
+\item 
+bool \hyperlink{classSocket_ae53f8b0e9b333ff473aa8f0883e2b854}{\_\-onDisconnect} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSocket_af4bdee68ba070ca8e80aa61a93823924}{
+\index{Socket@{Socket}!\_\-onConnect@{\_\-onConnect}}
+\index{\_\-onConnect@{\_\-onConnect}!Socket@{Socket}}
+\subsubsection[{\_\-onConnect}]{\setlength{\rightskip}{0pt plus 5cm}bool Socket::\_\-onConnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classSocket_af4bdee68ba070ca8e80aa61a93823924}
+
+
+set common parameters on the socket file descriptor
+
+Call virtual onconnect 
+
+\hypertarget{classSocket_ae53f8b0e9b333ff473aa8f0883e2b854}{
+\index{Socket@{Socket}!\_\-onDisconnect@{\_\-onDisconnect}}
+\index{\_\-onDisconnect@{\_\-onDisconnect}!Socket@{Socket}}
+\subsubsection[{\_\-onDisconnect}]{\setlength{\rightskip}{0pt plus 5cm}bool Socket::\_\-onDisconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classSocket_ae53f8b0e9b333ff473aa8f0883e2b854}
+
+
+remove from netcore 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/home/nonametr/projects/anima/shared/socket.h\item 
+/home/nonametr/projects/anima/shared/socket.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,415 @@
+\hypertarget{classJSONValue}{
+\section{JSONValue Class Reference}
+\label{classJSONValue}\index{JSONValue@{JSONValue}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJSONValue_a53cb9b84540e492d5c8efb8d84906bd0}{JSONValue} ()
+\item 
+\hyperlink{classJSONValue_acf94f34e1fc0f01064951c17461d63c9}{JSONValue} (const char $\ast$m\_\-char\_\-value)
+\item 
+\hyperlink{classJSONValue_a501f04137258c93343a0c6815c3ca96b}{JSONValue} (const std::string \&m\_\-string\_\-value)
+\item 
+\hyperlink{classJSONValue_aafcc30e3701ee1d34d54793810929518}{JSONValue} (bool m\_\-bool\_\-value)
+\item 
+\hyperlink{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}{JSONValue} (double m\_\-number\_\-value)
+\item 
+\hyperlink{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}{JSONValue} (const JSONArray \&m\_\-array\_\-value)
+\item 
+\hyperlink{classJSONValue_a2f1580969809665bd204dca3774226f5}{JSONValue} (const JSONObject \&m\_\-object\_\-value)
+\item 
+\hyperlink{classJSONValue_ae71766eb548ae78c060f0c308ceceb4b}{$\sim$JSONValue} ()
+\item 
+bool \hyperlink{classJSONValue_a0aee5e9041833102ace9c295c5ba04a1}{isNull} () const 
+\item 
+bool \hyperlink{classJSONValue_a7d55132933149e63e76a49c468142461}{isString} () const 
+\item 
+bool \hyperlink{classJSONValue_aead35875f85ebe8218ae008bc94287d5}{isBool} () const 
+\item 
+bool \hyperlink{classJSONValue_ae18150f35323645dc3b1e6d1bc217196}{isNumber} () const 
+\item 
+bool \hyperlink{classJSONValue_ae42e5a0a9a847948d88d21d904fa6ae2}{isArray} () const 
+\item 
+bool \hyperlink{classJSONValue_a4f55c32b852110bb4fbf6ae1bceb572d}{isObject} () const 
+\item 
+const std::string \& \hyperlink{classJSONValue_a027350e28f091ad41fc537d965ed6b42}{asString} () const 
+\item 
+bool \hyperlink{classJSONValue_a16a16d04c67898096289e3e2d07b4de4}{asBool} () const 
+\item 
+double \hyperlink{classJSONValue_a4e889d5fae91abbb951ae664b3d9db3e}{asNumber} () const 
+\item 
+const JSONArray \& \hyperlink{classJSONValue_ae0f1cc305919d110eb34d41f40ae3d73}{asArray} () const 
+\item 
+const JSONObject \& \hyperlink{classJSONValue_a139ff1bf529945a0a9b8e243a2029867}{asObject} () const 
+\item 
+std::string \hyperlink{classJSONValue_a05fdc2f472ead8269e6d10fd3fba4834}{stringify} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classJSONValue}{JSONValue} $\ast$ \hyperlink{classJSONValue_a07040bc6b1968981ab9afb43c7bf0afe}{Parse} (const char $\ast$$\ast$data)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classJSONValue_a66fb0fb6ee611c3bdf28f6d2b3d90422}{
+class \hyperlink{classJSONValue_a66fb0fb6ee611c3bdf28f6d2b3d90422}{JSON}}
+\label{classJSONValue_a66fb0fb6ee611c3bdf28f6d2b3d90422}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classJSONValue_a53cb9b84540e492d5c8efb8d84906bd0}{
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classJSONValue_a53cb9b84540e492d5c8efb8d84906bd0}
+Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type NULL
+
+public \hypertarget{classJSONValue_acf94f34e1fc0f01064951c17461d63c9}{
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{m\_\-char\_\-value}
+\end{DoxyParamCaption}
+)}}
+\label{classJSONValue_acf94f34e1fc0f01064951c17461d63c9}
+Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type String
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & m\_\-char\_\-value The string to use as the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classJSONValue_a501f04137258c93343a0c6815c3ca96b}{
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{m\_\-string\_\-value}
+\end{DoxyParamCaption}
+)}}
+\label{classJSONValue_a501f04137258c93343a0c6815c3ca96b}
+Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type String
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em std::string} & m\_\-string\_\-value The string to use as the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classJSONValue_aafcc30e3701ee1d34d54793810929518}{
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\begin{DoxyParamCaption}
+\item[{bool}]{m\_\-bool\_\-value}
+\end{DoxyParamCaption}
+)}}
+\label{classJSONValue_aafcc30e3701ee1d34d54793810929518}
+Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type Bool
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & m\_\-bool\_\-value The bool to use as the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}{
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\begin{DoxyParamCaption}
+\item[{double}]{m\_\-number\_\-value}
+\end{DoxyParamCaption}
+)}}
+\label{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}
+Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type Number
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & m\_\-number\_\-value The number to use as the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}{
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\begin{DoxyParamCaption}
+\item[{const JSONArray \&}]{m\_\-array\_\-value}
+\end{DoxyParamCaption}
+)}}
+\label{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}
+Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type Array
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em JSONArray} & m\_\-array\_\-value The JSONArray to use as the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classJSONValue_a2f1580969809665bd204dca3774226f5}{
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
+\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\begin{DoxyParamCaption}
+\item[{const JSONObject \&}]{m\_\-object\_\-value}
+\end{DoxyParamCaption}
+)}}
+\label{classJSONValue_a2f1580969809665bd204dca3774226f5}
+Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type Object
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em JSONObject} & m\_\-object\_\-value The JSONObject to use as the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classJSONValue_ae71766eb548ae78c060f0c308ceceb4b}{
+\index{JSONValue@{JSONValue}!$\sim$JSONValue@{$\sim$JSONValue}}
+\index{$\sim$JSONValue@{$\sim$JSONValue}!JSONValue@{JSONValue}}
+\subsubsection[{$\sim$JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::$\sim$JSONValue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classJSONValue_ae71766eb548ae78c060f0c308ceceb4b}
+The destructor for the \hyperlink{classJSON}{JSON} Value object Handles deleting the objects in the array or the object value
+
+public 
+
+\subsection{Member Function Documentation}
+\hypertarget{classJSONValue_ae0f1cc305919d110eb34d41f40ae3d73}{
+\index{JSONValue@{JSONValue}!asArray@{asArray}}
+\index{asArray@{asArray}!JSONValue@{JSONValue}}
+\subsubsection[{asArray}]{\setlength{\rightskip}{0pt plus 5cm}const JSONArray \& JSONValue::asArray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_ae0f1cc305919d110eb34d41f40ae3d73}
+Retrieves the Array value of this \hyperlink{classJSONValue}{JSONValue} Use IsArray() before using this method.
+
+public
+
+\begin{DoxyReturn}{Returns}
+JSONArray Returns the array value 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a16a16d04c67898096289e3e2d07b4de4}{
+\index{JSONValue@{JSONValue}!asBool@{asBool}}
+\index{asBool@{asBool}!JSONValue@{JSONValue}}
+\subsubsection[{asBool}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::asBool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_a16a16d04c67898096289e3e2d07b4de4}
+Retrieves the Bool value of this \hyperlink{classJSONValue}{JSONValue} Use IsBool() before using this method.
+
+public
+
+\begin{DoxyReturn}{Returns}
+bool Returns the bool value 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a4e889d5fae91abbb951ae664b3d9db3e}{
+\index{JSONValue@{JSONValue}!asNumber@{asNumber}}
+\index{asNumber@{asNumber}!JSONValue@{JSONValue}}
+\subsubsection[{asNumber}]{\setlength{\rightskip}{0pt plus 5cm}double JSONValue::asNumber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_a4e889d5fae91abbb951ae664b3d9db3e}
+Retrieves the Number value of this \hyperlink{classJSONValue}{JSONValue} Use IsNumber() before using this method.
+
+public
+
+\begin{DoxyReturn}{Returns}
+double Returns the number value 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a139ff1bf529945a0a9b8e243a2029867}{
+\index{JSONValue@{JSONValue}!asObject@{asObject}}
+\index{asObject@{asObject}!JSONValue@{JSONValue}}
+\subsubsection[{asObject}]{\setlength{\rightskip}{0pt plus 5cm}const JSONObject \& JSONValue::asObject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_a139ff1bf529945a0a9b8e243a2029867}
+Retrieves the Object value of this \hyperlink{classJSONValue}{JSONValue} Use IsObject() before using this method.
+
+public
+
+\begin{DoxyReturn}{Returns}
+JSONObject Returns the object value 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a027350e28f091ad41fc537d965ed6b42}{
+\index{JSONValue@{JSONValue}!asString@{asString}}
+\index{asString@{asString}!JSONValue@{JSONValue}}
+\subsubsection[{asString}]{\setlength{\rightskip}{0pt plus 5cm}const std::string \& JSONValue::asString (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_a027350e28f091ad41fc537d965ed6b42}
+Retrieves the String value of this \hyperlink{classJSONValue}{JSONValue} Use IsString() before using this method.
+
+public
+
+\begin{DoxyReturn}{Returns}
+std::string Returns the string value 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_ae42e5a0a9a847948d88d21d904fa6ae2}{
+\index{JSONValue@{JSONValue}!isArray@{isArray}}
+\index{isArray@{isArray}!JSONValue@{JSONValue}}
+\subsubsection[{isArray}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isArray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_ae42e5a0a9a847948d88d21d904fa6ae2}
+Checks if the value is an Array
+
+public
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if it is an Array value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_aead35875f85ebe8218ae008bc94287d5}{
+\index{JSONValue@{JSONValue}!isBool@{isBool}}
+\index{isBool@{isBool}!JSONValue@{JSONValue}}
+\subsubsection[{isBool}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isBool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_aead35875f85ebe8218ae008bc94287d5}
+Checks if the value is a Bool
+
+public
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if it is a Bool value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a0aee5e9041833102ace9c295c5ba04a1}{
+\index{JSONValue@{JSONValue}!isNull@{isNull}}
+\index{isNull@{isNull}!JSONValue@{JSONValue}}
+\subsubsection[{isNull}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isNull (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_a0aee5e9041833102ace9c295c5ba04a1}
+Checks if the value is a NULL
+
+public
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if it is a NULL value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_ae18150f35323645dc3b1e6d1bc217196}{
+\index{JSONValue@{JSONValue}!isNumber@{isNumber}}
+\index{isNumber@{isNumber}!JSONValue@{JSONValue}}
+\subsubsection[{isNumber}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isNumber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_ae18150f35323645dc3b1e6d1bc217196}
+Checks if the value is a Number
+
+public
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if it is a Number value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a4f55c32b852110bb4fbf6ae1bceb572d}{
+\index{JSONValue@{JSONValue}!isObject@{isObject}}
+\index{isObject@{isObject}!JSONValue@{JSONValue}}
+\subsubsection[{isObject}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isObject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_a4f55c32b852110bb4fbf6ae1bceb572d}
+Checks if the value is an Object
+
+public
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if it is an Object value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a7d55132933149e63e76a49c468142461}{
+\index{JSONValue@{JSONValue}!isString@{isString}}
+\index{isString@{isString}!JSONValue@{JSONValue}}
+\subsubsection[{isString}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isString (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_a7d55132933149e63e76a49c468142461}
+Checks if the value is a String
+
+public
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if it is a String value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a07040bc6b1968981ab9afb43c7bf0afe}{
+\index{JSONValue@{JSONValue}!Parse@{Parse}}
+\index{Parse@{Parse}!JSONValue@{JSONValue}}
+\subsubsection[{Parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf JSONValue} $\ast$ JSONValue::Parse (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classJSONValue_a07040bc6b1968981ab9afb43c7bf0afe}
+Parses a \hyperlink{classJSON}{JSON} encoded value to a \hyperlink{classJSONValue}{JSONValue} object
+
+protected
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+JSONValue$\ast$ Returns a pointer to a \hyperlink{classJSONValue}{JSONValue} object on success, NULL on error 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a05fdc2f472ead8269e6d10fd3fba4834}{
+\index{JSONValue@{JSONValue}!stringify@{stringify}}
+\index{stringify@{stringify}!JSONValue@{JSONValue}}
+\subsubsection[{stringify}]{\setlength{\rightskip}{0pt plus 5cm}std::string JSONValue::stringify (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classJSONValue_a05fdc2f472ead8269e6d10fd3fba4834}
+Creates a \hyperlink{classJSON}{JSON} encoded string for the value with all necessary characters escaped
+
+public
+
+\begin{DoxyReturn}{Returns}
+std::string Returns the \hyperlink{classJSON}{JSON} string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/home/nonametr/projects/anima/shared/jsonvalue.h\item 
+/home/nonametr/projects/anima/shared/jsonvalue.cpp\end{DoxyCompactItemize}

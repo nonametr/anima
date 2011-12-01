@@ -1,0 +1,91 @@
+\hypertarget{classMutex}{
+\section{Mutex Class Reference}
+\label{classMutex}\index{Mutex@{Mutex}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMutex_a593423d868daf926c7b0d63a833ae29a}{Mutex} ()
+\item 
+virtual \hyperlink{classMutex_ac9e9182407f5f74892318607888e9be4}{$\sim$Mutex} ()
+\item 
+\hypertarget{classMutex_ad91be808bf0a60a16f10b897ec246d3a}{
+void {\bfseries lock} ()}
+\label{classMutex_ad91be808bf0a60a16f10b897ec246d3a}
+
+\item 
+\hypertarget{classMutex_a546a5b797ba29959357586aa2b3740a8}{
+void {\bfseries unlock} ()}
+\label{classMutex_a546a5b797ba29959357586aa2b3740a8}
+
+\item 
+bool \hyperlink{classMutex_a85bdf2b7c3d9ce789c61f8bc2a127c8a}{try\_\-lock} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pthread\_\-mutex\_\-t \hyperlink{classMutex_a8feb0b01916c1feedd1f0c0dcd74081b}{mutex}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMutex_ad7ee7f8bf85bcdc0cd99f7fb82cd9f83}{
+static bool {\bfseries attr\_\-initalized} = false}
+\label{classMutex_ad7ee7f8bf85bcdc0cd99f7fb82cd9f83}
+
+\item 
+\hypertarget{classMutex_a7c27b9401231941ebf4cce6cfc81192c}{
+static pthread\_\-mutexattr\_\-t {\bfseries attr}}
+\label{classMutex_a7c27b9401231941ebf4cce6cfc81192c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMutex_a593423d868daf926c7b0d63a833ae29a}{
+\index{Mutex@{Mutex}!Mutex@{Mutex}}
+\index{Mutex@{Mutex}!Mutex@{Mutex}}
+\subsubsection[{Mutex}]{\setlength{\rightskip}{0pt plus 5cm}Mutex::Mutex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classMutex_a593423d868daf926c7b0d63a833ae29a}
+Initializes a mutex class, with pthread\_\-mutex\_\-init \hypertarget{classMutex_ac9e9182407f5f74892318607888e9be4}{
+\index{Mutex@{Mutex}!$\sim$Mutex@{$\sim$Mutex}}
+\index{$\sim$Mutex@{$\sim$Mutex}!Mutex@{Mutex}}
+\subsubsection[{$\sim$Mutex}]{\setlength{\rightskip}{0pt plus 5cm}Mutex::$\sim$Mutex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classMutex_ac9e9182407f5f74892318607888e9be4}
+Deletes the associated mutex 
+
+\subsection{Member Function Documentation}
+\hypertarget{classMutex_a85bdf2b7c3d9ce789c61f8bc2a127c8a}{
+\index{Mutex@{Mutex}!try\_\-lock@{try\_\-lock}}
+\index{try\_\-lock@{try\_\-lock}!Mutex@{Mutex}}
+\subsubsection[{try\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}bool Mutex::try\_\-lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classMutex_a85bdf2b7c3d9ce789c61f8bc2a127c8a}
+\begin{DoxyReturn}{Returns}
+false if cannot be lock, true if it was locked. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classMutex_a8feb0b01916c1feedd1f0c0dcd74081b}{
+\index{Mutex@{Mutex}!mutex@{mutex}}
+\index{mutex@{mutex}!Mutex@{Mutex}}
+\subsubsection[{mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\_\-mutex\_\-t {\bf Mutex::mutex}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classMutex_a8feb0b01916c1feedd1f0c0dcd74081b}
+pthread struct used in system calls 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/home/nonametr/projects/anima/shared/thread.h\item 
+/home/nonametr/projects/anima/shared/thread.cpp\end{DoxyCompactItemize}

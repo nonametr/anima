@@ -1,0 +1,213 @@
+\hypertarget{classJSON}{
+\section{JSON Class Reference}
+\label{classJSON}\index{JSON@{JSON}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classJSONValue}{JSONValue} $\ast$ \hyperlink{classJSON_a7f3d733e38c15aaeee7223831f9739a3}{Parse} (const char $\ast$data)
+\item 
+static std::string \hyperlink{classJSON_a599f5c5792e9995314da85d8ab8a83b9}{Stringify} (const \hyperlink{classJSONValue}{JSONValue} $\ast$value)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classJSON_a6101b573a904af0ea2fee028071814e9}{SkipWhitespace} (const char $\ast$$\ast$data)
+\item 
+static bool \hyperlink{classJSON_ac8f6350078266a15d18b685e06f58caa}{ExtractString} (const char $\ast$$\ast$data, std::string \&str)
+\item 
+static double \hyperlink{classJSON_a470e922f11065159826bbd59d8b73889}{ParseInt} (const char $\ast$$\ast$data)
+\item 
+static double \hyperlink{classJSON_a6d4eb6810c7b29a21a6346dbb8edfd2e}{ParseDecimal} (const char $\ast$$\ast$data)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classJSON_ad2efeda1c797ac7a1371213b1b6ffdcf}{
+class \hyperlink{classJSON_ad2efeda1c797ac7a1371213b1b6ffdcf}{JSONValue}}
+\label{classJSON_ad2efeda1c797ac7a1371213b1b6ffdcf}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classJSON_ac8f6350078266a15d18b685e06f58caa}{
+\index{JSON@{JSON}!ExtractString@{ExtractString}}
+\index{ExtractString@{ExtractString}!JSON@{JSON}}
+\subsubsection[{ExtractString}]{\setlength{\rightskip}{0pt plus 5cm}bool JSON::ExtractString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{data, }
+\item[{std::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classJSON_ac8f6350078266a15d18b685e06f58caa}
+Extracts a \hyperlink{classJSON}{JSON} String as defined by the spec -\/ \char`\"{}$<$some chars$>$\char`\"{} Any escaped characters are swapped out for their unescaped values
+
+protected
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{JSON} text \\
+\hline
+{\em std::string\&} & str Reference to a std::string to receive the extracted string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true on success, false on failure 
+\end{DoxyReturn}
+
+
+Save the char so we can change it if need be
+
+Escaping something?
+
+Move over the escape char
+
+Deal with the escaped char
+
+We need 5 chars (4 hex + the 'u') or its not valid
+
+Deal with the chars
+
+Do it first to move off the 'u' and leave us on the final hex digit as we move on by one later on
+
+Parse the hex digit
+
+Invalid hex digit = invalid \hyperlink{classJSON}{JSON}
+
+By the spec, only the above cases are allowed
+
+End of the string?
+
+Disallowed char?
+
+SPEC Violation: Allow tabs due to real world cases
+
+Add the next char
+
+Move on
+
+If we're here, the string ended incorrectly 
+
+\hypertarget{classJSON_a7f3d733e38c15aaeee7223831f9739a3}{
+\index{JSON@{JSON}!Parse@{Parse}}
+\index{Parse@{Parse}!JSON@{JSON}}
+\subsubsection[{Parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf JSONValue} $\ast$ JSON::Parse (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classJSON_a7f3d733e38c15aaeee7223831f9739a3}
+Parses a complete \hyperlink{classJSON}{JSON} encoded string
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & data The \hyperlink{classJSON}{JSON} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+JSONValue$\ast$ Returns a \hyperlink{classJSON}{JSON} Value representing the root, or NULL on error 
+\end{DoxyReturn}
+
+
+Skip any preceding whitespace, end of data = no \hyperlink{classJSON}{JSON} = fail
+
+We need the start of a value here now...
+
+Can be white space now and should be at the end of the string then...
+
+We're now at the end of the string 
+
+\hypertarget{classJSON_a6d4eb6810c7b29a21a6346dbb8edfd2e}{
+\index{JSON@{JSON}!ParseDecimal@{ParseDecimal}}
+\index{ParseDecimal@{ParseDecimal}!JSON@{JSON}}
+\subsubsection[{ParseDecimal}]{\setlength{\rightskip}{0pt plus 5cm}double JSON::ParseDecimal (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classJSON_a6d4eb6810c7b29a21a6346dbb8edfd2e}
+Parses some text as though it is a decimal
+
+protected
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{JSON} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Returns the double value of the decimal found 
+\end{DoxyReturn}
+\hypertarget{classJSON_a470e922f11065159826bbd59d8b73889}{
+\index{JSON@{JSON}!ParseInt@{ParseInt}}
+\index{ParseInt@{ParseInt}!JSON@{JSON}}
+\subsubsection[{ParseInt}]{\setlength{\rightskip}{0pt plus 5cm}double JSON::ParseInt (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classJSON_a470e922f11065159826bbd59d8b73889}
+Parses some text as though it is an integer
+
+protected
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{JSON} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Returns the double value of the number found 
+\end{DoxyReturn}
+\hypertarget{classJSON_a6101b573a904af0ea2fee028071814e9}{
+\index{JSON@{JSON}!SkipWhitespace@{SkipWhitespace}}
+\index{SkipWhitespace@{SkipWhitespace}!JSON@{JSON}}
+\subsubsection[{SkipWhitespace}]{\setlength{\rightskip}{0pt plus 5cm}bool JSON::SkipWhitespace (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classJSON_a6101b573a904af0ea2fee028071814e9}
+Skips over any whitespace characters (space, tab,  or \par
+) defined by the \hyperlink{classJSON}{JSON} spec
+
+protected
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{JSON} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if there is more data, or false if the end of the text was reached 
+\end{DoxyReturn}
+\hypertarget{classJSON_a599f5c5792e9995314da85d8ab8a83b9}{
+\index{JSON@{JSON}!Stringify@{Stringify}}
+\index{Stringify@{Stringify}!JSON@{JSON}}
+\subsubsection[{Stringify}]{\setlength{\rightskip}{0pt plus 5cm}std::string JSON::Stringify (
+\begin{DoxyParamCaption}
+\item[{const {\bf JSONValue} $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classJSON_a599f5c5792e9995314da85d8ab8a83b9}
+Turns the passed in \hyperlink{classJSONValue}{JSONValue} into a \hyperlink{classJSON}{JSON} encode string
+
+public
+
+
+\begin{DoxyParams}{Parameters}
+{\em JSONValue$\ast$} & value The root value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std::string Returns a \hyperlink{classJSON}{JSON} encoded string representation of the given value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/home/nonametr/projects/anima/shared/json.h\item 
+/home/nonametr/projects/anima/shared/json.cpp\end{DoxyCompactItemize}
