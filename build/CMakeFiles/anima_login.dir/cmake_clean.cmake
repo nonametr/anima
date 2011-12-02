@@ -11,6 +11,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/anima_login.dir/shared/jsonvalue.o"
   "CMakeFiles/anima_login.dir/login_server/loginserver.o"
   "CMakeFiles/anima_login.dir/login_server/loginserverhandler.o"
+  "CMakeFiles/anima_login.dir/shared/version_control.o"
   "anima_login.pdb"
   "anima_login"
 )

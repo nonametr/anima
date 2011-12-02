@@ -31,6 +31,7 @@ void LoginServer::ininializeObjects()
 {
     new ThreadCore;
     new NetCore;
+    new VersionControl;
     new PeriodicThreadCaller;///no need to delete at exit - it's auto runing thread and as all threads its managed by ThreadCore
 
     /// hook signals
@@ -45,6 +46,7 @@ void LoginServer::destroyObjects()
     tracelog(OPTIMAL, "Shutting down...");
     delete iThreadCore;
     delete iNetCore;
+    delete iVersionControl;
 
     signal(SIGINT, 0);
     signal(SIGTERM, 0);
@@ -82,14 +84,15 @@ void LoginServer::run()
 
     new ListenSocket<LSHandlerSocket>(listen_ip.c_str(), listen_port);
 
+    tracelog(OPTIMAL, "Server version: %s. Almost started...", iVersionControl->getVersion().c_str());
     tracelog(OPTIMAL, "Success! Ready for connections");
 
     ///entering infinity loop state
-    while (_running.GetVal())
-    {
+     while (_running.GetVal())
+     {
         ///Some periodic checks possible here
-        sleep(20);
-    }
+        sleep(10);
+     }
     destroyObjects();
 }
 void LoginServer::performPacket(Packet *pkt)

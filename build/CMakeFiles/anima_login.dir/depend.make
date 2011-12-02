@@ -13,18 +13,25 @@ CMakeFiles/anima_login.dir/login_server/loginserver.o: ../login_server/../shared
 CMakeFiles/anima_login.dir/login_server/loginserver.o: ../login_server/../shared/thread.h
 CMakeFiles/anima_login.dir/login_server/loginserver.o: ../login_server/../shared/thread_controller.h
 CMakeFiles/anima_login.dir/login_server/loginserver.o: ../login_server/../shared/threadcore.h
+CMakeFiles/anima_login.dir/login_server/loginserver.o: ../login_server/../shared/version_control.h
 CMakeFiles/anima_login.dir/login_server/loginserver.o: ../login_server/loginserver.cpp
 CMakeFiles/anima_login.dir/login_server/loginserver.o: ../login_server/loginserver.h
 CMakeFiles/anima_login.dir/login_server/loginserver.o: ../login_server/loginserverhandler.h
 
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/common.h
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/config.h
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/listensocket.h
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/netcore.h
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/periodicthreadcaller.h
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/singleton.h
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/socket.h
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/socket_base.h
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/socket_operations.h
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/thread.h
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/thread_controller.h
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/threadcore.h
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/../shared/version_control.h
+CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/loginserver.h
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/loginserverhandler.cpp
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o: ../login_server/loginserverhandler.h
 
@@ -40,6 +47,7 @@ CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/thread.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/thread_controller.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/threadcore.h
+CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/version_control.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/loginserver.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/loginserverhandler.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/main_login.cpp
@@ -106,4 +114,10 @@ CMakeFiles/anima_login.dir/shared/threadcore.o: ../shared/thread.h
 CMakeFiles/anima_login.dir/shared/threadcore.o: ../shared/thread_controller.h
 CMakeFiles/anima_login.dir/shared/threadcore.o: ../shared/threadcore.cpp
 CMakeFiles/anima_login.dir/shared/threadcore.o: ../shared/threadcore.h
+
+CMakeFiles/anima_login.dir/shared/version_control.o: ../shared/common.h
+CMakeFiles/anima_login.dir/shared/version_control.o: ../shared/config.h
+CMakeFiles/anima_login.dir/shared/version_control.o: ../shared/singleton.h
+CMakeFiles/anima_login.dir/shared/version_control.o: ../shared/version_control.cpp
+CMakeFiles/anima_login.dir/shared/version_control.o: ../shared/version_control.h
 

@@ -53,6 +53,12 @@ void intToString ( char * buf, int num )
 {
     sprintf ( buf,"%u",num );
 }
+string intToString ( int num )
+{
+    char buf[128];
+    snprintf ( buf, 128, "%u",num );
+    return buf;
+}
 /**
  * @brief convert string to timestamp
  *

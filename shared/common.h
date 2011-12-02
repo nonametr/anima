@@ -188,5 +188,6 @@ inline uint secsToTimeBitFields ( time_t secs )
 }
 time_t convTimePeriod ( uint dLength, char dType );
 void intToString ( char * buf, int num );
+string intToString ( int num );
 
 #endif

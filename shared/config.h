@@ -19,7 +19,7 @@ public:
         ///database connection configuration for login server. LSD = LOGIN SERVER DATABASE
         LSD_IP, LSD_NAME, LSD_USER, LSD_PASSWORD, LSD_CHARSET, LSD_LOG_PATH,
         ///login server general configuration, this configuration loads from LSD
-        LS_IP, LS_DEMON_USER, LS_DEMON_DIR, LS_ERROR_LOG_PATH, LS_SRV_LOG_PATH, SIZE_STR
+        LS_IP, LS_DEMON_USER, LS_DEMON_DIR, LS_ERROR_LOG_PATH, LS_SRV_LOG_PATH, LS_VERSION_CONTROL_SYSTEM, SIZE_STR
     };
     /**
      * @brief all int params of server configuration discribed in this enum

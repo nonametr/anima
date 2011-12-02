@@ -37,7 +37,7 @@ bool Config::parseFileData(const char* file_data)
     string str_config_params[SIZE_STR] =
     {
         "LSD_IP", "LSD_NAME", "LSD_USER", "LSD_PASSWORD", "LSD_CHARSET", "LSD_LOG_PATH",
-        "LS_IP", "LS_DEMON_USER", "LS_DEMON_DIR", "LS_ERROR_LOG_PATH", "LS_SRV_LOG_PATH"
+        "LS_IP", "LS_DEMON_USER", "LS_DEMON_DIR", "LS_ERROR_LOG_PATH", "LS_SRV_LOG_PATH", "LS_VERSION_CONTROL_SYSTEM"
     };
     string int_config_params[SIZE_INT]  =
     {

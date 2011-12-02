@@ -7,6 +7,7 @@
 #include "../shared/netcore.h"
 #include "../shared/threadcore.h"
 #include "../shared/periodicthreadcaller.h"
+#include "../shared/version_control.h"
 
 #include "loginserverhandler.h"
 

@@ -334,6 +334,30 @@ CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.provides: CMakeFile
 CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.provides.build: CMakeFiles/anima_login.dir/login_server/loginserverhandler.o
 .PHONY : CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.provides.build
 
+CMakeFiles/anima_login.dir/shared/version_control.o: CMakeFiles/anima_login.dir/flags.make
+CMakeFiles/anima_login.dir/shared/version_control.o: ../shared/version_control.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_login.dir/shared/version_control.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_login.dir/shared/version_control.o -c /home/nonametr/projects/anima/shared/version_control.cpp
+
+CMakeFiles/anima_login.dir/shared/version_control.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_login.dir/shared/version_control.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/version_control.cpp > CMakeFiles/anima_login.dir/shared/version_control.i
+
+CMakeFiles/anima_login.dir/shared/version_control.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_login.dir/shared/version_control.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/version_control.cpp -o CMakeFiles/anima_login.dir/shared/version_control.s
+
+CMakeFiles/anima_login.dir/shared/version_control.o.requires:
+.PHONY : CMakeFiles/anima_login.dir/shared/version_control.o.requires
+
+CMakeFiles/anima_login.dir/shared/version_control.o.provides: CMakeFiles/anima_login.dir/shared/version_control.o.requires
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/version_control.o.provides.build
+.PHONY : CMakeFiles/anima_login.dir/shared/version_control.o.provides
+
+CMakeFiles/anima_login.dir/shared/version_control.o.provides.build: CMakeFiles/anima_login.dir/shared/version_control.o
+.PHONY : CMakeFiles/anima_login.dir/shared/version_control.o.provides.build
+
 # Object files for target anima_login
 anima_login_OBJECTS = \
 "CMakeFiles/anima_login.dir/login_server/main_login.o" \
@@ -347,7 +371,8 @@ anima_login_OBJECTS = \
 "CMakeFiles/anima_login.dir/shared/json.o" \
 "CMakeFiles/anima_login.dir/shared/jsonvalue.o" \
 "CMakeFiles/anima_login.dir/login_server/loginserver.o" \
-"CMakeFiles/anima_login.dir/login_server/loginserverhandler.o"
+"CMakeFiles/anima_login.dir/login_server/loginserverhandler.o" \
+"CMakeFiles/anima_login.dir/shared/version_control.o"
 
 # External object files for target anima_login
 anima_login_EXTERNAL_OBJECTS =
@@ -364,6 +389,7 @@ anima_login: CMakeFiles/anima_login.dir/shared/json.o
 anima_login: CMakeFiles/anima_login.dir/shared/jsonvalue.o
 anima_login: CMakeFiles/anima_login.dir/login_server/loginserver.o
 anima_login: CMakeFiles/anima_login.dir/login_server/loginserverhandler.o
+anima_login: CMakeFiles/anima_login.dir/shared/version_control.o
 anima_login: CMakeFiles/anima_login.dir/build.make
 anima_login: CMakeFiles/anima_login.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable anima_login"
@@ -385,6 +411,7 @@ CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/json.o.re
 CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/jsonvalue.o.requires
 CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/login_server/loginserver.o.requires
 CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/login_server/loginserverhandler.o.requires
+CMakeFiles/anima_login.dir/requires: CMakeFiles/anima_login.dir/shared/version_control.o.requires
 .PHONY : CMakeFiles/anima_login.dir/requires
 
 CMakeFiles/anima_login.dir/clean:

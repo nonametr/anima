@@ -16,6 +16,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/nonametr/projects/anima/shared/socket.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_login.dir/shared/socket.o"
   "/home/nonametr/projects/anima/shared/thread.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_login.dir/shared/thread.o"
   "/home/nonametr/projects/anima/shared/threadcore.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_login.dir/shared/threadcore.o"
+  "/home/nonametr/projects/anima/shared/version_control.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_login.dir/shared/version_control.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

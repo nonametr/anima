@@ -288,6 +288,21 @@ shared/threadcore.s:
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/threadcore.s
 .PHONY : shared/threadcore.s
 
+# target to build an object file
+shared/version_control.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/version_control.o
+.PHONY : shared/version_control.o
+
+# target to preprocess a source file
+shared/version_control.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/version_control.i
+.PHONY : shared/version_control.i
+
+# target to generate assembly for a file
+shared/version_control.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/version_control.s
+.PHONY : shared/version_control.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -333,6 +348,9 @@ help:
 	@echo "... shared/threadcore.o"
 	@echo "... shared/threadcore.i"
 	@echo "... shared/threadcore.s"
+	@echo "... shared/version_control.o"
+	@echo "... shared/version_control.i"
+	@echo "... shared/version_control.s"
 .PHONY : help
 
 
