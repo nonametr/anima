@@ -1,4 +1,4 @@
-#include "loginserver.h"
+#include "login_server.h"
 
 initialiseSingleton ( LoginServer );
 
@@ -55,15 +55,6 @@ void LoginServer::destroyObjects()
 }
 LoginServer::~LoginServer()
 {
-    while (true)
-    {
-        Packet *pkt = _data.pop();
-        if (pkt)
-            delete pkt;
-        else
-            break;
-        tracelog(OPTIMAL, "Clearing request queue... %u req. left", _data.get_size());
-    }
 }
 void LoginServer::run()
 {
@@ -82,23 +73,17 @@ void LoginServer::run()
     uint listen_port = iConfig->getParam(Config::LS_PORT);
     string listen_ip = iConfig->getParam(Config::LS_IP);
 
-    new ListenSocket<LSHandlerSocket>(listen_ip.c_str(), listen_port);
+    new LSWorld(listen_ip.c_str(), listen_port);
 
     tracelog(OPTIMAL, "Server version: %s. Almost started...", iVersionControl->getVersion().c_str());
     tracelog(OPTIMAL, "Success! Ready for connections");
 
     ///entering infinity loop state
-     while (_running.GetVal())
-     {
+//      while (_running.GetVal())
+//      {
         ///Some periodic checks possible here
         sleep(10);
-     }
+//      }
     destroyObjects();
-}
-void LoginServer::performPacket(Packet *pkt)
-{
-    tracelog(OPTIMAL, "performPacket = %s", pkt->data.c_str());
-    pkt->connect->send("recved and processed");
-    pkt->connect->disconnect();
 }
 

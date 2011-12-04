@@ -31,7 +31,7 @@ class JSONValue;
 typedef std::vector<JSONValue*> JSONArray;
 typedef std::map<std::string, JSONValue*> JSONObject;
 
-#include "jsonvalue.h"
+#include "json_value.h"
 
 class JSON
 {

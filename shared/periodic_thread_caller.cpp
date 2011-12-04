@@ -1,4 +1,4 @@
-#include "periodicthreadcaller.h"
+#include "periodic_thread_caller.h"
 
 initialiseSingleton ( PeriodicThreadCaller );
 

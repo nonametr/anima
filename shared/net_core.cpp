@@ -1,7 +1,7 @@
-#include "netcore.h"
-#include "listensocket.h"
+#include "net_core.h"
+#include "listen_socket.h"
 #include "config.h"
-#include "threadcore.h"
+#include "thread_core.h"
 
 initialiseSingleton ( NetCore );
 
@@ -45,7 +45,6 @@ void NetCore::addToEpoll ( SOCKET sock )
     memset ( &ev, 0, sizeof ( epoll_event ) );
     ev.events = EPOLLIN | EPOLLET;		/** use edge-triggered instead of level-triggered because we're using nonblocking sockets */
     ev.data.fd = sock;
-
     if ( epoll_ctl ( _epoll_inst, EPOLL_CTL_ADD, ev.data.fd, &ev ) )
         traceerr ( "Could not add event to epoll_set sock %u", sock );
 }
@@ -60,7 +59,7 @@ void NetCore::removeFromEpoll ( SOCKET sock )
     if ( epoll_ctl ( _epoll_inst, EPOLL_CTL_DEL, ev.data.fd, &ev ) )
         traceerr ( "Could not remove sock %u from epoll set", sock );
 }
-void NetCore::addListenSocket ( ListenSocketBase * s )
+void NetCore::addListenSocket ( ListenSocket * s )
 {
     ASSERT ( _listen_sock[s->getSockDescriptor() ] == NULL );
     _listen_sock[s->getSockDescriptor() ] = s;
@@ -153,8 +152,8 @@ void NetCoreWorkerThread::run()
                     traceerr ( "Requested sock that is too high (%u)", _events[i].data.fd );
                     continue;
                 }
-                if ( ( ptr = ( ( ListenSocketBase* ) iNetCore->getListenSock ( _events[i].data.fd ) ) ) != NULL )
-                    ( ( ListenSocketBase* ) ptr )->onAccept();
+                if ( ( ptr = ( ( ListenSocket* ) iNetCore->getListenSock ( _events[i].data.fd ) ) ) != NULL )
+                    ( ( ListenSocket* ) ptr )->onAccept();
                 else
                     traceerr ( "Returned invalid sock obj (no pointer) of sock %u", _events[i].data.fd );
                 continue;
@@ -172,9 +171,7 @@ void NetCoreWorkerThread::run()
                     traceerr ( "Invalid sock obj (disconnected) of sock %u", _events[i].data.fd );
                     continue;
                 }
-                int bytes_recv = recv(ptr->getSockDescriptor(), rcv_buf, RECIVE_BUFFER_SIZE, 0);
-		string recv_str(rcv_buf, bytes_recv);
-                ptr->onRead(recv_str);
+                ptr->read();
             }
         }
     }

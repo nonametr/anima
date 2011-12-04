@@ -109,34 +109,34 @@ anima_login/fast:
 .PHONY : anima_login/fast
 
 # target to build an object file
-login_server/loginserver.o:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/loginserver.o
-.PHONY : login_server/loginserver.o
+login_server/login_server.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/login_server.o
+.PHONY : login_server/login_server.o
 
 # target to preprocess a source file
-login_server/loginserver.i:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/loginserver.i
-.PHONY : login_server/loginserver.i
+login_server/login_server.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/login_server.i
+.PHONY : login_server/login_server.i
 
 # target to generate assembly for a file
-login_server/loginserver.s:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/loginserver.s
-.PHONY : login_server/loginserver.s
+login_server/login_server.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/login_server.s
+.PHONY : login_server/login_server.s
 
 # target to build an object file
-login_server/loginserverhandler.o:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/loginserverhandler.o
-.PHONY : login_server/loginserverhandler.o
+login_server/login_server_handler.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/login_server_handler.o
+.PHONY : login_server/login_server_handler.o
 
 # target to preprocess a source file
-login_server/loginserverhandler.i:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/loginserverhandler.i
-.PHONY : login_server/loginserverhandler.i
+login_server/login_server_handler.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/login_server_handler.i
+.PHONY : login_server/login_server_handler.i
 
 # target to generate assembly for a file
-login_server/loginserverhandler.s:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/loginserverhandler.s
-.PHONY : login_server/loginserverhandler.s
+login_server/login_server_handler.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/login_server/login_server_handler.s
+.PHONY : login_server/login_server_handler.s
 
 # target to build an object file
 login_server/main_login.o:
@@ -199,49 +199,49 @@ shared/json.s:
 .PHONY : shared/json.s
 
 # target to build an object file
-shared/jsonvalue.o:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/jsonvalue.o
-.PHONY : shared/jsonvalue.o
+shared/json_value.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json_value.o
+.PHONY : shared/json_value.o
 
 # target to preprocess a source file
-shared/jsonvalue.i:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/jsonvalue.i
-.PHONY : shared/jsonvalue.i
+shared/json_value.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json_value.i
+.PHONY : shared/json_value.i
 
 # target to generate assembly for a file
-shared/jsonvalue.s:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/jsonvalue.s
-.PHONY : shared/jsonvalue.s
+shared/json_value.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json_value.s
+.PHONY : shared/json_value.s
 
 # target to build an object file
-shared/netcore.o:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/netcore.o
-.PHONY : shared/netcore.o
+shared/net_core.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/net_core.o
+.PHONY : shared/net_core.o
 
 # target to preprocess a source file
-shared/netcore.i:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/netcore.i
-.PHONY : shared/netcore.i
+shared/net_core.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/net_core.i
+.PHONY : shared/net_core.i
 
 # target to generate assembly for a file
-shared/netcore.s:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/netcore.s
-.PHONY : shared/netcore.s
+shared/net_core.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/net_core.s
+.PHONY : shared/net_core.s
 
 # target to build an object file
-shared/periodicthreadcaller.o:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodicthreadcaller.o
-.PHONY : shared/periodicthreadcaller.o
+shared/periodic_thread_caller.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodic_thread_caller.o
+.PHONY : shared/periodic_thread_caller.o
 
 # target to preprocess a source file
-shared/periodicthreadcaller.i:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodicthreadcaller.i
-.PHONY : shared/periodicthreadcaller.i
+shared/periodic_thread_caller.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodic_thread_caller.i
+.PHONY : shared/periodic_thread_caller.i
 
 # target to generate assembly for a file
-shared/periodicthreadcaller.s:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodicthreadcaller.s
-.PHONY : shared/periodicthreadcaller.s
+shared/periodic_thread_caller.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodic_thread_caller.s
+.PHONY : shared/periodic_thread_caller.s
 
 # target to build an object file
 shared/socket.o:
@@ -274,19 +274,19 @@ shared/thread.s:
 .PHONY : shared/thread.s
 
 # target to build an object file
-shared/threadcore.o:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/threadcore.o
-.PHONY : shared/threadcore.o
+shared/thread_core.o:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread_core.o
+.PHONY : shared/thread_core.o
 
 # target to preprocess a source file
-shared/threadcore.i:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/threadcore.i
-.PHONY : shared/threadcore.i
+shared/thread_core.i:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread_core.i
+.PHONY : shared/thread_core.i
 
 # target to generate assembly for a file
-shared/threadcore.s:
-	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/threadcore.s
-.PHONY : shared/threadcore.s
+shared/thread_core.s:
+	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread_core.s
+.PHONY : shared/thread_core.s
 
 # target to build an object file
 shared/version_control.o:
@@ -312,12 +312,12 @@ help:
 	@echo "... anima_login"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... login_server/loginserver.o"
-	@echo "... login_server/loginserver.i"
-	@echo "... login_server/loginserver.s"
-	@echo "... login_server/loginserverhandler.o"
-	@echo "... login_server/loginserverhandler.i"
-	@echo "... login_server/loginserverhandler.s"
+	@echo "... login_server/login_server.o"
+	@echo "... login_server/login_server.i"
+	@echo "... login_server/login_server.s"
+	@echo "... login_server/login_server_handler.o"
+	@echo "... login_server/login_server_handler.i"
+	@echo "... login_server/login_server_handler.s"
 	@echo "... login_server/main_login.o"
 	@echo "... login_server/main_login.i"
 	@echo "... login_server/main_login.s"
@@ -330,24 +330,24 @@ help:
 	@echo "... shared/json.o"
 	@echo "... shared/json.i"
 	@echo "... shared/json.s"
-	@echo "... shared/jsonvalue.o"
-	@echo "... shared/jsonvalue.i"
-	@echo "... shared/jsonvalue.s"
-	@echo "... shared/netcore.o"
-	@echo "... shared/netcore.i"
-	@echo "... shared/netcore.s"
-	@echo "... shared/periodicthreadcaller.o"
-	@echo "... shared/periodicthreadcaller.i"
-	@echo "... shared/periodicthreadcaller.s"
+	@echo "... shared/json_value.o"
+	@echo "... shared/json_value.i"
+	@echo "... shared/json_value.s"
+	@echo "... shared/net_core.o"
+	@echo "... shared/net_core.i"
+	@echo "... shared/net_core.s"
+	@echo "... shared/periodic_thread_caller.o"
+	@echo "... shared/periodic_thread_caller.i"
+	@echo "... shared/periodic_thread_caller.s"
 	@echo "... shared/socket.o"
 	@echo "... shared/socket.i"
 	@echo "... shared/socket.s"
 	@echo "... shared/thread.o"
 	@echo "... shared/thread.i"
 	@echo "... shared/thread.s"
-	@echo "... shared/threadcore.o"
-	@echo "... shared/threadcore.i"
-	@echo "... shared/threadcore.s"
+	@echo "... shared/thread_core.o"
+	@echo "... shared/thread_core.i"
+	@echo "... shared/thread_core.s"
 	@echo "... shared/version_control.o"
 	@echo "... shared/version_control.i"
 	@echo "... shared/version_control.s"

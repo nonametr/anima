@@ -7,7 +7,9 @@
 int main ( int argc, char **argv )
 {
     new Config;
-    
+
+    bool restart;
+    bool running = true;
     const char *cfg_file = NULL;
     int c = 1;
     while (c < argc)
@@ -19,14 +21,14 @@ int main ( int argc, char **argv )
                 return -1;
             }
             else
-	    {
+            {
                 cfg_file = argv[c];
-		break;
-	    }
+                break;
+            }
         }
         ++c;
     }
-    
+
     iConfig->loadFromFile(cfg_file);///it will use default path to configuration file if no -c option passed
 
     rlimit rl;
@@ -42,12 +44,25 @@ int main ( int argc, char **argv )
     }
 
     tracelog(OPTIMAL, "Starting login server");
-    new LoginServer;
-    iLoginServer->run();
-    iLoginServer->isRestating();
-
-    delete iLoginServer;
-    delete iConfig;
+    while (running)
+    {
+        new LoginServer;
+        iLoginServer->run();
+        bool restart = iLoginServer->isRestating();
+        delete iLoginServer;
+        delete iConfig;
+        if (restart)
+        {
+            new Config;
+	    tracelog(OPTIMAL, "Restarting login server");
+            iConfig->loadFromFile(cfg_file);
+            running = true;
+        }
+        else
+        {
+            running = false;
+        }
+    }
 
     return EXIT_SUCCESS;
 }

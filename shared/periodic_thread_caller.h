@@ -4,7 +4,7 @@
 #include "singleton.h"
 #include "thread.h"
 #include <map>
-#include "threadcore.h"
+#include "thread_core.h"
 
 #define INFINITY_SLEEP_TIME 10000000
 

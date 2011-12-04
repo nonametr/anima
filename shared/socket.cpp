@@ -1,8 +1,11 @@
 #include "socket.h"
-#include "netcore.h"
+#include "net_core.h"
+
+#include "listen_socket.h"
 
 Socket::Socket() : _connected(false)
 {
+    _owner = NULL;
     _sock = create();
     _connected.SetVal(false);
     ASSERT_CONTINUE(_sock > 0);
@@ -38,6 +41,22 @@ bool Socket::send(std::string out_packet)
 {
     ::send(_sock, out_packet.c_str(), out_packet.length()*sizeof(char), MSG_NOSIGNAL);
     return true;
+}
+bool Socket::read()
+{
+    int bytes_recv = recv(_sock, _recv_buf, RECIVE_BUFFER_SIZE, 0);
+    _recv_str.assign(_recv_buf, 0, bytes_recv);
+    _onRead(_recv_str);
+}
+void Socket::setOwner(ListenSocket *owner)
+{
+    _owner = owner;
+}
+bool Socket::_onRead( const string &data )
+{
+    if (_owner)
+        _owner->onClientRead(data);
+    onRead(data);
 }
 bool Socket::_onConnect()
 {

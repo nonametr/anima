@@ -6,6 +6,10 @@
 #include "socket_operations.h"
 #include "thread.h"
 
+#define RECIVE_BUFFER_SIZE 65536
+
+class ListenSocket;
+
 class Socket : public SocketOperations
 {
 public:
@@ -24,30 +28,41 @@ public:
     bool disconnect();
     /// Accept from connection
     bool accept(sockaddr_in * address);
-    /// Locks sending mutex, send bytes, unlocks mutex
+    /// Send bytes
     bool send(std::string out_packet);
+    /// Read bytes
+    bool read();
 
     /// Called when data is received
-    virtual bool onRead( const string &data ) {};
+    virtual bool onRead( const string &data ){};
     /// Called when a connection is first successfully established
     virtual bool onConnect() {};
     /// Called when the socket is disconnected from the client (either forcibly or by the connection dropping)
     virtual bool onDisconnect() {};
-
-    bool isConnected() {
+    
+    void setOwner(ListenSocket *owner);
+    
+    bool isConnected() 
+    {
         return _connected.GetVal();
     };
     string getRemoteIP();
-    inline uint getRemotePort() {
+    inline uint getRemotePort() 
+    {
         return ntohs(_client.sin_port);
     }
-    inline in_addr getRemoteAddress() {
+    inline in_addr getRemoteAddress() 
+    {
         return _client.sin_addr;
     }
 protected:
     bool _onConnect();
     bool _onDisconnect();
+    bool _onRead(const string &data);
 private:
+    char _recv_buf[RECIVE_BUFFER_SIZE];
+    string _recv_str;
+    ListenSocket *_owner;
     AtomicBoolean _connected;
     sockaddr_in _client;
 };

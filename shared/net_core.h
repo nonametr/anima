@@ -5,7 +5,6 @@
 #include "socket.h"
 #include "thread.h"
 
-#define RECIVE_BUFFER_SIZE 65536
 #define THREAD_EVENT_MAX_SIZE 128  /// This is the number of socket events each thread can receieve at once.
 /// This default value should be more than enough.
 #define SOCKET_LISTEN_MAX_COUNT 128
@@ -14,7 +13,7 @@
 
 //#define ANTI_DDOS 8//DONT WORK BEHIND PROXY SUCH AS NGINX
 
-class ListenSocketBase;
+class ListenSocket;
 class NetCoreWorkerThread;
 
 class NetCore : public Singleton<NetCore>
@@ -27,13 +26,13 @@ public:
 
     /// add a new socket to the r/w epoll set and to the sock mapping
     void addSocket ( Socket * s );
-    void addListenSocket ( ListenSocketBase * s );
+    void addListenSocket ( ListenSocket * s );
 private:
     Socket *getSock ( SOCKET sock )
     {
         return _rw_sock[sock];
     };
-    ListenSocketBase *getListenSock ( SOCKET sock )
+    ListenSocket *getListenSock ( SOCKET sock )
     {
         return _listen_sock[sock];
     };
@@ -54,7 +53,7 @@ private:
     uint _max_sock_desc;
 
     Socket* _rw_sock[SOCKET_MAX_COUNT];
-    ListenSocketBase* _listen_sock[SOCKET_LISTEN_MAX_COUNT];
+    ListenSocket* _listen_sock[SOCKET_LISTEN_MAX_COUNT];
 };
 
 class NetCoreWorkerThread : public Thread

@@ -1,21 +1,14 @@
 #ifndef LISTENSOCKET_H
 #define LISTENSOCKET_H
 
-#include "netcore.h"
+#include "net_core.h"
 #include "socket.h"
 
-class ListenSocketBase : public Socket
+class ListenSocket : public Socket
 {
-	public:
-		virtual ~ListenSocketBase() {}
-		virtual void onAccept() = 0;
-};
-
-template<class SocketClass>
-class ListenSocket : public ListenSocketBase
-{
+      friend class NetCoreWorkerThread;
 public:
-    ListenSocket(const char* listen_address, uint port) : ListenSocketBase()
+    ListenSocket(const char* listen_address, uint port)
     {
         reuseAddr();
         disableBlocking();
@@ -51,36 +44,37 @@ public:
         listen_socket_opened = true;
         iNetCore->addListenSocket(this);
     }
-
-    ~ListenSocket()
+    virtual ~ListenSocket()
     {
         if (listen_socket_opened)
             close();
     }
+    virtual void onClientRead(const string &data) {}
+private:
+    ListenSocket(){};
     void onAccept()
     {
         accept_socket = ::accept(_sock, (sockaddr*)&accept_socket_address, (socklen_t*)&len);
         if (accept_socket == -1)
             return;
 
-        rw_socket = new SocketClass(accept_socket);
+        rw_socket = new Socket(accept_socket);
+        rw_socket->setOwner(this);
         rw_socket->accept(&accept_socket_address);
     }
-
     void close()
     {
         if (listen_socket_opened)
             closeSocket();
         listen_socket_opened = false;
     }
-private:
     SOCKET accept_socket;
     struct sockaddr_in listen_socket_address;
     struct sockaddr_in accept_socket_address;
     bool listen_socket_opened;
     uint len;
 
-    SocketClass* rw_socket;
+    Socket* rw_socket;
 };
 
 #endif // LISTENSOCKET_H

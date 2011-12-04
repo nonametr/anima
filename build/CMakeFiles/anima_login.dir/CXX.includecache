@@ -32,13 +32,13 @@ string
 singleton.h
 /home/nonametr/projects/anima/login_server/../shared/singleton.h
 
-/home/nonametr/projects/anima/login_server/../shared/listensocket.h
-netcore.h
-/home/nonametr/projects/anima/login_server/../shared/netcore.h
+/home/nonametr/projects/anima/login_server/../shared/listen_socket.h
+net_core.h
+/home/nonametr/projects/anima/login_server/../shared/net_core.h
 socket.h
 /home/nonametr/projects/anima/login_server/../shared/socket.h
 
-/home/nonametr/projects/anima/login_server/../shared/netcore.h
+/home/nonametr/projects/anima/login_server/../shared/net_core.h
 singleton.h
 /home/nonametr/projects/anima/login_server/../shared/singleton.h
 socket.h
@@ -46,15 +46,15 @@ socket.h
 thread.h
 /home/nonametr/projects/anima/login_server/../shared/thread.h
 
-/home/nonametr/projects/anima/login_server/../shared/periodicthreadcaller.h
+/home/nonametr/projects/anima/login_server/../shared/periodic_thread_caller.h
 singleton.h
 /home/nonametr/projects/anima/login_server/../shared/singleton.h
 thread.h
 /home/nonametr/projects/anima/login_server/../shared/thread.h
 map
 -
-threadcore.h
-/home/nonametr/projects/anima/login_server/../shared/threadcore.h
+thread_core.h
+/home/nonametr/projects/anima/login_server/../shared/thread_core.h
 
 /home/nonametr/projects/anima/login_server/../shared/singleton.h
 common.h
@@ -100,7 +100,7 @@ string
 
 /home/nonametr/projects/anima/login_server/../shared/thread_controller.h
 
-/home/nonametr/projects/anima/login_server/../shared/threadcore.h
+/home/nonametr/projects/anima/login_server/../shared/thread_core.h
 set
 -
 thread.h
@@ -116,11 +116,11 @@ thread_controller.h
 config.h
 /home/nonametr/projects/anima/login_server/../shared/config.h
 
-/home/nonametr/projects/anima/login_server/loginserver.cpp
-loginserver.h
-/home/nonametr/projects/anima/login_server/loginserver.h
+/home/nonametr/projects/anima/login_server/login_server.cpp
+login_server.h
+/home/nonametr/projects/anima/login_server/login_server.h
 
-/home/nonametr/projects/anima/login_server/loginserver.h
+/home/nonametr/projects/anima/login_server/login_server.h
 ../shared/singleton.h
 /home/nonametr/projects/anima/login_server/../shared/singleton.h
 ../shared/thread.h
@@ -129,24 +129,24 @@ loginserver.h
 /home/nonametr/projects/anima/login_server/../shared/common.h
 ../shared/config.h
 /home/nonametr/projects/anima/login_server/../shared/config.h
-../shared/netcore.h
-/home/nonametr/projects/anima/login_server/../shared/netcore.h
-../shared/threadcore.h
-/home/nonametr/projects/anima/login_server/../shared/threadcore.h
-../shared/periodicthreadcaller.h
-/home/nonametr/projects/anima/login_server/../shared/periodicthreadcaller.h
+../shared/net_core.h
+/home/nonametr/projects/anima/login_server/../shared/net_core.h
+../shared/thread_core.h
+/home/nonametr/projects/anima/login_server/../shared/thread_core.h
+../shared/periodic_thread_caller.h
+/home/nonametr/projects/anima/login_server/../shared/periodic_thread_caller.h
 ../shared/version_control.h
 /home/nonametr/projects/anima/login_server/../shared/version_control.h
-loginserverhandler.h
-/home/nonametr/projects/anima/login_server/loginserverhandler.h
+login_server_handler.h
+/home/nonametr/projects/anima/login_server/login_server_handler.h
 signal.h
 -
 
-/home/nonametr/projects/anima/login_server/loginserverhandler.h
+/home/nonametr/projects/anima/login_server/login_server_handler.h
 ../shared/socket.h
 /home/nonametr/projects/anima/login_server/../shared/socket.h
-../shared/listensocket.h
-/home/nonametr/projects/anima/login_server/../shared/listensocket.h
-loginserver.h
-/home/nonametr/projects/anima/login_server/loginserver.h
+../shared/listen_socket.h
+/home/nonametr/projects/anima/login_server/../shared/listen_socket.h
+login_server.h
+/home/nonametr/projects/anima/login_server/login_server.h
 

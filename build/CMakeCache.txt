@@ -93,19 +93,19 @@ CMAKE_LINKER:FILEPATH=/usr/bin/ld
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
 //Flags used by the linker during the creation of modules.
-CMAKE_MODULE_LINKER_FLAGS:STRING=-lpthread
+CMAKE_MODULE_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during debug builds.
-CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=-lpthread
+CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=
 
 //Flags used by the linker during release minsize builds.
-CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL:STRING=-lpthread
+CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL:STRING=
 
 //Flags used by the linker during release builds.
-CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=-lpthread
+CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 
 //Flags used by the linker during Release with Debug Info builds.
-CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=-lpthread
+CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
 CMAKE_NM:FILEPATH=/usr/bin/nm

@@ -2,7 +2,7 @@
 #include <signal.h>
 #include <sys/resource.h>
 
-#include "loginserver.h"
+#include "login_server.h"
 
 int main ( int argc, char **argv )
 {

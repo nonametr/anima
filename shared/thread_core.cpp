@@ -1,4 +1,4 @@
-#include "threadcore.h"
+#include "thread_core.h"
 #include <unistd.h>
 
 initialiseSingleton ( ThreadCore );
