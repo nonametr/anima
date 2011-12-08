@@ -28,7 +28,8 @@ int main ( int argc, char **argv )
         }
         ++c;
     }
-
+    
+    tracelog(OPTIMAL, "Platform sizeof(char) = %u, sizeof(int) = %u", (uint)sizeof(char), (uint)sizeof(int));
     iConfig->loadFromFile(cfg_file);///it will use default path to configuration file if no -c option passed
 
     rlimit rl;

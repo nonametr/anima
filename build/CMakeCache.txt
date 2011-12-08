@@ -81,7 +81,7 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=-lpthread
 CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=-lpthread
 
 //Flags used by the linker during Release with Debug Info builds.
-CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=-lpthread
+CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local

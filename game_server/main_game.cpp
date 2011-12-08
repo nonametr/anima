@@ -2,7 +2,7 @@
 #include <signal.h>
 #include <sys/resource.h>
 
-#include "login_server.h"
+#include "game_server.h"
 
 int main ( int argc, char **argv )
 {
@@ -28,14 +28,7 @@ int main ( int argc, char **argv )
         }
         ++c;
     }
-    
-    unsigned char ss[sizeof(PacketEcho)] = {"\0"};
-    PacketEcho a = {300, "aasdasd", 7, 2312};
-    memcpy(&ss, &a, sizeof(PacketEcho));
-    
-    traceerr("serialized packet = %s", ss);
-    
-    tracelog(OPTIMAL, "Platform sizeof(char) = %u, sizeof(int) = %u", (uint)sizeof(char), (uint)sizeof(int));
+
     iConfig->loadFromFile(cfg_file);///it will use default path to configuration file if no -c option passed
 
     rlimit rl;
@@ -53,10 +46,10 @@ int main ( int argc, char **argv )
     tracelog(OPTIMAL, "Starting login server");
     while (running)
     {
-        new LoginServer;
-        iLoginServer->run();
-        bool restart = iLoginServer->isRestating();
-        delete iLoginServer;
+        new GameServer;
+        iGameServer->run();
+        bool restart = iGameServer->isRestating();
+        delete iGameServer;
         delete iConfig;
         if (restart)
         {
@@ -73,3 +66,5 @@ int main ( int argc, char **argv )
 
     return EXIT_SUCCESS;
 }
+
+

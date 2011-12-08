@@ -1,16 +1,9 @@
 #ifndef LOGINSERVERHANDLER_H
 #define LOGINSERVERHANDLER_H
 
-
 #include "../shared/socket.h"
 #include "../shared/listen_socket.h"
 #include "login_server.h"
-
-struct Packet
-{
-    string data;
-    Socket *connect;
-};
 
 class LSWorldThread : public Thread
 {
@@ -29,10 +22,10 @@ class LSWorld : public ListenSocket, public Singleton<LSWorld>
 public:
     LSWorld(const char* listen_address, uint port);
     virtual ~LSWorld();
-    void onClientRead(const string &data);
+    void onClientRead(Client *pkt);
 private:
-    void performPacket( Packet *pkt );
-    FQueue<Packet*> _data;
+    void performPacket( Client *pkt );
+    FQueue<Client*> _data;
 };
 
 #define iLSWorld LSWorld::getSingletonPtr()

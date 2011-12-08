@@ -6,6 +6,7 @@ CMakeFiles/anima_login.dir/login_server/login_server.o
  /home/nonametr/projects/anima/login_server/../shared/config.h
  /home/nonametr/projects/anima/login_server/../shared/listen_socket.h
  /home/nonametr/projects/anima/login_server/../shared/net_core.h
+ /home/nonametr/projects/anima/login_server/../shared/packet_definitions.h
  /home/nonametr/projects/anima/login_server/../shared/periodic_thread_caller.h
  /home/nonametr/projects/anima/login_server/../shared/singleton.h
  /home/nonametr/projects/anima/login_server/../shared/socket.h
@@ -23,6 +24,7 @@ CMakeFiles/anima_login.dir/login_server/login_server_handler.o
  /home/nonametr/projects/anima/login_server/../shared/config.h
  /home/nonametr/projects/anima/login_server/../shared/listen_socket.h
  /home/nonametr/projects/anima/login_server/../shared/net_core.h
+ /home/nonametr/projects/anima/login_server/../shared/packet_definitions.h
  /home/nonametr/projects/anima/login_server/../shared/periodic_thread_caller.h
  /home/nonametr/projects/anima/login_server/../shared/singleton.h
  /home/nonametr/projects/anima/login_server/../shared/socket.h
@@ -40,6 +42,7 @@ CMakeFiles/anima_login.dir/login_server/main_login.o
  /home/nonametr/projects/anima/login_server/../shared/config.h
  /home/nonametr/projects/anima/login_server/../shared/listen_socket.h
  /home/nonametr/projects/anima/login_server/../shared/net_core.h
+ /home/nonametr/projects/anima/login_server/../shared/packet_definitions.h
  /home/nonametr/projects/anima/login_server/../shared/periodic_thread_caller.h
  /home/nonametr/projects/anima/login_server/../shared/singleton.h
  /home/nonametr/projects/anima/login_server/../shared/socket.h
@@ -78,6 +81,7 @@ CMakeFiles/anima_login.dir/shared/net_core.o
  /home/nonametr/projects/anima/shared/listen_socket.h
  /home/nonametr/projects/anima/shared/net_core.cpp
  /home/nonametr/projects/anima/shared/net_core.h
+ /home/nonametr/projects/anima/shared/packet_definitions.h
  /home/nonametr/projects/anima/shared/singleton.h
  /home/nonametr/projects/anima/shared/socket.h
  /home/nonametr/projects/anima/shared/socket_base.h
@@ -98,6 +102,7 @@ CMakeFiles/anima_login.dir/shared/socket.o
  /home/nonametr/projects/anima/shared/common.h
  /home/nonametr/projects/anima/shared/listen_socket.h
  /home/nonametr/projects/anima/shared/net_core.h
+ /home/nonametr/projects/anima/shared/packet_definitions.h
  /home/nonametr/projects/anima/shared/singleton.h
  /home/nonametr/projects/anima/shared/socket.cpp
  /home/nonametr/projects/anima/shared/socket.h

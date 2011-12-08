@@ -10,22 +10,19 @@ LSWorld::LSWorld(const char* listen_address, uint port) : ListenSocket(listen_ad
         iThreadCore->startThread(new LSWorldThread);
     }
 }
-void LSWorld::onClientRead(const string &data)
+void LSWorld::onClientRead(Client *pkt)
 {
-    Packet *rcv_pack = new Packet;
-    rcv_pack->connect = this;
-    rcv_pack->data = data;
-
-    _data.push(rcv_pack);
+    _data.push(pkt);
 }
-void LSWorld::performPacket( Packet *pkt )
+void LSWorld::performPacket( Client *pkt )
 {
+//   pkt->connect->send("hello");
 }
 LSWorld::~LSWorld()
 {
     while (true)
     {
-        Packet *pkt = _data.pop();
+        Client *pkt = _data.pop();
         if (pkt)
             delete pkt;
         else
@@ -35,12 +32,13 @@ LSWorld::~LSWorld()
 }
 void LSWorldThread::run()
 {
-    Packet* pkt = NULL;
+    Client* pkt = NULL;
     while (_running.GetVal())
     {
         if (pkt != NULL)
         {
             iLSWorld->performPacket( pkt );
+	    delete [] pkt->data;
             delete pkt;
         }
 

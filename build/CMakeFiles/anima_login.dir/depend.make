@@ -5,6 +5,7 @@ CMakeFiles/anima_login.dir/login_server/login_server.o: ../login_server/../share
 CMakeFiles/anima_login.dir/login_server/login_server.o: ../login_server/../shared/config.h
 CMakeFiles/anima_login.dir/login_server/login_server.o: ../login_server/../shared/listen_socket.h
 CMakeFiles/anima_login.dir/login_server/login_server.o: ../login_server/../shared/net_core.h
+CMakeFiles/anima_login.dir/login_server/login_server.o: ../login_server/../shared/packet_definitions.h
 CMakeFiles/anima_login.dir/login_server/login_server.o: ../login_server/../shared/periodic_thread_caller.h
 CMakeFiles/anima_login.dir/login_server/login_server.o: ../login_server/../shared/singleton.h
 CMakeFiles/anima_login.dir/login_server/login_server.o: ../login_server/../shared/socket.h
@@ -22,6 +23,7 @@ CMakeFiles/anima_login.dir/login_server/login_server_handler.o: ../login_server/
 CMakeFiles/anima_login.dir/login_server/login_server_handler.o: ../login_server/../shared/config.h
 CMakeFiles/anima_login.dir/login_server/login_server_handler.o: ../login_server/../shared/listen_socket.h
 CMakeFiles/anima_login.dir/login_server/login_server_handler.o: ../login_server/../shared/net_core.h
+CMakeFiles/anima_login.dir/login_server/login_server_handler.o: ../login_server/../shared/packet_definitions.h
 CMakeFiles/anima_login.dir/login_server/login_server_handler.o: ../login_server/../shared/periodic_thread_caller.h
 CMakeFiles/anima_login.dir/login_server/login_server_handler.o: ../login_server/../shared/singleton.h
 CMakeFiles/anima_login.dir/login_server/login_server_handler.o: ../login_server/../shared/socket.h
@@ -39,6 +41,7 @@ CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/config.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/listen_socket.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/net_core.h
+CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/packet_definitions.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/periodic_thread_caller.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/singleton.h
 CMakeFiles/anima_login.dir/login_server/main_login.o: ../login_server/../shared/socket.h
@@ -77,6 +80,7 @@ CMakeFiles/anima_login.dir/shared/net_core.o: ../shared/config.h
 CMakeFiles/anima_login.dir/shared/net_core.o: ../shared/listen_socket.h
 CMakeFiles/anima_login.dir/shared/net_core.o: ../shared/net_core.cpp
 CMakeFiles/anima_login.dir/shared/net_core.o: ../shared/net_core.h
+CMakeFiles/anima_login.dir/shared/net_core.o: ../shared/packet_definitions.h
 CMakeFiles/anima_login.dir/shared/net_core.o: ../shared/singleton.h
 CMakeFiles/anima_login.dir/shared/net_core.o: ../shared/socket.h
 CMakeFiles/anima_login.dir/shared/net_core.o: ../shared/socket_base.h
@@ -97,6 +101,7 @@ CMakeFiles/anima_login.dir/shared/periodic_thread_caller.o: ../shared/thread_cor
 CMakeFiles/anima_login.dir/shared/socket.o: ../shared/common.h
 CMakeFiles/anima_login.dir/shared/socket.o: ../shared/listen_socket.h
 CMakeFiles/anima_login.dir/shared/socket.o: ../shared/net_core.h
+CMakeFiles/anima_login.dir/shared/socket.o: ../shared/packet_definitions.h
 CMakeFiles/anima_login.dir/shared/socket.o: ../shared/singleton.h
 CMakeFiles/anima_login.dir/shared/socket.o: ../shared/socket.cpp
 CMakeFiles/anima_login.dir/shared/socket.o: ../shared/socket.h

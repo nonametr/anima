@@ -4,7 +4,7 @@
 #include <string>
 #include "singleton.h"
 
-#define DEFAULT_CONFIG_PATH "/home/nonametr/projects/anima/build/login.cfg"
+#define DEFAULT_CONFIG_PATH "/home/nonametr/projects/anima/build/anima.cfg"
 /**
  * @brief server configuration data store
  **/
@@ -19,7 +19,9 @@ public:
         ///database connection configuration for login server. LSD = LOGIN SERVER DATABASE
         LSD_IP, LSD_NAME, LSD_USER, LSD_PASSWORD, LSD_CHARSET, LSD_LOG_PATH,
         ///login server general configuration, this configuration loads from LSD
-        LS_IP, LS_DEMON_USER, LS_DEMON_DIR, LS_ERROR_LOG_PATH, LS_SRV_LOG_PATH, LS_VERSION_CONTROL_SYSTEM, SIZE_STR
+        LS_IP, LS_DEMON_USER, LS_DEMON_DIR, LS_ERROR_LOG_PATH, LS_SRV_LOG_PATH, LS_VERSION_CONTROL_SYSTEM, 
+	///game server general config
+	GS_IP, GS_DEMON_USER, GS_DEMON_DIR, GS_ERROR_LOG_PATH, GS_SRV_LOG_PATH, GS_VERSION_CONTROL_SYSTEM, SIZE_STR
     };
     /**
      * @brief all int params of server configuration discribed in this enum
@@ -29,7 +31,9 @@ public:
         ///database connection configuration for login server. LSD = LOGIN SERVER DATABASE
         LSD_PORT,
         ///login server general configuration, this configuration loads from LSD
-        LS_DBG_LVL, LS_PORT, LS_NUM_EPOLLS_WORKER_THREADS, LS_NUM_LOGIN_PROCCESSING_THREADS, SIZE_INT
+        LS_DBG_LVL, LS_PORT, LS_NUM_EPOLLS_WORKER_THREADS, LS_NUM_LOGIN_PROCCESSING_THREADS, 
+	///game server general config
+	GS_DBG_LVL, GS_PORT, GS_NUM_EPOLLS_WORKER_THREADS, GS_NUM_PROCCESSING_THREADS, SIZE_INT
     };
     /**
      * @brief constructor performs loading all configurations params

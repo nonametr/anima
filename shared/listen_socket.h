@@ -49,7 +49,7 @@ public:
         if (listen_socket_opened)
             close();
     }
-    virtual void onClientRead(const string &data) {}
+    virtual void onClientRead(const Client *pkt) {}
 private:
     ListenSocket(){};
     void onAccept()

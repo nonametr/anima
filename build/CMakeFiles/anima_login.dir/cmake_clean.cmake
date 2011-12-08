@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/anima_login.dir/login_server/main_login.o"
+  "CMakeFiles/anima_login.dir/login_server/login_server.o"
+  "CMakeFiles/anima_login.dir/login_server/login_server_handler.o"
   "CMakeFiles/anima_login.dir/shared/common.o"
   "CMakeFiles/anima_login.dir/shared/config.o"
   "CMakeFiles/anima_login.dir/shared/socket.o"
@@ -9,8 +11,6 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/anima_login.dir/shared/periodic_thread_caller.o"
   "CMakeFiles/anima_login.dir/shared/json.o"
   "CMakeFiles/anima_login.dir/shared/json_value.o"
-  "CMakeFiles/anima_login.dir/login_server/login_server.o"
-  "CMakeFiles/anima_login.dir/login_server/login_server_handler.o"
   "CMakeFiles/anima_login.dir/shared/version_control.o"
   "anima_login.pdb"
   "anima_login"

@@ -96,6 +96,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named anima_game
+
+# Build rule for target.
+anima_game: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 anima_game
+.PHONY : anima_game
+
+# fast build rule for target.
+anima_game/fast:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/build
+.PHONY : anima_game/fast
+
+#=============================================================================
 # Target rules for targets named anima_login
 
 # Build rule for target.
@@ -107,6 +120,51 @@ anima_login: cmake_check_build_system
 anima_login/fast:
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/build
 .PHONY : anima_login/fast
+
+# target to build an object file
+game_server/game_server.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_server.o
+.PHONY : game_server/game_server.o
+
+# target to preprocess a source file
+game_server/game_server.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_server.i
+.PHONY : game_server/game_server.i
+
+# target to generate assembly for a file
+game_server/game_server.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_server.s
+.PHONY : game_server/game_server.s
+
+# target to build an object file
+game_server/main_game.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/main_game.o
+.PHONY : game_server/main_game.o
+
+# target to preprocess a source file
+game_server/main_game.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/main_game.i
+.PHONY : game_server/main_game.i
+
+# target to generate assembly for a file
+game_server/main_game.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/main_game.s
+.PHONY : game_server/main_game.s
+
+# target to build an object file
+game_server/shard.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard.o
+.PHONY : game_server/shard.o
+
+# target to preprocess a source file
+game_server/shard.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard.i
+.PHONY : game_server/shard.i
+
+# target to generate assembly for a file
+game_server/shard.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard.s
+.PHONY : game_server/shard.s
 
 # target to build an object file
 login_server/login_server.o:
@@ -155,151 +213,181 @@ login_server/main_login.s:
 
 # target to build an object file
 shared/common.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/common.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/common.o
 .PHONY : shared/common.o
 
 # target to preprocess a source file
 shared/common.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/common.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/common.i
 .PHONY : shared/common.i
 
 # target to generate assembly for a file
 shared/common.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/common.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/common.s
 .PHONY : shared/common.s
 
 # target to build an object file
 shared/config.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/config.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/config.o
 .PHONY : shared/config.o
 
 # target to preprocess a source file
 shared/config.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/config.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/config.i
 .PHONY : shared/config.i
 
 # target to generate assembly for a file
 shared/config.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/config.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/config.s
 .PHONY : shared/config.s
 
 # target to build an object file
 shared/json.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json.o
 .PHONY : shared/json.o
 
 # target to preprocess a source file
 shared/json.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json.i
 .PHONY : shared/json.i
 
 # target to generate assembly for a file
 shared/json.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json.s
 .PHONY : shared/json.s
 
 # target to build an object file
 shared/json_value.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json_value.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json_value.o
 .PHONY : shared/json_value.o
 
 # target to preprocess a source file
 shared/json_value.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json_value.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json_value.i
 .PHONY : shared/json_value.i
 
 # target to generate assembly for a file
 shared/json_value.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json_value.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/json_value.s
 .PHONY : shared/json_value.s
 
 # target to build an object file
 shared/net_core.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net_core.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/net_core.o
 .PHONY : shared/net_core.o
 
 # target to preprocess a source file
 shared/net_core.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net_core.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/net_core.i
 .PHONY : shared/net_core.i
 
 # target to generate assembly for a file
 shared/net_core.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net_core.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/net_core.s
 .PHONY : shared/net_core.s
 
 # target to build an object file
 shared/periodic_thread_caller.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/periodic_thread_caller.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodic_thread_caller.o
 .PHONY : shared/periodic_thread_caller.o
 
 # target to preprocess a source file
 shared/periodic_thread_caller.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/periodic_thread_caller.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodic_thread_caller.i
 .PHONY : shared/periodic_thread_caller.i
 
 # target to generate assembly for a file
 shared/periodic_thread_caller.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/periodic_thread_caller.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/periodic_thread_caller.s
 .PHONY : shared/periodic_thread_caller.s
 
 # target to build an object file
 shared/socket.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/socket.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/socket.o
 .PHONY : shared/socket.o
 
 # target to preprocess a source file
 shared/socket.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/socket.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/socket.i
 .PHONY : shared/socket.i
 
 # target to generate assembly for a file
 shared/socket.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/socket.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/socket.s
 .PHONY : shared/socket.s
 
 # target to build an object file
 shared/thread.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/thread.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread.o
 .PHONY : shared/thread.o
 
 # target to preprocess a source file
 shared/thread.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/thread.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread.i
 .PHONY : shared/thread.i
 
 # target to generate assembly for a file
 shared/thread.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/thread.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread.s
 .PHONY : shared/thread.s
 
 # target to build an object file
 shared/thread_core.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/thread_core.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread_core.o
 .PHONY : shared/thread_core.o
 
 # target to preprocess a source file
 shared/thread_core.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/thread_core.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread_core.i
 .PHONY : shared/thread_core.i
 
 # target to generate assembly for a file
 shared/thread_core.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/thread_core.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/thread_core.s
 .PHONY : shared/thread_core.s
 
 # target to build an object file
 shared/version_control.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/version_control.o
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/version_control.o
 .PHONY : shared/version_control.o
 
 # target to preprocess a source file
 shared/version_control.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/version_control.i
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/version_control.i
 .PHONY : shared/version_control.i
 
 # target to generate assembly for a file
 shared/version_control.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/version_control.s
 	$(MAKE) -f CMakeFiles/anima_login.dir/build.make CMakeFiles/anima_login.dir/shared/version_control.s
 .PHONY : shared/version_control.s
 
@@ -309,9 +397,19 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... anima_game"
 	@echo "... anima_login"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... game_server/game_server.o"
+	@echo "... game_server/game_server.i"
+	@echo "... game_server/game_server.s"
+	@echo "... game_server/main_game.o"
+	@echo "... game_server/main_game.i"
+	@echo "... game_server/main_game.s"
+	@echo "... game_server/shard.o"
+	@echo "... game_server/shard.i"
+	@echo "... game_server/shard.s"
 	@echo "... login_server/login_server.o"
 	@echo "... login_server/login_server.i"
 	@echo "... login_server/login_server.s"

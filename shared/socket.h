@@ -5,6 +5,7 @@
 #include "socket_base.h"
 #include "socket_operations.h"
 #include "thread.h"
+#include "packet_definitions.h"
 
 #define RECIVE_BUFFER_SIZE 65536
 
@@ -34,7 +35,7 @@ public:
     bool read();
 
     /// Called when data is received
-    virtual bool onRead( const string &data ){};
+    virtual bool onRead( const Client *data ){};
     /// Called when a connection is first successfully established
     virtual bool onConnect() {};
     /// Called when the socket is disconnected from the client (either forcibly or by the connection dropping)
@@ -58,10 +59,10 @@ public:
 protected:
     bool _onConnect();
     bool _onDisconnect();
-    bool _onRead(const string &data);
+    bool _onRead(const Client *pkt);
 private:
     char _recv_buf[RECIVE_BUFFER_SIZE];
-    string _recv_str;
+    
     ListenSocket *_owner;
     AtomicBoolean _connected;
     sockaddr_in _client;

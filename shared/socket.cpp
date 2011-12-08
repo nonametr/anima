@@ -39,24 +39,59 @@ bool Socket::accept(sockaddr_in * address)
 }
 bool Socket::send(std::string out_packet)
 {
-    ::send(_sock, out_packet.c_str(), out_packet.length()*sizeof(char), MSG_NOSIGNAL);
+    if (::send(_sock, out_packet.c_str(), out_packet.length()*sizeof(char), MSG_NOSIGNAL) == -1)
+        traceerr("Error on send");
     return true;
 }
 bool Socket::read()
 {
+    int pack_type;
+    int pack_size;
+    
     int bytes_recv = recv(_sock, _recv_buf, RECIVE_BUFFER_SIZE, 0);
-    _recv_str.assign(_recv_buf, 0, bytes_recv);
-    _onRead(_recv_str);
+    ///packet type and packet size must be here
+    if (bytes_recv < PACKET_HEADER_SIZE)
+    {
+        traceerr("Error rcv packet without header");
+	this->send(MSG_PACKET_NO_HEADER);
+	this->disconnect();
+        return false;
+    }
+    memcpy(&pack_type, &_recv_buf[0], PACKET_INT_SIZE);
+    memcpy(&pack_size, &_recv_buf[PACKET_INT_SIZE], PACKET_INT_SIZE);
+
+    if(pack_type >= PACKETS_MAX_ID)
+    {
+	traceerr("Error rcv packet with id graiter than possible. Can't handle it!");
+	this->send(MSG_PACKET_WRONG_ID);
+	this->disconnect();
+        return false;
+    }
+    if(bytes_recv < pack_size)
+    {
+        traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
+	this->send(MSG_PACKET_FRAGMET);
+	this->disconnect();
+        return false;
+    }
+    Client *pkt = new Client;
+    pkt->connection = this;
+    pkt->size = pack_size;
+    pkt->type = pack_type;
+    pkt->data = new char[pack_size];
+    memcpy(pkt->data, &_recv_buf, pack_size);
+    
+    _onRead(pkt);
 }
 void Socket::setOwner(ListenSocket *owner)
 {
     _owner = owner;
 }
-bool Socket::_onRead( const string &data )
+bool Socket::_onRead( const Client *pkt )
 {
     if (_owner)
-        _owner->onClientRead(data);
-    onRead(data);
+        _owner->onClientRead(pkt);
+    onRead(pkt);
 }
 bool Socket::_onConnect()
 {
