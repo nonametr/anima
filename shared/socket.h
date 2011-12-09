@@ -30,7 +30,7 @@ public:
     /// Accept from connection
     bool accept(sockaddr_in * address);
     /// Send bytes
-    bool send(std::string out_packet);
+    bool send(const char* out_packet, uint size);
     /// Read bytes
     bool read();
 

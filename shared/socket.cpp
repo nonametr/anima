@@ -37,9 +37,9 @@ bool Socket::accept(sockaddr_in * address)
     memcpy(&_client, address, sizeof(*address));
     _onConnect();
 }
-bool Socket::send(std::string out_packet)
+bool Socket::send(const char* out_packet, uint size)
 {
-    if (::send(_sock, out_packet.c_str(), out_packet.length()*sizeof(char), MSG_NOSIGNAL) == -1)
+    if (::send(_sock, out_packet, size*sizeof(char), MSG_NOSIGNAL) == -1)
         traceerr("Error on send");
     return true;
 }
@@ -49,11 +49,18 @@ bool Socket::read()
     int pack_size;
     
     int bytes_recv = recv(_sock, _recv_buf, RECIVE_BUFFER_SIZE, 0);
+
+    char send_buf[sizeof(PacketEcho)];
+    PacketEcho answ = {1, sizeof(PacketEcho), "hello", strlen("hello"), 17771};
+    memcpy(&send_buf, &answ, sizeof(PacketEcho));
+    this->send(send_buf, sizeof(PacketEcho));
+    this->disconnect();
+    return true;
     ///packet type and packet size must be here
     if (bytes_recv < PACKET_HEADER_SIZE)
     {
         traceerr("Error rcv packet without header");
-	this->send(MSG_PACKET_NO_HEADER);
+	this->send(MSG_PACKET_NO_HEADER, strlen(MSG_PACKET_NO_HEADER));
 	this->disconnect();
         return false;
     }
@@ -63,14 +70,14 @@ bool Socket::read()
     if(pack_type >= PACKETS_MAX_ID)
     {
 	traceerr("Error rcv packet with id graiter than possible. Can't handle it!");
-	this->send(MSG_PACKET_WRONG_ID);
+	this->send(MSG_PACKET_WRONG_ID, strlen(MSG_PACKET_NO_HEADER));
 	this->disconnect();
         return false;
     }
     if(bytes_recv < pack_size)
     {
         traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
-	this->send(MSG_PACKET_FRAGMET);
+	this->send(MSG_PACKET_FRAGMET, strlen(MSG_PACKET_NO_HEADER));
 	this->disconnect();
         return false;
     }
