@@ -49,13 +49,7 @@ bool Socket::read()
     int pack_size;
     
     int bytes_recv = recv(_sock, _recv_buf, RECIVE_BUFFER_SIZE, 0);
-
-    char send_buf[sizeof(PacketEcho)];
-    PacketEcho answ = {1, sizeof(PacketEcho), "hello", strlen("hello"), 17771};
-    memcpy(&send_buf, &answ, sizeof(PacketEcho));
-    this->send(send_buf, sizeof(PacketEcho));
-    this->disconnect();
-    return true;
+    
     ///packet type and packet size must be here
     if (bytes_recv < PACKET_HEADER_SIZE)
     {
@@ -74,7 +68,7 @@ bool Socket::read()
 	this->disconnect();
         return false;
     }
-    if(bytes_recv < pack_size)
+    if(bytes_recv =! pack_size)
     {
         traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
 	this->send(MSG_PACKET_FRAGMET, strlen(MSG_PACKET_NO_HEADER));
@@ -94,10 +88,10 @@ void Socket::setOwner(ListenSocket *owner)
 {
     _owner = owner;
 }
-bool Socket::_onRead( const Client *pkt )
+bool Socket::_onRead( Client *pkt )
 {
     if (_owner)
-        _owner->onClientRead(pkt);
+        _owner->_onClientRead(pkt);
     onRead(pkt);
 }
 bool Socket::_onConnect()

@@ -44,5 +44,4 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/anima_game.dir/DependInfo.cmake"
-  "CMakeFiles/anima_login.dir/DependInfo.cmake"
   )

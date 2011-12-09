@@ -12,6 +12,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/anima_game.dir/shared/json.o"
   "CMakeFiles/anima_game.dir/shared/json_value.o"
   "CMakeFiles/anima_game.dir/shared/version_control.o"
+  "CMakeFiles/anima_game.dir/shared/database.o"
+  "CMakeFiles/anima_game.dir/shared/mysql_database.o"
   "anima_game.pdb"
   "anima_game"
 )

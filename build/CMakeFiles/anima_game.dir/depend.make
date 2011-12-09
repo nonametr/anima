@@ -65,6 +65,17 @@ CMakeFiles/anima_game.dir/shared/config.o: ../shared/config.cpp
 CMakeFiles/anima_game.dir/shared/config.o: ../shared/config.h
 CMakeFiles/anima_game.dir/shared/config.o: ../shared/singleton.h
 
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/callback.h
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/common.h
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/config.h
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/database.cpp
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/database.h
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/field.h
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/singleton.h
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/thread.h
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/thread_controller.h
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/thread_core.h
+
 CMakeFiles/anima_game.dir/shared/json.o: ../shared/json.cpp
 CMakeFiles/anima_game.dir/shared/json.o: ../shared/json.h
 CMakeFiles/anima_game.dir/shared/json.o: ../shared/json_value.h
@@ -72,6 +83,9 @@ CMakeFiles/anima_game.dir/shared/json.o: ../shared/json_value.h
 CMakeFiles/anima_game.dir/shared/json_value.o: ../shared/json.h
 CMakeFiles/anima_game.dir/shared/json_value.o: ../shared/json_value.cpp
 CMakeFiles/anima_game.dir/shared/json_value.o: ../shared/json_value.h
+
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/mysql_database.cpp
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/mysql_database.h
 
 CMakeFiles/anima_game.dir/shared/net_core.o: ../shared/common.h
 CMakeFiles/anima_game.dir/shared/net_core.o: ../shared/config.h

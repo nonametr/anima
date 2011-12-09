@@ -168,6 +168,30 @@ sys/resource.h
 login_server.h
 /home/nonametr/projects/anima/login_server/login_server.h
 
+/home/nonametr/projects/anima/shared/../shared/json.h
+vector
+-
+string
+-
+map
+-
+json_value.h
+/home/nonametr/projects/anima/shared/../shared/json_value.h
+
+/home/nonametr/projects/anima/shared/../shared/json_value.h
+vector
+-
+string
+-
+json.h
+/home/nonametr/projects/anima/shared/../shared/json.h
+
+/home/nonametr/projects/anima/shared/common.cpp
+common.h
+/home/nonametr/projects/anima/shared/common.h
+config.h
+/home/nonametr/projects/anima/shared/config.h
+
 /home/nonametr/projects/anima/shared/common.h
 stdio.h
 -
@@ -187,6 +211,14 @@ vector
 -
 assert.h
 -
+
+/home/nonametr/projects/anima/shared/config.cpp
+config.h
+/home/nonametr/projects/anima/shared/config.h
+../shared/json.h
+/home/nonametr/projects/anima/shared/../shared/json.h
+../shared/json_value.h
+/home/nonametr/projects/anima/shared/../shared/json_value.h
 
 /home/nonametr/projects/anima/shared/config.h
 string
@@ -219,6 +251,20 @@ thread.h
 /home/nonametr/projects/anima/shared/thread.h
 
 /home/nonametr/projects/anima/shared/packet_definitions.h
+
+/home/nonametr/projects/anima/shared/periodic_thread_caller.cpp
+periodic_thread_caller.h
+/home/nonametr/projects/anima/shared/periodic_thread_caller.h
+
+/home/nonametr/projects/anima/shared/periodic_thread_caller.h
+singleton.h
+/home/nonametr/projects/anima/shared/singleton.h
+thread.h
+/home/nonametr/projects/anima/shared/thread.h
+map
+-
+thread_core.h
+/home/nonametr/projects/anima/shared/thread_core.h
 
 /home/nonametr/projects/anima/shared/singleton.h
 common.h
@@ -266,6 +312,12 @@ netdb.h
 socket_base.h
 /home/nonametr/projects/anima/shared/socket_base.h
 
+/home/nonametr/projects/anima/shared/thread.cpp
+thread.h
+/home/nonametr/projects/anima/shared/thread.h
+common.h
+/home/nonametr/projects/anima/shared/common.h
+
 /home/nonametr/projects/anima/shared/thread.h
 pthread.h
 -
@@ -273,6 +325,12 @@ string
 -
 
 /home/nonametr/projects/anima/shared/thread_controller.h
+
+/home/nonametr/projects/anima/shared/thread_core.cpp
+thread_core.h
+/home/nonametr/projects/anima/shared/thread_core.h
+unistd.h
+-
 
 /home/nonametr/projects/anima/shared/thread_core.h
 set
@@ -285,4 +343,12 @@ config.h
 /home/nonametr/projects/anima/shared/config.h
 thread_controller.h
 /home/nonametr/projects/anima/shared/thread_controller.h
+
+/home/nonametr/projects/anima/shared/version_control.cpp
+version_control.h
+/home/nonametr/projects/anima/shared/version_control.h
+
+/home/nonametr/projects/anima/shared/version_control.h
+config.h
+/home/nonametr/projects/anima/shared/config.h
 

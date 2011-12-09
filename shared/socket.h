@@ -59,7 +59,7 @@ public:
 protected:
     bool _onConnect();
     bool _onDisconnect();
-    bool _onRead(const Client *pkt);
+    bool _onRead(Client *pkt);
 private:
     char _recv_buf[RECIVE_BUFFER_SIZE];
     

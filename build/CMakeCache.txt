@@ -69,16 +69,16 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g
 
 //Flags used by the linker.
-CMAKE_EXE_LINKER_FLAGS:STRING=-lpthread
+CMAKE_EXE_LINKER_FLAGS:STRING=-lpthread -lmysqlclient
 
 //Flags used by the linker during debug builds.
-CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=-lpthread
+CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=-lpthread -lmysqlclient
 
 //Flags used by the linker during release minsize builds.
-CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=-lpthread
+CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=-lpthread -lmysqlclient
 
 //Flags used by the linker during release builds.
-CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=-lpthread
+CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=-lpthread -lmysqlclient
 
 //Flags used by the linker during Release with Debug Info builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=

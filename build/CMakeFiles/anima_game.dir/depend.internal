@@ -65,6 +65,17 @@ CMakeFiles/anima_game.dir/shared/config.o
  /home/nonametr/projects/anima/shared/config.cpp
  /home/nonametr/projects/anima/shared/config.h
  /home/nonametr/projects/anima/shared/singleton.h
+CMakeFiles/anima_game.dir/shared/database.o
+ /home/nonametr/projects/anima/shared/callback.h
+ /home/nonametr/projects/anima/shared/common.h
+ /home/nonametr/projects/anima/shared/config.h
+ /home/nonametr/projects/anima/shared/database.cpp
+ /home/nonametr/projects/anima/shared/database.h
+ /home/nonametr/projects/anima/shared/field.h
+ /home/nonametr/projects/anima/shared/singleton.h
+ /home/nonametr/projects/anima/shared/thread.h
+ /home/nonametr/projects/anima/shared/thread_controller.h
+ /home/nonametr/projects/anima/shared/thread_core.h
 CMakeFiles/anima_game.dir/shared/json.o
  /home/nonametr/projects/anima/shared/json.cpp
  /home/nonametr/projects/anima/shared/json.h
@@ -73,6 +84,9 @@ CMakeFiles/anima_game.dir/shared/json_value.o
  /home/nonametr/projects/anima/shared/json.h
  /home/nonametr/projects/anima/shared/json_value.cpp
  /home/nonametr/projects/anima/shared/json_value.h
+CMakeFiles/anima_game.dir/shared/mysql_database.o
+ /home/nonametr/projects/anima/shared/mysql_database.cpp
+ /home/nonametr/projects/anima/shared/mysql_database.h
 CMakeFiles/anima_game.dir/shared/net_core.o
  /home/nonametr/projects/anima/shared/common.h
  /home/nonametr/projects/anima/shared/config.h

@@ -358,6 +358,54 @@ CMakeFiles/anima_game.dir/shared/version_control.o.provides: CMakeFiles/anima_ga
 CMakeFiles/anima_game.dir/shared/version_control.o.provides.build: CMakeFiles/anima_game.dir/shared/version_control.o
 .PHONY : CMakeFiles/anima_game.dir/shared/version_control.o.provides.build
 
+CMakeFiles/anima_game.dir/shared/database.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/database.o: ../shared/database.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/database.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/database.o -c /home/nonametr/projects/anima/shared/database.cpp
+
+CMakeFiles/anima_game.dir/shared/database.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/database.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/database.cpp > CMakeFiles/anima_game.dir/shared/database.i
+
+CMakeFiles/anima_game.dir/shared/database.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/database.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/database.cpp -o CMakeFiles/anima_game.dir/shared/database.s
+
+CMakeFiles/anima_game.dir/shared/database.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/database.o.requires
+
+CMakeFiles/anima_game.dir/shared/database.o.provides: CMakeFiles/anima_game.dir/shared/database.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/database.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/database.o.provides
+
+CMakeFiles/anima_game.dir/shared/database.o.provides.build: CMakeFiles/anima_game.dir/shared/database.o
+.PHONY : CMakeFiles/anima_game.dir/shared/database.o.provides.build
+
+CMakeFiles/anima_game.dir/shared/mysql_database.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/mysql_database.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mysql_database.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mysql_database.o -c /home/nonametr/projects/anima/shared/mysql_database.cpp
+
+CMakeFiles/anima_game.dir/shared/mysql_database.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mysql_database.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mysql_database.cpp > CMakeFiles/anima_game.dir/shared/mysql_database.i
+
+CMakeFiles/anima_game.dir/shared/mysql_database.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mysql_database.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mysql_database.cpp -o CMakeFiles/anima_game.dir/shared/mysql_database.s
+
+CMakeFiles/anima_game.dir/shared/mysql_database.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/mysql_database.o.requires
+
+CMakeFiles/anima_game.dir/shared/mysql_database.o.provides: CMakeFiles/anima_game.dir/shared/mysql_database.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/mysql_database.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/mysql_database.o.provides
+
+CMakeFiles/anima_game.dir/shared/mysql_database.o.provides.build: CMakeFiles/anima_game.dir/shared/mysql_database.o
+.PHONY : CMakeFiles/anima_game.dir/shared/mysql_database.o.provides.build
+
 # Object files for target anima_game
 anima_game_OBJECTS = \
 "CMakeFiles/anima_game.dir/game_server/main_game.o" \
@@ -372,7 +420,9 @@ anima_game_OBJECTS = \
 "CMakeFiles/anima_game.dir/shared/periodic_thread_caller.o" \
 "CMakeFiles/anima_game.dir/shared/json.o" \
 "CMakeFiles/anima_game.dir/shared/json_value.o" \
-"CMakeFiles/anima_game.dir/shared/version_control.o"
+"CMakeFiles/anima_game.dir/shared/version_control.o" \
+"CMakeFiles/anima_game.dir/shared/database.o" \
+"CMakeFiles/anima_game.dir/shared/mysql_database.o"
 
 # External object files for target anima_game
 anima_game_EXTERNAL_OBJECTS =
@@ -390,6 +440,8 @@ anima_game: CMakeFiles/anima_game.dir/shared/periodic_thread_caller.o
 anima_game: CMakeFiles/anima_game.dir/shared/json.o
 anima_game: CMakeFiles/anima_game.dir/shared/json_value.o
 anima_game: CMakeFiles/anima_game.dir/shared/version_control.o
+anima_game: CMakeFiles/anima_game.dir/shared/database.o
+anima_game: CMakeFiles/anima_game.dir/shared/mysql_database.o
 anima_game: CMakeFiles/anima_game.dir/build.make
 anima_game: CMakeFiles/anima_game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable anima_game"
@@ -412,6 +464,8 @@ CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/periodic_th
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/json.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/json_value.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/version_control.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/database.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/mysql_database.o.requires
 .PHONY : CMakeFiles/anima_game.dir/requires
 
 CMakeFiles/anima_game.dir/clean:

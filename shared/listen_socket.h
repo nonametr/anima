@@ -6,7 +6,7 @@
 
 class ListenSocket : public Socket
 {
-      friend class NetCoreWorkerThread;
+    friend class NetCoreWorkerThread;
 public:
     ListenSocket(const char* listen_address, uint port)
     {
@@ -49,9 +49,13 @@ public:
         if (listen_socket_opened)
             close();
     }
-    virtual void onClientRead(const Client *pkt) {}
+    void _onClientRead(Client *pkt) 
+    {
+        this->onClientRead(pkt);
+    }
+    virtual void onClientRead(Client *pkt) = 0;
 private:
-    ListenSocket(){};
+    ListenSocket() {};
     void onAccept()
     {
         accept_socket = ::accept(_sock, (sockaddr*)&accept_socket_address, (socklen_t*)&len);

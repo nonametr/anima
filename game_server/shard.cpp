@@ -17,7 +17,9 @@ void Shard::onClientRead(Client *pkt)
 void Shard::performPacket( Client *pkt )
 {
     char buf[1024];
-    snprintf(buf, 1024, "echo = %s", pkt->data);
+    PacketEcho tst;
+    memcpy(&tst, pkt->data, pkt->size);
+    snprintf(buf, 1024, "echo = %s", tst.data);
     tracelog(4, "%s", buf);
     pkt->connection->send(buf, strlen(buf));
 }
