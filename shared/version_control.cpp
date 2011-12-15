@@ -8,13 +8,13 @@ string VCBase::getVersion()
 }
 GitVC::GitVC()
 {
-    FILE *fp;
-    int len;
-    char *buf;
-    char *find_buf;
-    char *last_ver_ptr;
-    char version[128];
-    char str_file[] = "../.git/logs/HEAD";
+//     FILE *fp;
+//     int len;
+//     char *buf;
+//     char *find_buf;
+//     char *last_ver_ptr;
+//     char version[128];
+//     char str_file[] = "../.git/logs/HEAD";
 
 //     fp=fopen(str_file,"rb");
 //     if (fp)
@@ -40,9 +40,9 @@ GitVC::GitVC()
 //     {
 //         traceerr("GIT config file = %s, load error", str_file);
 //     }
-    _build_version = intToString(time(NULL));
-    _major_version = MAJOR_VERSION;
-    _full_version = _major_version + _minor_version;
+//     _build_version = intToString(time(NULL));
+//     _major_version = MAJOR_VERSION;
+//     _full_version = _major_version + _minor_version;
 }
 string GitVC::getVersion()
 {

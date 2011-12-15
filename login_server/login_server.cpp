@@ -64,13 +64,13 @@ void LoginServer::run()
     FILE* fPid = fopen("login_server.pid", "w");
     if (fPid)
     {
-        uint pid;
+        uint32 pid;
         pid = getpid();
-        fprintf(fPid, "%u", (uint)pid);
+        fprintf(fPid, "%u", (uint32)pid);
         fclose(fPid);
     }
 
-    uint listen_port = iConfig->getParam(Config::LS_PORT);
+    uint32 listen_port = iConfig->getParam(Config::LS_PORT);
     string listen_ip = iConfig->getParam(Config::LS_IP);
 
     new LSWorld(listen_ip.c_str(), listen_port);

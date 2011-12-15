@@ -5,12 +5,13 @@ initialiseSingleton ( GameServer );
 
 GameServer::GameServer()
 {
-    _running.SetVal(true);
-    _need_restart.SetVal(false);
+    _running.setVal(true);
+    _need_restart.setVal(false);
 }
 /*** Signal Handler ***/
 void _onSignal(int s)
 {
+    vector<int> a{1,2,3,4,5};
     switch (s)
     {
     case SIGHUP:
@@ -65,13 +66,13 @@ void GameServer::run()
     FILE* fPid = fopen("login_server.pid", "w");
     if (fPid)
     {
-        uint pid;
+        uint32 pid;
         pid = getpid();
-        fprintf(fPid, "%u", (uint)pid);
+        fprintf(fPid, "%u", (uint32)pid);
         fclose(fPid);
     }
 
-    uint listen_port = iConfig->getParam(Config::GS_PORT);
+    uint32 listen_port = iConfig->getParam(Config::GS_PORT);
     string listen_ip = iConfig->getParam(Config::GS_IP);
 
     new Shard(listen_ip.c_str(), listen_port);
@@ -80,7 +81,7 @@ void GameServer::run()
     tracelog(OPTIMAL, "Success! Ready for connections");
 
      ///entering infinity loop state
-     while (_running.GetVal())
+     while (_running.getVal())
      {
         ///Some periodic checks possible here
         sleep(10);

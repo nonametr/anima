@@ -9,25 +9,30 @@
 #include "../shared/thread_core.h"
 #include "../shared/periodic_thread_caller.h"
 #include "../shared/version_control.h"
+#include "../shared/common.h"
 
 #include <signal.h>
+
+#include "shard.h"
 
 class GameServer : public Singleton<GameServer>
 {
 public:
     GameServer();
     virtual ~GameServer();
-    
+
     void run();
     void restart()
     {
-	_need_restart.SetVal(true);
-	stop();
+        _need_restart.setVal(true);
+        stop();
     }
-    bool isRestating(){ return _need_restart.GetVal(); }
-    void stop() 
+    bool isRestating() {
+        return _need_restart.getVal();
+    }
+    void stop()
     {
-        _running.SetVal(false);
+        _running.setVal(false);
     };
 private:
     void ininializeObjects();

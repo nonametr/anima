@@ -4,11 +4,11 @@
  * @brief converts decimal number to mask value.
  *
  * @param dec mask bit
- * @return uint value where "dec" bit is set to "1"
+ * @return uint32 value where "dec" bit is set to "1"
  **/
-uint decimalToMask ( uint dec )
+uint32 decimalToMask ( uint32 dec )
 {
-    return ( ( uint ) 1 << ( dec - 1 ) );
+    return ( ( uint32 ) 1 << ( dec - 1 ) );
 }
 float round ( float f )
 {
@@ -67,11 +67,11 @@ string intToString ( int num )
  **/
 int getTimeFromString ( const char * str )
 {
-    uint time_res = 0;
+    uint32 time_res = 0;
     char * p = ( char* ) str;
-    uint multiplier;
+    uint32 multiplier;
     string number_temp;
-    uint multipliee;
+    uint32 multipliee;
     number_temp.reserve ( 10 );
     while ( *p != 0 )
     {
@@ -121,7 +121,7 @@ int getTimeFromString ( const char * str )
  * @param timestamp timestamp value
  * @return :string resulting string
  **/
-string getStringFromTimeStamp ( uint timestamp )
+string getStringFromTimeStamp ( uint32 timestamp )
 {
     int seconds = ( int ) timestamp;
     int mins= 0;
@@ -233,7 +233,7 @@ const char * szMonthNames[12] =
  * @param timestamp timestamp value
  * @return :string resulting string
  **/
-string getDataTimeFromTimeStamp ( uint timestamp )
+string getDataTimeFromTimeStamp ( uint32 timestamp )
 {
     char szTempBuf[100];
     time_t t = ( time_t ) timestamp;
@@ -341,7 +341,7 @@ vector<string> strSplit ( const string &src, const string &sep )
     if ( s.length() ) res.push_back ( s );
     return res;
 }
-time_t convTimePeriod ( uint dLength, char dType )
+time_t convTimePeriod ( uint32 dLength, char dType )
 {
     time_t rawtime = 0;
     if ( dLength == 0 )

@@ -18,9 +18,12 @@ CMakeFiles/anima_game.dir/game_server/game_server.o: ../game_server/../shared/ve
 CMakeFiles/anima_game.dir/game_server/game_server.o: ../game_server/game_server.cpp
 CMakeFiles/anima_game.dir/game_server/game_server.o: ../game_server/game_server.h
 CMakeFiles/anima_game.dir/game_server/game_server.o: ../game_server/shard.h
+CMakeFiles/anima_game.dir/game_server/game_server.o: ../game_server/user.h
+CMakeFiles/anima_game.dir/game_server/game_server.o: ../game_server/user_interface.h
 
 CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/../shared/common.h
 CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/../shared/config.h
+CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/../shared/listen_socket.h
 CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/../shared/net_core.h
 CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/../shared/packet_definitions.h
 CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/../shared/periodic_thread_caller.h
@@ -34,6 +37,9 @@ CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/../shared/thre
 CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/../shared/version_control.h
 CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/game_server.h
 CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/main_game.cpp
+CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/shard.h
+CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/user.h
+CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/user_interface.h
 
 CMakeFiles/anima_game.dir/game_server/shard.o: ../game_server/../shared/common.h
 CMakeFiles/anima_game.dir/game_server/shard.o: ../game_server/../shared/config.h
@@ -52,6 +58,63 @@ CMakeFiles/anima_game.dir/game_server/shard.o: ../game_server/../shared/version_
 CMakeFiles/anima_game.dir/game_server/shard.o: ../game_server/game_server.h
 CMakeFiles/anima_game.dir/game_server/shard.o: ../game_server/shard.cpp
 CMakeFiles/anima_game.dir/game_server/shard.o: ../game_server/shard.h
+CMakeFiles/anima_game.dir/game_server/shard.o: ../game_server/user.h
+CMakeFiles/anima_game.dir/game_server/shard.o: ../game_server/user_interface.h
+
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/common.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/config.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/listen_socket.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/net_core.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/packet_definitions.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/periodic_thread_caller.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/singleton.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/socket.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/socket_base.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/socket_operations.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/thread.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/thread_controller.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/thread_core.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/../shared/version_control.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/game_server.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/shard.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/shard_ext.cpp
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/shard_ext.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/user.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/user_ext.h
+CMakeFiles/anima_game.dir/game_server/shard_ext.o: ../game_server/user_interface.h
+
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/common.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/config.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/listen_socket.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/net_core.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/packet_definitions.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/periodic_thread_caller.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/singleton.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/socket.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/socket_base.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/socket_operations.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/thread.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/thread_controller.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/thread_core.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/../shared/version_control.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/game_server.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/shard.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/shard_ext.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/shard_storage.cpp
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/shard_storage.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/user.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/user_ext.h
+CMakeFiles/anima_game.dir/game_server/shard_storage.o: ../game_server/user_interface.h
+
+CMakeFiles/anima_game.dir/game_server/user.o: ../game_server/../shared/common.h
+CMakeFiles/anima_game.dir/game_server/user.o: ../game_server/user.cpp
+CMakeFiles/anima_game.dir/game_server/user.o: ../game_server/user.h
+CMakeFiles/anima_game.dir/game_server/user.o: ../game_server/user_interface.h
+
+CMakeFiles/anima_game.dir/game_server/user_ext.o: ../game_server/../shared/common.h
+CMakeFiles/anima_game.dir/game_server/user_ext.o: ../game_server/user_ext.cpp
+CMakeFiles/anima_game.dir/game_server/user_ext.o: ../game_server/user_ext.h
+CMakeFiles/anima_game.dir/game_server/user_ext.o: ../game_server/user_interface.h
 
 CMakeFiles/anima_game.dir/shared/common.o: ../shared/common.cpp
 CMakeFiles/anima_game.dir/shared/common.o: ../shared/common.h
@@ -84,8 +147,17 @@ CMakeFiles/anima_game.dir/shared/json_value.o: ../shared/json.h
 CMakeFiles/anima_game.dir/shared/json_value.o: ../shared/json_value.cpp
 CMakeFiles/anima_game.dir/shared/json_value.o: ../shared/json_value.h
 
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/callback.h
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/common.h
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/config.h
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/database.h
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/field.h
 CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/mysql_database.cpp
 CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/mysql_database.h
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/singleton.h
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/thread.h
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/thread_controller.h
+CMakeFiles/anima_game.dir/shared/mysql_database.o: ../shared/thread_core.h
 
 CMakeFiles/anima_game.dir/shared/net_core.o: ../shared/common.h
 CMakeFiles/anima_game.dir/shared/net_core.o: ../shared/config.h

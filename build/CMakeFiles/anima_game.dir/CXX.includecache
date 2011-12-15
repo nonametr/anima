@@ -25,12 +25,24 @@ vector
 -
 assert.h
 -
+unordered_map
+-
+unordered_set
+-
+map
+-
+memory
+-
+boost/shared_ptr.hpp
+-
 
 /home/nonametr/projects/anima/game_server/../shared/config.h
 string
 -
 singleton.h
 /home/nonametr/projects/anima/game_server/../shared/singleton.h
+common.h
+/home/nonametr/projects/anima/game_server/../shared/common.h
 
 /home/nonametr/projects/anima/game_server/../shared/listen_socket.h
 net_core.h
@@ -45,6 +57,8 @@ socket.h
 /home/nonametr/projects/anima/game_server/../shared/socket.h
 thread.h
 /home/nonametr/projects/anima/game_server/../shared/thread.h
+common.h
+/home/nonametr/projects/anima/game_server/../shared/common.h
 
 /home/nonametr/projects/anima/game_server/../shared/packet_definitions.h
 
@@ -57,6 +71,8 @@ map
 -
 thread_core.h
 /home/nonametr/projects/anima/game_server/../shared/thread_core.h
+common.h
+/home/nonametr/projects/anima/game_server/../shared/common.h
 
 /home/nonametr/projects/anima/game_server/../shared/singleton.h
 common.h
@@ -137,10 +153,10 @@ config.h
 /home/nonametr/projects/anima/game_server/../shared/periodic_thread_caller.h
 ../shared/version_control.h
 /home/nonametr/projects/anima/game_server/../shared/version_control.h
+../shared/common.h
+/home/nonametr/projects/anima/game_server/../shared/common.h
 signal.h
 -
-
-/home/nonametr/projects/anima/game_server/shard.cpp
 shard.h
 /home/nonametr/projects/anima/game_server/shard.h
 
@@ -149,6 +165,48 @@ shard.h
 /home/nonametr/projects/anima/game_server/../shared/socket.h
 ../shared/listen_socket.h
 /home/nonametr/projects/anima/game_server/../shared/listen_socket.h
+../shared/common.h
+/home/nonametr/projects/anima/game_server/../shared/common.h
 game_server.h
 /home/nonametr/projects/anima/game_server/game_server.h
+user.h
+/home/nonametr/projects/anima/game_server/user.h
+
+/home/nonametr/projects/anima/game_server/shard_ext.h
+../shared/socket.h
+/home/nonametr/projects/anima/game_server/../shared/socket.h
+../shared/listen_socket.h
+/home/nonametr/projects/anima/game_server/../shared/listen_socket.h
+game_server.h
+/home/nonametr/projects/anima/game_server/game_server.h
+user_ext.h
+/home/nonametr/projects/anima/game_server/user_ext.h
+atomic
+-
+
+/home/nonametr/projects/anima/game_server/shard_storage.cpp
+shard_storage.h
+/home/nonametr/projects/anima/game_server/shard_storage.h
+
+/home/nonametr/projects/anima/game_server/shard_storage.h
+../shared/singleton.h
+/home/nonametr/projects/anima/game_server/../shared/singleton.h
+../shared/common.h
+/home/nonametr/projects/anima/game_server/../shared/common.h
+user.h
+/home/nonametr/projects/anima/game_server/user.h
+shard_ext.h
+/home/nonametr/projects/anima/game_server/shard_ext.h
+
+/home/nonametr/projects/anima/game_server/user.h
+user_interface.h
+/home/nonametr/projects/anima/game_server/user_interface.h
+
+/home/nonametr/projects/anima/game_server/user_ext.h
+user_interface.h
+/home/nonametr/projects/anima/game_server/user_interface.h
+
+/home/nonametr/projects/anima/game_server/user_interface.h
+../shared/common.h
+/home/nonametr/projects/anima/game_server/../shared/common.h
 

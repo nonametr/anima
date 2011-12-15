@@ -7,13 +7,13 @@ Socket::Socket() : _connected(false)
 {
     _owner = NULL;
     _sock = create();
-    _connected.SetVal(false);
+    _connected.setVal(false);
     ASSERT_CONTINUE(_sock > 0);
 }
 Socket::~Socket()
 {
 }
-bool Socket::connect(const char * address, uint port)
+void Socket::connect(const char * address, uint32 port)
 {
     struct hostent * host = gethostbyname(address);
     ASSERT_RETURN(host != 0);
@@ -25,94 +25,88 @@ bool Socket::connect(const char * address, uint port)
     //disableBlocking();//in _onConnect
     ASSERT_RETURN(::connect(_sock, (const sockaddr*)&_client, sizeof(_client)) != -1);
     _onConnect();
-    return true;
 }
-bool Socket::disconnect()
+void Socket::disconnect()
 {
     _onDisconnect();
     closeSocket();
 }
-bool Socket::accept(sockaddr_in * address)
+void Socket::accept(sockaddr_in * address)
 {
     memcpy(&_client, address, sizeof(*address));
     _onConnect();
 }
-bool Socket::send(const char* out_packet, uint size)
+void Socket::send(const char* out_packet, uint32 size)
 {
     if (::send(_sock, out_packet, size*sizeof(char), MSG_NOSIGNAL) == -1)
         traceerr("Error on send");
-    return true;
 }
-bool Socket::read()
+void Socket::read()
 {
     int pack_type;
     int pack_size;
-    
+
     int bytes_recv = recv(_sock, _recv_buf, RECIVE_BUFFER_SIZE, 0);
-    
+
     ///packet type and packet size must be here
     if (bytes_recv < PACKET_HEADER_SIZE)
     {
         traceerr("Error rcv packet without header");
-	this->send(MSG_PACKET_NO_HEADER, strlen(MSG_PACKET_NO_HEADER));
-	this->disconnect();
-        return false;
+        this->send(MSG_PACKET_NO_HEADER, strlen(MSG_PACKET_NO_HEADER));
+        this->disconnect();
     }
     memcpy(&pack_type, &_recv_buf[0], PACKET_INT_SIZE);
     memcpy(&pack_size, &_recv_buf[PACKET_INT_SIZE], PACKET_INT_SIZE);
 
-    if(pack_type >= PACKETS_MAX_ID)
+    if (pack_type >= IG_MAX_ID)
     {
-	traceerr("Error rcv packet with id graiter than possible. Can't handle it!");
-	this->send(MSG_PACKET_WRONG_ID, strlen(MSG_PACKET_NO_HEADER));
-	this->disconnect();
-        return false;
+        traceerr("Error rcv packet with id graiter than possible. Can't handle it!");
+        this->send(MSG_PACKET_WRONG_ID, strlen(MSG_PACKET_NO_HEADER));
+        this->disconnect();
     }
-    if(bytes_recv =! pack_size)
+    if (bytes_recv != pack_size)
     {
         traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
-	this->send(MSG_PACKET_FRAGMET, strlen(MSG_PACKET_NO_HEADER));
-	this->disconnect();
-        return false;
+        this->send(MSG_PACKET_FRAGMET, strlen(MSG_PACKET_NO_HEADER));
+        this->disconnect();
     }
-    Client *pkt = new Client;
-    pkt->connection = this;
+    ClientConnection *pkt = new ClientConnection;
+    pkt->sock = this;
     pkt->size = pack_size;
     pkt->type = pack_type;
     pkt->data = new char[pack_size];
     memcpy(pkt->data, &_recv_buf, pack_size);
-    
+
     _onRead(pkt);
 }
 void Socket::setOwner(ListenSocket *owner)
 {
     _owner = owner;
 }
-bool Socket::_onRead( Client *pkt )
+void Socket::_onRead( ClientConnection *pkt )
 {
     if (_owner)
-        _owner->_onClientRead(pkt);
-    onRead(pkt);
+        _owner->_onClientConnectionRead(pkt);
 }
-bool Socket::_onConnect()
+void Socket::_onConnect()
 {
     /// set common parameters on the socket file descriptor
     disableBlocking();
     disableBuffering();
 
-    _connected.SetVal(true);
+    _connected.setVal(true);
 
     iNetCore->addSocket(this);
-
-    /// Call virtual onconnect
-    onConnect();
+    if (_owner)
+        _owner->_onClientConnectionConnect(this);
 }
-bool Socket::_onDisconnect()
+void Socket::_onDisconnect()
 {
-    _connected.SetVal(false);
+    _connected.setVal(false);
     /// remove from netcore
     iNetCore->removeSocket(this);
-    onDisconnect();
+    if (_owner)
+        _owner->_onClientConnectionDisconnect(this);
 }
 string Socket::getRemoteIP()
 {

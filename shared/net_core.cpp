@@ -18,20 +18,20 @@ NetCore::NetCore()
     memset ( _listen_sock, 0, sizeof ( void* ) * SOCKET_LISTEN_MAX_COUNT );
     _max_sock_desc = 0;
 
-    uint num_thread = iConfig->getParam ( Config::LS_NUM_EPOLLS_WORKER_THREADS );
-    for ( uint i = 0; i < num_thread; ++i )
+    uint32 num_thread = iConfig->getParam ( Config::LS_NUM_EPOLLS_WORKER_THREADS );
+    for ( uint32 i = 0; i < num_thread; ++i )
     {
         iThreadCore->startThread ( new NetCoreWorkerThread );
     }
 }
 NetCore::~NetCore()
 {
-    for ( uint i = 0; i < SOCKET_LISTEN_MAX_COUNT; ++i )
+    for ( uint32 i = 0; i < SOCKET_LISTEN_MAX_COUNT; ++i )
     {
         if ( _listen_sock[i] )
             delete _listen_sock[i];
     }
-    for ( uint i = 0; i < SOCKET_MAX_COUNT; ++i )
+    for ( uint32 i = 0; i < SOCKET_MAX_COUNT; ++i )
     {
         if ( _rw_sock[i] )
             delete _rw_sock[i];
@@ -70,9 +70,9 @@ void NetCore::addListenSocket ( ListenSocket * s )
 void NetCore::addSocket ( Socket * s )
 {
 #ifdef ANTI_DDOS
-    uint saddr;
+    uint32 saddr;
     int i, count;
-    for ( uint i = 0; i < _max_sock_desc; ++i )
+    for ( uint32 i = 0; i < _max_sock_desc; ++i )
     {
         if ( _rw_sock[i]->getRemoteAddress().s_addr == saddr )
             count++;
@@ -84,7 +84,7 @@ void NetCore::addSocket ( Socket * s )
         return;
     }
 #endif
-    if ( s->getSockDescriptor() > _max_sock_desc )
+    if ( s->getSockDescriptor() > (int)_max_sock_desc )
         _max_sock_desc = s->getSockDescriptor();
     if ( _rw_sock[s->getSockDescriptor() ] != NULL )
     {
@@ -116,23 +116,21 @@ void NetCore::removeSocket ( Socket* s )
 }
 void NetCore::closeAll()
 {
-    for ( uint i = 0; i < _max_sock_desc; ++i )
+    for ( uint32 i = 0; i < _max_sock_desc; ++i )
         if ( _rw_sock[i] != NULL )
             _rw_sock[i]->disconnect();
 }
 NetCoreWorkerThread::NetCoreWorkerThread()
 {
-    _running.SetVal ( true );
+    _running.setVal ( true );
     _epoll_inst = iNetCore->getEpollInst();
 }
 void NetCoreWorkerThread::run()
 {
     int sock_count;
     Socket* ptr;
-    char rcv_buf[RECIVE_BUFFER_SIZE];
-    int bytes_recv;
 
-    while ( _running.GetVal() )
+    while ( _running.getVal() )
     {
         sock_count = epoll_wait ( _epoll_inst, _events, THREAD_EVENT_MAX_SIZE, 5000 );
         for ( int i = 0; i < sock_count; ++i )

@@ -29,7 +29,7 @@ public:
         Value = InitialValue;
     }
 
-    inline unsigned int AddVal( unsigned int AddValue )
+    inline unsigned int addVal( unsigned int AddValue )
     {
         unsigned int val = 0;
 
@@ -37,7 +37,7 @@ public:
 
         return val;
     }
-    inline unsigned int SubVal( unsigned int SubValue )
+    inline unsigned int subVal( unsigned int SubValue )
     {
         unsigned int val = 0;
 
@@ -45,7 +45,7 @@ public:
 
         return val;
     }
-    inline unsigned int SetVal( unsigned int NewValue )
+    inline unsigned int setVal( unsigned int NewValue )
     {
         unsigned int ret = 0;
 
@@ -53,7 +53,7 @@ public:
 
         return ret;
     }
-    unsigned int GetVal() {
+    unsigned int getVal() {
         return Value;
     }
 
@@ -81,9 +81,9 @@ public:
         Value = InitialValue;
     }
 
-    unsigned int SetVal( unsigned long NewValue );
-    unsigned int AddVal( unsigned long AddValue );
-    unsigned int GetVal() {
+    unsigned int setVal( unsigned long NewValue );
+    unsigned int addVal( unsigned long AddValue );
+    unsigned int getVal() {
         return Value;
     }
 
@@ -130,12 +130,12 @@ public:
 
     AtomicFloat( float InitialValue ) {
         unsigned long iv = *( reinterpret_cast< unsigned long* >( &InitialValue ) );
-        Value.SetVal( iv );
+        Value.setVal( iv );
     }
 
-    float SetVal( float NewValue );
+    float setVal( float NewValue );
 
-    float GetVal();
+    float getVal();
 
 private:
     // Disabled copy constructor
@@ -156,17 +156,17 @@ public:
 
     AtomicBoolean( bool val ) {
         if ( val )
-            Value.SetVal( 1 );
+            Value.setVal( 1 );
         else
-            Value.SetVal( 0 );
+            Value.setVal( 0 );
     }
 
-    bool SetVal( bool val );
+    bool setVal( bool val );
 
-    bool GetVal() {
+    bool getVal() {
         unsigned int val = 0;
 
-        val = Value.GetVal();
+        val = Value.getVal();
 
         return ( val & 1 );
     }

@@ -10,6 +10,29 @@
 #include <math.h>
 #include <vector>
 #include <assert.h>
+#include <unordered_map>
+#include <unordered_set>
+#include <map>
+
+// #define USE_STL_CPP0X
+
+#ifdef USE_STL_CPP0X
+#define USE_STL_UNORDERED_MAP
+#define USE_STL_SHARED_PTR
+#endif
+
+#ifdef USE_STL_UNORDERED_MAP
+#define associative_container unordered_map
+#else
+#define associative_container map
+#endif
+
+#ifdef USE_STL_SHARED_PTR
+#include <memory>
+#else
+#include <boost/shared_ptr.hpp>
+#define shared_ptr boost::shared_ptr
+#endif
 
 typedef unsigned long long uint64;
 typedef long long int64;
@@ -79,7 +102,8 @@ void logTrace ( const char *str );
 
 #define ASSERT_FAIL( EXPR ) if (!(EXPR)) { traceerr("ASSERT fail! EXPR = \"%s\"",#EXPR); assert(EXPR); ((void(*)())0)(); }
 #define ASSERT_CONTINUE( EXPR ) if (!(EXPR)) { traceerr("ASSERT_CONTINUE fail! EXPR = \"%s\"",#EXPR); }
-#define ASSERT_RETURN( EXPR ) if (!(EXPR)) { traceerr("ASSERT_CONTINUE fail! EXPR = \"%s\"",#EXPR); return false; }
+#define ASSERT_RETURN_FALSE( EXPR ) if (!(EXPR)) { traceerr("ASSERT_CONTINUE fail! EXPR = \"%s\"",#EXPR); return false; }
+#define ASSERT_RETURN( EXPR ) if (!(EXPR)) { traceerr("ASSERT_CONTINUE fail! EXPR = \"%s\"",#EXPR); return; }
 #define ASSERT ASSERT_FAIL
 
 /**
@@ -108,11 +132,11 @@ static inline int absi ( const int value )
  * @brief fast int abs and recast to unsigned
  *
  * @param value value to abs
- * @return uint absed uint value
+ * @return uint32 absed uint32 value
  **/
-static inline uint absui ( const int value )
+static inline uint32 absui ( const int value )
 {
-    return ( uint ) ( value ^ ( value >> 31 ) ) - ( value >> 31 );
+    return ( uint32 ) ( value ^ ( value >> 31 ) ) - ( value >> 31 );
 }
 /**
  * @brief fastest Method of float2int32
@@ -147,9 +171,9 @@ static inline int long2int ( const double value )
 /**
  * @brief return current precise time
  *
- * @return uint
+ * @return uint32
  **/
-inline uint getTickCount()
+inline uint32 getTickCount()
 {
     struct timeval tv;
     gettimeofday ( &tv, NULL );
@@ -162,7 +186,7 @@ inline uint getTickCount()
  * @param count size of array
  * @return void
  **/
-inline void reverseArray ( uint* pointer, size_t count )
+inline void reverseArray ( uint32* pointer, size_t count )
 {
     size_t x;
     int * temp = ( int* ) malloc ( count );
@@ -172,13 +196,10 @@ inline void reverseArray ( uint* pointer, size_t count )
     free ( temp );
 }
 int getTimeFromString ( const char * str );
-string getStringFromTimeStamp ( uint timestamp );
-string getDataTimeFromTimeStamp ( uint timestamp );
-uint decimalToMask ( uint dec );
+string getStringFromTimeStamp ( uint32 timestamp );
+string getDataTimeFromTimeStamp ( uint32 timestamp );
+uint32 decimalToMask ( uint32 dec );
 bool isStringUTF8 ( const char *str );
-float round ( float f );
-double round ( double d );
-long double round ( long double ld );
 volatile long atomicIncrement ( volatile long* value );
 volatile long atomicDecrement ( volatile long* value );
 vector<string> strSplit ( const string &src, const string &sep );
@@ -186,14 +207,14 @@ vector<string> strSplit ( const string &src, const string &sep );
  * @brief NEED DESC
  *
  * @param secs time_t value
- * @return uint
+ * @return uint32
  **/
-inline uint secsToTimeBitFields ( time_t secs )
+inline uint32 secsToTimeBitFields ( time_t secs )
 {
     tm* lt = localtime ( &secs );
     return ( lt->tm_year - 100 ) << 24 | lt->tm_mon  << 20 | ( lt->tm_mday - 1 ) << 14 | lt->tm_wday << 11 | lt->tm_hour << 6 | lt->tm_min;
 }
-time_t convTimePeriod ( uint dLength, char dType );
+time_t convTimePeriod ( uint32 dLength, char dType );
 void intToString ( char * buf, int num );
 string intToString ( int num );
 

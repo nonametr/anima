@@ -6,11 +6,11 @@ initialiseSingleton ( Config );
 
 Config::Config()
 {
-    for (uint i = 0; i < SIZE_STR; ++i)
+    for (uint32 i = 0; i < SIZE_STR; ++i)
     {
         _data_str[i] = string("");
     }
-    for (uint i = 0; i < SIZE_INT; ++i)
+    for (uint32 i = 0; i < SIZE_INT; ++i)
     {
         _data_int[i] = 0;
     }
@@ -51,7 +51,7 @@ bool Config::parseFileData(const char* file_data)
     JSONObject root;
     ASSERT(value->isObject());
     root = value->asObject();
-    for (uint i = 0; i < SIZE_STR; ++i)
+    for (uint32 i = 0; i < SIZE_STR; ++i)
     {
         JSONObject::iterator it = root.find(str_config_params[i]);
         if (it != root.end())
@@ -67,7 +67,7 @@ bool Config::parseFileData(const char* file_data)
             continue;
         }
     }
-    for (uint i = 0; i < SIZE_INT; ++i)
+    for (uint32 i = 0; i < SIZE_INT; ++i)
     {
         JSONObject::iterator it = root.find(int_config_params[i]);
         if (it != root.end())
@@ -84,6 +84,7 @@ bool Config::parseFileData(const char* file_data)
         }
     }
     delete value;
+    return true;
 }
 bool Config::readFile(const string str_file)
 {

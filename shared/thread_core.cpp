@@ -45,9 +45,9 @@ bool ThreadCore::threadExit(ThreadController * t_control)
 }
 ThreadCore::ThreadCore()
 {
-    uint thread_count = _getNumCpus()*4;
+    uint32 thread_count = _getNumCpus()*4;
 
-    for (int i= 0; i < thread_count; ++i)
+    for (uint32 i= 0; i < thread_count; ++i)
         initThread();
 
     tracelog(OPTIMAL, "Startup, launching %u precreated threads.", thread_count);
@@ -141,7 +141,7 @@ void ThreadCore::shutdown()
                     t_control->stop();
                 }
             }
-            tracelog(4, "Stoping threads... %u active and %u free threads remaining...", static_cast<uint>(_active_threads.size()), static_cast<uint>(_free_threads.size()) );
+            tracelog(4, "Stoping threads... %u active and %u free threads remaining...", static_cast<uint32>(_active_threads.size()), static_cast<uint32>(_free_threads.size()) );
             _mutex.unlock();
             sleep(1);
             continue;

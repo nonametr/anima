@@ -5,16 +5,17 @@
 #include "thread.h"
 #include <map>
 #include "thread_core.h"
+#include "common.h"
 
 #define INFINITY_SLEEP_TIME 10000000
 
 struct PeriodicThread
 {
     std::vector<Thread*> threads_to_run;
-    uint call_interval;
+    uint32 call_interval;
 };
 
-typedef std::map<uint, PeriodicThread> PeriodicThreadMap;
+typedef std::map<uint32, PeriodicThread> PeriodicThreadMap;
 
 class PeriodicThreadCaller : public Thread, public Singleton<PeriodicThreadCaller>
 {
@@ -23,9 +24,9 @@ public:
     virtual ~PeriodicThreadCaller();
     void run();
     void onShutdown();
-    void startPeriodicThread(Thread * thread, uint call_interval);
+    void startPeriodicThread(Thread * thread, uint32 call_interval);
 private:
-    PeriodicThreadMap _periodic_threads;///uint - time when need to resume thread
+    PeriodicThreadMap _periodic_threads;///uint32 - time when need to resume thread
 
     AtomicBoolean _runing;
     Mutex _pt_mutex;

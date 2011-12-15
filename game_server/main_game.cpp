@@ -48,7 +48,7 @@ int main ( int argc, char **argv )
     {
         new GameServer;
         iGameServer->run();
-        bool restart = iGameServer->isRestating();
+        restart = iGameServer->isRestating();
         delete iGameServer;
         delete iConfig;
         if (restart)
@@ -57,10 +57,6 @@ int main ( int argc, char **argv )
 	    tracelog(OPTIMAL, "Restarting login server");
             iConfig->loadFromFile(cfg_file);
             running = true;
-        }
-        else
-        {
-            running = false;
         }
     }
 

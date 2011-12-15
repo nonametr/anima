@@ -17,33 +17,33 @@ public:
     MySQLDatabase();
     ~MySQLDatabase();
 
-    bool Initialize(const char* Hostname, unsigned int port,
+    bool initialize(const char* Hostname, unsigned int port,
                     const char* Username, const char* Password, const char* DatabaseName,
                     uint32 ConnectionCount, uint32 BufferSize);
 
-    void Shutdown();
+    void shutdown();
 
-    string EscapeString(string Escape);
-    void EscapeLongString(const char* str, uint32 len, stringstream & out);
-    string EscapeString(const char* esc, DatabaseConnection* con);
+    string escapeString(string Escape);
+    void escapeLongString(const char* str, uint32 len, stringstream & out);
+    string escapeString(const char* esc, DatabaseConnection* con);
 
-    bool SupportsReplaceInto() {
+    bool supportsReplaceInto() {
         return true;
     }
-    bool SupportsTableLocking() {
+    bool supportsTableLocking() {
         return true;
     }
 
 protected:
 
-    bool _HandleError(MySQLDatabaseConnection*, uint32 ErrorNumber);
-    bool _SendQuery(DatabaseConnection* con, const char* Sql, bool Self = false);
+    bool _handleError(MySQLDatabaseConnection*, uint32 ErrorNumber);
+    bool _sendQuery(DatabaseConnection* con, const char* Sql, bool Self = false);
 
-    void _BeginTransaction(DatabaseConnection* conn);
-    void _EndTransaction(DatabaseConnection* conn);
-    bool _Reconnect(MySQLDatabaseConnection* conn);
+    void _beginTransaction(DatabaseConnection* conn);
+    void _endTransaction(DatabaseConnection* conn);
+    bool _reconnect(MySQLDatabaseConnection* conn);
 
-    QueryResult* _StoreQueryResult(DatabaseConnection* con);
+    QueryResult* _storeQueryResult(DatabaseConnection* con);
 };
 
 class MySQLQueryResult : public QueryResult
@@ -52,7 +52,7 @@ public:
     MySQLQueryResult(MYSQL_RES* res, uint32 FieldCount, uint32 RowCount);
     ~MySQLQueryResult();
 
-    bool NextRow();
+    bool nextRow();
 
 protected:
     MYSQL_RES* mResult;

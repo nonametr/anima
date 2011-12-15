@@ -2,19 +2,19 @@
 
 initialiseSingleton ( LSWorld );
 
-LSWorld::LSWorld(const char* listen_address, uint port) : ListenSocket(listen_address, port)
+LSWorld::LSWorld(const char* listen_address, uint32 port) : ListenSocket(listen_address, port)
 {
-    uint num_threads = iConfig->getParam(Config::LS_NUM_LOGIN_PROCCESSING_THREADS);
-    for (uint i = 0; i < num_threads; ++i)
+    uint32 num_threads = iConfig->getParam(Config::LS_NUM_LOGIN_PROCCESSING_THREADS);
+    for (uint32 i = 0; i < num_threads; ++i)
     {
         iThreadCore->startThread(new LSWorldThread);
     }
 }
-void LSWorld::onClientRead(Client *pkt)
+void LSWorld::onClientConnectionRead(ClientConnection *pkt)
 {
     _data.push(pkt);
 }
-void LSWorld::performPacket( Client *pkt )
+void LSWorld::performPacket( ClientConnection *pkt )
 {
 //   pkt->connect->send("hello");
 }
@@ -22,7 +22,7 @@ LSWorld::~LSWorld()
 {
     while (true)
     {
-        Client *pkt = _data.pop();
+        ClientConnection *pkt = _data.pop();
         if (pkt)
             delete pkt;
         else
@@ -32,7 +32,7 @@ LSWorld::~LSWorld()
 }
 void LSWorldThread::run()
 {
-    Client* pkt = NULL;
+    ClientConnection* pkt = NULL;
     while (_running.GetVal())
     {
         if (pkt != NULL)

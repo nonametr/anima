@@ -14,6 +14,10 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/anima_game.dir/shared/version_control.o"
   "CMakeFiles/anima_game.dir/shared/database.o"
   "CMakeFiles/anima_game.dir/shared/mysql_database.o"
+  "CMakeFiles/anima_game.dir/game_server/shard_ext.o"
+  "CMakeFiles/anima_game.dir/game_server/shard_storage.o"
+  "CMakeFiles/anima_game.dir/game_server/user.o"
+  "CMakeFiles/anima_game.dir/game_server/user_ext.o"
   "anima_game.pdb"
   "anima_game"
 )

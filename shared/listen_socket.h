@@ -6,9 +6,10 @@
 
 class ListenSocket : public Socket
 {
+    friend class Socket;
     friend class NetCoreWorkerThread;
 public:
-    ListenSocket(const char* listen_address, uint port)
+    ListenSocket(const char* listen_address, uint32 port)
     {
         reuseAddr();
         disableBlocking();
@@ -49,12 +50,22 @@ public:
         if (listen_socket_opened)
             close();
     }
-    void _onClientRead(Client *pkt) 
-    {
-        this->onClientRead(pkt);
-    }
-    virtual void onClientRead(Client *pkt) = 0;
+    virtual void onClientConnectionRead(ClientConnection *pkt) = 0;
+    virtual void onClientConnectionDisconnect(Socket *sock) = 0;
+    virtual void onClientConnectionConnect(Socket *sock) = 0;
 private:
+    inline void _onClientConnectionRead(ClientConnection *pkt)
+    {
+        this->onClientConnectionRead(pkt);
+    }
+    inline void _onClientConnectionDisconnect(Socket *sock)
+    {
+        this->onClientConnectionDisconnect(sock);
+    }
+    inline void _onClientConnectionConnect(Socket *sock)
+    {
+        this->onClientConnectionConnect(sock);
+    }
     ListenSocket() {};
     void onAccept()
     {
@@ -76,7 +87,7 @@ private:
     struct sockaddr_in listen_socket_address;
     struct sockaddr_in accept_socket_address;
     bool listen_socket_opened;
-    uint len;
+    uint32 len;
 
     Socket* rw_socket;
 };

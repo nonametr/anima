@@ -4,6 +4,7 @@
 #include "singleton.h"
 #include "socket.h"
 #include "thread.h"
+#include "common.h"
 
 #define THREAD_EVENT_MAX_SIZE 128  /// This is the number of socket events each thread can receieve at once.
 /// This default value should be more than enough.
@@ -48,9 +49,9 @@ private:
     void addToEpoll ( SOCKET sock );
     void removeFromEpoll ( SOCKET sock );
 
-    uint _listen_sock_count;
-    uint _sock_count;
-    uint _max_sock_desc;
+    uint32 _listen_sock_count;
+    uint32 _sock_count;
+    uint32 _max_sock_desc;
 
     Socket* _rw_sock[SOCKET_MAX_COUNT];
     ListenSocket* _listen_sock[SOCKET_LISTEN_MAX_COUNT];
@@ -68,7 +69,7 @@ public:
     void run();
     void onShutdown()
     {
-        _running.SetVal ( false );
+        _running.setVal ( false );
     }
 private:
     /// epoll event struct

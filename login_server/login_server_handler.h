@@ -20,12 +20,12 @@ class LSWorld : public ListenSocket, public Singleton<LSWorld>
 {
     friend class LSWorldThread;
 public:
-    LSWorld(const char* listen_address, uint port);
+    LSWorld(const char* listen_address, uint32 port);
     virtual ~LSWorld();
-    void onClientRead(Client *pkt);
+    void onClientConnectionRead(ClientConnection *pkt);
 private:
-    void performPacket( Client *pkt );
-    FQueue<Client*> _data;
+    void performPacket( ClientConnection *pkt );
+    FQueue<ClientConnection*> _data;
 };
 
 #define iLSWorld LSWorld::getSingletonPtr()

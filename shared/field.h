@@ -2,6 +2,7 @@
 #define FIELD_H
 
 #include "common.h"
+
 class Field
 {
 public:

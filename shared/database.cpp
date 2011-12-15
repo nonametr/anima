@@ -9,10 +9,10 @@ SQLCallbackBase::~SQLCallbackBase()
 
 Database::Database() : Thread()
 {
-	_counter = 0;
-	Connections = NULL;
-	mConnectionCount = -1;   // Not connected.
-	_running = true;
+    _counter = 0;
+    Connections = NULL;
+    mConnectionCount = -1;   // Not connected.
+    _running = true;
 }
 
 Database::~Database()
@@ -20,377 +20,377 @@ Database::~Database()
 
 }
 
-void Database::_Initialize()
+void Database::_initialize()
 {
-	// Spawn Database thread
-	iThreadCore->startThread(this);
+    // Spawn Database thread
+    iThreadCore->startThread(this);
 
-	// launch the query thread
-	qt = new QueryThread(this);
-	iThreadCore->startThread(qt);
+    // launch the query thread
+    qt = new QueryThread(this);
+    iThreadCore->startThread(qt);
 }
 
-DatabaseConnection* Database::GetFreeConnection()
+DatabaseConnection* Database::getFreeConnection()
 {
-	uint32 i = 0;
-	for(;;)
-	{
-		DatabaseConnection* con = Connections[((i++) % mConnectionCount) ];
-		if(con->Busy.try_lock())
-			return con;
-	}
+    uint32 i = 0;
+    for (;;)
+    {
+        DatabaseConnection* con = Connections[((i++) % mConnectionCount) ];
+        if (con->Busy.try_lock())
+            return con;
+    }
 
-	// shouldn't be reached
-	return NULL;
+    // shouldn't be reached
+    return NULL;
 }
 
 // Use this when we request data that can return a value (not async)
-QueryResult* Database::Query(const char* QueryString, ...)
+QueryResult* Database::query(const char* QueryString, ...)
 {
-	char sql[16384];
-	va_list vlist;
-	va_start(vlist, QueryString);
-	vsnprintf(sql, 16384, QueryString, vlist);
-	va_end(vlist);
+    char sql[16384];
+    va_list vlist;
+    va_start(vlist, QueryString);
+    vsnprintf(sql, 16384, QueryString, vlist);
+    va_end(vlist);
 
-	// Send the query
-	QueryResult* qResult = NULL;
-	DatabaseConnection* con = GetFreeConnection();
+    // Send the query
+    QueryResult* qResult = NULL;
+    DatabaseConnection* con = getFreeConnection();
 
-	if(_SendQuery(con, sql, false))
-		qResult = _StoreQueryResult(con);
+    if (_sendQuery(con, sql, false))
+        qResult = _storeQueryResult(con);
 
-	con->Busy.unlock();
-	return qResult;
+    con->Busy.unlock();
+    return qResult;
 }
 
-QueryResult* Database::QueryNA(const char* QueryString)
+QueryResult* Database::queryNA(const char* QueryString)
 {
-	// Send the query
-	QueryResult* qResult = NULL;
-	DatabaseConnection* con = GetFreeConnection();
+    // Send the query
+    QueryResult* qResult = NULL;
+    DatabaseConnection* con = getFreeConnection();
 
-	if(_SendQuery(con, QueryString, false))
-		qResult = _StoreQueryResult(con);
+    if (_sendQuery(con, QueryString, false))
+        qResult = _storeQueryResult(con);
 
-	con->Busy.unlock();
-	return qResult;
+    con->Busy.unlock();
+    return qResult;
 }
 
-QueryResult* Database::FQuery(const char* QueryString, DatabaseConnection* con)
+QueryResult* Database::fQuery(const char* QueryString, DatabaseConnection* con)
 {
-	// Send the query
-	QueryResult* qResult = NULL;
-	if(_SendQuery(con, QueryString, false))
-		qResult = _StoreQueryResult(con);
+    // Send the query
+    QueryResult* qResult = NULL;
+    if (_sendQuery(con, QueryString, false))
+        qResult = _storeQueryResult(con);
 
-	return qResult;
+    return qResult;
 }
 
-void Database::FWaitExecute(const char* QueryString, DatabaseConnection* con)
+void Database::fWaitExecute(const char* QueryString, DatabaseConnection* con)
 {
-	// Send the query
-	_SendQuery(con, QueryString, false);
+    // Send the query
+    _sendQuery(con, QueryString, false);
 }
 
-void QueryBuffer::AddQuery(const char* format, ...)
+void QueryBuffer::addQuery(const char* format, ...)
 {
-	char query[16384];
-	va_list vlist;
-	va_start(vlist, format);
-	vsnprintf(query, 16384, format, vlist);
-	va_end(vlist);
+    char query[16384];
+    va_list vlist;
+    va_start(vlist, format);
+    vsnprintf(query, 16384, format, vlist);
+    va_end(vlist);
 
-	size_t len = strlen(query);
-	char* pBuffer = new char[len + 1];
-	memcpy(pBuffer, query, len + 1);
+    size_t len = strlen(query);
+    char* pBuffer = new char[len + 1];
+    memcpy(pBuffer, query, len + 1);
 
-	queries.push_back(pBuffer);
+    queries.push_back(pBuffer);
 }
 
-void QueryBuffer::AddQueryNA(const char* str)
+void QueryBuffer::addQueryNA(const char* str)
 {
-	size_t len = strlen(str);
-	char* pBuffer = new char[len + 1];
-	memcpy(pBuffer, str, len + 1);
+    size_t len = strlen(str);
+    char* pBuffer = new char[len + 1];
+    memcpy(pBuffer, str, len + 1);
 
-	queries.push_back(pBuffer);
+    queries.push_back(pBuffer);
 }
 
-void QueryBuffer::AddQueryStr(const string & str)
+void QueryBuffer::addQueryStr(const string & str)
 {
-	size_t len = str.size();
-	char* pBuffer = new char[len + 1];
-	memcpy(pBuffer, str.c_str(), len + 1);
+    size_t len = str.size();
+    char* pBuffer = new char[len + 1];
+    memcpy(pBuffer, str.c_str(), len + 1);
 
-	queries.push_back(pBuffer);
+    queries.push_back(pBuffer);
 }
 
-void Database::PerformQueryBuffer(QueryBuffer* b, DatabaseConnection* ccon)
+void Database::performQueryBuffer(QueryBuffer* b, DatabaseConnection* ccon)
 {
-	if(!b->queries.size())
-		return;
+    if (!b->queries.size())
+        return;
 
-	DatabaseConnection* con = ccon;
-	if(ccon == NULL)
-		con = GetFreeConnection();
+    DatabaseConnection* con = ccon;
+    if (ccon == NULL)
+        con = getFreeConnection();
 
-	_BeginTransaction(con);
+    _beginTransaction(con);
 
-	for(vector<char*>::iterator itr = b->queries.begin(); itr != b->queries.end(); ++itr)
-	{
-		_SendQuery(con, *itr, false);
-		delete[](*itr);
-	}
+    for (vector<char*>::iterator itr = b->queries.begin(); itr != b->queries.end(); ++itr)
+    {
+        _sendQuery(con, *itr, false);
+        delete[](*itr);
+    }
 
-	_EndTransaction(con);
+    _endTransaction(con);
 
-	if(ccon == NULL)
-		con->Busy.unlock();
+    if (ccon == NULL)
+        con->Busy.unlock();
 }
 // Use this when we do not have a result. ex: INSERT into SQL 1
-bool Database::Execute(const char* QueryString, ...)
+bool Database::execute(const char* QueryString, ...)
 {
-	char query[16384];
+    char query[16384];
 
-	va_list vlist;
-	va_start(vlist, QueryString);
-	vsnprintf(query, 16384, QueryString, vlist);
-	va_end(vlist);
+    va_list vlist;
+    va_start(vlist, QueryString);
+    vsnprintf(query, 16384, QueryString, vlist);
+    va_end(vlist);
 
-	if(!_running)
-		return WaitExecuteNA(query);
+    if (!_running)
+        return waitExecuteNA(query);
 
-	size_t len = strlen(query);
-	char* pBuffer = new char[len + 1];
-	memcpy(pBuffer, query, len + 1);
+    size_t len = strlen(query);
+    char* pBuffer = new char[len + 1];
+    memcpy(pBuffer, query, len + 1);
 
-	queries_queue.push(pBuffer);
-	return true;
+    queries_queue.push(pBuffer);
+    return true;
 }
 
-bool Database::ExecuteNA(const char* QueryString)
+bool Database::executeNA(const char* QueryString)
 {
-	if(!_running)
-		return WaitExecuteNA(QueryString);
+    if (!_running)
+        return waitExecuteNA(QueryString);
 
-	size_t len = strlen(QueryString);
-	char* pBuffer = new char[len + 1];
-	memcpy(pBuffer, QueryString, len + 1);
+    size_t len = strlen(QueryString);
+    char* pBuffer = new char[len + 1];
+    memcpy(pBuffer, QueryString, len + 1);
 
-	queries_queue.push(pBuffer);
-	return true;
+    queries_queue.push(pBuffer);
+    return true;
 }
 
 // Wait till the other queries are done, then execute
-bool Database::WaitExecute(const char* QueryString, ...)
+bool Database::waitExecute(const char* QueryString, ...)
 {
-	char sql[16384];
-	va_list vlist;
-	va_start(vlist, QueryString);
-	vsnprintf(sql, 16384, QueryString, vlist);
-	va_end(vlist);
+    char sql[16384];
+    va_list vlist;
+    va_start(vlist, QueryString);
+    vsnprintf(sql, 16384, QueryString, vlist);
+    va_end(vlist);
 
-	DatabaseConnection* con = GetFreeConnection();
-	bool Result = _SendQuery(con, sql, false);
-	con->Busy.unlock();
-	return Result;
+    DatabaseConnection* con = getFreeConnection();
+    bool Result = _sendQuery(con, sql, false);
+    con->Busy.unlock();
+    return Result;
 }
 
-bool Database::WaitExecuteNA(const char* QueryString)
+bool Database::waitExecuteNA(const char* QueryString)
 {
-	DatabaseConnection* con = GetFreeConnection();
-	bool Result = _SendQuery(con, QueryString, false);
-	con->Busy.unlock();
-	return Result;
+    DatabaseConnection* con = getFreeConnection();
+    bool Result = _sendQuery(con, QueryString, false);
+    con->Busy.unlock();
+    return Result;
 }
 
 void Database::run()
 {
-	_running = true;
-	char* query = queries_queue.pop();
-	DatabaseConnection* con = GetFreeConnection();
-	while(1)
-	{
+    _running = true;
+    char* query = queries_queue.pop();
+    DatabaseConnection* con = getFreeConnection();
+    while (1)
+    {
 
-		if(query != NULL)
-		{
-			if(con == NULL)
-				con = GetFreeConnection();
-			_SendQuery(con, query, false);
-			delete[] query;
-		}
+        if (query != NULL)
+        {
+            if (con == NULL)
+                con = getFreeConnection();
+            _sendQuery(con, query, false);
+            delete[] query;
+        }
 
-		if(!_running)
-			break;
-		query = queries_queue.pop();
+        if (!_running)
+            break;
+        query = queries_queue.pop();
 
-		if(query == NULL)
-		{
-			if(con != NULL)
-				con->Busy.unlock();
-			con = NULL;
-			sleep(5);
-		}
-	}
+        if (query == NULL)
+        {
+            if (con != NULL)
+                con->Busy.unlock();
+            con = NULL;
+            sleep(5);
+        }
+    }
 
-	if(con != NULL)
-		con->Busy.unlock();
+    if (con != NULL)
+        con->Busy.unlock();
 
-	// execute all the remaining queries
-	query = queries_queue.pop();
-	while(query)
-	{
-		con = GetFreeConnection();
-		_SendQuery(con, query, false);
-		con->Busy.unlock();
-		delete[] query;
-		query = queries_queue.pop();
-	}
+    // execute all the remaining queries
+    query = queries_queue.pop();
+    while (query)
+    {
+        con = getFreeConnection();
+        _sendQuery(con, query, false);
+        con->Busy.unlock();
+        delete[] query;
+        query = queries_queue.pop();
+    }
 
-	_running = false;
+    _running = false;
 }
 
-void AsyncQuery::AddQuery(const char* format, ...)
+void AsyncQuery::addQuery(const char* format, ...)
 {
-	AsyncQueryResult res;
-	va_list ap;
-	char buffer[10000];
-	size_t len;
-	va_start(ap, format);
-	vsnprintf(buffer, 10000, format, ap);
-	va_end(ap);
-	len = strlen(buffer);
-	ASSERT(len);
-	res.query = new char[len + 1];
-	res.query[len] = 0;
-	memcpy(res.query, buffer, len);
-	res.result = NULL;
-	queries.push_back(res);
+    AsyncQueryResult res;
+    va_list ap;
+    char buffer[10000];
+    size_t len;
+    va_start(ap, format);
+    vsnprintf(buffer, 10000, format, ap);
+    va_end(ap);
+    len = strlen(buffer);
+    ASSERT(len);
+    res.query = new char[len + 1];
+    res.query[len] = 0;
+    memcpy(res.query, buffer, len);
+    res.result = NULL;
+    queries.push_back(res);
 }
 
-void AsyncQuery::Perform()
+void AsyncQuery::perform()
 {
-	DatabaseConnection* conn = db->GetFreeConnection();
-	for(vector<AsyncQueryResult>::iterator itr = queries.begin(); itr != queries.end(); ++itr)
-		itr->result = db->FQuery(itr->query, conn);
+    DatabaseConnection* conn = db->getFreeConnection();
+    for (vector<AsyncQueryResult>::iterator itr = queries.begin(); itr != queries.end(); ++itr)
+        itr->result = db->fQuery(itr->query, conn);
 
-	conn->Busy.unlock();
-	func->run(queries);
+    conn->Busy.unlock();
+    func->run(queries);
 
-	delete this;
+    delete this;
 }
 
 AsyncQuery::~AsyncQuery()
 {
-	delete func;
-	for(vector<AsyncQueryResult>::iterator itr = queries.begin(); itr != queries.end(); ++itr)
-	{
-		if(itr->result)
-			delete itr->result;
+    delete func;
+    for (vector<AsyncQueryResult>::iterator itr = queries.begin(); itr != queries.end(); ++itr)
+    {
+        if (itr->result)
+            delete itr->result;
 
-		delete[] itr->query;
-	}
+        delete[] itr->query;
+    }
 }
 
-void Database::EndThreads()
+void Database::endThreads()
 {
-	//these 2 loops spin until theres nothing left
-	while(1)
-	{
-		QueryBuffer* buf = query_buffer.pop();
-		if(buf == NULL)
-			break;
-		query_buffer.push(buf);
-	}
-	while(1)
-	{
-		char* buf = queries_queue.pop();
-		if(buf == NULL)
-			break;
-		queries_queue.push(buf);
-	}
+    //these 2 loops spin until theres nothing left
+    while (1)
+    {
+        QueryBuffer* buf = query_buffer.pop();
+        if (buf == NULL)
+            break;
+        query_buffer.push(buf);
+    }
+    while (1)
+    {
+        char* buf = queries_queue.pop();
+        if (buf == NULL)
+            break;
+        queries_queue.push(buf);
+    }
 
-	_running = false;
+    _running = false;
 
-	while(_running || qt)
-	{
-		sleep(1);
-		if(!_running)
-			break;
-	}
+    while (_running || qt)
+    {
+        sleep(1);
+        if (!_running)
+            break;
+    }
 }
 
 void QueryThread::run()
 {
-	db->thread_proc_query();
+    db->thread_proc_query();
 }
 
 QueryThread::~QueryThread()
 {
-	db->qt = NULL;
+    db->qt = NULL;
 }
 
 void Database::thread_proc_query()
 {
-	QueryBuffer* q;
-	DatabaseConnection* con = GetFreeConnection();
+    QueryBuffer* q;
+    DatabaseConnection* con = getFreeConnection();
 
-	q = query_buffer.pop();
-	while(1)
-	{
-		if(q != NULL)
-		{
-			PerformQueryBuffer(q, con);
-			delete q;
-		}
+    q = query_buffer.pop();
+    while (1)
+    {
+        if (q != NULL)
+        {
+            performQueryBuffer(q, con);
+            delete q;
+        }
 
-		if(!_running)
-			break;
+        if (!_running)
+            break;
 
-		q = query_buffer.pop();
-		if(q == NULL)
-			sleep(5);
-	}
+        q = query_buffer.pop();
+        if (q == NULL)
+            sleep(5);
+    }
 
-	con->Busy.unlock();
+    con->Busy.unlock();
 
-	// kill any queries
-	q = query_buffer.pop();
-	while(q != NULL)
-	{
-		PerformQueryBuffer(q, NULL);
-		delete q;
+    // kill any queries
+    q = query_buffer.pop();
+    while (q != NULL)
+    {
+        performQueryBuffer(q, NULL);
+        delete q;
 
-		q = query_buffer.pop();
-	}
+        q = query_buffer.pop();
+    }
 }
 
-void Database::QueueAsyncQuery(AsyncQuery* query)
+void Database::queueAsyncQuery(AsyncQuery* query)
 {
-	query->db = this;
-	/*if(qt == NULL)
-	{
-		query->Perform();
-		return;
-	}
+    query->db = this;
+    /*if(qt == NULL)
+    {
+    	query->Perform();
+    	return;
+    }
 
-	qqueries_queue.push(query);*/
-	query->Perform();
+    qqueries_queue.push(query);*/
+    query->perform();
 }
 
-void Database::AddQueryBuffer(QueryBuffer* b)
+void Database::addQueryBuffer(QueryBuffer* b)
 {
-	if(qt != NULL)
-		query_buffer.push(b);
-	else
-	{
-		PerformQueryBuffer(b, NULL);
-		delete b;
-	}
+    if (qt != NULL)
+        query_buffer.push(b);
+    else
+    {
+        performQueryBuffer(b, NULL);
+        delete b;
+    }
 }
 
-void Database::FreeQueryResult(QueryResult* p)
+void Database::freeQueryResult(QueryResult* p)
 {
-	delete p;
+    delete p;
 }

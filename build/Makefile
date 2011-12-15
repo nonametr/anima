@@ -154,6 +154,66 @@ game_server/shard.s:
 .PHONY : game_server/shard.s
 
 # target to build an object file
+game_server/shard_ext.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard_ext.o
+.PHONY : game_server/shard_ext.o
+
+# target to preprocess a source file
+game_server/shard_ext.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard_ext.i
+.PHONY : game_server/shard_ext.i
+
+# target to generate assembly for a file
+game_server/shard_ext.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard_ext.s
+.PHONY : game_server/shard_ext.s
+
+# target to build an object file
+game_server/shard_storage.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard_storage.o
+.PHONY : game_server/shard_storage.o
+
+# target to preprocess a source file
+game_server/shard_storage.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard_storage.i
+.PHONY : game_server/shard_storage.i
+
+# target to generate assembly for a file
+game_server/shard_storage.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard_storage.s
+.PHONY : game_server/shard_storage.s
+
+# target to build an object file
+game_server/user.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user.o
+.PHONY : game_server/user.o
+
+# target to preprocess a source file
+game_server/user.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user.i
+.PHONY : game_server/user.i
+
+# target to generate assembly for a file
+game_server/user.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user.s
+.PHONY : game_server/user.s
+
+# target to build an object file
+game_server/user_ext.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user_ext.o
+.PHONY : game_server/user_ext.o
+
+# target to preprocess a source file
+game_server/user_ext.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user_ext.i
+.PHONY : game_server/user_ext.i
+
+# target to generate assembly for a file
+game_server/user_ext.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user_ext.s
+.PHONY : game_server/user_ext.s
+
+# target to build an object file
 shared/common.o:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/common.o
 .PHONY : shared/common.o
@@ -351,6 +411,18 @@ help:
 	@echo "... game_server/shard.o"
 	@echo "... game_server/shard.i"
 	@echo "... game_server/shard.s"
+	@echo "... game_server/shard_ext.o"
+	@echo "... game_server/shard_ext.i"
+	@echo "... game_server/shard_ext.s"
+	@echo "... game_server/shard_storage.o"
+	@echo "... game_server/shard_storage.i"
+	@echo "... game_server/shard_storage.s"
+	@echo "... game_server/user.o"
+	@echo "... game_server/user.i"
+	@echo "... game_server/user.s"
+	@echo "... game_server/user_ext.o"
+	@echo "... game_server/user_ext.i"
+	@echo "... game_server/user_ext.s"
 	@echo "... shared/common.o"
 	@echo "... shared/common.i"
 	@echo "... shared/common.s"

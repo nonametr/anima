@@ -4,7 +4,7 @@
 class ThreadController
 {
 public:
-    explicit ThreadController ( uint thread_id )
+    explicit ThreadController ( uint32 thread_id )
     {
         _runing = true;
         _delete_target_on_exit = true;
@@ -73,9 +73,9 @@ public:
     {
         pthread_join ( _handle,NULL );
     }
-    inline uint getId()
+    inline uint32 getId()
     {
-        return ( uint ) _thread_id;
+        return ( uint32 ) _thread_id;
     }
 private:
     pthread_cond_t _cond;

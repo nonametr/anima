@@ -6,14 +6,14 @@ PeriodicThreadCaller::PeriodicThreadCaller()
 {
     pthread_mutex_init( &_sleep_mutex, NULL );
     pthread_cond_init( &_sleep_cond, NULL );
-    _runing.SetVal(true);
+    _runing.setVal(true);
     iThreadCore->startThread(this);
 }
 PeriodicThreadCaller::~PeriodicThreadCaller()
 {
     for ( PeriodicThreadMap::iterator it_pt = _periodic_threads.begin(); it_pt != _periodic_threads.end(); ++it_pt)
     {
-        for (uint i = 0; i < it_pt->second.threads_to_run.size(); ++i)
+        for (uint32 i = 0; i < it_pt->second.threads_to_run.size(); ++i)
         {
             delete it_pt->second.threads_to_run[i];
         }
@@ -25,14 +25,14 @@ void PeriodicThreadCaller::run()
     struct timespec tv;
     struct timeval  tp;
 
-    uint current_time;
-    uint exam_time;
-    uint sleeping_time;
+    uint32 current_time;
+    uint32 exam_time;
+    uint32 sleeping_time;
     PeriodicThreadMap::iterator it_exam;
     while (true)
     {
         _pt_mutex.lock();
-        if (!_runing.GetVal())
+        if (!_runing.getVal())
         {
             _pt_mutex.unlock();
             break;
@@ -44,7 +44,7 @@ void PeriodicThreadCaller::run()
             exam_time = it_exam->first;
             if (exam_time <= current_time)
             {
-                for (uint i = 0; i < it_exam->second.threads_to_run.size(); ++i)
+                for (uint32 i = 0; i < it_exam->second.threads_to_run.size(); ++i)
                 {
                     ThreadCore::getSingletonPtr()->startThreadNoDel(it_exam->second.threads_to_run[i]);
                     exam_time = current_time + it_exam->second.call_interval;///its next exam_time
@@ -69,12 +69,12 @@ void PeriodicThreadCaller::run()
 }
 void PeriodicThreadCaller::onShutdown()
 {
-    _runing.SetVal(false);
+    _runing.setVal(false);
     pthread_cond_signal( &_sleep_cond );///waiking up periodic thread callback checks
 }
-void PeriodicThreadCaller::startPeriodicThread(Thread * thread, uint call_interval)
+void PeriodicThreadCaller::startPeriodicThread(Thread * thread, uint32 call_interval)
 {
-    uint exam_time = getTickCount() + call_interval;
+    uint32 exam_time = getTickCount() + call_interval;
 
     PeriodicThread period_th;
     period_th.call_interval = call_interval;

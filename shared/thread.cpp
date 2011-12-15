@@ -3,14 +3,14 @@
 
 using namespace std;
 
-bool AtomicBoolean::SetVal( bool val )
+bool AtomicBoolean::setVal( bool val )
 {
     unsigned int oldval = 0;
 
     if ( val )
-        oldval = Value.SetVal( 1 );
+        oldval = Value.setVal( 1 );
     else
-        oldval = Value.SetVal( 0 );
+        oldval = Value.setVal( 0 );
 
     return ( oldval & 1 );
 }
@@ -32,7 +32,7 @@ unsigned int AtomicCounter::operator--()
 
     return val;
 }
-unsigned int AtomicULong::AddVal( unsigned long AddValue )
+unsigned int AtomicULong::addVal( unsigned long AddValue )
 {
     unsigned long val = 0;
 
@@ -40,7 +40,7 @@ unsigned int AtomicULong::AddVal( unsigned long AddValue )
 
     return val;
 }
-unsigned int AtomicULong::SetVal( unsigned long NewValue )
+unsigned int AtomicULong::setVal( unsigned long NewValue )
 {
     unsigned long ret = 0;
 
@@ -49,21 +49,21 @@ unsigned int AtomicULong::SetVal( unsigned long NewValue )
     return ret;
 }
 
-float AtomicFloat::SetVal( float NewValue )
+float AtomicFloat::setVal( float NewValue )
 {
     unsigned long iv = 0;
     float ret = 0.0f;
 
     iv = *( reinterpret_cast< unsigned long* >( &NewValue ) );
-    ret = *( reinterpret_cast< float* >( Value.SetVal( iv ) ));
+    ret = *( reinterpret_cast< float* >( Value.setVal( iv ) ));
 
     return ret;
 }
-float AtomicFloat::GetVal()
+float AtomicFloat::getVal()
 {
     float val = 0.0f;
 
-    val = *( reinterpret_cast< float* >( Value.GetVal() ) );
+    val = *( reinterpret_cast< float* >( Value.getVal() ) );
 
     return val;
 }

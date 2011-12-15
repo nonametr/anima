@@ -29,12 +29,6 @@ int main ( int argc, char **argv )
         ++c;
     }
     
-    char serialize[sizeof(PacketEcho)];
-    PacketEcho test = {1, sizeof(PacketEcho), "TEST TEST 1111 AAAAAAAA", strlen("TEST TEST 1111 AAAAAAAA")*sizeof(char), 1};
-    
-    memcpy(&serialize, &test, sizeof(PacketEcho));
-    
-    tracelog(OPTIMAL, "Platform sizeof(char) = %u, sizeof(int) = %u", (uint)sizeof(char), (uint)sizeof(int));
     iConfig->loadFromFile(cfg_file);///it will use default path to configuration file if no -c option passed
 
     rlimit rl;

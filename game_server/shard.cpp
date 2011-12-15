@@ -2,32 +2,34 @@
 
 initialiseSingleton ( Shard );
 
-Shard::Shard(const char* listen_address, uint port) : ListenSocket(listen_address, port)
+Shard::Shard(const char* listen_address, uint32 port) : ListenSocket(listen_address, port)
 {
-    uint num_threads = iConfig->getParam(Config::GS_NUM_PROCCESSING_THREADS);
-    for (uint i = 0; i < num_threads; ++i)
+    uint32 num_threads = iConfig->getParam(Config::GS_NUM_PROCCESSING_THREADS);
+    for (uint32 i = 0; i < num_threads; ++i)
     {
         iThreadCore->startThread(new ShardThread);
     }
+    
+    
 }
-void Shard::onClientRead(Client *pkt)
+void Shard::onClientConnectionRead(ClientConnection *pkt)
 {
     _data.push(pkt);
 }
-void Shard::performPacket( Client *pkt )
+void Shard::performPacket( ClientConnection *pkt )
 {
-    char buf[1024];
-    PacketEcho tst;
-    memcpy(&tst, pkt->data, pkt->size);
-    snprintf(buf, 1024, "echo = %s", tst.data);
-    tracelog(4, "%s", buf);
-    pkt->connection->send(buf, strlen(buf));
+//     char buf[1024];
+//     PacketEcho tst;
+//     memcpy(&tst, pkt->data, pkt->size);
+//     snprintf(buf, 1024, "echo = %s", tst.data);
+//     tracelog(4, "%s", buf);
+//     pkt->connection->send(buf, strlen(buf));
 }
 Shard::~Shard()
 {
     while (true)
     {
-        Client *pkt = _data.pop();
+        ClientConnection *pkt = _data.pop();
         if (pkt)
             delete pkt;
         else
@@ -37,8 +39,8 @@ Shard::~Shard()
 }
 void ShardThread::run()
 {
-    Client* pkt = NULL;
-    while (_running.GetVal())
+    ClientConnection* pkt = NULL;
+    while (_running.getVal())
     {
         if (pkt != NULL)
         {
@@ -53,11 +55,11 @@ void ShardThread::run()
 }
 void ShardThread::onShutdown()
 {
-    _running.SetVal(false);
+    _running.setVal(false);
 }
 ShardThread::ShardThread()
 {
-    _running.SetVal(true);
+    _running.setVal(true);
 }
 ShardThread::~ShardThread()
 {

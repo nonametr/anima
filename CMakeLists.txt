@@ -8,6 +8,10 @@ PROJECT(anima)
 # ./shared/periodic_thread_caller.h ./shared/periodic_thread_caller.cpp ./shared/json.h 
 # ./shared/json.cpp ./shared/json_value.h ./shared/json_value.cpp ./shared/version_control.h ./shared/version_control.cpp)
 
+# target_link_libraries (anima_login z mysqlclient pthread)
+
+
+
 ADD_EXECUTABLE(anima_game ./game_server/main_game.cpp ./game_server/game_server.h 
 ./game_server/game_server.cpp ./game_server/shard.h ./game_server/shard.cpp ./shared/common.h 
 ./shared/common.cpp ./shared/singleton.h ./shared/config.h ./shared/config.cpp ./shared/socket.h 
@@ -15,8 +19,13 @@ ADD_EXECUTABLE(anima_game ./game_server/main_game.cpp ./game_server/game_server.
 ./shared/thread.h ./shared/thread.cpp ./shared/thread_core.h ./shared/thread_core.cpp 
 ./shared/periodic_thread_caller.h ./shared/periodic_thread_caller.cpp ./shared/json.h 
 ./shared/json.cpp ./shared/json_value.h ./shared/json_value.cpp ./shared/version_control.h ./shared/version_control.cpp
-./shared/database.h ./shared/database.cpp ./shared/mysql_database.h ./shared/mysql_database.cpp )
+./shared/database.h ./shared/database.cpp ./shared/mysql_database.h ./shared/mysql_database.cpp ./game_server/shard_ext.h 
+./game_server/shard_ext.cpp ./game_server/shard_storage.h ./game_server/shard_storage.cpp ./game_server/user.h 
+./game_server/user.cpp ./game_server/user_ext.h ./game_server/user_ext.cpp ./shared/smart_pointer.h)
 
-ADD_SUBDIRECTORY(login_server)
-ADD_SUBDIRECTORY(game_server)
+target_link_libraries (anima_game z mysqlclient pthread)
+add_definitions(-Wall -Werror -std=c++0x) 
 
+add_subdirectory(login_server)
+add_subdirectory(game_server)
+add_subdirectory(super_server)

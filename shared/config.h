@@ -3,6 +3,7 @@
 
 #include <string>
 #include "singleton.h"
+#include "common.h"
 
 #define DEFAULT_CONFIG_PATH "/home/nonametr/projects/anima/build/anima.cfg"
 /**
