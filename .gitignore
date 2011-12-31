@@ -1,0 +1,6 @@
+game_server/*.*~
+shared/*.*~
+shared/net/*.*~
+shared/db/*.*~
+shared/mt/*.*~
+login_server/*.*~
