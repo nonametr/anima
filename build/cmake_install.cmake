@@ -36,7 +36,6 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/nonametr/projects/anima/build/login_server/cmake_install.cmake")
   INCLUDE("/home/nonametr/projects/anima/build/game_server/cmake_install.cmake")
-  INCLUDE("/home/nonametr/projects/anima/build/super_server/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

@@ -1,33 +1,30 @@
 #include "game_server.h"
 #include "shard.h"
 
-initialiseSingleton ( GameServer );
-
 GameServer::GameServer()
 {
     _running.setVal(true);
     _need_restart.setVal(false);
 }
 /*** Signal Handler ***/
-void _onSignal(int s)
+void _onGSSignal(int s)
 {
-    vector<int> a{1,2,3,4,5};
     switch (s)
     {
     case SIGHUP:
     {
         tracelog(OPTIMAL, "Received SIGHUP signal, reloading login server.");
-        iGameServer->restart();
+        iServer->restart();
     }
     break;
     case SIGINT:
     case SIGTERM:
     case SIGABRT:
-        iGameServer->stop();
+        iServer->stop();
         break;
     }
 
-    signal(s, _onSignal);
+    signal(s, _onGSSignal);
 }
 void GameServer::ininializeObjects()
 {
@@ -38,10 +35,10 @@ void GameServer::ininializeObjects()
 
     /// hook signals
     tracelog(OPTIMAL, "Hooking signals...");
-    signal(SIGINT, _onSignal);
-    signal(SIGTERM, _onSignal);
-    signal(SIGABRT, _onSignal);
-    signal(SIGHUP, _onSignal);
+    signal(SIGINT, _onGSSignal);
+    signal(SIGTERM, _onGSSignal);
+    signal(SIGABRT, _onGSSignal);
+    signal(SIGHUP, _onGSSignal);
 }
 void GameServer::destroyObjects()
 {
@@ -62,20 +59,7 @@ void GameServer::run()
 {
     ininializeObjects();
 
-    /** write pid file */
-    FILE* fPid = fopen("login_server.pid", "w");
-    if (fPid)
-    {
-        uint32 pid;
-        pid = getpid();
-        fprintf(fPid, "%u", (uint32)pid);
-        fclose(fPid);
-    }
-
-    uint32 listen_port = iConfig->getParam(Config::GS_PORT);
-    string listen_ip = iConfig->getParam(Config::GS_IP);
-
-    new Shard(listen_ip.c_str(), listen_port);
+    new Shard(_listen_ip.c_str(), _port);
     
     tracelog(OPTIMAL, "Server version: %s. Almost started...", iVersionControl->getVersion().c_str());
     tracelog(OPTIMAL, "Success! Ready for connections");

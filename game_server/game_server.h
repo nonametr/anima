@@ -2,20 +2,21 @@
 #define GAMESERVER_H
 
 #include "../shared/singleton.h"
-#include "../shared/thread.h"
+#include "../shared/mt/thread.h"
 #include "../shared/common.h"
 #include "../shared/config.h"
-#include "../shared/net_core.h"
-#include "../shared/thread_core.h"
-#include "../shared/periodic_thread_caller.h"
+#include "../shared/net/net_core.h"
+#include "../shared/mt/thread_core.h"
+#include "../shared/mt/periodic_thread_caller.h"
 #include "../shared/version_control.h"
 #include "../shared/common.h"
 
 #include <signal.h>
 
 #include "shard.h"
+#include "server.h"
 
-class GameServer : public Singleton<GameServer>
+class GameServer : public Server
 {
 public:
     GameServer();
@@ -41,7 +42,5 @@ private:
     AtomicBoolean _running;
     AtomicBoolean _need_restart;
 };
-
-#define iGameServer GameServer::getSingletonPtr()
 
 #endif // GAMESERVER_H

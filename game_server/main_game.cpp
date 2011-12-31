@@ -1,11 +1,24 @@
 #include <iostream>
 #include <signal.h>
 #include <sys/resource.h>
+#include <unistd.h>
+#include "../game_server/server.h"
+#include "../shared/common.h"
 
 #include "game_server.h"
 
+Server* iServer;
+uint32 dbg_lvl;//extern
+string err_log_path;//extern
+string srv_log_path;//extern
+
 int main ( int argc, char **argv )
 {
+    uint32 pid;
+    dbg_lvl = OPTIMAL;
+    srv_log_path = "start_srv.log";
+    err_log_path = "start_err.log";
+    string work_dir(get_current_dir_name());
     new Config;
 
     bool restart;
@@ -42,14 +55,28 @@ int main ( int argc, char **argv )
         if (setrlimit(RLIMIT_CORE, &rl) == -1)
             traceerr("Setrlimit failed. Server may not save core.dump files.\n");
     }
+    /** write pid file */
+    FILE* fPid = fopen("anima.pid", "w");
+    if (fPid)
+    {
+        pid = getpid();
+        fprintf(fPid, "%u", (uint32)pid);
+        fclose(fPid);
+    }
 
     tracelog(OPTIMAL, "Starting login server");
     while (running)
     {
-        new GameServer;
-        iGameServer->run();
-        restart = iGameServer->isRestating();
-        delete iGameServer;
+        iServer = Server::create(work_dir, pid);
+	if(!iServer)
+	{
+	  traceerr("Error server can't start. Try check DB config or сontact your network administrator.");
+	  delete iConfig;
+	  break;
+	}
+        iServer->run();
+        restart = iServer->isRestating();
+        delete iServer;
         delete iConfig;
         if (restart)
         {

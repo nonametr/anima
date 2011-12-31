@@ -4,7 +4,6 @@
 #include "../shared/singleton.h"
 #include "../shared/common.h"
 #include "user.h"
-#include "shard_ext.h"
 
 ///Shard data storage
 class ShardStorage : public Singleton<ShardStorage>

@@ -1,8 +1,8 @@
 #ifndef LOGINSERVERHANDLER_H
 #define LOGINSERVERHANDLER_H
 
-#include "../shared/socket.h"
-#include "../shared/listen_socket.h"
+#include "../shared/net/socket.h"
+#include "../shared/net/listen_socket.h"
 #include "login_server.h"
 
 class LSWorldThread : public Thread
@@ -22,10 +22,14 @@ class LSWorld : public ListenSocket, public Singleton<LSWorld>
 public:
     LSWorld(const char* listen_address, uint32 port);
     virtual ~LSWorld();
-    void onClientConnectionRead(ClientConnection *pkt);
-private:
+private:  
+    void onClientConnectionRead(ClientConnection *pkt){ _data.push(pkt); }
+    void onClientConnectionDisconnect(Socket *sock){ --_conn_count; };
+    void onClientConnectionConnect(Socket *sock){ ++_conn_count; };
+    
     void performPacket( ClientConnection *pkt );
     FQueue<ClientConnection*> _data;
+    AtomicCounter _conn_count;
 };
 
 #define iLSWorld LSWorld::getSingletonPtr()

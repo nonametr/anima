@@ -371,10 +371,10 @@ time_t convTimePeriod ( uint32 dLength, char dType )
     }
     return mktime ( ti );
 }
-void logError ( const char *str )
+void logError ( string err_log_path, const char *str )
 {
     FILE *logfile;
-    if ( ( logfile = fopen ( Config::getSingletonPtr()->getParam(Config::LS_ERROR_LOG_PATH).c_str(), "a+" ) ) )
+    if ( ( logfile = fopen ( err_log_path.c_str(), "a+" ) ) )
     {
         time_t		now;
         struct tm	ptm;
@@ -389,10 +389,10 @@ void logError ( const char *str )
     }
 }
 
-void logTrace ( const char *str )
+void logTrace ( string srv_log_path, const char *str )
 {
     FILE *logfile;
-    if ( ( logfile = fopen ( Config::getSingletonPtr()->getParam(Config::LS_ERROR_LOG_PATH).c_str(), "a+" ) ) )
+    if ( ( logfile = fopen ( srv_log_path.c_str(), "a+" ) ) )
     {
         time_t		now;
         struct tm	ptm;

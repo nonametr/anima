@@ -1,31 +1,29 @@
 #include "login_server.h"
 
-initialiseSingleton ( LoginServer );
-
 LoginServer::LoginServer()
 {
-    _running.SetVal(true);
-    _need_restart.SetVal(false);
+    _running.setVal(true);
+    _need_restart.setVal(false);
 }
 /*** Signal Handler ***/
-void _onSignal(int s)
+void _onLSSignal(int s)
 {
     switch (s)
     {
     case SIGHUP:
     {
         tracelog(OPTIMAL, "Received SIGHUP signal, reloading login server.");
-        iLoginServer->restart();
+        iServer->restart();
     }
     break;
     case SIGINT:
     case SIGTERM:
     case SIGABRT:
-        iLoginServer->stop();
+        iServer->stop();
         break;
     }
 
-    signal(s, _onSignal);
+    signal(s, _onLSSignal);
 }
 void LoginServer::ininializeObjects()
 {
@@ -36,10 +34,10 @@ void LoginServer::ininializeObjects()
 
     /// hook signals
     tracelog(OPTIMAL, "Hooking signals...");
-    signal(SIGINT, _onSignal);
-    signal(SIGTERM, _onSignal);
-    signal(SIGABRT, _onSignal);
-    signal(SIGHUP, _onSignal);
+    signal(SIGINT, _onLSSignal);
+    signal(SIGTERM, _onLSSignal);
+    signal(SIGABRT, _onLSSignal);
+    signal(SIGHUP, _onLSSignal);
 }
 void LoginServer::destroyObjects()
 {
@@ -70,10 +68,7 @@ void LoginServer::run()
         fclose(fPid);
     }
 
-    uint32 listen_port = iConfig->getParam(Config::LS_PORT);
-    string listen_ip = iConfig->getParam(Config::LS_IP);
-
-    new LSWorld(listen_ip.c_str(), listen_port);
+    new LSWorld(_listen_ip.c_str(), _port);
 
     tracelog(OPTIMAL, "Server version: %s. Almost started...", iVersionControl->getVersion().c_str());
     tracelog(OPTIMAL, "Success! Ready for connections");

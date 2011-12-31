@@ -1,4 +1,5 @@
 #include "version_control.h"
+#include "../game_server/server.h"
 
 initialiseSingleton ( VersionControl );
 
@@ -51,8 +52,8 @@ string GitVC::getVersion()
 VersionControl::VersionControl()
 {
     vc = NULL;
-    vcs_name = iConfig->getParam(Config::LS_VERSION_CONTROL_SYSTEM);
-    if (vcs_name.find(VCS_GIT) != string::npos)
+    _vcs_name = iServer->getVersionControlSystemName();
+    if (_vcs_name.find(VCS_GIT) != string::npos)
     {
         vc = new GitVC;
     }
@@ -62,7 +63,7 @@ string VersionControl::getVersion()
     if (!vc)
     {
         traceerr("No VCS specified!");
-        return ((VCBase*)this)->getVersion();
+        return "no version";
     }
     return vc->getVersion();
 }

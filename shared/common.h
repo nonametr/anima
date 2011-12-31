@@ -14,6 +14,7 @@
 #include <unordered_set>
 #include <map>
 
+#define DBG_LVL_TRACE 8
 // #define USE_STL_CPP0X
 
 #ifdef USE_STL_CPP0X
@@ -43,6 +44,12 @@ typedef short int int16;
 typedef unsigned char uint8;
 typedef char int8;
 
+class Server;
+extern Server* iServer;
+extern uint32 dbg_lvl;
+extern std::string err_log_path;
+extern std::string srv_log_path;
+
 using namespace std;
 
 enum DBG_LVL { DISABLED = 0, VERY_LOW = 1, LOW = 2, MEDIUM = 3, OPTIMAL = 4, GOOD = 5, TOP = 6, EXTREAM = 7, CRAZY = 8, INSANE = 9, GODLIKE = 10  };
@@ -63,7 +70,7 @@ void logTrace ( const char *str );
     }
 #define tracelog( LVL, S, ... ) 																	\
     {																	\
-            if( Config::getSingletonPtr()->getParam(Config::LS_DBG_LVL) >= LVL )							\
+            if( dbg_lvl >= LVL )							\
             {																\
                     char __BUF__[32736];										\
                     snprintf( __BUF__, sizeof(__BUF__)-1,						\
@@ -83,11 +90,11 @@ void logTrace ( const char *str );
                                                                                             __LINE__,				\
                                                                                             __FUNCTION__,			\
                                                                                             ## __VA_ARGS__ );		\
-            logError( __BUF__ );											\
+            logError( err_log_path, __BUF__ );											\
     }
 #define tracelog( LVL, S, ... ) 																	\
     {																	\
-            if( Config::getSingletonPtr()->getParam(Config::LS_DBG_LVL) >= LVL )											\
+            if( dbg_lvl >= LVL )											\
             {																\
                     char __BUF__[32736];										\
                     snprintf( __BUF__, sizeof(__BUF__)-1,						\
@@ -95,7 +102,7 @@ void logTrace ( const char *str );
                                                                                                     __LINE__,			\
                                                                                                     __FUNCTION__,		\
                                                                                                     ## __VA_ARGS__ );	\
-                    logTrace( __BUF__ );\
+                    logTrace( srv_log_path, __BUF__ );\
             }																\
     }
 #endif

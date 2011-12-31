@@ -1,19 +1,20 @@
 #ifndef LOGINSERVER_H
 #define LOGINSERVER_H
 #include "../shared/singleton.h"
-#include "../shared/thread.h"
+#include "../shared/mt/thread.h"
 #include "../shared/common.h"
 #include "../shared/config.h"
-#include "../shared/net_core.h"
-#include "../shared/thread_core.h"
-#include "../shared/periodic_thread_caller.h"
+#include "../shared/net/net_core.h"
+#include "../shared/mt/thread_core.h"
+#include "../shared/mt/periodic_thread_caller.h"
 #include "../shared/version_control.h"
 
 #include "login_server_handler.h"
 
 #include <signal.h>
+#include "../game_server/server.h"
 
-class LoginServer : public Singleton<LoginServer>
+class LoginServer : public Server
 {
 public:
     LoginServer();
@@ -22,13 +23,13 @@ public:
     void run();
     void restart()
     {
-	_need_restart.SetVal(true);
+	_need_restart.setVal(true);
 	stop();
     }
-    bool isRestating(){ return _need_restart.GetVal(); }
+    bool isRestating(){ return _need_restart.getVal(); }
     void stop() 
     {
-        _running.SetVal(false);
+        _running.setVal(false);
     };
 private:
     void ininializeObjects();
@@ -37,7 +38,5 @@ private:
     AtomicBoolean _running;
     AtomicBoolean _need_restart;
 };
-
-#define iLoginServer LoginServer::getSingletonPtr()
 
 #endif // LOGINSERVER_H

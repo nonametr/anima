@@ -1,18 +1,15 @@
 #include "login_server_handler.h"
+#include "../game_server/server.h"
 
 initialiseSingleton ( LSWorld );
 
 LSWorld::LSWorld(const char* listen_address, uint32 port) : ListenSocket(listen_address, port)
 {
-    uint32 num_threads = iConfig->getParam(Config::LS_NUM_LOGIN_PROCCESSING_THREADS);
+    uint32 num_threads = iServer->getNumWorkerThreads();
     for (uint32 i = 0; i < num_threads; ++i)
     {
         iThreadCore->startThread(new LSWorldThread);
     }
-}
-void LSWorld::onClientConnectionRead(ClientConnection *pkt)
-{
-    _data.push(pkt);
 }
 void LSWorld::performPacket( ClientConnection *pkt )
 {
@@ -33,7 +30,7 @@ LSWorld::~LSWorld()
 void LSWorldThread::run()
 {
     ClientConnection* pkt = NULL;
-    while (_running.GetVal())
+    while (_running.getVal())
     {
         if (pkt != NULL)
         {
@@ -49,11 +46,11 @@ void LSWorldThread::run()
 }
 void LSWorldThread::onShutdown()
 {
-    _running.SetVal(false);
+    _running.setVal(false);
 }
 LSWorldThread::LSWorldThread()
 {
-    _running.SetVal(true);
+    _running.setVal(true);
 }
 LSWorldThread::~LSWorldThread()
 {

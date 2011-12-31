@@ -14,7 +14,6 @@ Config::Config()
     {
         _data_int[i] = 0;
     }
-    _data_int[LS_DBG_LVL] = GODLIKE;
 }
 Config::~Config()
 {
@@ -36,15 +35,11 @@ bool Config::parseFileData(const char* file_data)
 {
     string str_config_params[SIZE_STR] =
     {
-        "LSD_IP", "LSD_NAME", "LSD_USER", "LSD_PASSWORD", "LSD_CHARSET", "LSD_LOG_PATH",
-        "LS_IP", "LS_DEMON_USER", "LS_DEMON_DIR", "LS_ERROR_LOG_PATH", "LS_SRV_LOG_PATH", "LS_VERSION_CONTROL_SYSTEM",
-	"GS_IP", "GS_DEMON_USER", "GS_DEMON_DIR", "GS_ERROR_LOG_PATH", "GS_SRV_LOG_PATH", "GS_VERSION_CONTROL_SYSTEM" 
+        "SSD_IP", "SSD_NAME", "SSD_USER", "SSD_PASSWORD", "SSD_CHARSET"
     };
     string int_config_params[SIZE_INT]  =
     {
-        "LSD_PORT",
-        "LS_DBG_LVL", "LS_PORT", "LS_NUM_EPOLLS_WORKER_THREADS", "LS_NUM_LOGIN_PROCCESSING_THREADS",
-	"GS_DBG_LVL", "GS_PORT", "GS_NUM_EPOLLS_WORKER_THREADS", "GS_NUM_PROCCESSING_THREADS"
+        "SSD_PORT"
     };
     JSONValue *value = JSON::Parse(file_data);
     JSONValue *second_value;

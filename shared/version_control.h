@@ -25,11 +25,11 @@ class VersionControl : public Singleton<VersionControl>
 {
 public:
     VersionControl();
-    ~VersionControl(){ delete vc; };
+    ~VersionControl(){ if(vc) delete vc; };
     string getVersion();
 private:
     VCBase *vc;
-    string vcs_name;
+    string _vcs_name;
 };
 
 #define iVersionControl VersionControl::getSingletonPtr()
