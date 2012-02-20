@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/nonametr/projects/anima/dict_json_generator.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/dict_json_generator.o"
   "/home/nonametr/projects/anima/game_server/database_manager.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/game_server/database_manager.o"
   "/home/nonametr/projects/anima/game_server/ext_interface.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/game_server/ext_interface.o"
   "/home/nonametr/projects/anima/game_server/game_server.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/game_server/game_server.o"

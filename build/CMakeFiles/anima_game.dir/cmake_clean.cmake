@@ -25,6 +25,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/anima_game.dir/game_server/pvp_instance.o"
   "CMakeFiles/anima_game.dir/game_server/server.o"
   "CMakeFiles/anima_game.dir/game_server/database_manager.o"
+  "CMakeFiles/anima_game.dir/dict_json_generator.o"
   "anima_game.pdb"
   "anima_game"
 )

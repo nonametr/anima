@@ -26,7 +26,7 @@ ADD_EXECUTABLE(anima_game ./game_server/main_game.cpp
 ./game_server/ext_interface.cpp ./game_server/shard_storage.h ./game_server/shard_storage.cpp ./game_server/user.h 
 ./game_server/user.cpp ./game_server/user_ext.h ./game_server/user_ext.cpp ./shared/smart_pointer.h ./game_server/instance.h ./game_server/instance.cpp
 ./game_server/main_instance.h ./game_server/main_instance.cpp ./game_server/pvp_instance.h ./game_server/pvp_instance.cpp 
-./game_server/server.h ./game_server/server.cpp ./game_server/database_manager.h ./game_server/database_manager.cpp)
+./game_server/server.h ./game_server/server.cpp ./game_server/database_manager.h ./game_server/database_manager.cpp ./dict_json_generator.h ./dict_json_generator.cpp)
 
 target_link_libraries (anima_game z mysqlclient pthread)
 add_definitions(-Wall -Werror -std=c++0x) 

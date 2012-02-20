@@ -109,6 +109,21 @@ anima_game/fast:
 .PHONY : anima_game/fast
 
 # target to build an object file
+dict_json_generator.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/dict_json_generator.o
+.PHONY : dict_json_generator.o
+
+# target to preprocess a source file
+dict_json_generator.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/dict_json_generator.i
+.PHONY : dict_json_generator.i
+
+# target to generate assembly for a file
+dict_json_generator.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/dict_json_generator.s
+.PHONY : dict_json_generator.s
+
+# target to build an object file
 game_server/database_manager.o:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/database_manager.o
 .PHONY : game_server/database_manager.o
@@ -507,6 +522,9 @@ help:
 	@echo "... anima_game"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... dict_json_generator.o"
+	@echo "... dict_json_generator.i"
+	@echo "... dict_json_generator.s"
 	@echo "... game_server/database_manager.o"
 	@echo "... game_server/database_manager.i"
 	@echo "... game_server/database_manager.s"

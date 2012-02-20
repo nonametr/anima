@@ -38,8 +38,8 @@ class JSON
     friend class JSONValue;
 
 public:
-    static JSONValue* Parse(const char *data);
-    static std::string Stringify(const JSONValue *value);
+    static JSONValue* parse(const char *data);
+    static std::string stringify(const JSONValue *value);
 protected:
     static bool SkipWhitespace(const char **data);
     static bool ExtractString(const char **data, std::string &str);

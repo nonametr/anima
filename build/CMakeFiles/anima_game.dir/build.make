@@ -644,6 +644,29 @@ CMakeFiles/anima_game.dir/game_server/database_manager.o.provides: CMakeFiles/an
 
 CMakeFiles/anima_game.dir/game_server/database_manager.o.provides.build: CMakeFiles/anima_game.dir/game_server/database_manager.o
 
+CMakeFiles/anima_game.dir/dict_json_generator.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/dict_json_generator.o: ../dict_json_generator.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/dict_json_generator.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/dict_json_generator.o -c /home/nonametr/projects/anima/dict_json_generator.cpp
+
+CMakeFiles/anima_game.dir/dict_json_generator.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/dict_json_generator.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/dict_json_generator.cpp > CMakeFiles/anima_game.dir/dict_json_generator.i
+
+CMakeFiles/anima_game.dir/dict_json_generator.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/dict_json_generator.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/dict_json_generator.cpp -o CMakeFiles/anima_game.dir/dict_json_generator.s
+
+CMakeFiles/anima_game.dir/dict_json_generator.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/dict_json_generator.o.requires
+
+CMakeFiles/anima_game.dir/dict_json_generator.o.provides: CMakeFiles/anima_game.dir/dict_json_generator.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/dict_json_generator.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/dict_json_generator.o.provides
+
+CMakeFiles/anima_game.dir/dict_json_generator.o.provides.build: CMakeFiles/anima_game.dir/dict_json_generator.o
+
 # Object files for target anima_game
 anima_game_OBJECTS = \
 "CMakeFiles/anima_game.dir/game_server/main_game.o" \
@@ -671,7 +694,8 @@ anima_game_OBJECTS = \
 "CMakeFiles/anima_game.dir/game_server/main_instance.o" \
 "CMakeFiles/anima_game.dir/game_server/pvp_instance.o" \
 "CMakeFiles/anima_game.dir/game_server/server.o" \
-"CMakeFiles/anima_game.dir/game_server/database_manager.o"
+"CMakeFiles/anima_game.dir/game_server/database_manager.o" \
+"CMakeFiles/anima_game.dir/dict_json_generator.o"
 
 # External object files for target anima_game
 anima_game_EXTERNAL_OBJECTS =
@@ -702,6 +726,7 @@ anima_game: CMakeFiles/anima_game.dir/game_server/main_instance.o
 anima_game: CMakeFiles/anima_game.dir/game_server/pvp_instance.o
 anima_game: CMakeFiles/anima_game.dir/game_server/server.o
 anima_game: CMakeFiles/anima_game.dir/game_server/database_manager.o
+anima_game: CMakeFiles/anima_game.dir/dict_json_generator.o
 anima_game: CMakeFiles/anima_game.dir/build.make
 anima_game: CMakeFiles/anima_game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable anima_game"
@@ -737,6 +762,7 @@ CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/main_i
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/pvp_instance.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/server.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/database_manager.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/dict_json_generator.o.requires
 .PHONY : CMakeFiles/anima_game.dir/requires
 
 CMakeFiles/anima_game.dir/clean:

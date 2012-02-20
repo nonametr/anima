@@ -27,7 +27,7 @@ JSON::JSON()
 *
 * @return JSONValue* Returns a JSON Value representing the root, or NULL on error
 */
-JSONValue *JSON::Parse(const char *data)
+JSONValue *JSON::parse(const char *data)
 {
 /// Skip any preceding whitespace, end of data = no JSON = fail
     if (!SkipWhitespace(&data))
@@ -58,7 +58,7 @@ JSONValue *JSON::Parse(const char *data)
 *
 * @return std::string Returns a JSON encoded string representation of the given value
 */
-std::string JSON::Stringify(const JSONValue *value)
+std::string JSON::stringify(const JSONValue *value)
 {
     if (value != NULL)
         return value->stringify();

@@ -6,11 +6,16 @@
 #include "../shared/common.h"
 
 #include "game_server.h"
+#include "../dict_json_generator.h"
 
 Server* iServer;
+
 uint32 dbg_lvl;//extern
 string err_log_path;//extern
 string srv_log_path;//extern
+
+#include <cstdlib>
+#include <iostream>
 
 int main ( int argc, char **argv )
 {
@@ -63,7 +68,11 @@ int main ( int argc, char **argv )
         fprintf(fPid, "%u", (uint32)pid);
         fclose(fPid);
     }
-
+    
+    new ThreadCore;
+    new DatabaseManager;
+    new DictJSONGenerator;
+    
     tracelog(OPTIMAL, "Starting login server");
     while (running)
     {

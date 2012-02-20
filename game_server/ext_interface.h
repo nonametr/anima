@@ -55,12 +55,12 @@ public:
     ExtInterface ( const char* listen_address, uint32 port );
     virtual ~ExtInterface() {};
 
-    template<class T>
-    void getUserCallBack ( uint32 uid, void ( T::*handler ) ( shared_ptr<UserInterface> user ) )
-    {
-        //borring user data fetch code
-        handler ( shared_ptr<UserExt>() );
-    };
+//     template<class T>
+//     void getUserCallBack ( uint32 uid, void ( T::*handler ) ( shared_ptr<UserInterface> user ) )
+//     {
+//         //borring user data fetch code
+//         handler ( shared_ptr<UserExt>() );
+//     };
 private:
     void onClientConnectionDisconnect ( Socket *sock );
     void onClientConnectionConnect ( Socket *sock );

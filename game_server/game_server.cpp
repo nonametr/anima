@@ -28,7 +28,6 @@ void _onGSSignal(int s)
 }
 void GameServer::ininializeObjects()
 {
-    new ThreadCore;
     new NetCore;
     new VersionControl;
     new PeriodicThreadCaller;///no need to delete at exit - it's auto runing thread and as all threads its managed by ThreadCore

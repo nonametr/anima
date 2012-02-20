@@ -41,7 +41,7 @@ bool Config::parseFileData(const char* file_data)
     {
         "SSD_PORT"
     };
-    JSONValue *value = JSON::Parse(file_data);
+    JSONValue *value = JSON::parse(file_data);
     JSONValue *second_value;
     JSONObject root;
     ASSERT(value->isObject());
@@ -74,7 +74,7 @@ bool Config::parseFileData(const char* file_data)
         }
         else
         {
-            traceerr("Error loading configuration from file. Expected field \"%s\" not found.", str_config_params[i].c_str());
+            traceerr("Error loading configuration from file. Expected field \"%s\" not found.", int_config_params[i].c_str());
             continue;
         }
     }
