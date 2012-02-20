@@ -1,8 +1,8 @@
 #include "shard.h"
 
-initialiseSingleton ( Shard );
+initialiseSingleton ( ShardSoket );
 
-Shard::Shard(const char* listen_address, uint32 port) : ListenSocket(listen_address, port)
+ShardSoket::ShardSoket(const char* listen_address, uint32 port) : ListenSocket(listen_address, port)
 {
     for (uint32 i = 0; i < iServer->getNumWorkerThreads(); ++i)
     {
@@ -13,9 +13,9 @@ Shard::Shard(const char* listen_address, uint32 port) : ListenSocket(listen_addr
         _shardPacketHandlers[i].status = 0;
         _shardPacketHandlers[i].handler = NULL;
     }
-//     _shardPacketHandlers[IG_JOIN].handler = &Shard::cJoin;
+     _shardPacketHandlers[IG_JOIN].handler = &ShardSoket::cJoin;
 }
-void Shard::cJoin(ClientConnection* c_pkt)
+void ShardSoket::cJoin(ClientConnection* c_pkt)
 {
     JoinData join;
     if (sizeof(join) != c_pkt->data_size)
@@ -24,7 +24,6 @@ void Shard::cJoin(ClientConnection* c_pkt)
 	return;
     }
     memcpy(&join, c_pkt->data, c_pkt->data_size);
-    
     
     //TEST DATA 
     int money = 10000;
@@ -66,11 +65,11 @@ void Shard::cJoin(ClientConnection* c_pkt)
     memcpy(&buf_3[3*sizeof(int)], og_name.data, name.length()*sizeof(char));
     c_pkt->sock->send(buf_3, og_name.size);
 }
-void Shard::performPacket( ClientConnection *pkt )
+void ShardSoket::performPacket( ClientConnection *pkt )
 {
-//     (this->*_shardPacketHandlers[pkt->type].handler)(pkt);
+     (this->*_shardPacketHandlers[pkt->type].handler)(pkt);
 }
-Shard::~Shard()
+ShardSoket::~ShardSoket()
 {
     while (true)
     {

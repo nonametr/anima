@@ -58,7 +58,7 @@ void GameServer::run()
 {
     ininializeObjects();
 
-    new Shard(_listen_ip.c_str(), _port);
+    new ShardSoket(_listen_ip.c_str(), _port);
     
     tracelog(OPTIMAL, "Server version: %s. Almost started...", iVersionControl->getVersion().c_str());
     tracelog(OPTIMAL, "Success! Ready for connections");

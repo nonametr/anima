@@ -17,15 +17,20 @@ string srv_log_path;//extern
 #include <cstdlib>
 #include <iostream>
 
-int main ( int argc, char **argv )
+
+void initGlobals()
 {
-    uint32 pid;
     dbg_lvl = OPTIMAL;
     srv_log_path = "start_srv.log";
     err_log_path = "start_err.log";
+}
+int main ( int argc, char **argv )
+{
+    initGlobals();
+    
+    uint32 pid;
     string work_dir(get_current_dir_name());
     new Config;
-
     bool restart;
     bool running = true;
     const char *cfg_file = NULL;

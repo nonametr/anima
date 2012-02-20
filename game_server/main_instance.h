@@ -6,7 +6,7 @@
 class MainInstance : public Instance
 {
 public:
-    void cJoin(ClientConnection* recvPacket);
+    void cJoin(ClientConnection* recvPacket){};
 private:
 };
 

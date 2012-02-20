@@ -23,24 +23,9 @@ public:
     virtual ~GameServer();
 
     void run();
-    void restart()
-    {
-        _need_restart.setVal(true);
-        stop();
-    }
-    bool isRestating() {
-        return _need_restart.getVal();
-    }
-    void stop()
-    {
-        _running.setVal(false);
-    };
 private:
     void ininializeObjects();
     void destroyObjects();
-
-    AtomicBoolean _running;
-    AtomicBoolean _need_restart;
 };
 
 #endif // GAMESERVER_H

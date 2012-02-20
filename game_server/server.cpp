@@ -14,7 +14,16 @@ Server::~Server()
 {
     unlockDb(_pid);
 }
-
+void Server::restart()
+{
+    _need_restart.setVal(true);
+    stop();
+}
+bool Server::isRestating(){ return _need_restart.getVal(); }
+void Server::stop() 
+{
+    _running.setVal(false);
+}
 Server* Server::create(string &work_dir, uint32 pid)
 {
     Server *srv;

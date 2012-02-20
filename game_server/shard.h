@@ -8,12 +8,12 @@
 #include "user.h"
 #include "instance.h"
 
-class Shard;
+class ShardSoket;
 
 struct PaketHandler
 {
     uint16 status;
-    void (Instance::*handler)(ClientConnection* recvPacket);
+    void (ShardSoket::*handler)(ClientConnection* recvPacket);
 };
 
 class ShardThread : public Thread
@@ -27,13 +27,13 @@ private:
     AtomicBoolean _running;
 };
 
-///Local shard
-class Shard : public ListenSocket, public Singleton<Shard>
+///Local shard soket
+class ShardSoket : public ListenSocket, public Singleton<ShardSoket>
 {
     friend class ShardThread;
 public:
-    Shard(const char* listen_address, uint32 port);
-    virtual ~Shard();
+    ShardSoket(const char* listen_address, uint32 port);
+    virtual ~ShardSoket();
 private:
 
     void onClientConnectionRead(ClientConnection *pkt){ _data.push(pkt); }
@@ -53,6 +53,6 @@ private:
     AtomicCounter _conn_count;
 };
 
-#define iShard Shard::getSingletonPtr()
+#define iShard ShardSoket::getSingletonPtr()
 
 #endif // SHARD_H
