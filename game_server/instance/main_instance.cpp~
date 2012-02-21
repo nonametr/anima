@@ -1,5 +1,7 @@
 #include "main_instance.h"
 
+initialiseSingleton ( MainInstance );
+
 MainInstance::MainInstance(GameSocket *owner) : owner_shard(owner)
 {
     for (uint32 i = 0; i < IG_MAIN_JOIN; ++i)
@@ -7,6 +9,16 @@ MainInstance::MainInstance(GameSocket *owner) : owner_shard(owner)
         _shardPacketHandlers[i].setHandler(PaketHandler<MainInstance>::NO_HANDLER_SET, NULL);
     }
     _shardPacketHandlers[IG_MAIN_JOIN].setHandler(PaketHandler<MainInstance>::HANDLER_SET, &MainInstance::cJoin);
+}
+
+void MainInstance::handlePaket(ClientConnection* pkt)
+{
+    if (_shardPacketHandlers[pkt->type].status == PaketHandler<MainInstance>::NO_HANDLER_SET)
+    {
+        pkt->sock->send(MSG_PACKET_WRONG_ID_IN_THIS_INSTANCE, strlen(MSG_PACKET_WRONG_ID_IN_THIS_INSTANCE));
+        return;
+    }
+    (this->*_shardPacketHandlers[pkt->type].handler)(pkt);
 }
 
 void MainInstance::cJoin(ClientConnection* c_pkt)
@@ -58,14 +70,4 @@ void MainInstance::cJoin(ClientConnection* c_pkt)
     memcpy(&buf_3, &og_name, 3*sizeof(int));
     memcpy(&buf_3[3*sizeof(int)], og_name.data, name.length()*sizeof(char));
     c_pkt->sock->send(buf_3, og_name.size);
-}
-
-void MainInstance::handlePaket(ClientConnection* pkt)
-{
-    if (_shardPacketHandlers[pkt->type].status == PaketHandler<MainInstance>::NO_HANDLER_SET)
-    {
-        pkt->sock->send(MSG_PACKET_WRONG_ID_IN_THIS_INSTANCE, strlen(MSG_PACKET_WRONG_ID_IN_THIS_INSTANCE));
-        return;
-    }
-    (this->*_shardPacketHandlers[pkt->type].handler)(pkt);
 }

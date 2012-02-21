@@ -1,12 +1,12 @@
 #ifndef MAIN_INST_H
 #define MAIN_INST_H
 
-#include "../instance.h"
+#include "instance.h"
 #include "../game_socket.h"
 
 class GameSocket;
 
-class MainInstance : public Instance
+class MainInstance : public Instance, public Singleton<MainInstance>
 {
 public:
     MainInstance(GameSocket *owner);
@@ -17,5 +17,7 @@ private:
     GameSocket *owner_shard;
     PaketHandler<MainInstance> _shardPacketHandlers[IG_MAX_ID];
 };
+
+#define iMainInstance MainInstance::getSingletonPtr()
 
 #endif // MAIN_INST_H

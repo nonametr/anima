@@ -16,6 +16,7 @@ struct ExtConnection
     Socket sock;
     Mutex mutex;
 };
+
 class ExtServer
 {
 public:

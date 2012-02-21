@@ -16,22 +16,26 @@ string srv_log_path;///extern global
 #include <cstdlib>
 #include <iostream>
 
+void destroyObjects()
+{
+    if (iServer)
+        delete iServer;
+    if (iThreadCore)
+        delete iThreadCore;
+    if (iDBManager)
+        delete iDBManager;
+    if (iConfig)
+        delete iConfig;
+}
 void initGlobals()
 {
     dbg_lvl = OPTIMAL;
     srv_log_path = "start_srv.log";
     err_log_path = "start_err.log";
 }
-int main ( int argc, char **argv )
+char* getArgConfigPath(int argc, char **argv)
 {
-    initGlobals();
-    
-    uint32 pid;
-    string work_dir(get_current_dir_name());
-    new Config;
-    bool restart;
-    bool running = true;
-    const char *cfg_file = NULL;
+    char *cfg_path = NULL;
     int c = 1;
     while (c < argc)
     {
@@ -39,15 +43,33 @@ int main ( int argc, char **argv )
         {
             if (++c >= argc)
             {
-                return -1;
+                break;
             }
             else
             {
-                cfg_file = argv[c];
+                cfg_path = argv[c];
                 break;
             }
         }
         ++c;
+    }
+    return cfg_path;
+}
+int main ( int argc, char **argv )
+{
+    initGlobals();
+
+    uint32 pid;
+    string work_dir(get_current_dir_name());
+    new Config;
+    bool restart = false;
+    bool running = true;
+    const char *cfg_file = getArgConfigPath(argc, argv);
+    if (!cfg_file)
+    {
+        traceerr("Error! No config file specified!");
+        destroyObjects();
+        return EXIT_FAILURE;
     }
 
     iConfig->loadFromFile(cfg_file);///it will use default path to configuration file if no -c option passed
@@ -71,31 +93,33 @@ int main ( int argc, char **argv )
         fprintf(fPid, "%u", (uint32)pid);
         fclose(fPid);
     }
-    
+
     new ThreadCore;
     new DatabaseManager;
+    
     DictJSONGenerator *djg = new DictJSONGenerator;
     delete djg;
-    
+
     tracelog(OPTIMAL, "Starting server");
     while (running)
     {
         iServer = Server::create(work_dir, pid);
-	if(!iServer)
-	{
-	  traceerr("Error server can't start. Try check DB config or сontact your network administrator.");
-	  delete iConfig;
-	  break;
-	}
+        if (!iServer)
+        {
+            traceerr("Error server can't start. Try check DB config or сontact your network administrator.");
+            destroyObjects();
+            break;
+        }
         iServer->run();
         restart = iServer->isRestating();
-        delete iServer;
-        delete iConfig;
+	destroyObjects();
         if (restart)
         {
             new Config;
-	    tracelog(OPTIMAL, "Restarting server");
+            tracelog(OPTIMAL, "Restarting server");
             iConfig->loadFromFile(cfg_file);
+            new ThreadCore;
+            new DatabaseManager;
             running = true;
         }
     }

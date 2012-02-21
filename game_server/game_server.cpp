@@ -42,7 +42,6 @@ void GameServer::ininializeObjects()
 void GameServer::destroyObjects()
 {
     tracelog(OPTIMAL, "Shutting down...");
-    delete iThreadCore;
     delete iNetCore;
     delete iVersionControl;
 
@@ -58,7 +57,7 @@ void GameServer::run()
 {
     ininializeObjects();
 
-    ///No need to terminate it manualy, it'll be terminated automaticly by iNetCore
+    ///No need to terminate it manualy, it'll be terminated automaticly by NetCore
     new GameSocket(_listen_ip.c_str(), _port);
     
     tracelog(OPTIMAL, "Server version: %s. Almost started...", iVersionControl->getVersion().c_str());

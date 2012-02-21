@@ -22,11 +22,19 @@ class LSWorld : public ListenSocket, public Singleton<LSWorld>
 public:
     LSWorld(const char* listen_address, uint32 port);
     virtual ~LSWorld();
-private:  
-    void onClientConnectionRead(ClientConnection *pkt){ _data.push(pkt); }
-    void onClientConnectionDisconnect(Socket *sock){ --_conn_count; };
-    void onClientConnectionConnect(Socket *sock){ ++_conn_count; };
-    
+private:
+    void onClientConnectionRead(char *pkt_data, int bytes_recv, Socket *sock) 
+    {
+	ClientConnection *pkt = paketize(pkt_data, bytes_recv, sock);
+        _data.push(pkt);
+    }
+    void onClientConnectionDisconnect(Socket *sock) {
+        --_conn_count;
+    };
+    void onClientConnectionConnect(Socket *sock) {
+        ++_conn_count;
+    };
+
     void performPacket( ClientConnection *pkt );
     FQueue<ClientConnection*> _data;
     AtomicCounter _conn_count;

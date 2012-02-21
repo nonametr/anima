@@ -50,13 +50,48 @@ public:
         if (listen_socket_opened)
             close();
     }
-    virtual void onClientConnectionRead(ClientConnection *pkt) = 0;
+    ClientConnection* paketize(char *pkt_data, int bytes_recv, Socket *sock)
+    {
+        int pack_type;
+        int pack_size;
+        ///packet type and packet size must be here
+        if (bytes_recv < PACKET_HEADER_SIZE)
+        {
+            traceerr("Error rcv packet without header");
+            sock->send(MSG_PACKET_NO_HEADER, strlen(MSG_PACKET_NO_HEADER));
+            sock->disconnect();
+        }
+        memcpy(&pack_type, &pkt_data[0], PACKET_INT_SIZE);
+        memcpy(&pack_size, &pkt_data[PACKET_INT_SIZE], PACKET_INT_SIZE);
+
+        if (pack_type >= IG_MAX_ID)
+        {
+            traceerr("Error rcv packet with id graiter than possible. Can't handle it!");
+            sock->send(MSG_PACKET_WRONG_ID, strlen(MSG_PACKET_NO_HEADER));
+            sock->disconnect();
+        }
+        if (bytes_recv != pack_size)
+        {
+            traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
+            sock->send(MSG_PACKET_FRAGMET, strlen(MSG_PACKET_NO_HEADER));
+            sock->disconnect();
+        }
+        ClientConnection *pkt = new ClientConnection;
+        pkt->sock = sock;
+        pkt->data_size = pack_size - 3*sizeof(int);///3 ints - service data;
+        pkt->type = pack_type;
+        pkt->data = new char[pkt->data_size];
+        memcpy(pkt->data, &pkt_data[3*sizeof(int)], pkt->data_size);
+	delete [] pkt_data;
+	return pkt;
+    }
+    virtual void onClientConnectionRead(char *pkt_data, int bytes_recv, Socket *sock) = 0;
     virtual void onClientConnectionDisconnect(Socket *sock) = 0;
     virtual void onClientConnectionConnect(Socket *sock) = 0;
 private:
-    inline void _onClientConnectionRead(ClientConnection *pkt)
+    inline void _onClientConnectionRead(char *pkt_data, int bytes_recv, Socket *sock)
     {
-        this->onClientConnectionRead(pkt);
+        this->onClientConnectionRead(pkt_data, bytes_recv, sock);
     }
     inline void _onClientConnectionDisconnect(Socket *sock)
     {
