@@ -169,19 +169,49 @@ game_server/game_server.s:
 .PHONY : game_server/game_server.s
 
 # target to build an object file
-game_server/instance.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance.o
-.PHONY : game_server/instance.o
+game_server/game_socket.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_socket.o
+.PHONY : game_server/game_socket.o
 
 # target to preprocess a source file
-game_server/instance.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance.i
-.PHONY : game_server/instance.i
+game_server/game_socket.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_socket.i
+.PHONY : game_server/game_socket.i
 
 # target to generate assembly for a file
-game_server/instance.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance.s
-.PHONY : game_server/instance.s
+game_server/game_socket.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_socket.s
+.PHONY : game_server/game_socket.s
+
+# target to build an object file
+game_server/instance/instance.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/instance.o
+.PHONY : game_server/instance/instance.o
+
+# target to preprocess a source file
+game_server/instance/instance.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/instance.i
+.PHONY : game_server/instance/instance.i
+
+# target to generate assembly for a file
+game_server/instance/instance.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/instance.s
+.PHONY : game_server/instance/instance.s
+
+# target to build an object file
+game_server/instance/main_instance.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/main_instance.o
+.PHONY : game_server/instance/main_instance.o
+
+# target to preprocess a source file
+game_server/instance/main_instance.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/main_instance.i
+.PHONY : game_server/instance/main_instance.i
+
+# target to generate assembly for a file
+game_server/instance/main_instance.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/main_instance.s
+.PHONY : game_server/instance/main_instance.s
 
 # target to build an object file
 game_server/main_game.o:
@@ -199,36 +229,6 @@ game_server/main_game.s:
 .PHONY : game_server/main_game.s
 
 # target to build an object file
-game_server/main_instance.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/main_instance.o
-.PHONY : game_server/main_instance.o
-
-# target to preprocess a source file
-game_server/main_instance.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/main_instance.i
-.PHONY : game_server/main_instance.i
-
-# target to generate assembly for a file
-game_server/main_instance.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/main_instance.s
-.PHONY : game_server/main_instance.s
-
-# target to build an object file
-game_server/pvp_instance.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/pvp_instance.o
-.PHONY : game_server/pvp_instance.o
-
-# target to preprocess a source file
-game_server/pvp_instance.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/pvp_instance.i
-.PHONY : game_server/pvp_instance.i
-
-# target to generate assembly for a file
-game_server/pvp_instance.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/pvp_instance.s
-.PHONY : game_server/pvp_instance.s
-
-# target to build an object file
 game_server/server.o:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/server.o
 .PHONY : game_server/server.o
@@ -242,21 +242,6 @@ game_server/server.i:
 game_server/server.s:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/server.s
 .PHONY : game_server/server.s
-
-# target to build an object file
-game_server/shard.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard.o
-.PHONY : game_server/shard.o
-
-# target to preprocess a source file
-game_server/shard.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard.i
-.PHONY : game_server/shard.i
-
-# target to generate assembly for a file
-game_server/shard.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard.s
-.PHONY : game_server/shard.s
 
 # target to build an object file
 game_server/shard_storage.o:
@@ -534,24 +519,21 @@ help:
 	@echo "... game_server/game_server.o"
 	@echo "... game_server/game_server.i"
 	@echo "... game_server/game_server.s"
-	@echo "... game_server/instance.o"
-	@echo "... game_server/instance.i"
-	@echo "... game_server/instance.s"
+	@echo "... game_server/game_socket.o"
+	@echo "... game_server/game_socket.i"
+	@echo "... game_server/game_socket.s"
+	@echo "... game_server/instance/instance.o"
+	@echo "... game_server/instance/instance.i"
+	@echo "... game_server/instance/instance.s"
+	@echo "... game_server/instance/main_instance.o"
+	@echo "... game_server/instance/main_instance.i"
+	@echo "... game_server/instance/main_instance.s"
 	@echo "... game_server/main_game.o"
 	@echo "... game_server/main_game.i"
 	@echo "... game_server/main_game.s"
-	@echo "... game_server/main_instance.o"
-	@echo "... game_server/main_instance.i"
-	@echo "... game_server/main_instance.s"
-	@echo "... game_server/pvp_instance.o"
-	@echo "... game_server/pvp_instance.i"
-	@echo "... game_server/pvp_instance.s"
 	@echo "... game_server/server.o"
 	@echo "... game_server/server.i"
 	@echo "... game_server/server.s"
-	@echo "... game_server/shard.o"
-	@echo "... game_server/shard.i"
-	@echo "... game_server/shard.s"
 	@echo "... game_server/shard_storage.o"
 	@echo "... game_server/shard_storage.i"
 	@echo "... game_server/shard_storage.s"

@@ -36,18 +36,46 @@ CMakeFiles/anima_game.dir/game_server/database_manager.o
  /home/nonametr/projects/anima/game_server/database_manager.cpp
  /home/nonametr/projects/anima/game_server/database_manager.h
 CMakeFiles/anima_game.dir/game_server/ext_interface.o
+ /home/nonametr/projects/anima/game_server/../game_server/../shared/db/database.h
+ /home/nonametr/projects/anima/game_server/../game_server/database_manager.h
+ /home/nonametr/projects/anima/game_server/../shared/common.h
+ /home/nonametr/projects/anima/game_server/../shared/config.h
  /home/nonametr/projects/anima/game_server/../shared/db/../callback.h
  /home/nonametr/projects/anima/game_server/../shared/db/../common.h
- /home/nonametr/projects/anima/game_server/../shared/db/../mt/../common.h
- /home/nonametr/projects/anima/game_server/../shared/db/../mt/../config.h
- /home/nonametr/projects/anima/game_server/../shared/db/../mt/../singleton.h
- /home/nonametr/projects/anima/game_server/../shared/db/../mt/thread.h
- /home/nonametr/projects/anima/game_server/../shared/db/../mt/thread_controller.h
  /home/nonametr/projects/anima/game_server/../shared/db/../mt/thread_core.h
  /home/nonametr/projects/anima/game_server/../shared/db/database.h
  /home/nonametr/projects/anima/game_server/../shared/db/field.h
  /home/nonametr/projects/anima/game_server/../shared/db/mysql_database.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/../config.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/periodic_thread_caller.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/thread.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/thread_controller.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/thread_core.h
+ /home/nonametr/projects/anima/game_server/../shared/net/../mt/thread.h
+ /home/nonametr/projects/anima/game_server/../shared/net/../singleton.h
+ /home/nonametr/projects/anima/game_server/../shared/net/listen_socket.h
+ /home/nonametr/projects/anima/game_server/../shared/net/net_core.h
+ /home/nonametr/projects/anima/game_server/../shared/net/packet_definitions.h
+ /home/nonametr/projects/anima/game_server/../shared/net/socket.h
+ /home/nonametr/projects/anima/game_server/../shared/net/socket_base.h
+ /home/nonametr/projects/anima/game_server/../shared/net/socket_operations.h
+ /home/nonametr/projects/anima/game_server/../shared/singleton.h
+ /home/nonametr/projects/anima/game_server/../shared/version_control.h
+ /home/nonametr/projects/anima/game_server/./instance/../../game_server/user.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/common.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/listen_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../game_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/instance.h
+ /home/nonametr/projects/anima/game_server/./instance/main_instance.h
  /home/nonametr/projects/anima/game_server/ext_interface.cpp
+ /home/nonametr/projects/anima/game_server/ext_interface.h
+ /home/nonametr/projects/anima/game_server/game_server.h
+ /home/nonametr/projects/anima/game_server/game_socket.h
+ /home/nonametr/projects/anima/game_server/server.h
+ /home/nonametr/projects/anima/game_server/user.h
+ /home/nonametr/projects/anima/game_server/user_ext.h
+ /home/nonametr/projects/anima/game_server/user_interface.h
 CMakeFiles/anima_game.dir/game_server/game_server.o
  /home/nonametr/projects/anima/game_server/../game_server/../shared/db/../callback.h
  /home/nonametr/projects/anima/game_server/../game_server/../shared/db/../mt/thread_core.h
@@ -55,7 +83,6 @@ CMakeFiles/anima_game.dir/game_server/game_server.o
  /home/nonametr/projects/anima/game_server/../game_server/../shared/db/field.h
  /home/nonametr/projects/anima/game_server/../game_server/../shared/db/mysql_database.h
  /home/nonametr/projects/anima/game_server/../game_server/database_manager.h
- /home/nonametr/projects/anima/game_server/../game_server/user.h
  /home/nonametr/projects/anima/game_server/../shared/common.h
  /home/nonametr/projects/anima/game_server/../shared/config.h
  /home/nonametr/projects/anima/game_server/../shared/mt/../config.h
@@ -74,15 +101,109 @@ CMakeFiles/anima_game.dir/game_server/game_server.o
  /home/nonametr/projects/anima/game_server/../shared/net/socket_operations.h
  /home/nonametr/projects/anima/game_server/../shared/singleton.h
  /home/nonametr/projects/anima/game_server/../shared/version_control.h
+ /home/nonametr/projects/anima/game_server/./instance/../../game_server/user.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/common.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/listen_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../game_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/instance.h
+ /home/nonametr/projects/anima/game_server/./instance/main_instance.h
  /home/nonametr/projects/anima/game_server/game_server.cpp
  /home/nonametr/projects/anima/game_server/game_server.h
- /home/nonametr/projects/anima/game_server/instance.h
+ /home/nonametr/projects/anima/game_server/game_socket.h
  /home/nonametr/projects/anima/game_server/server.h
- /home/nonametr/projects/anima/game_server/shard.h
  /home/nonametr/projects/anima/game_server/user.h
  /home/nonametr/projects/anima/game_server/user_interface.h
-CMakeFiles/anima_game.dir/game_server/instance.o
- /home/nonametr/projects/anima/game_server/instance.cpp
+CMakeFiles/anima_game.dir/game_server/game_socket.o
+ /home/nonametr/projects/anima/game_server/../game_server/../shared/db/../callback.h
+ /home/nonametr/projects/anima/game_server/../game_server/../shared/db/../mt/thread_core.h
+ /home/nonametr/projects/anima/game_server/../game_server/../shared/db/database.h
+ /home/nonametr/projects/anima/game_server/../game_server/../shared/db/field.h
+ /home/nonametr/projects/anima/game_server/../game_server/../shared/db/mysql_database.h
+ /home/nonametr/projects/anima/game_server/../game_server/database_manager.h
+ /home/nonametr/projects/anima/game_server/../shared/common.h
+ /home/nonametr/projects/anima/game_server/../shared/config.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/../config.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/periodic_thread_caller.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/thread.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/thread_controller.h
+ /home/nonametr/projects/anima/game_server/../shared/mt/thread_core.h
+ /home/nonametr/projects/anima/game_server/../shared/net/../common.h
+ /home/nonametr/projects/anima/game_server/../shared/net/../mt/thread.h
+ /home/nonametr/projects/anima/game_server/../shared/net/../singleton.h
+ /home/nonametr/projects/anima/game_server/../shared/net/listen_socket.h
+ /home/nonametr/projects/anima/game_server/../shared/net/net_core.h
+ /home/nonametr/projects/anima/game_server/../shared/net/packet_definitions.h
+ /home/nonametr/projects/anima/game_server/../shared/net/socket.h
+ /home/nonametr/projects/anima/game_server/../shared/net/socket_base.h
+ /home/nonametr/projects/anima/game_server/../shared/net/socket_operations.h
+ /home/nonametr/projects/anima/game_server/../shared/singleton.h
+ /home/nonametr/projects/anima/game_server/../shared/version_control.h
+ /home/nonametr/projects/anima/game_server/./instance/../../game_server/user.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/common.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/listen_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../game_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/instance.h
+ /home/nonametr/projects/anima/game_server/./instance/main_instance.h
+ /home/nonametr/projects/anima/game_server/game_server.h
+ /home/nonametr/projects/anima/game_server/game_socket.cpp
+ /home/nonametr/projects/anima/game_server/game_socket.h
+ /home/nonametr/projects/anima/game_server/server.h
+ /home/nonametr/projects/anima/game_server/user.h
+ /home/nonametr/projects/anima/game_server/user_interface.h
+CMakeFiles/anima_game.dir/game_server/instance/instance.o
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/../shared/common.h
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/user.h
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/user_interface.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/common.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/../common.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/../mt/thread.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/../singleton.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/listen_socket.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/net_core.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/packet_definitions.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/socket.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/socket_base.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/socket_operations.h
+ /home/nonametr/projects/anima/game_server/instance/instance.cpp
+ /home/nonametr/projects/anima/game_server/instance/instance.h
+CMakeFiles/anima_game.dir/game_server/instance/main_instance.o
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/../shared/db/../callback.h
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/../shared/db/../mt/thread_core.h
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/../shared/db/database.h
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/../shared/db/field.h
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/../shared/db/mysql_database.h
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/database_manager.h
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/user.h
+ /home/nonametr/projects/anima/game_server/instance/../../game_server/user_interface.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/common.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/config.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/mt/../config.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/mt/periodic_thread_caller.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/mt/thread.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/mt/thread_controller.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/mt/thread_core.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/../common.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/../mt/thread.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/../singleton.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/listen_socket.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/net_core.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/packet_definitions.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/socket.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/socket_base.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/net/socket_operations.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/singleton.h
+ /home/nonametr/projects/anima/game_server/instance/../../shared/version_control.h
+ /home/nonametr/projects/anima/game_server/instance/.././instance/instance.h
+ /home/nonametr/projects/anima/game_server/instance/.././instance/main_instance.h
+ /home/nonametr/projects/anima/game_server/instance/../game_server.h
+ /home/nonametr/projects/anima/game_server/instance/../game_socket.h
+ /home/nonametr/projects/anima/game_server/instance/../server.h
+ /home/nonametr/projects/anima/game_server/instance/../user.h
+ /home/nonametr/projects/anima/game_server/instance/instance.h
+ /home/nonametr/projects/anima/game_server/instance/main_instance.cpp
+ /home/nonametr/projects/anima/game_server/instance/main_instance.h
 CMakeFiles/anima_game.dir/game_server/main_game.o
  /home/nonametr/projects/anima/game_server/.././game_server/database_manager.h
  /home/nonametr/projects/anima/game_server/.././shared/common.h
@@ -94,7 +215,6 @@ CMakeFiles/anima_game.dir/game_server/main_game.o
  /home/nonametr/projects/anima/game_server/../game_server/../game_server/../shared/db/mysql_database.h
  /home/nonametr/projects/anima/game_server/../game_server/../game_server/database_manager.h
  /home/nonametr/projects/anima/game_server/../game_server/server.h
- /home/nonametr/projects/anima/game_server/../game_server/user.h
  /home/nonametr/projects/anima/game_server/../shared/common.h
  /home/nonametr/projects/anima/game_server/../shared/config.h
  /home/nonametr/projects/anima/game_server/../shared/mt/../config.h
@@ -113,36 +233,19 @@ CMakeFiles/anima_game.dir/game_server/main_game.o
  /home/nonametr/projects/anima/game_server/../shared/net/socket_operations.h
  /home/nonametr/projects/anima/game_server/../shared/singleton.h
  /home/nonametr/projects/anima/game_server/../shared/version_control.h
+ /home/nonametr/projects/anima/game_server/./instance/../../game_server/user.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/common.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/listen_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../game_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/instance.h
+ /home/nonametr/projects/anima/game_server/./instance/main_instance.h
  /home/nonametr/projects/anima/game_server/game_server.h
- /home/nonametr/projects/anima/game_server/instance.h
+ /home/nonametr/projects/anima/game_server/game_socket.h
  /home/nonametr/projects/anima/game_server/main_game.cpp
  /home/nonametr/projects/anima/game_server/server.h
- /home/nonametr/projects/anima/game_server/shard.h
  /home/nonametr/projects/anima/game_server/user.h
  /home/nonametr/projects/anima/game_server/user_interface.h
-CMakeFiles/anima_game.dir/game_server/main_instance.o
- /home/nonametr/projects/anima/game_server/../game_server/user.h
- /home/nonametr/projects/anima/game_server/../game_server/user_interface.h
- /home/nonametr/projects/anima/game_server/../shared/common.h
- /home/nonametr/projects/anima/game_server/../shared/net/../common.h
- /home/nonametr/projects/anima/game_server/../shared/net/../mt/thread.h
- /home/nonametr/projects/anima/game_server/../shared/net/../singleton.h
- /home/nonametr/projects/anima/game_server/../shared/net/listen_socket.h
- /home/nonametr/projects/anima/game_server/../shared/net/net_core.h
- /home/nonametr/projects/anima/game_server/../shared/net/packet_definitions.h
- /home/nonametr/projects/anima/game_server/../shared/net/socket.h
- /home/nonametr/projects/anima/game_server/../shared/net/socket_base.h
- /home/nonametr/projects/anima/game_server/../shared/net/socket_operations.h
- /home/nonametr/projects/anima/game_server/instance.h
- /home/nonametr/projects/anima/game_server/main_instance.cpp
- /home/nonametr/projects/anima/game_server/main_instance.h
-CMakeFiles/anima_game.dir/game_server/pvp_instance.o
- /home/nonametr/projects/anima/game_server/../game_server/user.h
- /home/nonametr/projects/anima/game_server/../game_server/user_interface.h
- /home/nonametr/projects/anima/game_server/../shared/common.h
- /home/nonametr/projects/anima/game_server/instance.h
- /home/nonametr/projects/anima/game_server/pvp_instance.cpp
- /home/nonametr/projects/anima/game_server/pvp_instance.h
 CMakeFiles/anima_game.dir/game_server/server.o
  /home/nonametr/projects/anima/game_server/../game_server/../shared/db/../callback.h
  /home/nonametr/projects/anima/game_server/../game_server/../shared/db/../mt/thread_core.h
@@ -150,7 +253,6 @@ CMakeFiles/anima_game.dir/game_server/server.o
  /home/nonametr/projects/anima/game_server/../game_server/../shared/db/field.h
  /home/nonametr/projects/anima/game_server/../game_server/../shared/db/mysql_database.h
  /home/nonametr/projects/anima/game_server/../game_server/database_manager.h
- /home/nonametr/projects/anima/game_server/../game_server/user.h
  /home/nonametr/projects/anima/game_server/../login_server/../game_server/server.h
  /home/nonametr/projects/anima/game_server/../login_server/login_server.h
  /home/nonametr/projects/anima/game_server/../login_server/login_server_handler.h
@@ -172,44 +274,17 @@ CMakeFiles/anima_game.dir/game_server/server.o
  /home/nonametr/projects/anima/game_server/../shared/net/socket_operations.h
  /home/nonametr/projects/anima/game_server/../shared/singleton.h
  /home/nonametr/projects/anima/game_server/../shared/version_control.h
+ /home/nonametr/projects/anima/game_server/./instance/../../game_server/user.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/common.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/listen_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../../shared/net/socket.h
+ /home/nonametr/projects/anima/game_server/./instance/../game_socket.h
+ /home/nonametr/projects/anima/game_server/./instance/instance.h
+ /home/nonametr/projects/anima/game_server/./instance/main_instance.h
  /home/nonametr/projects/anima/game_server/game_server.h
- /home/nonametr/projects/anima/game_server/instance.h
+ /home/nonametr/projects/anima/game_server/game_socket.h
  /home/nonametr/projects/anima/game_server/server.cpp
  /home/nonametr/projects/anima/game_server/server.h
- /home/nonametr/projects/anima/game_server/shard.h
- /home/nonametr/projects/anima/game_server/user.h
- /home/nonametr/projects/anima/game_server/user_interface.h
-CMakeFiles/anima_game.dir/game_server/shard.o
- /home/nonametr/projects/anima/game_server/../game_server/../shared/db/../callback.h
- /home/nonametr/projects/anima/game_server/../game_server/../shared/db/../mt/thread_core.h
- /home/nonametr/projects/anima/game_server/../game_server/../shared/db/database.h
- /home/nonametr/projects/anima/game_server/../game_server/../shared/db/field.h
- /home/nonametr/projects/anima/game_server/../game_server/../shared/db/mysql_database.h
- /home/nonametr/projects/anima/game_server/../game_server/database_manager.h
- /home/nonametr/projects/anima/game_server/../game_server/user.h
- /home/nonametr/projects/anima/game_server/../shared/common.h
- /home/nonametr/projects/anima/game_server/../shared/config.h
- /home/nonametr/projects/anima/game_server/../shared/mt/../config.h
- /home/nonametr/projects/anima/game_server/../shared/mt/periodic_thread_caller.h
- /home/nonametr/projects/anima/game_server/../shared/mt/thread.h
- /home/nonametr/projects/anima/game_server/../shared/mt/thread_controller.h
- /home/nonametr/projects/anima/game_server/../shared/mt/thread_core.h
- /home/nonametr/projects/anima/game_server/../shared/net/../common.h
- /home/nonametr/projects/anima/game_server/../shared/net/../mt/thread.h
- /home/nonametr/projects/anima/game_server/../shared/net/../singleton.h
- /home/nonametr/projects/anima/game_server/../shared/net/listen_socket.h
- /home/nonametr/projects/anima/game_server/../shared/net/net_core.h
- /home/nonametr/projects/anima/game_server/../shared/net/packet_definitions.h
- /home/nonametr/projects/anima/game_server/../shared/net/socket.h
- /home/nonametr/projects/anima/game_server/../shared/net/socket_base.h
- /home/nonametr/projects/anima/game_server/../shared/net/socket_operations.h
- /home/nonametr/projects/anima/game_server/../shared/singleton.h
- /home/nonametr/projects/anima/game_server/../shared/version_control.h
- /home/nonametr/projects/anima/game_server/game_server.h
- /home/nonametr/projects/anima/game_server/instance.h
- /home/nonametr/projects/anima/game_server/server.h
- /home/nonametr/projects/anima/game_server/shard.cpp
- /home/nonametr/projects/anima/game_server/shard.h
  /home/nonametr/projects/anima/game_server/user.h
  /home/nonametr/projects/anima/game_server/user_interface.h
 CMakeFiles/anima_game.dir/game_server/shard_storage.o
@@ -354,8 +429,20 @@ CMakeFiles/anima_game.dir/shared/mt/thread_core.o
  /home/nonametr/projects/anima/shared/mt/thread_core.cpp
  /home/nonametr/projects/anima/shared/mt/thread_core.h
 CMakeFiles/anima_game.dir/shared/net/net_core.o
+ /home/nonametr/projects/anima/shared/net/../../game_server/../game_server/../shared/config.h
+ /home/nonametr/projects/anima/shared/net/../../game_server/../game_server/../shared/db/../callback.h
+ /home/nonametr/projects/anima/shared/net/../../game_server/../game_server/../shared/db/database.h
+ /home/nonametr/projects/anima/shared/net/../../game_server/../game_server/../shared/db/field.h
+ /home/nonametr/projects/anima/shared/net/../../game_server/../game_server/../shared/db/mysql_database.h
+ /home/nonametr/projects/anima/shared/net/../../game_server/../game_server/../shared/singleton.h
+ /home/nonametr/projects/anima/shared/net/../../game_server/../game_server/database_manager.h
+ /home/nonametr/projects/anima/shared/net/../../game_server/../shared/common.h
+ /home/nonametr/projects/anima/shared/net/../../game_server/server.h
  /home/nonametr/projects/anima/shared/net/../common.h
+ /home/nonametr/projects/anima/shared/net/../config.h
  /home/nonametr/projects/anima/shared/net/../mt/thread.h
+ /home/nonametr/projects/anima/shared/net/../mt/thread_controller.h
+ /home/nonametr/projects/anima/shared/net/../mt/thread_core.h
  /home/nonametr/projects/anima/shared/net/../singleton.h
  /home/nonametr/projects/anima/shared/net/listen_socket.h
  /home/nonametr/projects/anima/shared/net/net_core.cpp

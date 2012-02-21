@@ -1,5 +1,5 @@
 #include "game_server.h"
-#include "shard.h"
+#include "game_socket.h"
 
 GameServer::GameServer()
 {
@@ -58,7 +58,8 @@ void GameServer::run()
 {
     ininializeObjects();
 
-    new ShardSoket(_listen_ip.c_str(), _port);
+    ///No need to terminate it manualy, it'll be terminated automaticly by iNetCore
+    new GameSocket(_listen_ip.c_str(), _port);
     
     tracelog(OPTIMAL, "Server version: %s. Almost started...", iVersionControl->getVersion().c_str());
     tracelog(OPTIMAL, "Success! Ready for connections");

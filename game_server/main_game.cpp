@@ -8,15 +8,13 @@
 #include "game_server.h"
 #include "../dict_json_generator.h"
 
-Server* iServer;
-
-uint32 dbg_lvl;//extern
-string err_log_path;//extern
-string srv_log_path;//extern
+Server* iServer;///extern global
+uint32 dbg_lvl;///extern global
+string err_log_path;///extern global
+string srv_log_path;///extern global
 
 #include <cstdlib>
 #include <iostream>
-
 
 void initGlobals()
 {
@@ -76,9 +74,10 @@ int main ( int argc, char **argv )
     
     new ThreadCore;
     new DatabaseManager;
-    new DictJSONGenerator;
+    DictJSONGenerator *djg = new DictJSONGenerator;
+    delete djg;
     
-    tracelog(OPTIMAL, "Starting login server");
+    tracelog(OPTIMAL, "Starting server");
     while (running)
     {
         iServer = Server::create(work_dir, pid);
@@ -95,7 +94,7 @@ int main ( int argc, char **argv )
         if (restart)
         {
             new Config;
-	    tracelog(OPTIMAL, "Restarting login server");
+	    tracelog(OPTIMAL, "Restarting server");
             iConfig->loadFromFile(cfg_file);
             running = true;
         }

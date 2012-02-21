@@ -13,7 +13,7 @@
 
 #include <signal.h>
 
-#include "shard.h"
+#include "game_socket.h"
 #include "server.h"
 
 class GameServer : public Server

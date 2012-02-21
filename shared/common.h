@@ -15,7 +15,7 @@
 #include <map>
 
 #define DBG_LVL_TRACE 8
-// #define USE_STL_CPP0X
+// #define USE_STL_CPP0X//USE IT IN RELEASE
 
 #ifdef USE_STL_CPP0X
 #define USE_STL_UNORDERED_MAP
@@ -45,6 +45,7 @@ typedef unsigned char uint8;
 typedef char int8;
 
 class Server;
+
 extern Server* iServer;
 extern uint32 dbg_lvl;
 extern std::string err_log_path;

@@ -5,6 +5,7 @@
 #define MSG_PACKET_WRONG_ID "Packet with that id can't be handled. Connection crushed and closed."
 #define MSG_PACKET_WRONG_DATA_SIZE "Expected another size of data of packet with that id thats why pkt can't be handled. Connection crushed and closed."
 #define MSG_PACKET_FRAGMET "Packet expecting structure wrong or corrupted. Connection crushed and closed."
+#define MSG_PACKET_WRONG_ID_IN_THIS_INSTANCE "Packet with that id can't be handled by current instance. Connection crushed and closed."
 
 #define PACKET_INT_SIZE 4
 #define PACKET_HEADER_SIZE PACKET_INT_SIZE*2
@@ -12,7 +13,7 @@
 
 enum IG_PAKETS
 {
-    IG_JOIN = 1, IG_GET_PARAM, IG_LIST_PARAMS, IG_MAX_ID
+    IG_MAIN_JOIN = 1, IG_GET_PARAM, IG_LIST_PARAMS, IG_MAX_ID
 };
 enum OG_PAKETS
 {
@@ -31,6 +32,7 @@ struct ClientConnection
     int type;
     int data_size;
 //     int uid;
+//     int soc_uid;
     char *data;
     Socket *sock;
 };
