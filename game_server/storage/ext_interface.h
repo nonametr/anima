@@ -1,10 +1,10 @@
 #ifndef EXTERNAL_SHARD_H
 #define EXTERNAL_SHARD_H
 
-#include "../shared/net/socket.h"
-#include "../shared/net/listen_socket.h"
-#include "game_server.h"
-#include "user_ext.h"
+#include "../../shared/net/socket.h"
+#include "../../shared/net/listen_socket.h"
+#include "../game_server.h"
+#include "../user/user_ext.h"
 #include <atomic>
 
 #define EXT_CONNECTIONS 3
@@ -49,26 +49,20 @@ private:
 };
 
 ///This class used to communicate with other shards
-class ExtInterface : public ListenSocket, public Singleton<ExtInterface>
+class ExtSocket : public ListenSocket
 {
     friend class ShardExtThread;
 public:
-    ExtInterface ( const char* listen_address, uint32 port );
-    virtual ~ExtInterface() {};
+    ExtSocket ( const char* listen_address, uint32 port );
+    virtual ~ExtSocket() {};
 
-//     template<class T>
-//     void getUserCallBack ( uint32 uid, void ( T::*handler ) ( shared_ptr<UserInterface> user ) )
-//     {
-//         //borring user data fetch code
-//         handler ( shared_ptr<UserExt>() );
-//     };
 private:
-    void onClientConnectionDisconnect ( Socket *sock );
-    void onClientConnectionConnect ( Socket *sock );
-    void onClientConnectionRead ( ClientConnection *pkt ){ _data.push ( pkt ); };
+    virtual void onClientPacketRead(Packet *pkt);
+    virtual void onClientPacketDisconnect(Socket *sock);
+    virtual void onClientPacketConnect(Socket *sock);
     
-    void _performPacket ( ClientConnection *pkt );
-    FQueue<ClientConnection*> _data;
+    void _performExtPacket ( ExtPacket *pkt );
+    FQueue<ClientPacket*> _data;
 
     AtomicCounter _conn_count;
 

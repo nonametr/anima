@@ -11,6 +11,10 @@
 #define PACKET_HEADER_SIZE PACKET_INT_SIZE*2
 #include "../common.h"
 
+enum EXT_PAKETS
+{
+    EXT_SET_MONEY, EXT_SET_GOLD, EXT_SET_EXP, EXT_SET_LVL
+};
 enum IG_PAKETS
 {
     IG_MAIN_JOIN = 1, IG_GET_PARAM, IG_LIST_PARAMS, IG_MAX_ID
@@ -27,16 +31,36 @@ struct JoinData
     uint32 uid;
     char sid[64];
 };
-struct ClientConnection
+
+
+class Packet
 {
-    int type;
+public:
     int data_size;
-//     int uid;
-//     int soc_uid;
-    char *data;
+    string data;
     Socket *sock;
 };
 
+struct DataObj
+{
+  int data_size;
+  char *data;
+};
+
+class ClientPacket : public Packet
+{
+public:
+    int type;
+    int uid;
+    int soc_uid;
+};
+class ExtPacket : public Packet
+{
+public:
+    int type;
+    int uid;
+    int soc_uid;
+};
 struct IGPacket
 {
     int type;///packet type = IG paket id
@@ -63,3 +87,5 @@ struct CrossPacket
 };
 
 #endif
+
+

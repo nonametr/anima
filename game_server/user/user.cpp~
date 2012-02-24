@@ -1,0 +1,39 @@
+#include "user.h"
+
+User::User()
+{
+
+}
+
+User::~User()
+{
+
+}
+
+///--------------SETTERS----------------
+void User::setMoney(int v_money)
+{
+}
+void User::setGold(int v_gold)
+{
+}
+void User::setExp(int v_exp)
+{
+}
+void User::setLvl(int v_lvl)
+{
+}
+///-------------GETTERS-----------------
+int User::getMoney()
+{
+}
+int User::getGold()
+{
+}
+int User::getExp()
+{
+}
+int User::getLvl()
+{
+}
+

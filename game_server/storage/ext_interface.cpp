@@ -1,9 +1,9 @@
 #include "ext_interface.h"
-#include "../shared/db/mysql_database.h"
+#include "../../shared/db/mysql_database.h"
 
-initialiseSingleton ( ExtInterface );
+initialiseSingleton ( ExtSocket );
 
-ExtInterface::ExtInterface ( const char* listen_address, uint32 port ) : ListenSocket(listen_address, port)
+ExtSocket::ExtSocket ( const char* listen_address, uint32 port ) : ListenSocket(listen_address, port)
 {
     uint32 server_id;
     string listen_ip;
@@ -25,14 +25,18 @@ ExtInterface::ExtInterface ( const char* listen_address, uint32 port ) : ListenS
     while (qres->nextRow());
 }
 
-void ExtInterface::onClientConnectionDisconnect ( Socket *sock )
+void ExtSocket::onClientPacketDisconnect ( Socket *sock )
 {
     --_conn_count;
 }
-void ExtInterface::onClientConnectionConnect ( Socket *sock )
+void ExtSocket::onClientPacketConnect ( Socket *sock )
 {
     ++_conn_count;
 }
+void ExtSocket::onClientPacketRead(Packet *pkt)
+{
+}
+    
 // ExtConnection *ExtInterface::_getFreeConnection()
 // {
 //     uint32 i = 0;

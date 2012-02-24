@@ -5,7 +5,7 @@
 #include "../shared/net/listen_socket.h"
 #include "../shared/common.h"
 #include "game_server.h"
-#include "user.h"
+#include "./user/user.h"
 #include "./instance/instance.h"
 #include "./instance/main_instance.h"
 
@@ -20,27 +20,19 @@ public:
     virtual ~GameSocket();
     void changeInstance(Socket *owner, shared_ptr<Instance> new_instance);
 private:
+    ClientPacket* _createClientPacket(Packet *pkt);
+    virtual void onClientPacketRead(Packet *pkt);
+    virtual void onClientPacketDisconnect(Socket *sock);
+    virtual void onClientPacketConnect(Socket *sock);
 
-    virtual void onClientConnectionRead(char *pkt_data, int bytes_recv, Socket *sock)
-    {
-        ClientConnection *pkt = paketize(pkt_data, bytes_recv, sock);
-        _data.push(pkt);
-    }
-    virtual void onClientConnectionDisconnect(Socket *sock) {
-        --_conn_count;
-    };
-    virtual void onClientConnectionConnect(Socket *sock) {
-        ++_conn_count;
-    };
+    void _performClientPacket( ClientPacket *pkt );
+    FQueue<ClientPacket*> _data;
 
-    void performPacket( ClientConnection *pkt );
-    FQueue<ClientConnection*> _data;
-
-    MainInstance *default_instance;
+    MainInstance *_default_instance;
     associative_container< Socket *, shared_ptr<Instance> > _instances;
     AtomicCounter _conn_count;
 };
-///GameSocket MT
+///ClientPacket MT
 class GameSocketThread : public Thread
 {
 public:

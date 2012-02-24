@@ -139,21 +139,6 @@ game_server/database_manager.s:
 .PHONY : game_server/database_manager.s
 
 # target to build an object file
-game_server/ext_interface.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/ext_interface.o
-.PHONY : game_server/ext_interface.o
-
-# target to preprocess a source file
-game_server/ext_interface.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/ext_interface.i
-.PHONY : game_server/ext_interface.i
-
-# target to generate assembly for a file
-game_server/ext_interface.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/ext_interface.s
-.PHONY : game_server/ext_interface.s
-
-# target to build an object file
 game_server/game_server.o:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_server.o
 .PHONY : game_server/game_server.o
@@ -244,49 +229,64 @@ game_server/server.s:
 .PHONY : game_server/server.s
 
 # target to build an object file
-game_server/shard_storage.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard_storage.o
-.PHONY : game_server/shard_storage.o
+game_server/storage/ext_interface.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o
+.PHONY : game_server/storage/ext_interface.o
 
 # target to preprocess a source file
-game_server/shard_storage.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard_storage.i
-.PHONY : game_server/shard_storage.i
+game_server/storage/ext_interface.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/ext_interface.i
+.PHONY : game_server/storage/ext_interface.i
 
 # target to generate assembly for a file
-game_server/shard_storage.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/shard_storage.s
-.PHONY : game_server/shard_storage.s
+game_server/storage/ext_interface.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/ext_interface.s
+.PHONY : game_server/storage/ext_interface.s
 
 # target to build an object file
-game_server/user.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user.o
-.PHONY : game_server/user.o
+game_server/storage/storage.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage.o
+.PHONY : game_server/storage/storage.o
 
 # target to preprocess a source file
-game_server/user.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user.i
-.PHONY : game_server/user.i
+game_server/storage/storage.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage.i
+.PHONY : game_server/storage/storage.i
 
 # target to generate assembly for a file
-game_server/user.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user.s
-.PHONY : game_server/user.s
+game_server/storage/storage.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage.s
+.PHONY : game_server/storage/storage.s
 
 # target to build an object file
-game_server/user_ext.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user_ext.o
-.PHONY : game_server/user_ext.o
+game_server/user/user.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user.o
+.PHONY : game_server/user/user.o
 
 # target to preprocess a source file
-game_server/user_ext.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user_ext.i
-.PHONY : game_server/user_ext.i
+game_server/user/user.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user.i
+.PHONY : game_server/user/user.i
 
 # target to generate assembly for a file
-game_server/user_ext.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user_ext.s
-.PHONY : game_server/user_ext.s
+game_server/user/user.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user.s
+.PHONY : game_server/user/user.s
+
+# target to build an object file
+game_server/user/user_ext.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user_ext.o
+.PHONY : game_server/user/user_ext.o
+
+# target to preprocess a source file
+game_server/user/user_ext.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user_ext.i
+.PHONY : game_server/user/user_ext.i
+
+# target to generate assembly for a file
+game_server/user/user_ext.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user_ext.s
+.PHONY : game_server/user/user_ext.s
 
 # target to build an object file
 login_server/login_server.o:
@@ -513,9 +513,6 @@ help:
 	@echo "... game_server/database_manager.o"
 	@echo "... game_server/database_manager.i"
 	@echo "... game_server/database_manager.s"
-	@echo "... game_server/ext_interface.o"
-	@echo "... game_server/ext_interface.i"
-	@echo "... game_server/ext_interface.s"
 	@echo "... game_server/game_server.o"
 	@echo "... game_server/game_server.i"
 	@echo "... game_server/game_server.s"
@@ -534,15 +531,18 @@ help:
 	@echo "... game_server/server.o"
 	@echo "... game_server/server.i"
 	@echo "... game_server/server.s"
-	@echo "... game_server/shard_storage.o"
-	@echo "... game_server/shard_storage.i"
-	@echo "... game_server/shard_storage.s"
-	@echo "... game_server/user.o"
-	@echo "... game_server/user.i"
-	@echo "... game_server/user.s"
-	@echo "... game_server/user_ext.o"
-	@echo "... game_server/user_ext.i"
-	@echo "... game_server/user_ext.s"
+	@echo "... game_server/storage/ext_interface.o"
+	@echo "... game_server/storage/ext_interface.i"
+	@echo "... game_server/storage/ext_interface.s"
+	@echo "... game_server/storage/storage.o"
+	@echo "... game_server/storage/storage.i"
+	@echo "... game_server/storage/storage.s"
+	@echo "... game_server/user/user.o"
+	@echo "... game_server/user/user.i"
+	@echo "... game_server/user/user.s"
+	@echo "... game_server/user/user_ext.o"
+	@echo "... game_server/user/user_ext.i"
+	@echo "... game_server/user/user_ext.s"
 	@echo "... login_server/login_server.o"
 	@echo "... login_server/login_server.i"
 	@echo "... login_server/login_server.s"

@@ -52,7 +52,7 @@ public:
 private:
     void _onConnect();
     void _onDisconnect();
-    void _onRead(char *pkt_data, int bytes_recv, Socket *sock);
+    void _onRead(Packet *pkt);
     
     char _recv_buf[RECIVE_BUFFER_SIZE];
     

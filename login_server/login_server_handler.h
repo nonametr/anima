@@ -23,20 +23,20 @@ public:
     LSWorld(const char* listen_address, uint32 port);
     virtual ~LSWorld();
 private:
-    void onClientConnectionRead(char *pkt_data, int bytes_recv, Socket *sock) 
+    void onClientPacketRead(Packet *pkt) 
     {
-	ClientConnection *pkt = paketize(pkt_data, bytes_recv, sock);
-        _data.push(pkt);
+	//ClientPacket *pkt = paketize(pkt_data, bytes_recv, sock);
+        //_data.push(pkt);
     }
-    void onClientConnectionDisconnect(Socket *sock) {
+    void onClientPacketDisconnect(Socket *sock) {
         --_conn_count;
     };
-    void onClientConnectionConnect(Socket *sock) {
+    void onClientPacketConnect(Socket *sock) {
         ++_conn_count;
     };
 
-    void performPacket( ClientConnection *pkt );
-    FQueue<ClientConnection*> _data;
+    void performPacket( ClientPacket *pkt );
+    FQueue<ClientPacket*> _data;
     AtomicCounter _conn_count;
 };
 

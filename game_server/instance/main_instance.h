@@ -10,9 +10,9 @@ class MainInstance : public Instance
 {
 public:
     MainInstance(GameSocket *owner);
-    virtual void handlePaket(ClientConnection* pkt);
+    virtual void handlePaket(ClientPacket* pkt);
 private:
-    void cJoin(ClientConnection* pkt);
+    void cJoin(ClientPacket* pkt);
 
     GameSocket *owner_shard;
     PaketHandler<MainInstance> _shardPacketHandlers[IG_MAX_ID];
