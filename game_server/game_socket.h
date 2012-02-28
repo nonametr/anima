@@ -1,13 +1,13 @@
 #ifndef SHARD_H
 #define SHARD_H
 
-#include "../shared/net/socket.h"
-#include "../shared/net/listen_socket.h"
-#include "../shared/common.h"
+#include "socket.h"
+#include "listen_socket.h"
+#include "common.h"
 #include "game_server.h"
-#include "./user/user.h"
-#include "./instance/instance.h"
-#include "./instance/main_instance.h"
+#include "user.h"
+#include "instance.h"
+#include "main_instance.h"
 
 class MainInstance;
 
@@ -20,19 +20,18 @@ public:
     virtual ~GameSocket();
     void changeInstance(Socket *owner, shared_ptr<Instance> new_instance);
 private:
-    ClientPacket* _createClientPacket(Packet *pkt);
-    virtual void onClientPacketRead(Packet *pkt);
-    virtual void onClientPacketDisconnect(Socket *sock);
-    virtual void onClientPacketConnect(Socket *sock);
+    virtual void onPacketRead(Packet *pkt);
+    virtual void onPacketDisconnect(Socket *sock);
+    virtual void onPacketConnect(Socket *sock);
 
-    void _performClientPacket( ClientPacket *pkt );
-    FQueue<ClientPacket*> _data;
+    void _performPacket( Packet *pkt );
+    FQueue<Packet*> _data;
 
     MainInstance *_default_instance;
     associative_container< Socket *, shared_ptr<Instance> > _instances;
     AtomicCounter _conn_count;
 };
-///ClientPacket MT
+///GameSocket MT
 class GameSocketThread : public Thread
 {
 public:

@@ -1,18 +1,18 @@
 #ifndef LOGINSERVER_H
 #define LOGINSERVER_H
-#include "../shared/singleton.h"
-#include "../shared/mt/thread.h"
-#include "../shared/common.h"
-#include "../shared/config.h"
-#include "../shared/net/net_core.h"
-#include "../shared/mt/thread_core.h"
-#include "../shared/mt/periodic_thread_caller.h"
-#include "../shared/version_control.h"
+#include "singleton.h"
+#include "thread.h"
+#include "common.h"
+#include "config.h"
+#include "net_core.h"
+#include "thread_core.h"
+#include "periodic_thread_caller.h"
+#include "version_control.h"
 
 #include "login_server_handler.h"
 
 #include <signal.h>
-#include "../game_server/server.h"
+#include "server.h"
 
 class LoginServer : public Server
 {

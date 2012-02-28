@@ -2,11 +2,11 @@
 #include <signal.h>
 #include <sys/resource.h>
 #include <unistd.h>
-#include "../game_server/server.h"
-#include "../shared/common.h"
+#include "server.h"
+#include "common.h"
 
 #include "game_server.h"
-#include "../dict_json_generator.h"
+// #include "dict_json_generator.h"
 
 Server* iServer;///extern global
 uint32 dbg_lvl;///extern global
@@ -72,7 +72,7 @@ int main ( int argc, char **argv )
         return EXIT_FAILURE;
     }
 
-    iConfig->loadFromFile(cfg_file);///it will use default path to configuration file if no -c option passed
+    iConfig->loadFromFile(cfg_file);///it will use default path to configuration file if cfg_file == NULL(default imposible) or no -c option passed
 
     rlimit rl;
     if (getrlimit(RLIMIT_CORE, &rl) == -1)
@@ -97,8 +97,8 @@ int main ( int argc, char **argv )
     new ThreadCore;
     new DatabaseManager;
     
-    DictJSONGenerator *djg = new DictJSONGenerator;
-    delete djg;
+//     DictJSONGenerator *djg = new DictJSONGenerator;
+//     delete djg;
 
     tracelog(OPTIMAL, "Starting server");
     while (running)
@@ -110,8 +110,8 @@ int main ( int argc, char **argv )
             destroyObjects();
             break;
         }
-        iServer->run();
-        restart = iServer->isRestating();
+        iServer->run();///infinity loop
+        running = restart = iServer->isRestating();
 	destroyObjects();
         if (restart)
         {

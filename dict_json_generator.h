@@ -1,9 +1,9 @@
 #ifndef DICTJSONGENERATOR_H
 #define DICTJSONGENERATOR_H
 
-#include "./game_server/database_manager.h"
+#include "database_manager.h"
 #include <string>
-#include "./shared/common.h"
+#include "common.h"
 
 using namespace std;
 

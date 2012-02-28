@@ -47,9 +47,29 @@ void Socket::read()
 {
     int bytes_recv = recv(_sock, _recv_buf, RECIVE_BUFFER_SIZE, 0);
 
+    if (bytes_recv < PACKET_HEADER_SIZE)
+    {
+        traceerr("Error rcv packet without header");
+        this->send(MSG_PACKET_NO_HEADER, strlen(MSG_PACKET_NO_HEADER));
+        this->disconnect();
+    }
+    
     Packet *pkt = new Packet;
-    pkt->data = string(_recv_buf, bytes_recv);
-    pkt->data_size = bytes_recv;
+    memcpy(&pkt->type, &_recv_buf[0*PACKET_INT_SIZE], PACKET_INT_SIZE);
+    memcpy(&pkt->total_size, &_recv_buf[1*PACKET_INT_SIZE], PACKET_INT_SIZE);
+    memcpy(&pkt->data_size, &_recv_buf[2*PACKET_INT_SIZE], PACKET_INT_SIZE);
+    memcpy(&pkt->crc32, &_recv_buf[3*PACKET_INT_SIZE], PACKET_INT_SIZE);
+    
+    if (pkt->data_size != bytes_recv - PACKET_HEADER_SIZE)
+    {
+        traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
+        this->send(MSG_PACKET_FRAGMET, strlen(MSG_PACKET_NO_HEADER));
+        this->disconnect();
+        delete pkt;
+        return;
+    }
+    pkt->data = new char[pkt->data_size];
+    memcpy(&pkt->data[0], &_recv_buf[4*PACKET_INT_SIZE], pkt->data_size*sizeof(char));
     pkt->sock = this;
 
     _onRead(pkt);
@@ -61,7 +81,7 @@ void Socket::setOwner(ListenSocket *owner)
 void Socket::_onRead(Packet *pkt)
 {
     if (_owner)
-        _owner->_onClientPacketRead(pkt);
+        _owner->_onPacketRead(pkt);
 }
 void Socket::_onConnect()
 {
@@ -73,7 +93,7 @@ void Socket::_onConnect()
 
     iNetCore->addSocket(this);
     if (_owner)
-        _owner->_onClientPacketConnect(this);
+        _owner->_onPacketConnect(this);
 }
 void Socket::_onDisconnect()
 {
@@ -81,7 +101,7 @@ void Socket::_onDisconnect()
     /// remove from netcore
     iNetCore->removeSocket(this);
     if (_owner)
-        _owner->_onClientPacketDisconnect(this);
+        _owner->_onPacketDisconnect(this);
 }
 string Socket::getRemoteIP()
 {

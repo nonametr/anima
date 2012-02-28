@@ -6,10 +6,14 @@
 #include "../game_server.h"
 #include "../user/user_ext.h"
 #include <atomic>
+#include "../instance/ext_connection_instance.h"
 
 #define EXT_CONNECTIONS 3
 
 #define DB_GET_OTHER_SERVERS_SQL__PID "SELECT server_id, listen_ip, ext_port, server_type FROM server_desc WHERE online != %u AND online != 0"
+
+class ExtConnectionInstance;
+class ExtSocket;
 
 struct ExtConnection
 {
@@ -37,38 +41,40 @@ private:
     uint32 _server_port;
 };
 
-class ShardExtThread : public Thread
-{
-public:
-    void run();
-    void onShutdown();
-    ShardExtThread();
-    virtual ~ShardExtThread();
-private:
-    AtomicBoolean _running;
-};
-
 ///This class used to communicate with other shards
 class ExtSocket : public ListenSocket
 {
-    friend class ShardExtThread;
+    friend class ExtSocketThread;
 public:
     ExtSocket ( const char* listen_address, uint32 port );
     virtual ~ExtSocket() {};
 
 private:
+    ClientPacket* _createExtClientPacket(Packet *pkt);
+
     virtual void onClientPacketRead(Packet *pkt);
     virtual void onClientPacketDisconnect(Socket *sock);
     virtual void onClientPacketConnect(Socket *sock);
     
-    void _performExtPacket ( ExtPacket *pkt );
+    void _performClientPacket ( ClientPacket *pkt );
     FQueue<ClientPacket*> _data;
 
     AtomicCounter _conn_count;
 
+    ExtConnectionInstance ext_con_inst;
     associative_container< uint32, ExtServer *> _ext_servers;//<server_id, connection>
 };
-
-#define iShardExt ShardExt::getSingletonPtr()
+///ExtSocket MT
+class ExtSocketThread : public Thread
+{
+public:
+    virtual void run();
+    virtual void onShutdown();
+    ExtSocketThread(ExtSocket *owner);
+    virtual ~ExtSocketThread();
+private:
+    ExtSocket *owner;
+    AtomicBoolean _running;
+};
 
 #endif // EXTERNAL_SHARD_H

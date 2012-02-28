@@ -1,8 +1,8 @@
 #include "net_core.h"
 #include "listen_socket.h"
-#include "../config.h"
-#include "../mt/thread_core.h"
-#include "../../game_server/server.h"
+#include "config.h"
+#include "thread_core.h"
+#include "server.h"
 
 initialiseSingleton ( NetCore );
 

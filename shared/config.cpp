@@ -1,6 +1,6 @@
 #include "config.h"
-#include "../shared/json.h"
-#include "../shared/json_value.h"
+#include "json.h"
+#include "json_value.h"
 
 initialiseSingleton ( Config );
 

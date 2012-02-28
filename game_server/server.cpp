@@ -1,7 +1,7 @@
 #include "server.h"
 #include <stdio.h>
 #include "game_server.h"
-#include "../login_server/login_server.h"
+#include "login_server.h"
 
 initialiseSingleton ( Server );
 

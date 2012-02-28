@@ -1,10 +1,10 @@
 #ifndef SOCKET_H
 #define SOCKET_H
 
-#include "../common.h"
+#include "common.h"
 #include "socket_base.h"
 #include "socket_operations.h"
-#include "../mt/thread.h"
+#include "thread.h"
 #include "packet_definitions.h"
 
 #define RECIVE_BUFFER_SIZE 65536

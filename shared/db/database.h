@@ -2,11 +2,11 @@
 #define DATABASE_H
 
 #include <string>
-#include "../mt/thread.h"
-#include "../common.h"
-#include "../callback.h"
+#include "thread.h"
+#include "common.h"
+#include "callback.h"
 #include "field.h"
-#include "../mt/thread_core.h"
+#include "thread_core.h"
 
 using namespace std;
 class QueryResult;

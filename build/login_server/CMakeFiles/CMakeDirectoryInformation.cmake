@@ -10,6 +10,16 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
+  ".././shared"
+  ".././shared/db"
+  ".././shared/mt"
+  ".././shared/net"
+  ".././game_server"
+  ".././game_server/instance"
+  ".././game_server/storage"
+  ".././game_server/user"
+  ".././login_server"
+  "../."
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
 SET(CMAKE_Fortran_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

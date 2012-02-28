@@ -1,5 +1,5 @@
 #include "version_control.h"
-#include "../game_server/server.h"
+#include "server.h"
 
 initialiseSingleton ( VersionControl );
 

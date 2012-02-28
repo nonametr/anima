@@ -3,8 +3,8 @@
 
 #include <set>
 #include "thread.h"
-#include "../common.h"
-#include "../config.h"
+#include "common.h"
+#include "config.h"
 #include "thread_controller.h"
 
 typedef std::set<ThreadController*> ThreadSet;

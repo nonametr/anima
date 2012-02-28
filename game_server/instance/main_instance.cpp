@@ -4,14 +4,14 @@ MainInstance::MainInstance(GameSocket *owner) : owner_shard(owner)
 {
     for (uint32 i = 0; i < IG_MAIN_JOIN; ++i)
     {
-        _shardPacketHandlers[i].setHandler(PaketHandler<MainInstance>::NO_HANDLER_SET, NULL);
+        _shardPacketHandlers[i].setHandler(PacketHandler<MainInstance>::NO_HANDLER_SET, NULL);
     }
-    _shardPacketHandlers[IG_MAIN_JOIN].setHandler(PaketHandler<MainInstance>::HANDLER_SET, &MainInstance::cJoin);
+    _shardPacketHandlers[IG_MAIN_JOIN].setHandler(PacketHandler<MainInstance>::HANDLER_SET, &MainInstance::cJoin);
 }
 
-void MainInstance::handlePaket(ClientPacket* pkt)
+void MainInstance::handlePacket(Packet* pkt)
 {
-    if (_shardPacketHandlers[pkt->type].status == PaketHandler<MainInstance>::NO_HANDLER_SET)
+    if (_shardPacketHandlers[pkt->type].status == PacketHandler<MainInstance>::NO_HANDLER_SET)
     {
         pkt->sock->send(MSG_PACKET_WRONG_ID_IN_THIS_INSTANCE, strlen(MSG_PACKET_WRONG_ID_IN_THIS_INSTANCE));
         return;
@@ -19,7 +19,7 @@ void MainInstance::handlePaket(ClientPacket* pkt)
     (this->*_shardPacketHandlers[pkt->type].handler)(pkt);
 }
 
-void MainInstance::cJoin(ClientPacket* c_pkt)
+void MainInstance::cJoin(Packet* c_pkt)
 {
 //     JoinData join;
 //     if (sizeof(join) != c_pkt->data_size)

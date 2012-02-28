@@ -144,7 +144,7 @@ bool MySQLDatabase::_handleError(MySQLDatabaseConnection* con, uint32 ErrorNumbe
     switch (ErrorNumber)
     {
     case 2006:  // Mysql server has gone away
-    case 2008:  // ClientPacket ran out of memory
+    case 2008:  // Packet ran out of memory
     case 2013:  // Lost connection to sql server during query
     case 2055:  // Lost connection to sql server - system error
     {

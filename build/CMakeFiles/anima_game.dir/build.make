@@ -46,662 +46,737 @@ include CMakeFiles/anima_game.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/anima_game.dir/flags.make
 
-CMakeFiles/anima_game.dir/game_server/main_game.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/main_game.o: ../game_server/main_game.cpp
+CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: ../game_server/main_game.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/main_game.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/main_game.o -c /home/nonametr/projects/anima/game_server/main_game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/main_game.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/main_game.cpp.o -c /home/nonametr/projects/anima/game_server/main_game.cpp
 
-CMakeFiles/anima_game.dir/game_server/main_game.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/main_game.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/main_game.cpp > CMakeFiles/anima_game.dir/game_server/main_game.i
+CMakeFiles/anima_game.dir/game_server/main_game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/main_game.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/main_game.cpp > CMakeFiles/anima_game.dir/game_server/main_game.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/main_game.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/main_game.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/main_game.cpp -o CMakeFiles/anima_game.dir/game_server/main_game.s
+CMakeFiles/anima_game.dir/game_server/main_game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/main_game.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/main_game.cpp -o CMakeFiles/anima_game.dir/game_server/main_game.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/main_game.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/main_game.o.requires
+CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/main_game.o.provides: CMakeFiles/anima_game.dir/game_server/main_game.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/main_game.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/main_game.o.provides
+CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/main_game.o.provides.build: CMakeFiles/anima_game.dir/game_server/main_game.o
+CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/main_game.cpp.o
 
-CMakeFiles/anima_game.dir/login_server/login_server.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/login_server/login_server.o: ../login_server/login_server.cpp
+CMakeFiles/anima_game.dir/login_server/login_server.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/login_server/login_server.cpp.o: ../login_server/login_server.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/login_server/login_server.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/login_server/login_server.o -c /home/nonametr/projects/anima/login_server/login_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/login_server/login_server.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/login_server/login_server.cpp.o -c /home/nonametr/projects/anima/login_server/login_server.cpp
 
-CMakeFiles/anima_game.dir/login_server/login_server.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/login_server/login_server.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/login_server/login_server.cpp > CMakeFiles/anima_game.dir/login_server/login_server.i
+CMakeFiles/anima_game.dir/login_server/login_server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/login_server/login_server.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/login_server/login_server.cpp > CMakeFiles/anima_game.dir/login_server/login_server.cpp.i
 
-CMakeFiles/anima_game.dir/login_server/login_server.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/login_server/login_server.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/login_server/login_server.cpp -o CMakeFiles/anima_game.dir/login_server/login_server.s
+CMakeFiles/anima_game.dir/login_server/login_server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/login_server/login_server.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/login_server/login_server.cpp -o CMakeFiles/anima_game.dir/login_server/login_server.cpp.s
 
-CMakeFiles/anima_game.dir/login_server/login_server.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/login_server/login_server.o.requires
+CMakeFiles/anima_game.dir/login_server/login_server.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/login_server/login_server.cpp.o.requires
 
-CMakeFiles/anima_game.dir/login_server/login_server.o.provides: CMakeFiles/anima_game.dir/login_server/login_server.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/login_server/login_server.o.provides
+CMakeFiles/anima_game.dir/login_server/login_server.cpp.o.provides: CMakeFiles/anima_game.dir/login_server/login_server.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/login_server/login_server.cpp.o.provides
 
-CMakeFiles/anima_game.dir/login_server/login_server.o.provides.build: CMakeFiles/anima_game.dir/login_server/login_server.o
+CMakeFiles/anima_game.dir/login_server/login_server.cpp.o.provides.build: CMakeFiles/anima_game.dir/login_server/login_server.cpp.o
 
-CMakeFiles/anima_game.dir/login_server/login_server_handler.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/login_server/login_server_handler.o: ../login_server/login_server_handler.cpp
+CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o: ../login_server/login_server_handler.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/login_server/login_server_handler.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/login_server/login_server_handler.o -c /home/nonametr/projects/anima/login_server/login_server_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o -c /home/nonametr/projects/anima/login_server/login_server_handler.cpp
 
-CMakeFiles/anima_game.dir/login_server/login_server_handler.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/login_server/login_server_handler.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/login_server/login_server_handler.cpp > CMakeFiles/anima_game.dir/login_server/login_server_handler.i
+CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/login_server/login_server_handler.cpp > CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.i
 
-CMakeFiles/anima_game.dir/login_server/login_server_handler.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/login_server/login_server_handler.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/login_server/login_server_handler.cpp -o CMakeFiles/anima_game.dir/login_server/login_server_handler.s
+CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/login_server/login_server_handler.cpp -o CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.s
 
-CMakeFiles/anima_game.dir/login_server/login_server_handler.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/login_server/login_server_handler.o.requires
+CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o.requires
 
-CMakeFiles/anima_game.dir/login_server/login_server_handler.o.provides: CMakeFiles/anima_game.dir/login_server/login_server_handler.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server_handler.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/login_server/login_server_handler.o.provides
+CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o.provides: CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o.provides
 
-CMakeFiles/anima_game.dir/login_server/login_server_handler.o.provides.build: CMakeFiles/anima_game.dir/login_server/login_server_handler.o
+CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o.provides.build: CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/game_server.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/game_server.o: ../game_server/game_server.cpp
+CMakeFiles/anima_game.dir/shared/common.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/common.cpp.o: ../shared/common.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/game_server.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/game_server.o -c /home/nonametr/projects/anima/game_server/game_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/common.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/common.cpp.o -c /home/nonametr/projects/anima/shared/common.cpp
 
-CMakeFiles/anima_game.dir/game_server/game_server.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/game_server.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/game_server.cpp > CMakeFiles/anima_game.dir/game_server/game_server.i
+CMakeFiles/anima_game.dir/shared/common.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/common.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/common.cpp > CMakeFiles/anima_game.dir/shared/common.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/game_server.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/game_server.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/game_server.cpp -o CMakeFiles/anima_game.dir/game_server/game_server.s
+CMakeFiles/anima_game.dir/shared/common.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/common.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/common.cpp -o CMakeFiles/anima_game.dir/shared/common.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/game_server.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/game_server.o.requires
+CMakeFiles/anima_game.dir/shared/common.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/common.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/game_server.o.provides: CMakeFiles/anima_game.dir/game_server/game_server.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_server.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/game_server.o.provides
+CMakeFiles/anima_game.dir/shared/common.cpp.o.provides: CMakeFiles/anima_game.dir/shared/common.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/common.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/common.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/game_server.o.provides.build: CMakeFiles/anima_game.dir/game_server/game_server.o
+CMakeFiles/anima_game.dir/shared/common.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/common.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/game_socket.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/game_socket.o: ../game_server/game_socket.cpp
+CMakeFiles/anima_game.dir/shared/config.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/config.cpp.o: ../shared/config.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/game_socket.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/game_socket.o -c /home/nonametr/projects/anima/game_server/game_socket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/config.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/config.cpp.o -c /home/nonametr/projects/anima/shared/config.cpp
 
-CMakeFiles/anima_game.dir/game_server/game_socket.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/game_socket.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/game_socket.cpp > CMakeFiles/anima_game.dir/game_server/game_socket.i
+CMakeFiles/anima_game.dir/shared/config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/config.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/config.cpp > CMakeFiles/anima_game.dir/shared/config.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/game_socket.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/game_socket.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/game_socket.cpp -o CMakeFiles/anima_game.dir/game_server/game_socket.s
+CMakeFiles/anima_game.dir/shared/config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/config.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/config.cpp -o CMakeFiles/anima_game.dir/shared/config.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/game_socket.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/game_socket.o.requires
+CMakeFiles/anima_game.dir/shared/config.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/config.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/game_socket.o.provides: CMakeFiles/anima_game.dir/game_server/game_socket.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_socket.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/game_socket.o.provides
+CMakeFiles/anima_game.dir/shared/config.cpp.o.provides: CMakeFiles/anima_game.dir/shared/config.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/config.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/config.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/game_socket.o.provides.build: CMakeFiles/anima_game.dir/game_server/game_socket.o
+CMakeFiles/anima_game.dir/shared/config.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/config.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/server.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/server.o: ../game_server/server.cpp
+CMakeFiles/anima_game.dir/shared/net/socket.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/net/socket.cpp.o: ../shared/net/socket.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/server.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/server.o -c /home/nonametr/projects/anima/game_server/server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/net/socket.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/socket.cpp.o -c /home/nonametr/projects/anima/shared/net/socket.cpp
 
-CMakeFiles/anima_game.dir/game_server/server.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/server.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/server.cpp > CMakeFiles/anima_game.dir/game_server/server.i
+CMakeFiles/anima_game.dir/shared/net/socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/net/socket.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/net/socket.cpp > CMakeFiles/anima_game.dir/shared/net/socket.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/server.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/server.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/server.cpp -o CMakeFiles/anima_game.dir/game_server/server.s
+CMakeFiles/anima_game.dir/shared/net/socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/net/socket.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/net/socket.cpp -o CMakeFiles/anima_game.dir/shared/net/socket.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/server.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/server.o.requires
+CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/server.o.provides: CMakeFiles/anima_game.dir/game_server/server.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/server.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/server.o.provides
+CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.provides: CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/server.o.provides.build: CMakeFiles/anima_game.dir/game_server/server.o
+CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/net/socket.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/database_manager.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/database_manager.o: ../game_server/database_manager.cpp
+CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o: ../shared/net/net_core.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/database_manager.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/database_manager.o -c /home/nonametr/projects/anima/game_server/database_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o -c /home/nonametr/projects/anima/shared/net/net_core.cpp
 
-CMakeFiles/anima_game.dir/game_server/database_manager.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/database_manager.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/database_manager.cpp > CMakeFiles/anima_game.dir/game_server/database_manager.i
+CMakeFiles/anima_game.dir/shared/net/net_core.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/net/net_core.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/net/net_core.cpp > CMakeFiles/anima_game.dir/shared/net/net_core.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/database_manager.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/database_manager.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/database_manager.cpp -o CMakeFiles/anima_game.dir/game_server/database_manager.s
+CMakeFiles/anima_game.dir/shared/net/net_core.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/net/net_core.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/net/net_core.cpp -o CMakeFiles/anima_game.dir/shared/net/net_core.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/database_manager.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/database_manager.o.requires
+CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/database_manager.o.provides: CMakeFiles/anima_game.dir/game_server/database_manager.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/database_manager.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/database_manager.o.provides
+CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.provides: CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/database_manager.o.provides.build: CMakeFiles/anima_game.dir/game_server/database_manager.o
+CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o
 
-CMakeFiles/anima_game.dir/shared/common.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/common.o: ../shared/common.cpp
+CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o: ../shared/net/command_structs.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/common.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/common.o -c /home/nonametr/projects/anima/shared/common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o -c /home/nonametr/projects/anima/shared/net/command_structs.cpp
 
-CMakeFiles/anima_game.dir/shared/common.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/common.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/common.cpp > CMakeFiles/anima_game.dir/shared/common.i
+CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/net/command_structs.cpp > CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.i
 
-CMakeFiles/anima_game.dir/shared/common.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/common.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/common.cpp -o CMakeFiles/anima_game.dir/shared/common.s
+CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/net/command_structs.cpp -o CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.s
 
-CMakeFiles/anima_game.dir/shared/common.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/common.o.requires
+CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/common.o.provides: CMakeFiles/anima_game.dir/shared/common.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/common.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/common.o.provides
+CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.provides: CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/common.o.provides.build: CMakeFiles/anima_game.dir/shared/common.o
+CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o
 
-CMakeFiles/anima_game.dir/shared/config.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/config.o: ../shared/config.cpp
+CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o: ../shared/mt/thread.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/config.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/config.o -c /home/nonametr/projects/anima/shared/config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o -c /home/nonametr/projects/anima/shared/mt/thread.cpp
 
-CMakeFiles/anima_game.dir/shared/config.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/config.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/config.cpp > CMakeFiles/anima_game.dir/shared/config.i
+CMakeFiles/anima_game.dir/shared/mt/thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mt/thread.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mt/thread.cpp > CMakeFiles/anima_game.dir/shared/mt/thread.cpp.i
 
-CMakeFiles/anima_game.dir/shared/config.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/config.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/config.cpp -o CMakeFiles/anima_game.dir/shared/config.s
+CMakeFiles/anima_game.dir/shared/mt/thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mt/thread.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mt/thread.cpp -o CMakeFiles/anima_game.dir/shared/mt/thread.cpp.s
 
-CMakeFiles/anima_game.dir/shared/config.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/config.o.requires
+CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/config.o.provides: CMakeFiles/anima_game.dir/shared/config.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/config.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/config.o.provides
+CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.provides: CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/config.o.provides.build: CMakeFiles/anima_game.dir/shared/config.o
+CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o
 
-CMakeFiles/anima_game.dir/shared/net/socket.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/net/socket.o: ../shared/net/socket.cpp
+CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o: ../shared/mt/thread_core.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/net/socket.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/socket.o -c /home/nonametr/projects/anima/shared/net/socket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o -c /home/nonametr/projects/anima/shared/mt/thread_core.cpp
 
-CMakeFiles/anima_game.dir/shared/net/socket.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/net/socket.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/net/socket.cpp > CMakeFiles/anima_game.dir/shared/net/socket.i
+CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mt/thread_core.cpp > CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.i
 
-CMakeFiles/anima_game.dir/shared/net/socket.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/net/socket.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/net/socket.cpp -o CMakeFiles/anima_game.dir/shared/net/socket.s
+CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mt/thread_core.cpp -o CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.s
 
-CMakeFiles/anima_game.dir/shared/net/socket.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/net/socket.o.requires
+CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/net/socket.o.provides: CMakeFiles/anima_game.dir/shared/net/socket.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/socket.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/net/socket.o.provides
+CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.provides: CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/net/socket.o.provides.build: CMakeFiles/anima_game.dir/shared/net/socket.o
+CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o
 
-CMakeFiles/anima_game.dir/shared/net/net_core.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/net/net_core.o: ../shared/net/net_core.cpp
+CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o: ../shared/mt/periodic_thread_caller.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/net/net_core.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/net_core.o -c /home/nonametr/projects/anima/shared/net/net_core.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o -c /home/nonametr/projects/anima/shared/mt/periodic_thread_caller.cpp
 
-CMakeFiles/anima_game.dir/shared/net/net_core.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/net/net_core.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/net/net_core.cpp > CMakeFiles/anima_game.dir/shared/net/net_core.i
+CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mt/periodic_thread_caller.cpp > CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.i
 
-CMakeFiles/anima_game.dir/shared/net/net_core.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/net/net_core.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/net/net_core.cpp -o CMakeFiles/anima_game.dir/shared/net/net_core.s
+CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mt/periodic_thread_caller.cpp -o CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.s
 
-CMakeFiles/anima_game.dir/shared/net/net_core.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/net/net_core.o.requires
+CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/net/net_core.o.provides: CMakeFiles/anima_game.dir/shared/net/net_core.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/net_core.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/net/net_core.o.provides
+CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.provides: CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/net/net_core.o.provides.build: CMakeFiles/anima_game.dir/shared/net/net_core.o
+CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o
 
-CMakeFiles/anima_game.dir/shared/mt/thread.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/mt/thread.o: ../shared/mt/thread.cpp
+CMakeFiles/anima_game.dir/shared/json.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/json.cpp.o: ../shared/json.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mt/thread.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/thread.o -c /home/nonametr/projects/anima/shared/mt/thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/json.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/json.cpp.o -c /home/nonametr/projects/anima/shared/json.cpp
 
-CMakeFiles/anima_game.dir/shared/mt/thread.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mt/thread.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mt/thread.cpp > CMakeFiles/anima_game.dir/shared/mt/thread.i
+CMakeFiles/anima_game.dir/shared/json.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/json.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/json.cpp > CMakeFiles/anima_game.dir/shared/json.cpp.i
 
-CMakeFiles/anima_game.dir/shared/mt/thread.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mt/thread.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mt/thread.cpp -o CMakeFiles/anima_game.dir/shared/mt/thread.s
+CMakeFiles/anima_game.dir/shared/json.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/json.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/json.cpp -o CMakeFiles/anima_game.dir/shared/json.cpp.s
 
-CMakeFiles/anima_game.dir/shared/mt/thread.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/mt/thread.o.requires
+CMakeFiles/anima_game.dir/shared/json.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/json.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/mt/thread.o.provides: CMakeFiles/anima_game.dir/shared/mt/thread.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/mt/thread.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/mt/thread.o.provides
+CMakeFiles/anima_game.dir/shared/json.cpp.o.provides: CMakeFiles/anima_game.dir/shared/json.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/json.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/mt/thread.o.provides.build: CMakeFiles/anima_game.dir/shared/mt/thread.o
+CMakeFiles/anima_game.dir/shared/json.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/json.cpp.o
 
-CMakeFiles/anima_game.dir/shared/mt/thread_core.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/mt/thread_core.o: ../shared/mt/thread_core.cpp
+CMakeFiles/anima_game.dir/shared/json_value.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/json_value.cpp.o: ../shared/json_value.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mt/thread_core.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/thread_core.o -c /home/nonametr/projects/anima/shared/mt/thread_core.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/json_value.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/json_value.cpp.o -c /home/nonametr/projects/anima/shared/json_value.cpp
 
-CMakeFiles/anima_game.dir/shared/mt/thread_core.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mt/thread_core.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mt/thread_core.cpp > CMakeFiles/anima_game.dir/shared/mt/thread_core.i
+CMakeFiles/anima_game.dir/shared/json_value.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/json_value.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/json_value.cpp > CMakeFiles/anima_game.dir/shared/json_value.cpp.i
 
-CMakeFiles/anima_game.dir/shared/mt/thread_core.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mt/thread_core.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mt/thread_core.cpp -o CMakeFiles/anima_game.dir/shared/mt/thread_core.s
+CMakeFiles/anima_game.dir/shared/json_value.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/json_value.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/json_value.cpp -o CMakeFiles/anima_game.dir/shared/json_value.cpp.s
 
-CMakeFiles/anima_game.dir/shared/mt/thread_core.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/mt/thread_core.o.requires
+CMakeFiles/anima_game.dir/shared/json_value.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/json_value.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/mt/thread_core.o.provides: CMakeFiles/anima_game.dir/shared/mt/thread_core.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/mt/thread_core.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/mt/thread_core.o.provides
+CMakeFiles/anima_game.dir/shared/json_value.cpp.o.provides: CMakeFiles/anima_game.dir/shared/json_value.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json_value.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/json_value.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/mt/thread_core.o.provides.build: CMakeFiles/anima_game.dir/shared/mt/thread_core.o
+CMakeFiles/anima_game.dir/shared/json_value.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/json_value.cpp.o
 
-CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o: ../shared/mt/periodic_thread_caller.cpp
+CMakeFiles/anima_game.dir/shared/version_control.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/version_control.cpp.o: ../shared/version_control.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_14)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o -c /home/nonametr/projects/anima/shared/mt/periodic_thread_caller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/version_control.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/version_control.cpp.o -c /home/nonametr/projects/anima/shared/version_control.cpp
 
-CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mt/periodic_thread_caller.cpp > CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.i
+CMakeFiles/anima_game.dir/shared/version_control.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/version_control.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/version_control.cpp > CMakeFiles/anima_game.dir/shared/version_control.cpp.i
 
-CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mt/periodic_thread_caller.cpp -o CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.s
+CMakeFiles/anima_game.dir/shared/version_control.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/version_control.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/version_control.cpp -o CMakeFiles/anima_game.dir/shared/version_control.cpp.s
 
-CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o.requires
+CMakeFiles/anima_game.dir/shared/version_control.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/version_control.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o.provides: CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o.provides
+CMakeFiles/anima_game.dir/shared/version_control.cpp.o.provides: CMakeFiles/anima_game.dir/shared/version_control.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/version_control.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/version_control.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o.provides.build: CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o
+CMakeFiles/anima_game.dir/shared/version_control.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/version_control.cpp.o
 
-CMakeFiles/anima_game.dir/shared/json.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/json.o: ../shared/json.cpp
+CMakeFiles/anima_game.dir/shared/db/database.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/db/database.cpp.o: ../shared/db/database.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/json.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/json.o -c /home/nonametr/projects/anima/shared/json.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/db/database.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/db/database.cpp.o -c /home/nonametr/projects/anima/shared/db/database.cpp
 
-CMakeFiles/anima_game.dir/shared/json.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/json.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/json.cpp > CMakeFiles/anima_game.dir/shared/json.i
+CMakeFiles/anima_game.dir/shared/db/database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/db/database.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/db/database.cpp > CMakeFiles/anima_game.dir/shared/db/database.cpp.i
 
-CMakeFiles/anima_game.dir/shared/json.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/json.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/json.cpp -o CMakeFiles/anima_game.dir/shared/json.s
+CMakeFiles/anima_game.dir/shared/db/database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/db/database.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/db/database.cpp -o CMakeFiles/anima_game.dir/shared/db/database.cpp.s
 
-CMakeFiles/anima_game.dir/shared/json.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/json.o.requires
+CMakeFiles/anima_game.dir/shared/db/database.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/db/database.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/json.o.provides: CMakeFiles/anima_game.dir/shared/json.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/json.o.provides
+CMakeFiles/anima_game.dir/shared/db/database.cpp.o.provides: CMakeFiles/anima_game.dir/shared/db/database.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/db/database.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/db/database.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/json.o.provides.build: CMakeFiles/anima_game.dir/shared/json.o
+CMakeFiles/anima_game.dir/shared/db/database.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/db/database.cpp.o
 
-CMakeFiles/anima_game.dir/shared/json_value.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/json_value.o: ../shared/json_value.cpp
+CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o: ../shared/db/mysql_database.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_16)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/json_value.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/json_value.o -c /home/nonametr/projects/anima/shared/json_value.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o -c /home/nonametr/projects/anima/shared/db/mysql_database.cpp
 
-CMakeFiles/anima_game.dir/shared/json_value.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/json_value.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/json_value.cpp > CMakeFiles/anima_game.dir/shared/json_value.i
+CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/db/mysql_database.cpp > CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.i
 
-CMakeFiles/anima_game.dir/shared/json_value.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/json_value.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/json_value.cpp -o CMakeFiles/anima_game.dir/shared/json_value.s
+CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/db/mysql_database.cpp -o CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.s
 
-CMakeFiles/anima_game.dir/shared/json_value.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/json_value.o.requires
+CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/json_value.o.provides: CMakeFiles/anima_game.dir/shared/json_value.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/json_value.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/json_value.o.provides
+CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.provides: CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/json_value.o.provides.build: CMakeFiles/anima_game.dir/shared/json_value.o
+CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o
 
-CMakeFiles/anima_game.dir/shared/version_control.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/version_control.o: ../shared/version_control.cpp
+CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: ../game_server/game_server.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_17)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/version_control.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/version_control.o -c /home/nonametr/projects/anima/shared/version_control.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/game_server.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/game_server.cpp.o -c /home/nonametr/projects/anima/game_server/game_server.cpp
 
-CMakeFiles/anima_game.dir/shared/version_control.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/version_control.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/version_control.cpp > CMakeFiles/anima_game.dir/shared/version_control.i
+CMakeFiles/anima_game.dir/game_server/game_server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/game_server.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/game_server.cpp > CMakeFiles/anima_game.dir/game_server/game_server.cpp.i
 
-CMakeFiles/anima_game.dir/shared/version_control.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/version_control.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/version_control.cpp -o CMakeFiles/anima_game.dir/shared/version_control.s
+CMakeFiles/anima_game.dir/game_server/game_server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/game_server.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/game_server.cpp -o CMakeFiles/anima_game.dir/game_server/game_server.cpp.s
 
-CMakeFiles/anima_game.dir/shared/version_control.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/version_control.o.requires
+CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/version_control.o.provides: CMakeFiles/anima_game.dir/shared/version_control.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/version_control.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/version_control.o.provides
+CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/version_control.o.provides.build: CMakeFiles/anima_game.dir/shared/version_control.o
+CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/game_server.cpp.o
 
-CMakeFiles/anima_game.dir/shared/db/database.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/db/database.o: ../shared/db/database.cpp
+CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: ../game_server/game_socket.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_18)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/db/database.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/db/database.o -c /home/nonametr/projects/anima/shared/db/database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o -c /home/nonametr/projects/anima/game_server/game_socket.cpp
 
-CMakeFiles/anima_game.dir/shared/db/database.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/db/database.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/db/database.cpp > CMakeFiles/anima_game.dir/shared/db/database.i
+CMakeFiles/anima_game.dir/game_server/game_socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/game_socket.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/game_socket.cpp > CMakeFiles/anima_game.dir/game_server/game_socket.cpp.i
 
-CMakeFiles/anima_game.dir/shared/db/database.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/db/database.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/db/database.cpp -o CMakeFiles/anima_game.dir/shared/db/database.s
+CMakeFiles/anima_game.dir/game_server/game_socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/game_socket.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/game_socket.cpp -o CMakeFiles/anima_game.dir/game_server/game_socket.cpp.s
 
-CMakeFiles/anima_game.dir/shared/db/database.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/db/database.o.requires
+CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/db/database.o.provides: CMakeFiles/anima_game.dir/shared/db/database.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/db/database.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/db/database.o.provides
+CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/db/database.o.provides.build: CMakeFiles/anima_game.dir/shared/db/database.o
+CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o
 
-CMakeFiles/anima_game.dir/shared/db/mysql_database.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/shared/db/mysql_database.o: ../shared/db/mysql_database.cpp
+CMakeFiles/anima_game.dir/game_server/server.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/server.cpp.o: ../game_server/server.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_19)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/db/mysql_database.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/db/mysql_database.o -c /home/nonametr/projects/anima/shared/db/mysql_database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/server.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/server.cpp.o -c /home/nonametr/projects/anima/game_server/server.cpp
 
-CMakeFiles/anima_game.dir/shared/db/mysql_database.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/db/mysql_database.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/db/mysql_database.cpp > CMakeFiles/anima_game.dir/shared/db/mysql_database.i
+CMakeFiles/anima_game.dir/game_server/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/server.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/server.cpp > CMakeFiles/anima_game.dir/game_server/server.cpp.i
 
-CMakeFiles/anima_game.dir/shared/db/mysql_database.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/db/mysql_database.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/db/mysql_database.cpp -o CMakeFiles/anima_game.dir/shared/db/mysql_database.s
+CMakeFiles/anima_game.dir/game_server/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/server.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/server.cpp -o CMakeFiles/anima_game.dir/game_server/server.cpp.s
 
-CMakeFiles/anima_game.dir/shared/db/mysql_database.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/shared/db/mysql_database.o.requires
+CMakeFiles/anima_game.dir/game_server/server.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/server.cpp.o.requires
 
-CMakeFiles/anima_game.dir/shared/db/mysql_database.o.provides: CMakeFiles/anima_game.dir/shared/db/mysql_database.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/db/mysql_database.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/shared/db/mysql_database.o.provides
+CMakeFiles/anima_game.dir/game_server/server.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/server.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/server.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/server.cpp.o.provides
 
-CMakeFiles/anima_game.dir/shared/db/mysql_database.o.provides.build: CMakeFiles/anima_game.dir/shared/db/mysql_database.o
+CMakeFiles/anima_game.dir/game_server/server.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/server.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o: ../game_server/storage/ext_interface.cpp
+CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o: ../game_server/database_manager.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_20)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o -c /home/nonametr/projects/anima/game_server/storage/ext_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o -c /home/nonametr/projects/anima/game_server/database_manager.cpp
 
-CMakeFiles/anima_game.dir/game_server/storage/ext_interface.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/ext_interface.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/ext_interface.cpp > CMakeFiles/anima_game.dir/game_server/storage/ext_interface.i
+CMakeFiles/anima_game.dir/game_server/database_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/database_manager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/database_manager.cpp > CMakeFiles/anima_game.dir/game_server/database_manager.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/storage/ext_interface.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/ext_interface.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/ext_interface.cpp -o CMakeFiles/anima_game.dir/game_server/storage/ext_interface.s
+CMakeFiles/anima_game.dir/game_server/database_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/database_manager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/database_manager.cpp -o CMakeFiles/anima_game.dir/game_server/database_manager.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o.requires
+CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o.provides: CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o.provides
+CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o.provides.build: CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o
+CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/storage/storage.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/storage/storage.o: ../game_server/storage/storage.cpp
+CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: ../game_server/storage/ext_socket.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_21)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/storage.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/storage.o -c /home/nonametr/projects/anima/game_server/storage/storage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o -c /home/nonametr/projects/anima/game_server/storage/ext_socket.cpp
 
-CMakeFiles/anima_game.dir/game_server/storage/storage.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/storage.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/storage.cpp > CMakeFiles/anima_game.dir/game_server/storage/storage.i
+CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/ext_socket.cpp > CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/storage/storage.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/storage.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/storage.cpp -o CMakeFiles/anima_game.dir/game_server/storage/storage.s
+CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/ext_socket.cpp -o CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/storage/storage.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/storage/storage.o.requires
+CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/storage/storage.o.provides: CMakeFiles/anima_game.dir/game_server/storage/storage.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/storage/storage.o.provides
+CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/storage/storage.o.provides.build: CMakeFiles/anima_game.dir/game_server/storage/storage.o
+CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/user/user.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/user/user.o: ../game_server/user/user.cpp
+CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: ../game_server/storage/ext_server_manager.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_22)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/user.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/user.o -c /home/nonametr/projects/anima/game_server/user/user.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o -c /home/nonametr/projects/anima/game_server/storage/ext_server_manager.cpp
 
-CMakeFiles/anima_game.dir/game_server/user/user.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/user.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/user/user.cpp > CMakeFiles/anima_game.dir/game_server/user/user.i
+CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/ext_server_manager.cpp > CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/user/user.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/user.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/user/user.cpp -o CMakeFiles/anima_game.dir/game_server/user/user.s
+CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/ext_server_manager.cpp -o CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/user/user.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/user.o.requires
+CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/user/user.o.provides: CMakeFiles/anima_game.dir/game_server/user/user.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/user.o.provides
+CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/user/user.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/user.o
+CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/user/user_ext.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/user/user_ext.o: ../game_server/user/user_ext.cpp
+CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: ../game_server/storage/storage.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_23)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/user_ext.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/user_ext.o -c /home/nonametr/projects/anima/game_server/user/user_ext.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o -c /home/nonametr/projects/anima/game_server/storage/storage.cpp
 
-CMakeFiles/anima_game.dir/game_server/user/user_ext.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/user_ext.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/user/user_ext.cpp > CMakeFiles/anima_game.dir/game_server/user/user_ext.i
+CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/storage.cpp > CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/user/user_ext.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/user_ext.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/user/user_ext.cpp -o CMakeFiles/anima_game.dir/game_server/user/user_ext.s
+CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/storage.cpp -o CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/user/user_ext.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/user_ext.o.requires
+CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/user/user_ext.o.provides: CMakeFiles/anima_game.dir/game_server/user/user_ext.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user_ext.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/user_ext.o.provides
+CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/user/user_ext.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/user_ext.o
+CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/instance/instance.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/instance/instance.o: ../game_server/instance/instance.cpp
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/user.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_24)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/instance/instance.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/instance.o -c /home/nonametr/projects/anima/game_server/instance/instance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/user.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/user.cpp.o -c /home/nonametr/projects/anima/game_server/user/user.cpp
 
-CMakeFiles/anima_game.dir/game_server/instance/instance.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/instance/instance.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/instance/instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/instance.i
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/user.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/user/user.cpp > CMakeFiles/anima_game.dir/game_server/user/user.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/instance/instance.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/instance/instance.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/instance/instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/instance.s
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/user.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/user/user.cpp -o CMakeFiles/anima_game.dir/game_server/user/user.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/instance/instance.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/instance/instance.o.requires
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/instance/instance.o.provides: CMakeFiles/anima_game.dir/game_server/instance/instance.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/instance.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/instance/instance.o.provides
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/instance/instance.o.provides.build: CMakeFiles/anima_game.dir/game_server/instance/instance.o
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/instance/main_instance.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/instance/main_instance.o: ../game_server/instance/main_instance.cpp
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: ../game_server/user/user_ext.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_25)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/instance/main_instance.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/main_instance.o -c /home/nonametr/projects/anima/game_server/instance/main_instance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o -c /home/nonametr/projects/anima/game_server/user/user_ext.cpp
 
-CMakeFiles/anima_game.dir/game_server/instance/main_instance.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/instance/main_instance.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/instance/main_instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/main_instance.i
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/user/user_ext.cpp > CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/instance/main_instance.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/instance/main_instance.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/instance/main_instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/main_instance.s
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/user/user_ext.cpp -o CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/instance/main_instance.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/instance/main_instance.o.requires
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/instance/main_instance.o.provides: CMakeFiles/anima_game.dir/game_server/instance/main_instance.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/main_instance.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/instance/main_instance.o.provides
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/instance/main_instance.o.provides.build: CMakeFiles/anima_game.dir/game_server/instance/main_instance.o
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o
 
-CMakeFiles/anima_game.dir/dict_json_generator.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/dict_json_generator.o: ../dict_json_generator.cpp
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: ../game_server/instance/instance.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_26)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/dict_json_generator.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/dict_json_generator.o -c /home/nonametr/projects/anima/dict_json_generator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o -c /home/nonametr/projects/anima/game_server/instance/instance.cpp
 
-CMakeFiles/anima_game.dir/dict_json_generator.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/dict_json_generator.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/dict_json_generator.cpp > CMakeFiles/anima_game.dir/dict_json_generator.i
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/instance/instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.i
 
-CMakeFiles/anima_game.dir/dict_json_generator.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/dict_json_generator.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/dict_json_generator.cpp -o CMakeFiles/anima_game.dir/dict_json_generator.s
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/instance/instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.s
 
-CMakeFiles/anima_game.dir/dict_json_generator.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/dict_json_generator.o.requires
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.requires
 
-CMakeFiles/anima_game.dir/dict_json_generator.o.provides: CMakeFiles/anima_game.dir/dict_json_generator.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/dict_json_generator.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/dict_json_generator.o.provides
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.provides
 
-CMakeFiles/anima_game.dir/dict_json_generator.o.provides.build: CMakeFiles/anima_game.dir/dict_json_generator.o
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: ../game_server/instance/main_instance.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o -c /home/nonametr/projects/anima/game_server/instance/main_instance.cpp
+
+CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/instance/main_instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/instance/main_instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: ../game_server/instance/ext_socket_instance.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_28)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o -c /home/nonametr/projects/anima/game_server/instance/ext_socket_instance.cpp
+
+CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/instance/ext_socket_instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/instance/ext_socket_instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o
+
+CMakeFiles/anima_game.dir/dict_json_generator.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/dict_json_generator.cpp.o: ../dict_json_generator.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/dict_json_generator.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/dict_json_generator.cpp.o -c /home/nonametr/projects/anima/dict_json_generator.cpp
+
+CMakeFiles/anima_game.dir/dict_json_generator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/dict_json_generator.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/dict_json_generator.cpp > CMakeFiles/anima_game.dir/dict_json_generator.cpp.i
+
+CMakeFiles/anima_game.dir/dict_json_generator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/dict_json_generator.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/dict_json_generator.cpp -o CMakeFiles/anima_game.dir/dict_json_generator.cpp.s
+
+CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.requires
+
+CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.provides: CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.provides
+
+CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.provides.build: CMakeFiles/anima_game.dir/dict_json_generator.cpp.o
 
 # Object files for target anima_game
 anima_game_OBJECTS = \
-"CMakeFiles/anima_game.dir/game_server/main_game.o" \
-"CMakeFiles/anima_game.dir/login_server/login_server.o" \
-"CMakeFiles/anima_game.dir/login_server/login_server_handler.o" \
-"CMakeFiles/anima_game.dir/game_server/game_server.o" \
-"CMakeFiles/anima_game.dir/game_server/game_socket.o" \
-"CMakeFiles/anima_game.dir/game_server/server.o" \
-"CMakeFiles/anima_game.dir/game_server/database_manager.o" \
-"CMakeFiles/anima_game.dir/shared/common.o" \
-"CMakeFiles/anima_game.dir/shared/config.o" \
-"CMakeFiles/anima_game.dir/shared/net/socket.o" \
-"CMakeFiles/anima_game.dir/shared/net/net_core.o" \
-"CMakeFiles/anima_game.dir/shared/mt/thread.o" \
-"CMakeFiles/anima_game.dir/shared/mt/thread_core.o" \
-"CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o" \
-"CMakeFiles/anima_game.dir/shared/json.o" \
-"CMakeFiles/anima_game.dir/shared/json_value.o" \
-"CMakeFiles/anima_game.dir/shared/version_control.o" \
-"CMakeFiles/anima_game.dir/shared/db/database.o" \
-"CMakeFiles/anima_game.dir/shared/db/mysql_database.o" \
-"CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o" \
-"CMakeFiles/anima_game.dir/game_server/storage/storage.o" \
-"CMakeFiles/anima_game.dir/game_server/user/user.o" \
-"CMakeFiles/anima_game.dir/game_server/user/user_ext.o" \
-"CMakeFiles/anima_game.dir/game_server/instance/instance.o" \
-"CMakeFiles/anima_game.dir/game_server/instance/main_instance.o" \
-"CMakeFiles/anima_game.dir/dict_json_generator.o"
+"CMakeFiles/anima_game.dir/game_server/main_game.cpp.o" \
+"CMakeFiles/anima_game.dir/login_server/login_server.cpp.o" \
+"CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/common.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/config.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/net/socket.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/json.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/json_value.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/version_control.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/db/database.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/game_server.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/server.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/user/user.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o" \
+"CMakeFiles/anima_game.dir/dict_json_generator.cpp.o"
 
 # External object files for target anima_game
 anima_game_EXTERNAL_OBJECTS =
 
-anima_game: CMakeFiles/anima_game.dir/game_server/main_game.o
-anima_game: CMakeFiles/anima_game.dir/login_server/login_server.o
-anima_game: CMakeFiles/anima_game.dir/login_server/login_server_handler.o
-anima_game: CMakeFiles/anima_game.dir/game_server/game_server.o
-anima_game: CMakeFiles/anima_game.dir/game_server/game_socket.o
-anima_game: CMakeFiles/anima_game.dir/game_server/server.o
-anima_game: CMakeFiles/anima_game.dir/game_server/database_manager.o
-anima_game: CMakeFiles/anima_game.dir/shared/common.o
-anima_game: CMakeFiles/anima_game.dir/shared/config.o
-anima_game: CMakeFiles/anima_game.dir/shared/net/socket.o
-anima_game: CMakeFiles/anima_game.dir/shared/net/net_core.o
-anima_game: CMakeFiles/anima_game.dir/shared/mt/thread.o
-anima_game: CMakeFiles/anima_game.dir/shared/mt/thread_core.o
-anima_game: CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o
-anima_game: CMakeFiles/anima_game.dir/shared/json.o
-anima_game: CMakeFiles/anima_game.dir/shared/json_value.o
-anima_game: CMakeFiles/anima_game.dir/shared/version_control.o
-anima_game: CMakeFiles/anima_game.dir/shared/db/database.o
-anima_game: CMakeFiles/anima_game.dir/shared/db/mysql_database.o
-anima_game: CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o
-anima_game: CMakeFiles/anima_game.dir/game_server/storage/storage.o
-anima_game: CMakeFiles/anima_game.dir/game_server/user/user.o
-anima_game: CMakeFiles/anima_game.dir/game_server/user/user_ext.o
-anima_game: CMakeFiles/anima_game.dir/game_server/instance/instance.o
-anima_game: CMakeFiles/anima_game.dir/game_server/instance/main_instance.o
-anima_game: CMakeFiles/anima_game.dir/dict_json_generator.o
+anima_game: CMakeFiles/anima_game.dir/game_server/main_game.cpp.o
+anima_game: CMakeFiles/anima_game.dir/login_server/login_server.cpp.o
+anima_game: CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/common.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/config.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/net/socket.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/json.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/json_value.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/version_control.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/db/database.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/game_server.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/server.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o
+anima_game: CMakeFiles/anima_game.dir/dict_json_generator.cpp.o
 anima_game: CMakeFiles/anima_game.dir/build.make
 anima_game: CMakeFiles/anima_game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable anima_game"
@@ -711,32 +786,35 @@ anima_game: CMakeFiles/anima_game.dir/link.txt
 CMakeFiles/anima_game.dir/build: anima_game
 .PHONY : CMakeFiles/anima_game.dir/build
 
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/main_game.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/login_server/login_server.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/login_server/login_server_handler.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/game_server.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/game_socket.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/server.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/database_manager.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/common.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/config.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/net/socket.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/net/net_core.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/mt/thread.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/mt/thread_core.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/json.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/json_value.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/version_control.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/db/database.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/db/mysql_database.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/storage/ext_interface.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/storage/storage.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/user.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/user_ext.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/instance/instance.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/instance/main_instance.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/dict_json_generator.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/login_server/login_server.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/common.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/config.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/json.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/json_value.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/version_control.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/db/database.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/server.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.requires
 .PHONY : CMakeFiles/anima_game.dir/requires
 
 CMakeFiles/anima_game.dir/clean:

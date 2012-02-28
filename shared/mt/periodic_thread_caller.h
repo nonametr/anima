@@ -1,11 +1,12 @@
 #ifndef PERIODICTHREADCALLER_H
 #define PERIODICTHREADCALLER_H
 
-#include "../singleton.h"
-#include "thread.h"
 #include <map>
+
+#include "singleton.h"
+#include "thread.h"
 #include "thread_core.h"
-#include "../common.h"
+#include "common.h"
 
 #define INFINITY_SLEEP_TIME 10000000
 

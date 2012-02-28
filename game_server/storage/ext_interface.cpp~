@@ -23,6 +23,7 @@ ExtSocket::ExtSocket ( const char* listen_address, uint32 port ) : ListenSocket(
         _ext_servers[server_id] = new ExtServer(server_id, listen_ip, ext_port, server_type);
     }
     while (qres->nextRow());
+    ext_con_inst = new ExtConnectionInstance(this);
 }
 
 void ExtSocket::onClientPacketDisconnect ( Socket *sock )
@@ -35,14 +36,77 @@ void ExtSocket::onClientPacketConnect ( Socket *sock )
 }
 void ExtSocket::onClientPacketRead(Packet *pkt)
 {
+    ClientPacket *client_pkt = _createExtClientPacket(pkt);
+    delete pkt;
+    if (client_pkt)
+        _data.push(client_pkt);
 }
-void ExtSocket::onClientPacketDisconnect(Socket *sock)
+void ExtSocket::_performClientPacket ( ClientPacket *pkt )
+{
+    ext_con_inst->handlePaket(pkt);
+}
+ClientPacket* ExtSocket::_createExtClientPacket(Packet *pkt)
+{
+    ClientPacket *client_pkt = new ClientPacket;
+    Socket *sock = client_pkt->sock = pkt->sock;
+
+    if (pkt->data_size < PACKET_HEADER_SIZE)
+    {
+        traceerr("Error rcv packet without header");
+        sock->send(MSG_PACKET_NO_HEADER, strlen(MSG_PACKET_NO_HEADER));
+        sock->disconnect();
+        delete client_pkt;
+        return NULL;
+    }
+    memcpy(&client_pkt->type, &pkt->data.c_str()[0], PACKET_INT_SIZE);
+    memcpy(&client_pkt->data_size, &pkt->data.c_str()[PACKET_INT_SIZE], PACKET_INT_SIZE);
+    if (client_pkt->type >= EG_MAX_ID)
+    {
+        traceerr("Error rcv packet with id graiter than possible. Can't handle it!");
+        sock->send(MSG_PACKET_WRONG_ID, strlen(MSG_PACKET_NO_HEADER));
+        sock->disconnect();
+        delete client_pkt;
+        return NULL;
+    }
+    if (client_pkt->data_size != pkt->data_size)
+    {
+        traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
+        sock->send(MSG_PACKET_FRAGMET, strlen(MSG_PACKET_NO_HEADER));
+        sock->disconnect();
+        delete client_pkt;
+        return NULL;
+    }
+    client_pkt->data_size -= 3*sizeof(int);///3 ints - service data;
+    client_pkt->data = string(pkt->data.c_str()[3*sizeof(int)], pkt->data_size);
+    return client_pkt;
+}
+void ExtSocketThread::run()
+{
+    ClientPacket* pkt = NULL;
+    while (_running.getVal())
+    {
+        if (pkt != NULL)
+        {
+            owner->_performClientPacket( pkt );
+            delete pkt;
+        }
+
+        pkt = owner->_data.pop( );
+        if (pkt == NULL)
+            sleep(1);
+    }
+}
+void ExtSocketThread::onShutdown()
+{
+    _running.setVal(false);
+}
+ExtSocketThread::ExtSocketThread(ExtSocket *owner) : owner(owner)
+{
+    _running.setVal(true);
+}
+ExtSocketThread::~ExtSocketThread()
 {
 }
-void ExtSocket::onClientPacketConnect(Socket *sock)
-{
-}
-    
 // ExtConnection *ExtInterface::_getFreeConnection()
 // {
 //     uint32 i = 0;
@@ -52,7 +116,7 @@ void ExtSocket::onClientPacketConnect(Socket *sock)
 //         if ( con->mutex.try_lock() )
 //             return con;
 //     }
-// 
+//
 //     // shouldn't be reached
 //     return NULL;
 // }

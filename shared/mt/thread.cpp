@@ -1,5 +1,5 @@
 #include "thread.h"
-#include "../common.h"
+#include "common.h"
 
 using namespace std;
 

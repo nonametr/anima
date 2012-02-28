@@ -1,28 +1,28 @@
 #ifndef INST_H
 #define INST_H
 
-#include "../../shared/net/socket.h"
-#include "../../shared/net/listen_socket.h"
-#include "../../shared/common.h"
-#include "../../game_server/user/user.h"
+#include "socket.h"
+#include "listen_socket.h"
+#include "common.h"
+#include "user.h"
 
 template <class T>
-class PaketHandler
+class PacketHandler
 {
 public:
     enum STATUS { NO_HANDLER_SET, HANDLER_SET} status;
-    inline void setHandler(STATUS v_status, void (T::*p_handler)(ClientPacket* recvPacket)) 
+    inline void setHandler(STATUS v_status, void (T::*p_handler)(Packet* recvPacket)) 
     {
         status = v_status;
         handler = p_handler;
     };
-    void (T::*handler)(ClientPacket* recvPacket);
+    void (T::*handler)(Packet* recvPacket);
 };
 
 class Instance
 {
 public:
-    virtual void handlePaket(ClientPacket* pkt) = 0;
+    virtual void handlePacket(Packet* pkt) = 0;
 private:
     associative_container< Socket *, shared_ptr<User> > _user_sessions;
 };

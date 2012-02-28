@@ -1,5 +1,5 @@
 #include "login_server_handler.h"
-#include "../game_server/server.h"
+#include "server.h"
 
 initialiseSingleton ( LSWorld );
 
@@ -11,7 +11,7 @@ LSWorld::LSWorld(const char* listen_address, uint32 port) : ListenSocket(listen_
         iThreadCore->startThread(new LSWorldThread);
     }
 }
-void LSWorld::performPacket( ClientPacket *pkt )
+void LSWorld::performPacket( Packet *pkt )
 {
 //   pkt->connect->send("hello");
 }
@@ -19,7 +19,7 @@ LSWorld::~LSWorld()
 {
     while (true)
     {
-        ClientPacket *pkt = _data.pop();
+        Packet *pkt = _data.pop();
         if (pkt)
             delete pkt;
         else
@@ -29,7 +29,7 @@ LSWorld::~LSWorld()
 }
 void LSWorldThread::run()
 {
-    ClientPacket* pkt = NULL;
+    Packet* pkt = NULL;
     while (_running.getVal())
     {
         if (pkt != NULL)

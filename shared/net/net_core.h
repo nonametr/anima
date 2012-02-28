@@ -1,10 +1,10 @@
 #ifndef NETCORE_H
 #define NETCORE_H
 
-#include "../singleton.h"
+#include "singleton.h"
 #include "socket.h"
-#include "../mt/thread.h"
-#include "../common.h"
+#include "thread.h"
+#include "common.h"
 
 #define THREAD_EVENT_MAX_SIZE 128  /// This is the number of socket events each thread can receieve at once.
 /// This default value should be more than enough.

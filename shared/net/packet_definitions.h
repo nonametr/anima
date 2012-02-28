@@ -8,82 +8,38 @@
 #define MSG_PACKET_WRONG_ID_IN_THIS_INSTANCE "Packet with that id can't be handled by current instance. Connection crushed and closed."
 
 #define PACKET_INT_SIZE 4
-#define PACKET_HEADER_SIZE PACKET_INT_SIZE*2
-#include "../common.h"
+#define PACKET_HEADER_SIZE PACKET_INT_SIZE*4
 
-enum EXT_PAKETS
-{
-    EXT_SET_MONEY, EXT_SET_GOLD, EXT_SET_EXP, EXT_SET_LVL
-};
-enum IG_PAKETS
-{
-    IG_MAIN_JOIN = 1, IG_GET_PARAM, IG_LIST_PARAMS, IG_MAX_ID
-};
-enum OG_PAKETS
-{
-    OG_NAME = 10000, OG_MONEY, OG_GOLD, OG_LIST_PARAMS, OG_MAX_ID
-};
+#include "common.h"
+#include "packet_id.h"
+#include "command_structs.h"
 
 class Socket;
 
-struct JoinData
+struct Packet
 {
-    uint32 uid;
-    char sid[64];
-};
-
-
-class Packet
-{
-public:
+    Packet() : data(NULL)
+    {
+    }
+    ~Packet()
+    {
+        if (data != NULL)
+            delete [] data;
+    }
+///---BEGIN HEADER------------
+    int type;
+    int total_size;
     int data_size;
-    string data;
+    int crc32;
+///---END HEADER--------------
+
+///---BEGIN BODY--------------
+    char *data;
+///---END BODY----------------
+
+///---BEGIN NON PACKET DATA---
     Socket *sock;
-};
-
-struct DataObj
-{
-  int data_size;
-  char *data;
-};
-
-class ClientPacket : public Packet
-{
-public:
-    int type;
-    int uid;
-    int soc_uid;
-};
-class ExtPacket : public Packet
-{
-public:
-    int type;
-    int uid;
-    int soc_uid;
-};
-struct IGPacket
-{
-    int type;///packet type = IG paket id
-    int size;///total packet size, including all from type to crc
-    int crc32;///crc32 from all packet data
-//     int uid;
-    char *data;
-};
-struct OGPacket
-{
-    int type;///packet type = OG paket id
-    int size;///total packet size, including all from type to crc
-    int crc32;///crc32 from all packet data
-//     int uid;
-    char *data;
-};
-
-struct CrossPacket
-{
-    int type;///packet type = 1
-    int size_total;///total packet size, including all from type to crc
-    int crc32;///crc32 from all packet data
-    char *data;
+///---END NON PACKET DATA-----
 };
 
 #endif

@@ -1,13 +1,9 @@
 #ifndef SERVER_H
 #define SERVER_H
 
-#include "../shared/common.h"
-#include "../game_server/database_manager.h"
-
-#define DB_LOCK_SQL__PID_WORK_PATH "UPDATE server_desc SET online_pid = %u WHERE active = 1 AND online_pid = 0 AND daemon_dir = \"%s\""
-#define DB_UNLOCK_SQL__PID "UPDATE server_desc SET online_pid = 0 WHERE active = 1 AND online_pid = %u"
-#define DB_TEST_UNIQ_SQL__PID "SELECT count(*) FROM server_desc WHERE online = %u"
-#define DB_SELECT_SERVER_SQL__PID "SELECT server_id, listen_ip, port, ext_port, daemon_user, daemon_dir, error_log_path, srv_log_path, dbg_lvl, num_net_threads, num_worker_threads, version_control_system_name, server_type FROM server_desc WHERE online_pid = %u"
+#include "common.h"
+#include "database_manager.h"
+#include "sql_define.h"
 
 #define GAME_SERVER 0
 #define LOGIN_SERVER 1
@@ -25,6 +21,7 @@ public:
     bool isRestating();
     void stop();
     
+    uint32 getId() { return _id; };
     uint32 getPID() { return _pid; };
     uint32 getNumWorkerThreads() { return _num_worker_threads; };
     uint32 getNumNetThreads() { return _num_net_threads; };

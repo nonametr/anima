@@ -3,7 +3,7 @@
 
 #include <mysql/mysql.h>
 #include "database.h"
-#include "../common.h"
+#include "common.h"
 
 struct MySQLDatabaseConnection : public DatabaseConnection
 {

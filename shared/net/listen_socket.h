@@ -50,21 +50,21 @@ public:
         if (listen_socket_opened)
             close();
     }
-    virtual void onClientPacketRead(Packet *pkt) = 0;
-    virtual void onClientPacketDisconnect(Socket *sock) = 0;
-    virtual void onClientPacketConnect(Socket *sock) = 0;
+    virtual void onPacketRead(Packet *pkt) = 0;
+    virtual void onPacketDisconnect(Socket *sock) = 0;
+    virtual void onPacketConnect(Socket *sock) = 0;
 private:
-    inline void _onClientPacketRead(Packet *pkt)
+    inline void _onPacketRead(Packet *pkt)
     {
-        this->onClientPacketRead(pkt);
+        this->onPacketRead(pkt);
     }
-    inline void _onClientPacketDisconnect(Socket *sock)
+    inline void _onPacketDisconnect(Socket *sock)
     {
-        this->onClientPacketDisconnect(sock);
+        this->onPacketDisconnect(sock);
     }
-    inline void _onClientPacketConnect(Socket *sock)
+    inline void _onPacketConnect(Socket *sock)
     {
-        this->onClientPacketConnect(sock);
+        this->onPacketConnect(sock);
     }
     ListenSocket() {};
     void onAccept()
