@@ -55,9 +55,43 @@ void intToString ( char * buf, int num )
 }
 string intToString ( int num )
 {
-    char buf[128];
-    snprintf ( buf, 128, "%u",num );
+    char buf[64];
+    snprintf ( buf, 64, "%u",num );
     return buf;
+}
+string int64ToString ( long long int num )
+{
+    char buf[128];
+    snprintf ( buf, 128, "%llu",num );
+    return buf;
+}
+string floatToString ( float num )
+{
+    char buf[128];
+    snprintf ( buf, 128, "%f",num );
+    return buf;
+}
+string doubleToString ( double num )
+{
+    char buf[128];
+    snprintf ( buf, 128, "%f",num );
+    return buf;
+}
+/**
+ * @brief creating md5 from 'text'
+ *
+ * @param value value to generate md5 from
+ * @param hash md5'ed value
+ **/
+void getMD5(char* text, char *hash)
+{
+    unsigned char md5digest[MD5_DIGEST_LENGTH];
+    MD5((unsigned char*)text, strlen(text), md5digest);
+
+    for (int i=0;i<MD5_DIGEST_LENGTH;i++)
+    {
+        sprintf(&hash[2*i], "%02x", md5digest[i]);
+    }
 }
 /**
  * @brief convert string to timestamp

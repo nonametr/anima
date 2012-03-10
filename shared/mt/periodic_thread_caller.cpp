@@ -1,12 +1,12 @@
 #include "periodic_thread_caller.h"
+#include "server.h"
 
 initialiseSingleton ( PeriodicThreadCaller );
 
-PeriodicThreadCaller::PeriodicThreadCaller()
+PeriodicThreadCaller::PeriodicThreadCaller() : _running(true)
 {
     pthread_mutex_init( &_sleep_mutex, NULL );
     pthread_cond_init( &_sleep_cond, NULL );
-    _runing.setVal(true);
     iThreadCore->startThread(this);
 }
 PeriodicThreadCaller::~PeriodicThreadCaller()
@@ -17,26 +17,25 @@ PeriodicThreadCaller::~PeriodicThreadCaller()
         {
             delete it_pt->second.threads_to_run[i];
         }
-        it_pt->second.threads_to_run.clear();
     }
 }
 void PeriodicThreadCaller::run()
 {
     struct timespec tv;
     struct timeval  tp;
-
+    
     uint32 current_time;
-    uint32 exam_time;
-    uint32 sleeping_time;
+    uint32 exam_time = INFINITY_SLEEP_TIME;
+    uint32 sleeping_time = INFINITY_SLEEP_TIME;
     PeriodicThreadMap::iterator it_exam;
     while (true)
     {
-        _pt_mutex.lock();
-        if (!_runing.getVal())
+        if (!_running)
         {
-            _pt_mutex.unlock();
+            _running = !_running;
             break;
         }
+        _pt_mutex.lock();
         current_time = getTickCount();
         if (_periodic_threads.size())
         {
@@ -49,15 +48,13 @@ void PeriodicThreadCaller::run()
                     ThreadCore::getSingletonPtr()->startThreadNoDel(it_exam->second.threads_to_run[i]);
                     exam_time = current_time + it_exam->second.call_interval;///its next exam_time
                     _periodic_threads[exam_time] = it_exam->second;
-                    sleeping_time = it_exam->second.call_interval;
+                    sleeping_time = (sleeping_time > it_exam->second.call_interval) ? it_exam->second.call_interval:sleeping_time;
                 }
                 _periodic_threads.erase(it_exam);
             }
             else
                 sleeping_time = exam_time - current_time;
         }
-        else
-            sleeping_time = INFINITY_SLEEP_TIME;
         gettimeofday(&tp, NULL);
         tv.tv_sec = tp.tv_sec + sleeping_time;
         tv.tv_nsec = tp.tv_usec*1000;
@@ -69,8 +66,13 @@ void PeriodicThreadCaller::run()
 }
 void PeriodicThreadCaller::onShutdown()
 {
-    _runing.setVal(false);
-    pthread_cond_signal( &_sleep_cond );///waiking up periodic thread callback checks
+    _running = false;
+    ///waiking up periodic thread callback checks
+    while (!_running)
+    {
+        sleep(1);
+        pthread_cond_signal( &_sleep_cond );
+    }
 }
 void PeriodicThreadCaller::startPeriodicThread(Thread * thread, uint32 call_interval)
 {

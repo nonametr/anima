@@ -10,13 +10,18 @@
 class DatabaseManager : public Singleton<DatabaseManager>
 {
 public:
-    DatabaseManager();
+    DatabaseManager(string work_dir, uint32 pid);
     MySQLDatabase *getSSDatabase();
     MySQLDatabase *getDatabase(unsigned int id);
     virtual ~DatabaseManager();
 private:
-    MySQLDatabase *ss_db;
-    MySQLDatabase **gs_db;//max db = 10
+    void lockDb(string &work_dir, uint32 pid);
+    bool testDb(uint32 pid);
+    void unlockDb(uint32 pid);
+    
+    MySQLDatabase *_ss_db;
+    MySQLDatabase **_gs_db;//max db = 10
+    uint32 _pid;
     
     uint _max_db_servers;
 };

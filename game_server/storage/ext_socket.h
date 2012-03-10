@@ -18,7 +18,7 @@ class ExtSocket : public ListenSocket
     friend class ExtSocketThread;
 public:
     ExtSocket ( const char* listen_address, uint32 port );
-    virtual ~ExtSocket() {};
+    virtual ~ExtSocket();
 
 private:
     virtual void onPacketRead(Packet *pkt);
@@ -42,7 +42,7 @@ public:
     virtual ~ExtSocketThread();
 private:
     ExtSocket *owner;
-    AtomicBoolean _running;
+    volatile bool _running;
 };
 
 #endif // EXTERNAL_SHARD_H

@@ -62,7 +62,7 @@ public:
     /* Thread Stuff                                                         */
     /************************************************************************/
     void run();
-    void onShutdown() { _running = false; };
+    void onShutdown() { _running = false; while(_running) sleep(1); };
 
     /************************************************************************/
     /* Virtual Functions                                                    */
@@ -99,7 +99,7 @@ public:
     void queueAsyncQuery(AsyncQuery* query);
     void endThreads();
 
-    void thread_proc_query();
+    void thread_proc_query(volatile bool &running);
     void freeQueryResult(QueryResult* p);
 
     DatabaseConnection* getFreeConnection();
@@ -115,13 +115,13 @@ public:
 
 protected:
 
-    // spawn threads and shizzle
+    /// spawn threads and shizzle
     void _initialize();
 
     virtual void _beginTransaction(DatabaseConnection* conn) = 0;
     virtual void _endTransaction(DatabaseConnection* conn) = 0;
 
-    // actual query function
+    /// actual query function
     virtual bool _sendQuery(DatabaseConnection* con, const char* Sql, bool Self) = 0;
     virtual QueryResult* _storeQueryResult(DatabaseConnection* con) = 0;
 
@@ -178,10 +178,10 @@ protected:
 class QueryThread : public Thread
 {
 public:
-    QueryThread(Database* d) : Thread(), db(d) {}
+    QueryThread(Database* d) : Thread(), db(d), _running(true){}
     ~QueryThread();
     void run();
-    void onShutdown(){ _running = false; };
+    void onShutdown(){ _running = false; while(!_running){ sleep(1); } };
 private:
     friend class Database;
     Database* db;

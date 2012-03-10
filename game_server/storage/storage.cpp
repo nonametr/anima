@@ -4,23 +4,77 @@
 #include "sql_define.h"
 #include "ext_server_manager.h"
 #include <time.h>
+#include <mysql/mysql.h>
 
 initialiseSingleton ( Storage );
 
 Storage::Storage()
 {
-
+//      iPeriodicThreadCaller->startPeriodicThread(new StorageThread, UNLOAD_PERIOD);
+//      iPeriodicThreadCaller->startPeriodicThread(new StorageTimer, TIME_UPDATE_PERIOD);
 }
 Storage::~Storage()
 {
+    for (uint32 i = 0; i < USER_HASH_SIZE; ++i)
+    {
+        _users_hash_lock[i].lock();
+        _users[i].clear();
+        _users_hash_lock[i].unlock();
+    }
+}
+///--------------PRIVATE------------------------------------------
+void Storage::addUser(shared_ptr<User> user)
+{
+    uint32 uid = user->get("uid").toInt();
+    uint32 hash = uid % USER_HASH_SIZE;
+    _users_hash_lock[hash].lock();
+    _users[hash][uid] = user;
+    _users_hash_lock[hash].unlock();
+}
+shared_ptr<User> Storage::findUser(uint32 uid)
+{
+    uint32 hash = uid % USER_HASH_SIZE;
+    _users_hash_lock[hash].lock();
+    auto it_us = _users[hash].find ( uid );
+    if ( it_us != _users[hash].end() )
+    {
+        _users_hash_lock[hash].unlock();
+        return it_us->second;
+    }
+    else
+    {
+        _users_hash_lock[hash].unlock();
+        return shared_ptr<User>();
+    }
+}
+void Storage::removeUser(uint32 uid)
+{
+    uint32 hash = uid % USER_HASH_SIZE;
+    _users_hash_lock[hash].lock();
+    _users[hash].erase(uid);
+    _users_hash_lock[hash].unlock();
+}
+///------------END PRIVATE------------------------------------------
+shared_ptr<User> Storage::getLocalUser(long long int soc_id, int soc_net_id)
+{
+    Field *field;
 
+    shared_ptr<QueryResult> qres(iDBManager->getSSDatabase()->query(DB_GET_UID_FROM__SOC_ID_SOC_NET_NAME, soc_id, soc_net_id));
+
+    if (!qres.get())
+        return createNewUser(soc_id, soc_net_id);
+
+    field = qres->fetch();
+    uint32 uid = field[0].getUInt32();
+    return getLocalUser(uid);
 }
 shared_ptr<User> Storage::getLocalUser( uint32 uid)
 {
-    auto it_us = _users.find ( uid );
-    if ( it_us != _users.end() )
-        return it_us->second;
-    return shared_ptr<User>();
+    shared_ptr<User> user = findUser(uid);
+    if (user == shared_ptr<User>())
+        return loadUser(uid);
+    else
+        return user;
 }
 shared_ptr<UserExt> Storage::getExtUser( uint32 uid)
 {
@@ -65,44 +119,67 @@ shared_ptr<User> Storage::loadUser(uint32 uid)
         return shared_ptr<User>();
 
     field = usr_qres->fetch();
+    shared_ptr<User> user(new User);
 
-    User *user = new User;
-    user->setUid(field[0].getUInt32());
-    user->setSocialId(field[1].getUInt64());
-    user->setSocialNet(field[2].getUInt32());
-    user->setFirstName(field[3].getString());
-    user->setLastName(field[4].getString());
-    user->setNickName(field[5].getString());
-    user->setSex(field[6].getUInt32());
-    user->setMoney(field[7].getUInt32());
-    user->setGold(field[8].getUInt32());
-    user->setExp(field[9].getUInt32());
-    user->setLvl(field[10].getUInt32());
-    user->setMusic(field[11].getUInt32());
-    user->setSound(field[12].getUInt32());
-    user->setAdmin(field[13].getUInt32());
-    user->setLastJoinUtime(field[14].getUInt32());
-    user->setRegistrationUtime(field[15].getUInt32());
-    user->setLanguage(field[16].getUInt32());
-    user->setInvitedFriendsCount(field[17].getUInt32());
-    user->setFriendsData(field[18].getString());
-    user->setAppFriendsData(field[19].getString());
-    user->setLoadingTime(time(NULL));
-
-    return shared_ptr<User>(user);
+    for (uint32 i = 0; i < usr_qres->getFieldCount(); ++i)
+    {
+        switch (field[i].getType())
+        {
+        case MYSQL_TYPE_DECIMAL:
+        case MYSQL_TYPE_TINY:
+        case MYSQL_TYPE_SHORT:
+        case MYSQL_TYPE_LONG:
+        case MYSQL_TYPE_NULL:
+        case MYSQL_TYPE_TIMESTAMP:
+        case MYSQL_TYPE_LONGLONG:
+        case MYSQL_TYPE_INT24:
+            user->set(field[i].getFieldName(), field[i].getInt32());
+            break;
+        case MYSQL_TYPE_FLOAT:
+        case MYSQL_TYPE_DOUBLE:
+            user->set(field[i].getFieldName(), field[i].getFloat());
+            break;
+        case MYSQL_TYPE_DATE:
+        case MYSQL_TYPE_TIME:
+        case MYSQL_TYPE_DATETIME:
+        case MYSQL_TYPE_YEAR:
+        case MYSQL_TYPE_NEWDATE:
+        case MYSQL_TYPE_VARCHAR:
+        case MYSQL_TYPE_BIT:
+        case MYSQL_TYPE_NEWDECIMAL:
+        case MYSQL_TYPE_ENUM:
+        case MYSQL_TYPE_SET:
+        case MYSQL_TYPE_TINY_BLOB:
+        case MYSQL_TYPE_MEDIUM_BLOB:
+        case MYSQL_TYPE_LONG_BLOB:
+        case MYSQL_TYPE_BLOB:
+        case MYSQL_TYPE_VAR_STRING:
+        case MYSQL_TYPE_STRING:
+        case MYSQL_TYPE_GEOMETRY:
+            user->set(field[i].getFieldName(), field[i].getString());
+            break;
+        default:
+            break;
+        }
+    }
+    addUser(user);
+    return user;
 }
 
-shared_ptr<User> Storage::createNewUser(long int soc_id, uint32 soc_net_id)
+shared_ptr<User> Storage::createNewUser(long long int soc_id, uint32 soc_net_id)
 {
     uint32 db_id = iServer->getId();
     shared_ptr<QueryResult> qres(iDBManager->getSSDatabase()->queryNA(DB_GET_NEW_USER_FOR_UPDATE));
     if (!qres.get())
     {
         iDBManager->getSSDatabase()->waitExecuteNA(DB_PRE_CREATE_NEW_USERS);
-	return createNewUser(soc_id, soc_net_id);
+        return createNewUser(soc_id, soc_net_id);
     }
     Field *fields = qres->fetch();
     uint32 new_uid = fields[0].getUInt32();
-    iDBManager->getSSDatabase()->execute(DB_UPDATE_LOCKED_FOR_UPDATE, soc_id, soc_net_id, db_id, iServer->getId());
-//     iDBManager->getDatabase(db_id)->execute(DB_CREATE_USER_GAME_DB__UID, new_uid);
+
+    iDBManager->getSSDatabase()->execute(DB_UPDATE_LOCKED_FOR_UPDATE, soc_id, soc_net_id, db_id, db_id, new_uid);
+    iDBManager->getDatabase(db_id)->execute(DB_CREATE_USER_GAME_DB__UID, new_uid);
+
+    return loadUser(new_uid);
 }

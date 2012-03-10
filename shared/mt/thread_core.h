@@ -29,6 +29,7 @@ private:
     ThreadSet _free_threads;
     ThreadSet _active_threads;
     Mutex _mutex;
+    volatile bool shutting_down;
 };
 
 #define iThreadCore ThreadCore::getSingletonPtr()

@@ -202,6 +202,17 @@ public:
     }
     /** @return false if cannot be lock, true if it was locked.
      */
+    inline bool try_1k_lock()
+    {
+	unsigned int cnt = 0;
+	while(pthread_mutex_trylock(&mutex))
+	{
+	  cnt++;
+	  if(cnt > 1000)
+	    return false;
+	}
+        return true;
+    }
     inline bool try_lock()
     {
         return (pthread_mutex_trylock(&mutex) == 0);

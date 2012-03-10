@@ -43,7 +43,7 @@ isExecutable=false
 Default Make Environment Profile=0
 Install As Root=true
 Number Of Jobs=8
-Su Command=1
+Su Command=2
 
 [Project]
 VersionControlSupport=kdevgit

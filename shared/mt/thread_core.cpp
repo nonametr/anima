@@ -15,7 +15,7 @@ static void * thread_proc(void * param)
             t_control->run();
         }
         ///after resuming, this is where we will end up. start the loop again, check for tasks, then go back to wait
-        if (ThreadCore::getSingletonPtr()->threadExit(t_control))
+        if (iThreadCore->threadExit(t_control))
             break;
         t_control->suspend();
     }
@@ -27,12 +27,12 @@ bool ThreadCore::threadExit(ThreadController * t_control)
     _mutex.lock();
     /// we're definitely no longer active
     _active_threads.erase(t_control);
-    
+
     if (!t_control->isRuning())
     {
         _free_threads.erase(t_control);
         delete t_control;
-	_mutex.unlock();
+        _mutex.unlock();
         return true;
     }
 
@@ -43,7 +43,7 @@ bool ThreadCore::threadExit(ThreadController * t_control)
     _mutex.unlock();
     return false;
 }
-ThreadCore::ThreadCore()
+ThreadCore::ThreadCore() : shutting_down(false)
 {
     uint32 thread_count = _getNumCpus()*4;
 
@@ -77,7 +77,8 @@ int ThreadCore::_getNumCpus()
 void ThreadCore::startThreadNoDel(Thread * thread)
 {
     ASSERT(thread != NULL);
-    _mutex.lock();
+    if (!_mutex.try_1k_lock())
+        return;
     ThreadController * t_control = startThread(thread);
     t_control->setDeleteOnExit(false);
     _mutex.unlock();
@@ -112,6 +113,7 @@ ThreadController * ThreadCore::startThread(Thread * thread)
 }
 void ThreadCore::shutdown()
 {
+    shutting_down = true;
     _mutex.lock();
     for ( ThreadSet::iterator itr = _free_threads.begin(); itr != _free_threads.end(); ++itr)
     {
@@ -141,7 +143,8 @@ void ThreadCore::shutdown()
                     t_control->stop();
                 }
             }
-            tracelog(4, "Stoping threads... %u active and %u free threads remaining...", static_cast<uint32>(_active_threads.size()), static_cast<uint32>(_free_threads.size()) );
+            tracelog(4, "Stoping threads... %u active and %u free threads remaining...", static_cast<uint32>(_active_threads.size()),
+                     static_cast<uint32>(_free_threads.size()) );
             _mutex.unlock();
             sleep(1);
             continue;
@@ -150,3 +153,4 @@ void ThreadCore::shutdown()
         break;
     }
 }
+

@@ -14,12 +14,12 @@ public:
 
     inline static type & getSingleton( )
     {
-        ASSERT ( _singleton_ptr );
+//         ASSERT ( _singleton_ptr );
         return *_singleton_ptr;
     }
     inline static type * getSingletonPtr( )
     {
-        ASSERT ( _singleton_ptr );
+//         ASSERT ( _singleton_ptr );
         return _singleton_ptr;
     }
 

@@ -13,7 +13,7 @@ UserExt::~UserExt()
 ///--------------SETTERS----------------
 void UserExt::setMoney(int v_money)
 {
-    Packet pkt = C1Int::create(_uid, v_money);
+    Packet pkt = CInt32::create(_uid, v_money, EG_SET_MONEY);
 
     ExtServerConnection *connection = iExtServerManager->getById(_server_id);
     if (connection == NULL)
@@ -92,6 +92,9 @@ void UserExt::setAppFriendsData(string v_app_friends_data)
 {
 
 }
+void UserExt::setSid(uint64 v_sid)
+{
+}
 ///-------------GETTERS-----------------
 int UserExt::getMoney()
 {
@@ -114,6 +117,10 @@ int UserExt::getUid()
     return 0;
 }
 int UserExt::getSocialNet()
+{
+    return 0;
+}
+long int UserExt::getSocialId()
 {
     return 0;
 }
@@ -168,5 +175,9 @@ string UserExt::getFriendsData()
 string UserExt::getAppFriendsData()
 {
     return "";
+}
+uint64 UserExt::getSid()
+{
+  return 0L;
 }
 

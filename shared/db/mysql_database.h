@@ -16,7 +16,7 @@ class MySQLDatabase : public Database
     friend class AsyncQuery;
 public:
     MySQLDatabase();
-    ~MySQLDatabase();
+    virtual ~MySQLDatabase();
 
     bool initialize(const char* Hostname, unsigned int port,
                     const char* Username, const char* Password, const char* DatabaseName,

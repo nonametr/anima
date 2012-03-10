@@ -4,11 +4,9 @@ cmake_minimum_required(VERSION 2.8)
 
 add_executable(
 anima_game 
+./shared/net/netcore_worker_thread.h
+./shared/net/netcore_worker_thread.cpp 
 ./game_server/main_game.cpp 
-./login_server/login_server.h 
-./login_server/login_server.cpp 
-./login_server/login_server_handler.h 
-./login_server/login_server_handler.cpp
 ./shared/common.h 
 ./shared/common.cpp 
 ./shared/singleton.h 
@@ -39,6 +37,8 @@ anima_game
 ./shared/db/mysql_database.h
 ./shared/db/mysql_database.cpp
 ./shared/smart_pointer.h
+./game_server/login_socket.h 
+./game_server/login_socket.cpp
 ./game_server/game_server.h 
 ./game_server/game_server.cpp 
 ./game_server/game_socket.h
@@ -46,7 +46,11 @@ anima_game
 ./game_server/server.h 
 ./game_server/server.cpp 
 ./game_server/database_manager.h 
-./game_server/database_manager.cpp 
+./game_server/database_manager.cpp
+./game_server/storage/storage_thread.h 
+./game_server/storage/storage_thread.cpp
+./game_server/storage/storage_timer.h
+./game_server/storage/storage_timer.cpp
 ./game_server/storage/ext_socket.h 
 ./game_server/storage/ext_socket.cpp 
 ./game_server/storage/ext_server_manager.h
@@ -75,13 +79,11 @@ include_directories(
 ./game_server 
 ./game_server/instance 
 ./game_server/storage 
-./game_server/user 
-./login_server 
+./game_server/user  
 ./
 )
 
-target_link_libraries (anima_game z mysqlclient pthread)
+target_link_libraries (anima_game z mysqlclient pthread crypto)
 add_definitions(-Wall -Werror -std=c++0x) 
 
-add_subdirectory(login_server)
 add_subdirectory(game_server)

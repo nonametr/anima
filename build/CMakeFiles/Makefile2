@@ -56,7 +56,7 @@ CMAKE_BINARY_DIR = /home/nonametr/projects/anima/build
 CMakeFiles/anima_game.dir/all:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/depend
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
 	@echo "Built target anima_game"
 .PHONY : CMakeFiles/anima_game.dir/all
 
@@ -66,7 +66,7 @@ all: CMakeFiles/anima_game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/anima_game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/anima/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/anima/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/anima_game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/anima/build/CMakeFiles 0
 .PHONY : CMakeFiles/anima_game.dir/rule
@@ -83,21 +83,6 @@ CMakeFiles/anima_game.dir/clean:
 # clean rule for target.
 clean: CMakeFiles/anima_game.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory login_server
-
-# Convenience name for "all" pass in the directory.
-login_server/all:
-.PHONY : login_server/all
-
-# Convenience name for "clean" pass in the directory.
-login_server/clean:
-.PHONY : login_server/clean
-
-# Convenience name for "preinstall" pass in the directory.
-login_server/preinstall:
-.PHONY : login_server/preinstall
 
 #=============================================================================
 # Directory level rules for directory game_server

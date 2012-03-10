@@ -26,6 +26,8 @@ public:
 private:
     void ininializeObjects();
     void destroyObjects();
+    
+    Socket *_gs, *_ls, *_es;
 };
 
 #endif // GAMESERVER_H

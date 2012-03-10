@@ -1,8 +1,9 @@
 #ifndef LISTENSOCKET_H
 #define LISTENSOCKET_H
 
-#include "net_core.h"
 #include "socket.h"
+#include "net_core.h"
+
 
 class ListenSocket : public Socket
 {
@@ -74,6 +75,7 @@ private:
             return;
 
         rw_socket = new Socket(accept_socket);
+	rw_socket->setType(HTTP_SOCKET);
         rw_socket->setOwner(this);
         rw_socket->accept(&accept_socket_address);
     }

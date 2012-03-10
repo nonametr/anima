@@ -21,7 +21,7 @@ enum IG_Packets
 };
 enum OG_Packets
 {
-    OG_MIN_ID = 20000, OG_NAME, OG_MONEY, OG_GOLD, OG_LIST_PARAMS, OG_MAX_ID
+    OG_MIN_ID = 20000, OG_NAME, OG_MONEY, OG_GOLD, OG_LIST_PARAMS, OG_MSG, OG_MAX_ID
 };
 
 #endif

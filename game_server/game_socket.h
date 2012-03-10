@@ -41,7 +41,7 @@ public:
     virtual ~GameSocketThread();
 private:
     GameSocket *shard_owner;
-    AtomicBoolean _running;
+    volatile bool _running;
 };
 
 #endif // SHARD_H

@@ -14,10 +14,10 @@ class ListenSocket;
 class Socket : public SocketOperations
 {
 public:
-    Socket(int sock)
+    enum SockType { DEFAULT_SOCKET = 0, HTTP_SOCKET };
+    Socket(int sock) : _type(DEFAULT_SOCKET), _connected(false)
     {
         ASSERT_CONTINUE(sock > 0);
-        _connected.setVal(true);
         _sock = sock;
     }
     Socket();
@@ -31,33 +31,35 @@ public:
     void accept(sockaddr_in * address);
     /// Send bytes
     void send(const char* out_packet, uint32 size);
+    void send(Packet *pkt);
     /// Read bytes
     void read();
-    
+
     void setOwner(ListenSocket *owner);
-    
-    bool isConnected() 
-    {
-        return _connected.getVal();
+    bool isConnected() {
+        return _connected;
     };
     string getRemoteIP();
-    inline uint32 getRemotePort() 
-    {
+    inline uint32 getRemotePort() {
         return ntohs(_client.sin_port);
     }
-    inline in_addr getRemoteAddress() 
-    {
+    inline in_addr getRemoteAddress() {
         return _client.sin_addr;
     }
+    void setType( SockType v_type )  {
+        _type = v_type;
+    };
+    string _send_buf;
 private:
     void _onConnect();
     void _onDisconnect();
     void _onRead(Packet *pkt);
-    
+
     char _recv_buf[RECIVE_BUFFER_SIZE];
     
     ListenSocket *_owner;
-    AtomicBoolean _connected;
+    SockType _type;
+    bool _connected;
     sockaddr_in _client;
     Mutex send_mutex;
 };

@@ -4,9 +4,9 @@
 class ThreadController
 {
 public:
-    explicit ThreadController ( uint32 thread_id )
+    ThreadController ( uint32 thread_id )
     {
-        _runing = true;
+        _running = true;
         _delete_target_on_exit = true;
         _target_thread = NULL;
         _thread_id = thread_id;
@@ -51,10 +51,12 @@ public:
     }
     void stop()
     {
-        _runing = false;
+        _running = false;
         if ( _target_thread )
+	{
             delete _target_thread;
-        _target_thread = NULL;
+	  _target_thread = NULL;
+	}
         resume();
     }
     void onShutdown()
@@ -67,7 +69,7 @@ public:
     }
     bool isRuning()
     {
-        return _runing;
+        return _running;
     }
     void join()
     {
@@ -83,7 +85,7 @@ private:
     pthread_t _handle;
     int _thread_id;
 
-    bool _runing;
+    bool _running;
     bool _delete_target_on_exit;
     Thread *_target_thread;
 };

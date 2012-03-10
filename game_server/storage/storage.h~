@@ -5,20 +5,33 @@
 #include "common.h"
 #include "user.h"
 #include "user_ext.h"
+#include "storage_thread.h"
+#include "storage_timer.h"
 
+#define USER_HASH_SIZE 1000
 ///Shard data storage
 class Storage : public Singleton<Storage>
 {
+  friend class StorageThread;
+  friend class StorageTimer;
 public:
     Storage();
     virtual ~Storage();
-    shared_ptr<User> createNewUser();
+    void unload(uint32 uid){};
+    uint32 getCurrentTime(){ return _time; };
+    shared_ptr<User> createNewUser(long long int soc_id, uint32 soc_net_id);
     shared_ptr<User> loadUser(uint32 uid);
-    shared_ptr<User> getLocalUser( uint32 uid);
-    shared_ptr<UserExt> getExtUser( uint32 uid);
+    shared_ptr<User> getLocalUser(long long int soc_id, int soc_net_id);
+    shared_ptr<User> getLocalUser(uint32 uid);
+    shared_ptr<UserExt> getExtUser(uint32 uid);
     shared_ptr<UserInterface> getUser ( uint32 uid );
 private:
-    associative_container< uint, shared_ptr<User> > _users;
+    void addUser(shared_ptr<User> user);
+    shared_ptr<User> findUser(uint32 uid);
+    void removeUser(uint32 uid);
+    associative_container< uint, shared_ptr<User> > _users[USER_HASH_SIZE];
+    Mutex _users_hash_lock[USER_HASH_SIZE];
+    uint32 _time;
 };
 
 #define iStorage Storage::getSingletonPtr()

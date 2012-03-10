@@ -61,11 +61,12 @@ GameSocket::~GameSocket()
             break;
         tracelog(OPTIMAL, "Clearing request queue... %u req. left", _data.get_size());
     }
+    delete _default_instance;
 }
 void GameSocketThread::run()
 {
     Packet* pkt = NULL;
-    while (_running.getVal())
+    while (_running)
     {
         if (pkt != NULL)
         {
@@ -77,14 +78,15 @@ void GameSocketThread::run()
         if (pkt == NULL)
             sleep(1);
     }
+    _running = !_running;
 }
 void GameSocketThread::onShutdown()
 {
-    _running.setVal(false);
+    _running = false;
+    while(!_running){sleep(1);}
 }
-GameSocketThread::GameSocketThread(GameSocket *owner) : shard_owner(owner)
+GameSocketThread::GameSocketThread(GameSocket *owner) : shard_owner(owner), _running(true)
 {
-    _running.setVal(true);
 }
 GameSocketThread::~GameSocketThread()
 {

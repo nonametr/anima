@@ -2,11 +2,26 @@
 #define FIELD_H
 
 #include "common.h"
+#include <mysql/mysql.h>
+
 
 class Field
 {
 public:
-
+    inline char* getFieldName() {
+        return field_name;
+    }
+    inline enum_field_types getType()
+    {
+      return type;
+    }
+    inline void setType(enum_field_types value)
+    {
+        type = value;
+    }
+    inline void setFieldName(char* value) {
+        field_name = value;
+    }
     inline void setValue(char* value) {
         mValue = value;
     }
@@ -51,6 +66,8 @@ public:
     }
 
 private:
+    enum_field_types type;
+    char *field_name;
     char* mValue;
 };
 

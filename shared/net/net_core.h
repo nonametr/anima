@@ -5,8 +5,8 @@
 #include "socket.h"
 #include "thread.h"
 #include "common.h"
+#include "netcore_worker_thread.h"
 
-#define THREAD_EVENT_MAX_SIZE 128  /// This is the number of socket events each thread can receieve at once.
 /// This default value should be more than enough.
 #define SOCKET_LISTEN_MAX_COUNT 128
 #define SOCKET_MAX_COUNT 32768	    /// This number dont need to be too big, otherwise it's gonna be eating
@@ -37,45 +37,20 @@ private:
     {
         return _listen_sock[sock];
     };
-    int getEpollInst()
-    {
-        return _epoll_inst;
-    };
-    int _epoll_inst;
-    /// remove a socket from epoll r/w set/sock mapping
-    void removeSocket ( Socket * s );
     /// closes all sockets
     void closeAll();
     void addToEpoll ( SOCKET sock );
     void removeFromEpoll ( SOCKET sock );
+    /// remove a socket from epoll r/w set/sock mapping
+    void removeSocket ( Socket * s );
 
     uint32 _listen_sock_count;
     uint32 _sock_count;
     uint32 _max_sock_desc;
 
+    associative_container<SOCKET, NetCoreWorkerThread*> _netcore_threads;
     Socket* _rw_sock[SOCKET_MAX_COUNT];
     ListenSocket* _listen_sock[SOCKET_LISTEN_MAX_COUNT];
-};
-
-class NetCoreWorkerThread : public Thread
-{
-    friend class NetCore;
-public:
-    NetCoreWorkerThread();
-    virtual ~NetCoreWorkerThread()
-    {
-        close ( _epoll_inst );
-    };
-    void run();
-    void onShutdown()
-    {
-        _running.setVal ( false );
-    }
-private:
-    /// epoll event struct
-    int _epoll_inst;
-    struct epoll_event _events[THREAD_EVENT_MAX_SIZE];
-    AtomicBoolean _running;
 };
 
 #define iNetCore NetCore::getSingletonPtr()

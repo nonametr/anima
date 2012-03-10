@@ -18,7 +18,6 @@ SET(CMAKE_C_INCLUDE_PATH
   ".././game_server/instance"
   ".././game_server/storage"
   ".././game_server/user"
-  ".././login_server"
   "../."
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

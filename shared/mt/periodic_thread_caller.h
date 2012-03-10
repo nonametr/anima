@@ -8,7 +8,7 @@
 #include "thread_core.h"
 #include "common.h"
 
-#define INFINITY_SLEEP_TIME 10000000
+#define INFINITY_SLEEP_TIME 1000000
 
 struct PeriodicThread
 {
@@ -23,13 +23,13 @@ class PeriodicThreadCaller : public Thread, public Singleton<PeriodicThreadCalle
 public:
     PeriodicThreadCaller();
     virtual ~PeriodicThreadCaller();
-    void run();
-    void onShutdown();
+    virtual void run();
+    virtual void onShutdown();
     void startPeriodicThread(Thread * thread, uint32 call_interval);
 private:
     PeriodicThreadMap _periodic_threads;///uint32 - time when need to resume thread
 
-    AtomicBoolean _runing;
+    volatile bool _running;
     Mutex _pt_mutex;
     pthread_cond_t _sleep_cond;
     pthread_mutex_t _sleep_mutex;

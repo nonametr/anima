@@ -5,9 +5,6 @@
 #include "database_manager.h"
 #include "sql_define.h"
 
-#define GAME_SERVER 0
-#define LOGIN_SERVER 1
-
 class Server : public Singleton<Server>
 {
 public:
@@ -20,6 +17,7 @@ public:
     void restart();
     bool isRestating();
     void stop();
+    bool isRunning(){ return _running; };
     
     uint32 getId() { return _id; };
     uint32 getPID() { return _pid; };
@@ -27,13 +25,11 @@ public:
     uint32 getNumNetThreads() { return _num_net_threads; };
     string getVersionControlSystemName() { return _version_control_system_name; };
 protected:
-    static void lockDb(string &work_dir, uint32 pid);
-    static bool testDb(uint32 pid);
-    static void unlockDb(uint32 pid);
     
     uint32 _id;
     string _listen_ip;
     uint32 _port;
+    uint32 _http_port;
     uint32 _ext_port;
     string _daemon_dir;
     uint32 _num_net_threads;
@@ -42,8 +38,8 @@ protected:
     string _version_control_system_name;
     uint32 _pid;
     string _work_dir;
-    
-    AtomicBoolean _running;
+     
+    volatile bool _running;
     AtomicBoolean _need_restart;
 };
 #endif // SERVER_H

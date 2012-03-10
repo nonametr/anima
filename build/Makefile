@@ -276,6 +276,30 @@ game_server/instance/main_instance.cpp.s:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.s
 .PHONY : game_server/instance/main_instance.cpp.s
 
+game_server/login_socket.o: game_server/login_socket.cpp.o
+.PHONY : game_server/login_socket.o
+
+# target to build an object file
+game_server/login_socket.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o
+.PHONY : game_server/login_socket.cpp.o
+
+game_server/login_socket.i: game_server/login_socket.cpp.i
+.PHONY : game_server/login_socket.i
+
+# target to preprocess a source file
+game_server/login_socket.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/login_socket.cpp.i
+.PHONY : game_server/login_socket.cpp.i
+
+game_server/login_socket.s: game_server/login_socket.cpp.s
+.PHONY : game_server/login_socket.s
+
+# target to generate assembly for a file
+game_server/login_socket.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/login_socket.cpp.s
+.PHONY : game_server/login_socket.cpp.s
+
 game_server/main_game.o: game_server/main_game.cpp.o
 .PHONY : game_server/main_game.o
 
@@ -396,6 +420,54 @@ game_server/storage/storage.cpp.s:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.s
 .PHONY : game_server/storage/storage.cpp.s
 
+game_server/storage/storage_thread.o: game_server/storage/storage_thread.cpp.o
+.PHONY : game_server/storage/storage_thread.o
+
+# target to build an object file
+game_server/storage/storage_thread.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o
+.PHONY : game_server/storage/storage_thread.cpp.o
+
+game_server/storage/storage_thread.i: game_server/storage/storage_thread.cpp.i
+.PHONY : game_server/storage/storage_thread.i
+
+# target to preprocess a source file
+game_server/storage/storage_thread.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.i
+.PHONY : game_server/storage/storage_thread.cpp.i
+
+game_server/storage/storage_thread.s: game_server/storage/storage_thread.cpp.s
+.PHONY : game_server/storage/storage_thread.s
+
+# target to generate assembly for a file
+game_server/storage/storage_thread.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.s
+.PHONY : game_server/storage/storage_thread.cpp.s
+
+game_server/storage/storage_timer.o: game_server/storage/storage_timer.cpp.o
+.PHONY : game_server/storage/storage_timer.o
+
+# target to build an object file
+game_server/storage/storage_timer.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o
+.PHONY : game_server/storage/storage_timer.cpp.o
+
+game_server/storage/storage_timer.i: game_server/storage/storage_timer.cpp.i
+.PHONY : game_server/storage/storage_timer.i
+
+# target to preprocess a source file
+game_server/storage/storage_timer.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.i
+.PHONY : game_server/storage/storage_timer.cpp.i
+
+game_server/storage/storage_timer.s: game_server/storage/storage_timer.cpp.s
+.PHONY : game_server/storage/storage_timer.s
+
+# target to generate assembly for a file
+game_server/storage/storage_timer.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.s
+.PHONY : game_server/storage/storage_timer.cpp.s
+
 game_server/user/user.o: game_server/user/user.cpp.o
 .PHONY : game_server/user/user.o
 
@@ -443,54 +515,6 @@ game_server/user/user_ext.s: game_server/user/user_ext.cpp.s
 game_server/user/user_ext.cpp.s:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s
 .PHONY : game_server/user/user_ext.cpp.s
-
-login_server/login_server.o: login_server/login_server.cpp.o
-.PHONY : login_server/login_server.o
-
-# target to build an object file
-login_server/login_server.cpp.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server.cpp.o
-.PHONY : login_server/login_server.cpp.o
-
-login_server/login_server.i: login_server/login_server.cpp.i
-.PHONY : login_server/login_server.i
-
-# target to preprocess a source file
-login_server/login_server.cpp.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server.cpp.i
-.PHONY : login_server/login_server.cpp.i
-
-login_server/login_server.s: login_server/login_server.cpp.s
-.PHONY : login_server/login_server.s
-
-# target to generate assembly for a file
-login_server/login_server.cpp.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server.cpp.s
-.PHONY : login_server/login_server.cpp.s
-
-login_server/login_server_handler.o: login_server/login_server_handler.cpp.o
-.PHONY : login_server/login_server_handler.o
-
-# target to build an object file
-login_server/login_server_handler.cpp.o:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.o
-.PHONY : login_server/login_server_handler.cpp.o
-
-login_server/login_server_handler.i: login_server/login_server_handler.cpp.i
-.PHONY : login_server/login_server_handler.i
-
-# target to preprocess a source file
-login_server/login_server_handler.cpp.i:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.i
-.PHONY : login_server/login_server_handler.cpp.i
-
-login_server/login_server_handler.s: login_server/login_server_handler.cpp.s
-.PHONY : login_server/login_server_handler.s
-
-# target to generate assembly for a file
-login_server/login_server_handler.cpp.s:
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/login_server/login_server_handler.cpp.s
-.PHONY : login_server/login_server_handler.cpp.s
 
 shared/common.o: shared/common.cpp.o
 .PHONY : shared/common.o
@@ -756,6 +780,30 @@ shared/net/net_core.cpp.s:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/net_core.cpp.s
 .PHONY : shared/net/net_core.cpp.s
 
+shared/net/netcore_worker_thread.o: shared/net/netcore_worker_thread.cpp.o
+.PHONY : shared/net/netcore_worker_thread.o
+
+# target to build an object file
+shared/net/netcore_worker_thread.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o
+.PHONY : shared/net/netcore_worker_thread.cpp.o
+
+shared/net/netcore_worker_thread.i: shared/net/netcore_worker_thread.cpp.i
+.PHONY : shared/net/netcore_worker_thread.i
+
+# target to preprocess a source file
+shared/net/netcore_worker_thread.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.i
+.PHONY : shared/net/netcore_worker_thread.cpp.i
+
+shared/net/netcore_worker_thread.s: shared/net/netcore_worker_thread.cpp.s
+.PHONY : shared/net/netcore_worker_thread.s
+
+# target to generate assembly for a file
+shared/net/netcore_worker_thread.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.s
+.PHONY : shared/net/netcore_worker_thread.cpp.s
+
 shared/net/socket.o: shared/net/socket.cpp.o
 .PHONY : shared/net/socket.o
 
@@ -834,6 +882,9 @@ help:
 	@echo "... game_server/instance/main_instance.o"
 	@echo "... game_server/instance/main_instance.i"
 	@echo "... game_server/instance/main_instance.s"
+	@echo "... game_server/login_socket.o"
+	@echo "... game_server/login_socket.i"
+	@echo "... game_server/login_socket.s"
 	@echo "... game_server/main_game.o"
 	@echo "... game_server/main_game.i"
 	@echo "... game_server/main_game.s"
@@ -849,18 +900,18 @@ help:
 	@echo "... game_server/storage/storage.o"
 	@echo "... game_server/storage/storage.i"
 	@echo "... game_server/storage/storage.s"
+	@echo "... game_server/storage/storage_thread.o"
+	@echo "... game_server/storage/storage_thread.i"
+	@echo "... game_server/storage/storage_thread.s"
+	@echo "... game_server/storage/storage_timer.o"
+	@echo "... game_server/storage/storage_timer.i"
+	@echo "... game_server/storage/storage_timer.s"
 	@echo "... game_server/user/user.o"
 	@echo "... game_server/user/user.i"
 	@echo "... game_server/user/user.s"
 	@echo "... game_server/user/user_ext.o"
 	@echo "... game_server/user/user_ext.i"
 	@echo "... game_server/user/user_ext.s"
-	@echo "... login_server/login_server.o"
-	@echo "... login_server/login_server.i"
-	@echo "... login_server/login_server.s"
-	@echo "... login_server/login_server_handler.o"
-	@echo "... login_server/login_server_handler.i"
-	@echo "... login_server/login_server_handler.s"
 	@echo "... shared/common.o"
 	@echo "... shared/common.i"
 	@echo "... shared/common.s"
@@ -894,6 +945,9 @@ help:
 	@echo "... shared/net/net_core.o"
 	@echo "... shared/net/net_core.i"
 	@echo "... shared/net/net_core.s"
+	@echo "... shared/net/netcore_worker_thread.o"
+	@echo "... shared/net/netcore_worker_thread.i"
+	@echo "... shared/net/netcore_worker_thread.s"
 	@echo "... shared/net/socket.o"
 	@echo "... shared/net/socket.i"
 	@echo "... shared/net/socket.s"

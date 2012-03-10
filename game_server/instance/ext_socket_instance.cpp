@@ -26,7 +26,7 @@ void ExtSocketInstance::handlePacket(Packet* pkt)
 }
 void ExtSocketInstance::cSetMoney(Packet* pkt)
 {
-    C1Int cMoney;
+    CInt32 cMoney;
     if (sizeof(cMoney) != pkt->data_size)
     {
         pkt->sock->send(MSG_PACKET_WRONG_DATA_SIZE, strlen(MSG_PACKET_WRONG_DATA_SIZE));

@@ -3,11 +3,9 @@
 
 #include "listen_socket.h"
 
-Socket::Socket() : _connected(false)
+Socket::Socket() :  _type(DEFAULT_SOCKET), _connected(false)
 {
-    _owner = NULL;
     _sock = create();
-    _connected.setVal(false);
     ASSERT_CONTINUE(_sock > 0);
 }
 Socket::~Socket()
@@ -36,43 +34,68 @@ void Socket::accept(sockaddr_in * address)
     memcpy(&_client, address, sizeof(*address));
     _onConnect();
 }
+void Socket::send(Packet *pkt)
+{
+
+    char *send_buf = new char[pkt->total_size];
+    memcpy(send_buf, &pkt[0], pkt->total_size);
+    string send(send_buf, pkt->total_size);
+    send_mutex.lock();
+    _send_buf.append(send);
+    send_mutex.unlock();
+}
 void Socket::send(const char* out_packet, uint32 size)
 {
+    string send(out_packet, size);
     send_mutex.lock();
-    if (::send(_sock, out_packet, size*sizeof(char), MSG_NOSIGNAL) == -1)
-        traceerr("Error on send packet!");
+    _send_buf.append(send);
     send_mutex.unlock();
 }
 void Socket::read()
 {
-    int bytes_recv = recv(_sock, _recv_buf, RECIVE_BUFFER_SIZE, 0);
-
-    if (bytes_recv < PACKET_HEADER_SIZE)
-    {
-        traceerr("Error rcv packet without header");
-        this->send(MSG_PACKET_NO_HEADER, strlen(MSG_PACKET_NO_HEADER));
-        this->disconnect();
-    }
-    
-    Packet *pkt = new Packet;
-    memcpy(&pkt->type, &_recv_buf[0*PACKET_INT_SIZE], PACKET_INT_SIZE);
-    memcpy(&pkt->total_size, &_recv_buf[1*PACKET_INT_SIZE], PACKET_INT_SIZE);
-    memcpy(&pkt->data_size, &_recv_buf[2*PACKET_INT_SIZE], PACKET_INT_SIZE);
-    memcpy(&pkt->crc32, &_recv_buf[3*PACKET_INT_SIZE], PACKET_INT_SIZE);
-    
-    if (pkt->data_size != bytes_recv - PACKET_HEADER_SIZE)
-    {
-        traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
-        this->send(MSG_PACKET_FRAGMET, strlen(MSG_PACKET_NO_HEADER));
-        this->disconnect();
-        delete pkt;
-        return;
-    }
-    pkt->data = new char[pkt->data_size];
-    memcpy(&pkt->data[0], &_recv_buf[4*PACKET_INT_SIZE], pkt->data_size*sizeof(char));
-    pkt->sock = this;
-
-    _onRead(pkt);
+    memset(&_recv_buf[0], 0, RECIVE_BUFFER_SIZE);
+    recv(_sock, _recv_buf, RECIVE_BUFFER_SIZE, 0);
+    traceerr("recv = %s", _recv_buf);
+    if (::send(_sock, "test", 4, MSG_NOSIGNAL) == -1)
+       traceerr("Error on send packet!");
+//
+//     if (bytes_recv < PACKET_HEADER_SIZE)
+//     {
+//         traceerr("Error rcv packet without header");
+//         string data = (string(MSG_PACKET_NO_HEADER) + string(", data recv = ") + string(_recv_buf, bytes_recv));
+//         this->send(data.c_str(), data.length());
+//         this->disconnect();
+//         return;
+//     }
+//     Packet *pkt = new Packet;
+//     switch (_type)
+//     {
+//     case DEFAULT_SOCKET:
+//         memcpy(&pkt->type, &_recv_buf[0*PACKET_INT_SIZE], PACKET_INT_SIZE);
+//         memcpy(&pkt->total_size, &_recv_buf[1*PACKET_INT_SIZE], PACKET_INT_SIZE);
+//         memcpy(&pkt->data_size, &_recv_buf[2*PACKET_INT_SIZE], PACKET_INT_SIZE);
+//         memcpy(&pkt->crc32, &_recv_buf[3*PACKET_INT_SIZE], PACKET_INT_SIZE);
+//
+//         if (pkt->data_size != bytes_recv - PACKET_HEADER_SIZE)
+//         {
+//             traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
+//             this->send(MSG_PACKET_FRAGMET, strlen(MSG_PACKET_FRAGMET));
+//             this->disconnect();
+//             delete pkt;
+//             return;
+//         }
+//         pkt->data = new char[pkt->data_size];
+//         memcpy(&pkt->data[0], &_recv_buf[4*PACKET_INT_SIZE], pkt->data_size*sizeof(char));
+//         pkt->sock = this;
+//         break;
+//     case HTTP_SOCKET:
+//         pkt->data = new char[bytes_recv];
+//         pkt->data_size = pkt->total_size = bytes_recv;
+//         memcpy(&pkt->data[0], &_recv_buf[0], pkt->data_size);
+//         pkt->sock = this;
+//         break;
+//     }
+//     _onRead(pkt);
 }
 void Socket::setOwner(ListenSocket *owner)
 {
@@ -89,7 +112,7 @@ void Socket::_onConnect()
     disableBlocking();
     disableBuffering();
 
-    _connected.setVal(true);
+    _connected = true;
 
     iNetCore->addSocket(this);
     if (_owner)
@@ -97,7 +120,7 @@ void Socket::_onConnect()
 }
 void Socket::_onDisconnect()
 {
-    _connected.setVal(false);
+    _connected = false;
     /// remove from netcore
     iNetCore->removeSocket(this);
     if (_owner)

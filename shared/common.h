@@ -13,6 +13,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <map>
+#include <openssl/md5.h>
 
 #define DBG_LVL_TRACE 8
 // #define USE_STL_CPP0X//USE IT IN RELEASE
@@ -63,8 +64,8 @@ void logTrace ( const char *str );
     {			\
         char __BUF__[32736];											\
         snprintf( __BUF__, sizeof(__BUF__)-1,							\
-                                             "%s:%d [%s] " S,		__FILE__,				\
-                                                                                            __LINE__,				\
+                                             "%s:%d %u [%s] " S,		__FILE__,				\
+                                                                                            __LINE__, (unsigned int)time(NULL),				\
                                                                                             __FUNCTION__,			\
                                                                                             ## __VA_ARGS__ );		\
         perror(__BUF__);\
@@ -85,10 +86,10 @@ void logTrace ( const char *str );
 #else
 #define traceerr( S, ... ) \
     {			\
-            char __BUF__[32736];											\
+            char __BUF__[32736];										\
             snprintf( __BUF__, sizeof(__BUF__)-1,							\
-                                             "%s:%d [%s] " S,		__FILE__,				\
-                                                                                            __LINE__,				\
+                                             "%s:%d %u [%s] " S,		__FILE__,				\
+                                                                                            __LINE__, (unsigned int)time(NULL),				\
                                                                                             __FUNCTION__,			\
                                                                                             ## __VA_ARGS__ );		\
             logError( err_log_path, __BUF__ );											\
@@ -136,6 +137,13 @@ static inline int absi ( const int value )
 {
     return ( value ^ ( value >> 31 ) ) - ( value >> 31 );
 }
+/**
+ * @brief creating md5 from 'text'
+ *
+ * @param value value to generate md5 from
+ * @param hash md5'ed value
+ **/
+void getMD5(char* text, char *hash);
 /**
  * @brief fast int abs and recast to unsigned
  *
@@ -225,5 +233,8 @@ inline uint32 secsToTimeBitFields ( time_t secs )
 time_t convTimePeriod ( uint32 dLength, char dType );
 void intToString ( char * buf, int num );
 string intToString ( int num );
+string int64ToString ( long long int num );
+string floatToString ( float num );
+string doubleToString ( double num );
 
 #endif
