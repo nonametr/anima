@@ -16,13 +16,13 @@ DatabaseManager::DatabaseManager(string work_dir, uint32 pid) : _ss_db ( NULL ),
         exit ( 0 );
     }
 
-    
-    
-        _ss_db->queryNA ( "UPDATE server_desc SET online_pid = 0");//!!!!!!!!!!!TEST!!!!!!!!!!!!
-	
-	
-	
-	
+
+
+    _ss_db->queryNA ( "UPDATE server_desc SET online_pid = 0");//!!!!!!!!!!!TEST!!!!!!!!!!!!
+
+
+
+
     lockDb ( work_dir, pid );
     if ( !testDb ( pid ) )
     {
@@ -41,7 +41,7 @@ DatabaseManager::DatabaseManager(string work_dir, uint32 pid) : _ss_db ( NULL ),
     fields = q_db_count->fetch();
     _max_db_servers = fields[0].getUInt32();
     _gs_db = new MySQLDatabase*[_max_db_servers];
-    for ( uint i = 0; i < _max_db_servers; ++i )
+    for(uint i = 0; i < _max_db_servers; ++i)
         _gs_db[i] = NULL;
     do
     {

@@ -32,6 +32,25 @@ CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o: ../game_server/dat
 CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o: ../game_server/database_manager.h
 CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o: ../game_server/sql_define.h
 
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/common.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/config.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/mt/thread.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/mt/thread_controller.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/mt/thread_core.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/net/command_structs.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/net/listen_socket.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/net/net_core.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/net/netcore_worker_thread.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/net/packet_definitions.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/net/packet_id.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/net/socket.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/net/socket_base.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/net/socket_operations.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: .././shared/singleton.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: ../game_server/debug_update.cpp
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: ../game_server/debug_update.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: ../game_server/login_socket.h
+
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/instance/ext_socket_instance.h
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/instance/instance.h
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/instance/main_instance.h
@@ -219,6 +238,8 @@ CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/config.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/db/database.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/db/field.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/db/mysql_database.h
+CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/json.h
+CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/json_value.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/mt/thread.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/mt/thread_controller.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/mt/thread_core.h
@@ -232,7 +253,9 @@ CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/net/socket
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/net/socket_base.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/net/socket_operations.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/singleton.h
+CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././shared/urlencode.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: ../game_server/database_manager.h
+CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: ../game_server/debug_update.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: ../game_server/login_socket.cpp
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: ../game_server/login_socket.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: ../game_server/server.h
@@ -433,6 +456,12 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././game_se
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././game_server/user/value.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././shared/common.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././shared/mt/thread.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././shared/net/command_structs.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././shared/net/packet_definitions.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././shared/net/packet_id.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././shared/net/socket.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././shared/net/socket_base.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././shared/net/socket_operations.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././shared/singleton.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: ../game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: ../game_server/storage/storage_thread.cpp
@@ -445,6 +474,12 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././game_ser
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././game_server/user/value.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././shared/common.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././shared/mt/thread.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././shared/net/command_structs.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././shared/net/packet_definitions.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././shared/net/packet_id.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././shared/net/socket.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././shared/net/socket_base.h
+CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././shared/net/socket_operations.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././shared/singleton.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: ../game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: ../game_server/storage/storage_thread.h
@@ -452,6 +487,15 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: ../game_serve
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: ../game_server/storage/storage_timer.h
 
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/common.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/json.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/json_value.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/mt/thread.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/command_structs.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/packet_definitions.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/packet_id.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/socket.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/socket_base.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/socket_operations.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/user.cpp
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/user_interface.h
@@ -640,6 +684,9 @@ CMakeFiles/anima_game.dir/shared/net/socket.cpp.o: ../shared/net/socket.cpp
 CMakeFiles/anima_game.dir/shared/net/socket.cpp.o: ../shared/net/socket.h
 CMakeFiles/anima_game.dir/shared/net/socket.cpp.o: ../shared/net/socket_base.h
 CMakeFiles/anima_game.dir/shared/net/socket.cpp.o: ../shared/net/socket_operations.h
+
+CMakeFiles/anima_game.dir/shared/urlencode.cpp.o: ../shared/urlencode.cpp
+CMakeFiles/anima_game.dir/shared/urlencode.cpp.o: ../shared/urlencode.h
 
 CMakeFiles/anima_game.dir/shared/version_control.cpp.o: .././game_server/database_manager.h
 CMakeFiles/anima_game.dir/shared/version_control.cpp.o: .././game_server/server.h

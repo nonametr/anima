@@ -16,7 +16,7 @@ private:
     void cJoin(Packet* pkt);
 
     GameSocket *owner_shard;
-    PacketHandler<MainInstance> _shardPacketHandlers[IG_MAX_ID];
+    PacketHandler<MainInstance> _shardPacketHandlers[Packets::IG_MAX_ID];
 };
 
 #endif // MAIN_INST_H

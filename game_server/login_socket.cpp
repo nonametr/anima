@@ -1,8 +1,12 @@
 #include "login_socket.h"
 #include "server.h"
 #include "storage.h"
+#include "debug_update.h"
+#include "urlencode.h"
+#include "json.h"
+#include "json_value.h"
 
-LoginSocket::LoginSocket(const char* listen_address, uint32 port) : ListenSocket(listen_address, port)
+void LoginSocket::updateDb()
 {
     Field *field;
 
@@ -22,7 +26,10 @@ LoginSocket::LoginSocket(const char* listen_address, uint32 port) : ListenSocket
         _social_net[soc_net_id].iframe 		= field[4].getString();
     }
     while ( qres_social->nextRow() );
-
+}
+LoginSocket::LoginSocket(const char* listen_address, uint32 port) : ListenSocket(listen_address, port)
+{
+    updateDb();
     _social_net[SocialNetDesc::VK].handler = &LoginSocket::vkReq;
     _social_net[SocialNetDesc::OK].handler = &LoginSocket::okReq;
     _social_net[SocialNetDesc::MM].handler = &LoginSocket::mmReq;
@@ -33,6 +40,9 @@ LoginSocket::LoginSocket(const char* listen_address, uint32 port) : ListenSocket
     {
         iThreadCore->startThread(new LoginSocketThread(this));
     }
+#ifdef DEBUG
+    iThreadCore->startThread(new DebugUpdate(this));
+#endif
 }
 LoginSocket::~LoginSocket()
 {
@@ -45,6 +55,34 @@ LoginSocket::~LoginSocket()
             break;
         tracelog(OPTIMAL, "Clearing request queue... %u req. left", _data.get_size());
     }
+}
+string LoginSocket::getJsonParamStr(string &data, string param)
+{
+    param += "\":\"";
+    std::size_t begin_pos = data.find(param);
+    if (begin_pos == string::npos)
+        return "";
+    begin_pos += param.length();
+    std::size_t end_pos = data.find("\",", begin_pos);
+    if (end_pos == string::npos)
+        return "";
+    if (end_pos - begin_pos >= 512 || (end_pos - begin_pos) <= 1)
+        return "";
+    return data.substr(begin_pos, end_pos - begin_pos);
+}
+string LoginSocket::getJsonParamInt(string &data, string param)
+{
+    param += "\":";
+    std::size_t begin_pos = data.find(param);
+    if (begin_pos == string::npos)
+        return "";
+    begin_pos += param.length();
+    std::size_t end_pos = data.find(",", begin_pos);
+    if (end_pos == string::npos)
+        return "";
+    if (end_pos - begin_pos >= 512 || (end_pos - begin_pos) <= 1)
+        return "";
+    return data.substr(begin_pos, end_pos - begin_pos);
 }
 string LoginSocket::getParam(string &data, string param)
 {
@@ -71,7 +109,15 @@ string LoginSocket::vkReq(string &data)
     string secret 	= getParam(data, "secret");
     string sid 		= getParam(data, "sid");
     string lc_name 	= getParam(data, "lc_name");
-
+    string api_result 	= getParam(data, "api_result");
+    api_result 		= UrlDecodeString(api_result);
+	
+    string first_name  	= getJsonParamStr(api_result, "first_name");
+    string last_name  	= getJsonParamStr(api_result, "last_name");
+    string nickname  	= getJsonParamStr(api_result, "nickname");
+    int sex  		= atoi(getJsonParamInt(api_result, "sex").c_str());
+    string photo_medium = getJsonParamStr(api_result, "photo_medium");
+	
     if (viewer_id.empty() || api_id.empty() || _social_net[SocialNetDesc::VK].app_id != api_id)
     {
         traceerr("%s, trace req. data: %s", "Error wrong req parameters, Warning!Possible hacking attempt!", data.c_str());
@@ -83,12 +129,17 @@ string LoginSocket::vkReq(string &data)
     string hash_str = string(hash);
     if (auth_key != hash_str)
     {
-        traceerr("%s, trace req. auth_key: %s; local_hash: %s", "Error auth_key fail, , Warning!Possible hacking attempt!", auth_key.c_str(), hash_str.c_str());
+        traceerr("%s, trace req. auth_key: %s; local_hash: %s", "Error auth_key fail, Warning!Possible hacking attempt!", auth_key.c_str(), hash_str.c_str());
         return "";
     }
 
     uint32 vid = atoi(viewer_id.c_str());
     shared_ptr<User> user = iStorage->getLocalUser(vid, SocialNetDesc::VK);
+    user->set("first_name", first_name);
+    user->set("last_name", last_name);
+    user->set("nickname", nickname);
+    user->set("avatar", photo_medium);
+    user->set("sex", sex);
 
     //GENERATE NEADED FLASHVARS
     string iframe = _social_net[SocialNetDesc::VK].iframe;
@@ -123,7 +174,12 @@ string LoginSocket::fbReq(string &data)
 }
 string LoginSocket::statReq(string &data)
 {
-    return "";
+    uint time = iStorage->getCurrentTime();
+    uint users_count = iStorage->getLocalUsersCount();
+    char ret_val[262144] = {"\0"};
+    snprintf(ret_val, 262144,  "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\
+/><title>Статистика</title></head><body>Статистика:<br>Время: %u; <br>Онлайн: %u;</body></html>", time, users_count);
+    return ret_val;
 }
 void LoginSocket::performPacket( Packet *pkt )
 {
@@ -137,7 +193,7 @@ void LoginSocket::performPacket( Packet *pkt )
             break;
         }
     }
-    if (!ret_val.empty())
+    if (ret_val.empty())
     {
         if (data.find("GET /voodoo3_stat?secret=power") != string::npos)///stat request
         {

@@ -32,6 +32,25 @@ CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o
  /home/nonametr/projects/anima/game_server/database_manager.cpp
  /home/nonametr/projects/anima/game_server/database_manager.h
  /home/nonametr/projects/anima/game_server/sql_define.h
+CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o
+ .././shared/common.h
+ .././shared/config.h
+ .././shared/mt/thread.h
+ .././shared/mt/thread_controller.h
+ .././shared/mt/thread_core.h
+ .././shared/net/command_structs.h
+ .././shared/net/listen_socket.h
+ .././shared/net/net_core.h
+ .././shared/net/netcore_worker_thread.h
+ .././shared/net/packet_definitions.h
+ .././shared/net/packet_id.h
+ .././shared/net/socket.h
+ .././shared/net/socket_base.h
+ .././shared/net/socket_operations.h
+ .././shared/singleton.h
+ /home/nonametr/projects/anima/game_server/debug_update.cpp
+ /home/nonametr/projects/anima/game_server/debug_update.h
+ /home/nonametr/projects/anima/game_server/login_socket.h
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o
  .././game_server/instance/ext_socket_instance.h
  .././game_server/instance/instance.h
@@ -220,6 +239,8 @@ CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o
  .././shared/db/database.h
  .././shared/db/field.h
  .././shared/db/mysql_database.h
+ .././shared/json.h
+ .././shared/json_value.h
  .././shared/mt/thread.h
  .././shared/mt/thread_controller.h
  .././shared/mt/thread_core.h
@@ -233,7 +254,9 @@ CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o
  .././shared/net/socket_base.h
  .././shared/net/socket_operations.h
  .././shared/singleton.h
+ .././shared/urlencode.h
  /home/nonametr/projects/anima/game_server/database_manager.h
+ /home/nonametr/projects/anima/game_server/debug_update.h
  /home/nonametr/projects/anima/game_server/login_socket.cpp
  /home/nonametr/projects/anima/game_server/login_socket.h
  /home/nonametr/projects/anima/game_server/server.h
@@ -434,6 +457,12 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o
  .././game_server/user/value.h
  .././shared/common.h
  .././shared/mt/thread.h
+ .././shared/net/command_structs.h
+ .././shared/net/packet_definitions.h
+ .././shared/net/packet_id.h
+ .././shared/net/socket.h
+ .././shared/net/socket_base.h
+ .././shared/net/socket_operations.h
  .././shared/singleton.h
  /home/nonametr/projects/anima/game_server/storage/storage.h
  /home/nonametr/projects/anima/game_server/storage/storage_thread.cpp
@@ -446,6 +475,12 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o
  .././game_server/user/value.h
  .././shared/common.h
  .././shared/mt/thread.h
+ .././shared/net/command_structs.h
+ .././shared/net/packet_definitions.h
+ .././shared/net/packet_id.h
+ .././shared/net/socket.h
+ .././shared/net/socket_base.h
+ .././shared/net/socket_operations.h
  .././shared/singleton.h
  /home/nonametr/projects/anima/game_server/storage/storage.h
  /home/nonametr/projects/anima/game_server/storage/storage_thread.h
@@ -453,6 +488,15 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o
  /home/nonametr/projects/anima/game_server/storage/storage_timer.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o
  .././shared/common.h
+ .././shared/json.h
+ .././shared/json_value.h
+ .././shared/mt/thread.h
+ .././shared/net/command_structs.h
+ .././shared/net/packet_definitions.h
+ .././shared/net/packet_id.h
+ .././shared/net/socket.h
+ .././shared/net/socket_base.h
+ .././shared/net/socket_operations.h
  /home/nonametr/projects/anima/game_server/user/user.cpp
  /home/nonametr/projects/anima/game_server/user/user.h
  /home/nonametr/projects/anima/game_server/user/user_interface.h
@@ -641,6 +685,9 @@ CMakeFiles/anima_game.dir/shared/net/socket.cpp.o
  /home/nonametr/projects/anima/shared/net/socket.h
  /home/nonametr/projects/anima/shared/net/socket_base.h
  /home/nonametr/projects/anima/shared/net/socket_operations.h
+CMakeFiles/anima_game.dir/shared/urlencode.cpp.o
+ /home/nonametr/projects/anima/shared/urlencode.cpp
+ /home/nonametr/projects/anima/shared/urlencode.h
 CMakeFiles/anima_game.dir/shared/version_control.cpp.o
  .././game_server/database_manager.h
  .././game_server/server.h

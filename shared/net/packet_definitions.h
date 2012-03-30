@@ -7,8 +7,9 @@
 #define MSG_PACKET_FRAGMET "Packet expecting structure wrong or corrupted. Connection crushed and closed."
 #define MSG_PACKET_WRONG_ID_IN_THIS_INSTANCE "Packet with that id can't be handled by current instance. Connection crushed and closed."
 
+#define PACKET_HEADER_COUNT 5
 #define PACKET_INT_SIZE 4
-#define PACKET_HEADER_SIZE PACKET_INT_SIZE*4
+#define PACKET_HEADER_SIZE PACKET_INT_SIZE*PACKET_HEADER_COUNT
 
 #include "common.h"
 #include "packet_id.h"
@@ -31,6 +32,7 @@ struct Packet
     int total_size;
     int data_size;
     int crc32;
+    int packet_id;
 ///---END HEADER--------------
 
 ///---BEGIN BODY--------------

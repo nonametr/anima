@@ -15,11 +15,11 @@ public:
     float toFloat(){ return f32; }
     double toDouble(){ return d64; }
     
-    static Value create(int val)		{ Value v(INT); v.i32 = val; v.need_update = true; return v; };
-    static Value create(long long int val) 	{ Value v(INT64); v.i64 = val; v.need_update = true; return v; };
-    static Value create(float val)		{ Value v(FLOAT); v.f32 = val; v.need_update = true; return v; };
-    static Value create(double val)		{ Value v(DOUBLE); v.d64 = val; v.need_update = true; return v; };
-    static Value create(string val)		{ Value v(STRING); v.str_val = val; v.need_update = true; return v; };
+    static Value create(int val)		{ Value v(INT); v.i32 = val; return v; };
+    static Value create(long long int val) 	{ Value v(INT64); v.i64 = val; return v; };
+    static Value create(float val)		{ Value v(FLOAT); v.f32 = val; return v; };
+    static Value create(double val)		{ Value v(DOUBLE); v.d64 = val; return v; };
+    static Value create(string val)		{ Value v(STRING); v.str_val = val; return v; };
     
     string str_val;
     union
@@ -29,7 +29,8 @@ public:
         float f32;
         double d64;
     };
-    bool need_update;
+    bool need_client_update;
+    bool need_sql_update;
 };
 
 #endif // VALUE_H

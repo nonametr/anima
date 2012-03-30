@@ -12,14 +12,15 @@ void GameSocket::onPacketConnect(Socket *sock)
 }
 void GameSocket::onPacketRead(Packet *pkt)
 {
-    if ((IG_MIN_ID < pkt->type) && (pkt->type < IG_MAX_ID))
+    if ((Packets::IG_MIN_ID < pkt->type) && (pkt->type < Packets::IG_MAX_ID))
     {
         _data.push(pkt);
     }
     else
     {
-        pkt->sock->send(MSG_PACKET_WRONG_ID, strlen(MSG_PACKET_WRONG_ID));
-	delete pkt;
+        Packet send_pkt = OG_STR::create(0, MSG_PACKET_WRONG_ID);
+        pkt->sock->send(&send_pkt);
+        delete pkt;
     }
 }
 GameSocket::GameSocket(const char* listen_address, uint32 port) : ListenSocket(listen_address, port)
@@ -42,13 +43,19 @@ void GameSocket::changeInstance(Socket *owner, shared_ptr<Instance> new_instance
 }
 void GameSocket::_performPacket( Packet *pkt )
 {
+    Instance* inst;
     associative_container< Socket *, shared_ptr<Instance> >::iterator it_inst = _instances.find(pkt->sock);
     if (it_inst == _instances.end())
     {
         ///Set default instance
         changeInstance(pkt->sock, shared_ptr<Instance>(_default_instance));
+        inst = _default_instance;
     }
-    it_inst->second->handlePacket(pkt);
+    else
+    {
+        inst = it_inst->second.get();
+    }
+    inst->handlePacket(pkt);
 }
 GameSocket::~GameSocket()
 {
@@ -83,7 +90,9 @@ void GameSocketThread::run()
 void GameSocketThread::onShutdown()
 {
     _running = false;
-    while(!_running){sleep(1);}
+    while (!_running) {
+        sleep(1);
+    }
 }
 GameSocketThread::GameSocketThread(GameSocket *owner) : shard_owner(owner), _running(true)
 {

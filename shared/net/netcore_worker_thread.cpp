@@ -95,7 +95,7 @@ void NetCoreWorkerThread::run()
                     traceerr ( "Returned invalid sock obj (no pointer) of sock %u", _events[i].data.fd );
                 continue;
             }
-            if ( _events[i].events & EPOLLHUP || _events[i].events & EPOLLERR )
+            if ( _events[i].events & EPOLLHUP || _events[i].events & EPOLLRDHUP || _events[i].events & EPOLLERR )
             {
                 ptr->disconnect();
                 continue;

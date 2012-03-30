@@ -3,6 +3,7 @@
 
 #include "instance.h"
 #include "game_socket.h"
+#include "storage.h"
 
 class GameSocket;
 

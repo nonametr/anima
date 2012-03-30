@@ -65,8 +65,11 @@ void GameServer::run()
 
     ///No need to terminate it manualy, it'll be terminated automaticly by NetCore
     _gs = new GameSocket ( _listen_ip.c_str(), _port );
+    _gs->setType(Socket::DEFAULT_SOCKET);
     _ls = new LoginSocket ( _listen_ip.c_str(), _http_port );
+    _ls->setType(Socket::HTTP_SOCKET);
     _es = new ExtSocket ( _listen_ip.c_str(), _ext_port );
+    _es->setType(Socket::DEFAULT_SOCKET);
 
     tracelog ( OPTIMAL, "Server version: %s. Almost started...", iVersionControl->getVersion().c_str() );
     tracelog ( OPTIMAL, "Success! Ready for connections" );
@@ -76,7 +79,7 @@ void GameServer::run()
     {
         ///Some periodic checks possible here
         sleep ( 5 );
-        break;
+     //   break;
     }
 
     destroyObjects();

@@ -65,7 +65,9 @@ void ExtServerConnection::sendPacket(Packet *pkt)
     ExtConnection *connection = _getFreeConnection();
     connection->mutex.lock();
     if (connection->sock.isConnected())
+    {
         connection->sock.send(send_buf, pkt->total_size);
+    }
     else
     {
         connection->sock.connect(_listen_ip.c_str(), _ext_port);

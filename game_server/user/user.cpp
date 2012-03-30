@@ -1,6 +1,9 @@
 #include "user.h"
+#include "command_structs.h"
+#include "json.h"
+#include "json_value.h"
 
-User::User()
+User::User() : joined(false)
 {
 
 }
@@ -8,9 +11,24 @@ User::~User()
 {
 
 }
+void User::join(Socket *sock)
+{
+    _sock 	= sock;
+    joined 	= true;
+
+    for (auto it = _values.begin(); it != _values.end(); ++it)
+    {
+        it->second.need_client_update = true;
+    }
+}
 ///--------------SETTERS----------------
 void User::set(string key, Value &value)
 {
+    if (joined)
+    {
+        value.need_client_update = true;
+        value.need_sql_update = true;
+    }
     _values[key] = value;
 }
 ///-------------GETTERS-----------------
@@ -23,35 +41,39 @@ Value User::get(string key)
     }
     return Value(Value::UNKNOWN);
 };
-string User::getUpdate()
+void User::updateClient()
 {
-    string res("");
+    JSONObject json_obj;
     for (auto it = _values.begin(); it != _values.end(); ++it)
     {
-        if (it->second.need_update)
+        if (it->second.need_client_update)
         {
             switch (it->second.type)
             {
             case Value::STRING:
-                res += it->first + " = "+ it->second.str_val + ", ";
+                json_obj[it->first] = new JSONValue(it->second.toStr());
                 break;
             case Value::INT:
-                res += it->first + " = "+ intToString(it->second.i32) + ", ";
+                json_obj[it->first] = new JSONValue((double)it->second.toInt());
                 break;
             case Value::INT64:
-                res += it->first + " = "+ int64ToString(it->second.i64) + ", ";
+                json_obj[it->first] = new JSONValue((double)it->second.toInt64());
                 break;
             case Value::FLOAT:
-                res += it->first + " = "+ floatToString(it->second.f32) + ", ";
+                json_obj[it->first] = new JSONValue((double)it->second.toFloat());
                 break;
             case Value::DOUBLE:
-                res += it->first + " = "+ doubleToString(it->second.d64) + ", ";
+                json_obj[it->first] = new JSONValue((double)it->second.toDouble());
                 break;
+            case Value::UNKNOWN:
             default:
                 break;
             }
+            it->second.need_client_update = false;
         }
     }
-    res.erase(res.length() - 1, 1);
-    return res;
+    JSONValue* val = new JSONValue(json_obj);
+    string json = val->stringify();
+    Packet client_update_pkt = OG_USER_DATA::create(json);
+    _sock->send(&client_update_pkt);
 }

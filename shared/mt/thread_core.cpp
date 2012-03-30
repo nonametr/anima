@@ -45,7 +45,7 @@ bool ThreadCore::threadExit(ThreadController * t_control)
 }
 ThreadCore::ThreadCore() : shutting_down(false)
 {
-    uint32 thread_count = _getNumCpus()*4;
+    uint32 thread_count = _getNumCpus()*8;
 
     for (uint32 i= 0; i < thread_count; ++i)
         initThread();
@@ -97,6 +97,7 @@ ThreadController * ThreadCore::startThread(Thread * thread)
 
         /// execute the task on this thread
         t_control->setExecutionTarget(thread);
+	thread->setTid(t_control->getId());
 
         /// resume the thread, and it should start working
         t_control->resume();

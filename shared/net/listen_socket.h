@@ -75,7 +75,7 @@ private:
             return;
 
         rw_socket = new Socket(accept_socket);
-	rw_socket->setType(HTTP_SOCKET);
+	rw_socket->setType(this->getType());
         rw_socket->setOwner(this);
         rw_socket->accept(&accept_socket_address);
     }
@@ -90,7 +90,7 @@ private:
     struct sockaddr_in accept_socket_address;
     bool listen_socket_opened;
     uint32 len;
-
+   
     Socket* rw_socket;
 };
 

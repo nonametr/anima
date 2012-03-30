@@ -6,9 +6,11 @@ add_executable(
 anima_game 
 ./shared/net/netcore_worker_thread.h
 ./shared/net/netcore_worker_thread.cpp 
-./game_server/main_game.cpp 
+./game_server/main_game.cpp
 ./shared/common.h 
 ./shared/common.cpp 
+./shared/urlencode.h 
+./shared/urlencode.cpp 
 ./shared/singleton.h 
 ./shared/config.h 
 ./shared/config.cpp 
@@ -45,6 +47,8 @@ anima_game
 ./game_server/game_socket.cpp 
 ./game_server/server.h 
 ./game_server/server.cpp 
+./game_server/debug_update.h 
+./game_server/debug_update.cpp
 ./game_server/database_manager.h 
 ./game_server/database_manager.cpp
 ./game_server/storage/storage_thread.h 

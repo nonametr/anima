@@ -156,6 +156,30 @@ game_server/database_manager.cpp.s:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/database_manager.cpp.s
 .PHONY : game_server/database_manager.cpp.s
 
+game_server/debug_update.o: game_server/debug_update.cpp.o
+.PHONY : game_server/debug_update.o
+
+# target to build an object file
+game_server/debug_update.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o
+.PHONY : game_server/debug_update.cpp.o
+
+game_server/debug_update.i: game_server/debug_update.cpp.i
+.PHONY : game_server/debug_update.i
+
+# target to preprocess a source file
+game_server/debug_update.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/debug_update.cpp.i
+.PHONY : game_server/debug_update.cpp.i
+
+game_server/debug_update.s: game_server/debug_update.cpp.s
+.PHONY : game_server/debug_update.s
+
+# target to generate assembly for a file
+game_server/debug_update.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/debug_update.cpp.s
+.PHONY : game_server/debug_update.cpp.s
+
 game_server/game_server.o: game_server/game_server.cpp.o
 .PHONY : game_server/game_server.o
 
@@ -828,6 +852,30 @@ shared/net/socket.cpp.s:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/net/socket.cpp.s
 .PHONY : shared/net/socket.cpp.s
 
+shared/urlencode.o: shared/urlencode.cpp.o
+.PHONY : shared/urlencode.o
+
+# target to build an object file
+shared/urlencode.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/urlencode.cpp.o
+.PHONY : shared/urlencode.cpp.o
+
+shared/urlencode.i: shared/urlencode.cpp.i
+.PHONY : shared/urlencode.i
+
+# target to preprocess a source file
+shared/urlencode.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/urlencode.cpp.i
+.PHONY : shared/urlencode.cpp.i
+
+shared/urlencode.s: shared/urlencode.cpp.s
+.PHONY : shared/urlencode.s
+
+# target to generate assembly for a file
+shared/urlencode.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/urlencode.cpp.s
+.PHONY : shared/urlencode.cpp.s
+
 shared/version_control.o: shared/version_control.cpp.o
 .PHONY : shared/version_control.o
 
@@ -867,6 +915,9 @@ help:
 	@echo "... game_server/database_manager.o"
 	@echo "... game_server/database_manager.i"
 	@echo "... game_server/database_manager.s"
+	@echo "... game_server/debug_update.o"
+	@echo "... game_server/debug_update.i"
+	@echo "... game_server/debug_update.s"
 	@echo "... game_server/game_server.o"
 	@echo "... game_server/game_server.i"
 	@echo "... game_server/game_server.s"
@@ -951,6 +1002,9 @@ help:
 	@echo "... shared/net/socket.o"
 	@echo "... shared/net/socket.i"
 	@echo "... shared/net/socket.s"
+	@echo "... shared/urlencode.o"
+	@echo "... shared/urlencode.i"
+	@echo "... shared/urlencode.s"
 	@echo "... shared/version_control.o"
 	@echo "... shared/version_control.i"
 	@echo "... shared/version_control.s"

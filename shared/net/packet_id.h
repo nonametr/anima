@@ -1,6 +1,8 @@
 #ifndef PACKET_ID_H
 #define PACKET_ID_H
 
+namespace Packets
+{
 enum EG_Packets
 {
     EG_MIN_ID = 1, 
@@ -17,11 +19,11 @@ enum EG_Packets
 };
 enum IG_Packets
 {
-    IG_MIN_ID = 10000, IG_MAIN_JOIN, IG_GET_PARAM, IG_LIST_PARAMS, IG_MAX_ID
+    IG_MIN_ID = 10000, IG_JOIN, IG_GET_PARAM, IG_LIST_PARAMS, IG_MAX_ID
 };
 enum OG_Packets
 {
-    OG_MIN_ID = 20000, OG_NAME, OG_MONEY, OG_GOLD, OG_LIST_PARAMS, OG_MSG, OG_MAX_ID
+    OG_MIN_ID = 20000, OG_USER_DATA, OG_MONEY, OG_GOLD, OG_LIST_PARAMS, OG_STR, OG_MAX_ID
 };
-
+}
 #endif

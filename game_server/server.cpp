@@ -37,6 +37,7 @@ Server* Server::create ( string &work_dir, uint32 pid )
 
     srv = new GameServer;
     srv->_id = field[0].getUInt32();
+    iDBManager->getSSDatabase()->execute ( DB_RESET_ALL_USERS_IN_MEMORY__SERVER_ID, srv->_id );
     srv->_listen_ip = field[1].getString();
     srv->_port = field[2].getUInt32();
     srv->_ext_port = field[3].getUInt32();

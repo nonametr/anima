@@ -4,6 +4,7 @@
 #define _MULTI_THREADED
 #include <pthread.h>
 #include <string>
+#include "common.h"
 
 using namespace std;
 
@@ -14,8 +15,10 @@ public:
     virtual ~Thread() {};
     virtual void run() = 0;
     virtual void onShutdown() = 0;///it should be almost atomic. no general mutex locks 
+    uint32 getTid() { return _tid; }
+    void setTid(uint32 tid) { _tid = tid; }
 private:
-    pthread_t _tid;
+    uint32 _tid;
 };
 
 class AtomicUInt

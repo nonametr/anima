@@ -16,7 +16,13 @@
 #include <openssl/md5.h>
 
 #define DBG_LVL_TRACE 8
-// #define USE_STL_CPP0X//USE IT IN RELEASE
+
+#define DEBUG
+// #define RELEASE
+
+#ifdef RELEASE
+#define USE_STL_CPP0X
+#endif
 
 #ifdef USE_STL_CPP0X
 #define USE_STL_UNORDERED_MAP

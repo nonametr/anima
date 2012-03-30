@@ -18,13 +18,14 @@ void ExtSocket::onPacketConnect ( Socket *sock )
 }
 void ExtSocket::onPacketRead(Packet *pkt)
 {
-    if ((EG_MIN_ID < pkt->type) && (pkt->type < EG_MAX_ID))
+    if ((Packets::EG_MIN_ID < pkt->type) && (pkt->type < Packets::EG_MAX_ID))
     {
         _data.push(pkt);
     }
     else
     {
-        pkt->sock->send(MSG_PACKET_WRONG_ID, strlen(MSG_PACKET_WRONG_ID));
+	Packet send_pkt = OG_STR::create(0, MSG_PACKET_WRONG_ID);
+	pkt->sock->send(&send_pkt);
 	delete pkt;
     }
 }

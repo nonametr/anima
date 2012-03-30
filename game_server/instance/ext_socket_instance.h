@@ -20,7 +20,7 @@ private:
     void cSetExp(Packet* pkt);
     
     ExtSocket *owner;
-    PacketHandler<ExtSocketInstance> _extPacketHandlers[EG_MAX_ID];
+    PacketHandler<ExtSocketInstance> _extPacketHandlers[Packets::EG_MAX_ID];
 };
 
 #endif // EXT_CONNECTION_INSTANCE_H

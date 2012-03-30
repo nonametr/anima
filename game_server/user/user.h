@@ -4,6 +4,7 @@
 #include "user_interface.h"
 #include "common.h"
 #include "value.h"
+#include "socket.h"
 
 class User : public UserInterface
 {
@@ -11,6 +12,7 @@ public:
     User();
     virtual ~User();
     void onSessionClose() {};
+    void join(Socket *sock);
 ///-------INTERFACE REALIZATION---------
 ///--------------SETTERS----------------
     virtual void set(string key, Value &value);
@@ -20,9 +22,13 @@ public:
     void set(string key, string value){ Value val = Value::create(value); set(key, val); };
 ///-------------GETTERS-----------------
     virtual Value get(string key);
-    string getUpdate();
+    void updateClient();
+    associative_container< string, Value >::iterator getBeginIterator(){ return _values.begin(); }
+    associative_container< string, Value >::iterator getEndIterator(){ return _values.end(); }
 private:
     associative_container< string, Value > _values;
+    bool joined;
+    Socket *_sock;
 };
 
 #endif // USER_H

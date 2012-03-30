@@ -49,19 +49,20 @@ public:
     void setType( SockType v_type )  {
         _type = v_type;
     };
-    string _send_buf;
+    SockType getType( )  {
+        return _type;
+    };
 private:
     void _onConnect();
     void _onDisconnect();
     void _onRead(Packet *pkt);
 
     char _recv_buf[RECIVE_BUFFER_SIZE];
-    
+
     ListenSocket *_owner;
     SockType _type;
     bool _connected;
     sockaddr_in _client;
-    Mutex send_mutex;
 };
 
 #endif // SOCKET_H

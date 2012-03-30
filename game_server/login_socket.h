@@ -32,10 +32,12 @@ class LoginSocket : public ListenSocket
 {
     friend class LoginSocketThread;
 public:
+    void updateDb();
     LoginSocket(const char* listen_address, uint32 port);
     virtual ~LoginSocket();
 private:
-    
+    string getJsonParamStr(string &data, string param);
+    string getJsonParamInt(string &data, string param);
     string getParam(string &data, string param);
     string vkReq(string &data);
     string okReq(string &data);

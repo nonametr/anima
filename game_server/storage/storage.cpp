@@ -55,6 +55,17 @@ void Storage::removeUser(uint32 uid)
     _users_hash_lock[hash].unlock();
 }
 ///------------END PRIVATE------------------------------------------
+int Storage::getLocalUsersCount()
+{
+    int count = 0;
+    for (uint i = 0; i < USER_HASH_SIZE; ++i)
+    {
+        _users_hash_lock[i].lock();
+        count += _users[i].size();
+        _users_hash_lock[i].unlock();
+    }
+    return count;
+}
 shared_ptr<User> Storage::getLocalUser(long long int soc_id, int soc_net_id)
 {
     Field *field;
@@ -75,6 +86,29 @@ shared_ptr<User> Storage::getLocalUser( uint32 uid)
         return loadUser(uid);
     else
         return user;
+}
+void Storage::addOnlineUser(SOCKET sock, shared_ptr<User> user)
+{
+    uint32 hash = sock % ONLINE_USER_HASH_SIZE;
+    _online_users_hash_lock[hash].lock();
+    _online_users[hash][sock] = user;
+    _online_users_hash_lock[hash].unlock();
+}
+shared_ptr<User> Storage::getOnlineUser(SOCKET sock)
+{
+    uint32 hash = sock % ONLINE_USER_HASH_SIZE;
+    _online_users_hash_lock[hash].lock();
+    auto it_us = _online_users[hash].find ( sock );
+    if ( it_us != _online_users[hash].end() )
+    {
+        _online_users_hash_lock[hash].unlock();
+        return it_us->second;
+    }
+    else
+    {
+        _online_users_hash_lock[hash].unlock();
+        return shared_ptr<User>();
+    }
 }
 shared_ptr<UserExt> Storage::getExtUser( uint32 uid)
 {
@@ -113,7 +147,7 @@ shared_ptr<User> Storage::loadUser(uint32 uid)
     int online 		= field[4].getUInt32();
     if (online)
         return shared_ptr<User>();
-    iDBManager->getSSDatabase()->execute(DB_SET_USER_SERVER_OWNER__SERVER_ID, iServer->getId());///set server_id for online field(user server owner)
+    iDBManager->getSSDatabase()->execute(DB_SET_USER_SERVER_OWNER__SERVER_ID_UID, iServer->getId(), uid);///set server_id for online field(user server owner)
     shared_ptr<QueryResult> usr_qres(iDBManager->getDatabase(db_id)->query(DB_GET_USER_DATA__UID, uid));///fetch all user data
     if (!usr_qres.get())
         return shared_ptr<User>();
@@ -178,8 +212,8 @@ shared_ptr<User> Storage::createNewUser(long long int soc_id, uint32 soc_net_id)
     Field *fields = qres->fetch();
     uint32 new_uid = fields[0].getUInt32();
 
-    iDBManager->getSSDatabase()->execute(DB_UPDATE_LOCKED_FOR_UPDATE, soc_id, soc_net_id, db_id, db_id, new_uid);
-    iDBManager->getDatabase(db_id)->execute(DB_CREATE_USER_GAME_DB__UID, new_uid);
+    iDBManager->getSSDatabase()->waitExecute(DB_UPDATE_LOCKED_FOR_UPDATE, soc_id, soc_net_id, db_id, db_id, new_uid);
+    iDBManager->getDatabase(db_id)->waitExecute(DB_CREATE_USER_GAME_DB__UID, new_uid);
 
     return loadUser(new_uid);
 }
