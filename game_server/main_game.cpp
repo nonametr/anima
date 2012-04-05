@@ -53,11 +53,10 @@ char* getArgConfigPath ( int argc, char **argv )
     }
     return cfg_path;
 }
-associative_container< string, int > _values;
 int main ( int argc, char **argv )
 {
     initGlobals();
-
+    
     uint32 pid;
     string work_dir ( get_current_dir_name() );
     new Config;

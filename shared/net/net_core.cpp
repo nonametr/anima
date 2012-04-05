@@ -54,8 +54,8 @@ void NetCore::addListenSocket ( ListenSocket * s )
 void NetCore::addSocket ( Socket * s )
 {
 #ifdef ANTI_DDOS
-    uint32 saddr;
-    int i, count;
+    uint32 saddr = s->getRemoteAddress().s_addr;
+    int count;
     for ( uint32 i = 0; i < _max_sock_desc; ++i )
     {
         if ( _rw_sock[i]->getRemoteAddress().s_addr == saddr )
@@ -64,6 +64,7 @@ void NetCore::addSocket ( Socket * s )
     /// More than ANTI_DDOS num. connections from the same ip? enough! xD
     if ( count > ANTI_DDOS )
     {
+	traceerr("Error DDOS detected! User droped!")
         s->disconnect();
         return;
     }
@@ -82,20 +83,21 @@ void NetCore::addSocket ( Socket * s )
         ///clearing old sock obj. we clear it only if system returns same desc(system nows that its not in use long time ago :)
         delete _rw_sock[s->getSockDescriptor()];
     }
-    _rw_sock[s->getSockDescriptor() ] = s;
+    _rw_sock[s->getSockDescriptor()] = s;
     ++_sock_count;
 
     addToEpoll ( s->getSockDescriptor() );
 }
 void NetCore::removeSocket ( Socket* s )
 {
-    if ( _rw_sock[s->getSockDescriptor()] != s )
+    Socket *sock = _rw_sock[s->getSockDescriptor()];
+    if ( sock != s )
     {
-        traceerr ( "Could not remove sock_desc %u from the set due to it not existing?", s->getSockDescriptor() );
+        traceerr ( "Could not remove sock_desc %u from the set due to its not existing?", s->getSockDescriptor() );
         return;
     }
     --_sock_count;
-
+    
     removeFromEpoll ( s->getSockDescriptor() );
 }
 void NetCore::closeAll()

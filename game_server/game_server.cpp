@@ -78,8 +78,8 @@ void GameServer::run()
     while ( _running )
     {
         ///Some periodic checks possible here
-        sleep ( 5 );
-     //   break;
+        sleep ( 25 );
+//         break;
     }
 
     destroyObjects();

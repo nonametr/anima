@@ -11,7 +11,7 @@ public:
     UserInterface() {};
     virtual ~UserInterface() {};
 ///--------------SETTERS----------------
-    virtual void set(string key, Value &value) = 0;
+    virtual void set(string key, Value value) = 0;
 ///-------------GETTERS-----------------
     virtual Value get(string key) = 0;
 };

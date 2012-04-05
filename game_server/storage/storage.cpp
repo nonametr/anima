@@ -8,7 +8,7 @@
 
 initialiseSingleton ( Storage );
 
-Storage::Storage()
+Storage::Storage() : _time(0)
 {
 //      iPeriodicThreadCaller->startPeriodicThread(new StorageThread, UNLOAD_PERIOD);
 //      iPeriodicThreadCaller->startPeriodicThread(new StorageTimer, TIME_UPDATE_PERIOD);
@@ -73,7 +73,7 @@ shared_ptr<User> Storage::getLocalUser(long long int soc_id, int soc_net_id)
     shared_ptr<QueryResult> qres(iDBManager->getSSDatabase()->query(DB_GET_UID_FROM__SOC_ID_SOC_NET_NAME, soc_id, soc_net_id));
 
     if (!qres.get())
-        return createNewUser(soc_id, soc_net_id);
+        return getNewUser(soc_id, soc_net_id);
 
     field = qres->fetch();
     uint32 uid = field[0].getUInt32();
@@ -136,11 +136,9 @@ shared_ptr<UserInterface> Storage::getUser ( uint32 uid )
 shared_ptr<User> Storage::loadUser(uint32 uid)
 {
     Field *field;
-
     shared_ptr<QueryResult> qres(iDBManager->getSSDatabase()->query(DB_GET_USER_LOGIN__UID, uid));///fetch base user info from logins db
     if (!qres.get())
         return shared_ptr<User>();
-
     field = qres->fetch();
 
     int db_id 		= field[3].getUInt32();
@@ -196,24 +194,51 @@ shared_ptr<User> Storage::loadUser(uint32 uid)
             break;
         }
     }
+    user->deserializeObjects();
     addUser(user);
     return user;
 }
 
-shared_ptr<User> Storage::createNewUser(long long int soc_id, uint32 soc_net_id)
+uint32 Storage::createUserLogin(long long int soc_id, uint32 soc_net_id)
 {
+    uint32 new_uid;
     uint32 db_id = iServer->getId();
     shared_ptr<QueryResult> qres(iDBManager->getSSDatabase()->queryNA(DB_GET_NEW_USER_FOR_UPDATE));
     if (!qres.get())
     {
         iDBManager->getSSDatabase()->waitExecuteNA(DB_PRE_CREATE_NEW_USERS);
-        return createNewUser(soc_id, soc_net_id);
+        return createUserLogin(soc_id, soc_net_id);
     }
-    Field *fields = qres->fetch();
-    uint32 new_uid = fields[0].getUInt32();
+    else
+    {
+        Field *fields = qres->fetch();
+        new_uid = fields[0].getUInt32();
 
-    iDBManager->getSSDatabase()->waitExecute(DB_UPDATE_LOCKED_FOR_UPDATE, soc_id, soc_net_id, db_id, db_id, new_uid);
-    iDBManager->getDatabase(db_id)->waitExecute(DB_CREATE_USER_GAME_DB__UID, new_uid);
+        iDBManager->getSSDatabase()->waitExecute(DB_UPDATE_LOCKED_FOR_UPDATE, soc_id, soc_net_id, db_id, db_id, new_uid);
+	return new_uid;
+    }
+}
+void Storage::createUserData(long long int soc_id, uint32 soc_net_id, uint32 uid)
+{
+    uint32 db_id = iServer->getId();
+    shared_ptr<QueryResult> qres(iDBManager->getDatabase(db_id)->queryNA(DB_USER_DATA_GET_NEW_USER_FOR_UPDATE));
+    if (!qres.get())
+    {
+        iDBManager->getDatabase(db_id)->waitExecuteNA(DB_USER_DATA_PRE_CREATE_NEW_USERS);
+        return createUserData(soc_id, soc_net_id, uid);
+    }
+    else
+    {
+	Field *fields = qres->fetch();
+        uint old = fields[0].getUInt32();
+        iDBManager->getDatabase(db_id)->waitExecute(DB_USER_DATA_UPDATE_LOCKED_FOR_UPDATE__NEWUID_OLDUID, uid, old);
+    }
+}
+shared_ptr<User> Storage::getNewUser(long long int soc_id, uint32 soc_net_id)
+{
+    uint32 new_uid = createUserLogin(soc_id, soc_net_id);
+    createUserData(soc_id, soc_net_id, new_uid);
 
     return loadUser(new_uid);
 }
+

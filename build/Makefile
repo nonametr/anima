@@ -492,6 +492,30 @@ game_server/storage/storage_timer.cpp.s:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.s
 .PHONY : game_server/storage/storage_timer.cpp.s
 
+game_server/user/object.o: game_server/user/object.cpp.o
+.PHONY : game_server/user/object.o
+
+# target to build an object file
+game_server/user/object.cpp.o:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/object.cpp.o
+.PHONY : game_server/user/object.cpp.o
+
+game_server/user/object.i: game_server/user/object.cpp.i
+.PHONY : game_server/user/object.i
+
+# target to preprocess a source file
+game_server/user/object.cpp.i:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/object.cpp.i
+.PHONY : game_server/user/object.cpp.i
+
+game_server/user/object.s: game_server/user/object.cpp.s
+.PHONY : game_server/user/object.s
+
+# target to generate assembly for a file
+game_server/user/object.cpp.s:
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/object.cpp.s
+.PHONY : game_server/user/object.cpp.s
+
 game_server/user/user.o: game_server/user/user.cpp.o
 .PHONY : game_server/user/user.o
 
@@ -957,6 +981,9 @@ help:
 	@echo "... game_server/storage/storage_timer.o"
 	@echo "... game_server/storage/storage_timer.i"
 	@echo "... game_server/storage/storage_timer.s"
+	@echo "... game_server/user/object.o"
+	@echo "... game_server/user/object.i"
+	@echo "... game_server/user/object.s"
 	@echo "... game_server/user/user.o"
 	@echo "... game_server/user/user.i"
 	@echo "... game_server/user/user.s"

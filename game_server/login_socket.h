@@ -4,6 +4,8 @@
 #include "socket.h"
 #include "listen_socket.h"
 
+#define HTML_HEADER "HTTP/1.1 200 OK\r\nServer: nginx/1.0.4\r\nContent-Type: text/html; charset=utf-8\r\n\r\n"
+
 class LoginSocket;
 
 struct SocialNetDesc 
@@ -44,6 +46,7 @@ private:
     string mmReq(string &data);
     string fbReq(string &data);
     string statReq(string &data);
+    string dictRegenerate(string &data);
     
     void onPacketRead(Packet *pkt)
     {

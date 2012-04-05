@@ -2,14 +2,48 @@
 #include "command_structs.h"
 #include "json.h"
 #include "json_value.h"
+#include "storage.h"
 
-User::User() : joined(false)
+User::User() : joined(false), _last_activity(0)
 {
 
 }
 User::~User()
 {
 
+}
+void User::deserializeObjects()
+{
+    const string &js_str = _values["items"].toStr();
+    JSONValue *val = JSON::parse(js_str.c_str());
+    if(!val)
+      return;
+    uint id;
+    uint count;
+
+    JSONArray js_arr = val->asArray();
+    for (uint i = 0; i < js_arr.size(); ++i)
+    {
+        JSONObject js_obj = js_arr[i]->asObject();
+        id = (uint)js_obj["id"]->asNumber();
+        count = (uint)js_obj["count"]->asNumber();
+        _objects[id].setCount(count);
+        _objects[id].setId(id);
+    }
+    delete val;
+}
+void User::serializeObjects()
+{
+    string json;
+    JSONArray js_arr;
+    for (auto it = _objects.begin(); it != _objects.end(); ++it)
+    {
+        JSONObject js_obj;
+        js_obj["id"] = new JSONValue((double)it->second.getId());
+        js_obj["count"] = new JSONValue((double)it->second.getCount());
+	js_arr.push_back(new JSONValue(js_obj));
+    }
+    _values["items"] = Value(JSON::stringify(new JSONValue(js_arr)));
 }
 void User::join(Socket *sock)
 {
@@ -22,8 +56,9 @@ void User::join(Socket *sock)
     }
 }
 ///--------------SETTERS----------------
-void User::set(string key, Value &value)
+void User::set(string key, Value value)
 {
+    _last_activity = iStorage->getCurrentTime();
     if (joined)
     {
         value.need_client_update = true;
@@ -41,6 +76,7 @@ Value User::get(string key)
     }
     return Value(Value::UNKNOWN);
 };
+///-----------CLIENT_SYNC---------------
 void User::updateClient()
 {
     JSONObject json_obj;
@@ -77,3 +113,4 @@ void User::updateClient()
     Packet client_update_pkt = OG_USER_DATA::create(json);
     _sock->send(&client_update_pkt);
 }
+

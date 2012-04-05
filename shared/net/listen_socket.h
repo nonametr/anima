@@ -14,6 +14,7 @@ public:
     {
         reuseAddr();
         disableBlocking();
+ 	disableBuffering();
         setTimeout(60);
 
         listen_socket_address.sin_family = AF_INET;
@@ -36,7 +37,7 @@ public:
             return;
         }
 
-        ret = listen(_sock, 5);
+        ret = listen(_sock, 128);
         if (ret != 0)
         {
             traceerr("Unable to listen on port %u.", (unsigned int)port);

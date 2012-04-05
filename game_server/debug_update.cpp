@@ -1,8 +1,7 @@
 #include "debug_update.h"
 
-DebugUpdate::DebugUpdate(LoginSocket *ls)
+DebugUpdate::DebugUpdate(LoginSocket *ls) : _running(true), _ls(ls)
 {
-    _ls = ls;
 }
 
 DebugUpdate::~DebugUpdate()

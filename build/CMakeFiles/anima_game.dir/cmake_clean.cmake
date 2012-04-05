@@ -1,4 +1,5 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/anima_game.dir/game_server/user/object.cpp.o"
   "CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o"
   "CMakeFiles/anima_game.dir/game_server/main_game.cpp.o"
   "CMakeFiles/anima_game.dir/shared/common.cpp.o"

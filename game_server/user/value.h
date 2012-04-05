@@ -5,9 +5,6 @@ class Value
 {
 public:
     enum TYPE {UNKNOWN, STRING, INT, INT64, FLOAT, DOUBLE} type;
-    Value(TYPE v_type):type(v_type), d64(0.0)
-    {}
-    Value(){}
     
     string toStr(){ return str_val; }
     int toInt(){ return i32; }
@@ -15,11 +12,14 @@ public:
     float toFloat(){ return f32; }
     double toDouble(){ return d64; }
     
-    static Value create(int val)		{ Value v(INT); v.i32 = val; return v; };
-    static Value create(long long int val) 	{ Value v(INT64); v.i64 = val; return v; };
-    static Value create(float val)		{ Value v(FLOAT); v.f32 = val; return v; };
-    static Value create(double val)		{ Value v(DOUBLE); v.d64 = val; return v; };
-    static Value create(string val)		{ Value v(STRING); v.str_val = val; return v; };
+    Value(TYPE v_type):type(v_type), d64(0.0)
+    {}
+    Value(){}
+    Value(int val, bool update = false):type(INT), d64(0.0)		{ i32 = val; need_sql_update = update; };
+    Value(long long int val, bool update = false):type(INT64), d64(0.0)	{ i64 = val; need_sql_update = update; };
+    Value(float val, bool update = false):type(FLOAT), d64(0.0)		{ f32 = val; need_sql_update = update; };
+    Value(double val, bool update = false):type(DOUBLE), d64(0.0)	{ d64 = val; need_sql_update = update; };
+    Value(string val, bool update = false):type(STRING), d64(0.0)	{ str_val = val; need_sql_update = update; };
     
     string str_val;
     union

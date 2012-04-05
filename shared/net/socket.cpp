@@ -49,29 +49,47 @@ void Socket::send(const char* out_packet, uint32 size)
 void Socket::read()
 {
     memset(&_recv_buf[0], 0, RECIVE_BUFFER_SIZE);
-    int bytes_recv = recv(_sock, _recv_buf, RECIVE_BUFFER_SIZE, 0);
-
-    if (bytes_recv < PACKET_HEADER_SIZE)
+    int read_size = 0;
+    int bytes_recv = 0;
+    do
     {
-        traceerr("Error rcv packet without header");
-	Packet send_pkt = OG_STR::create(0, MSG_PACKET_NO_HEADER);
-        this->send(&send_pkt);
-        this->disconnect();
+        read_size = recv(_sock, &_recv_buf[bytes_recv], RECIVE_BUFFER_SIZE - bytes_recv, 0);
+        bytes_recv += read_size > 0 ? read_size : 0;
+    }
+    while (read_size > 0);
+    if (bytes_recv == 0)
+    {
+        traceerr("Error rcv packet size 0");
+        if (this->isConnected())
+        {
+            this->disconnect();
+        }
         return;
     }
     Packet *pkt = new Packet;
     switch (_type)
     {
     case DEFAULT_SOCKET:
+        if (bytes_recv < PACKET_HEADER_SIZE)
+        {
+            traceerr("Error rcv packet without header");
+            if (this->isConnected())
+            {
+                Packet send_pkt = OG_STR::create(0, MSG_PACKET_NO_HEADER);
+                this->send(&send_pkt);
+                this->disconnect();
+            }
+            return;
+        }
         memcpy(&pkt->type, &_recv_buf[0*PACKET_INT_SIZE], PACKET_INT_SIZE);
         memcpy(&pkt->total_size, &_recv_buf[1*PACKET_INT_SIZE], PACKET_INT_SIZE);
         memcpy(&pkt->data_size, &_recv_buf[2*PACKET_INT_SIZE], PACKET_INT_SIZE);
         memcpy(&pkt->crc32, &_recv_buf[3*PACKET_INT_SIZE], PACKET_INT_SIZE);
-	memcpy(&pkt->packet_id, &_recv_buf[4*PACKET_INT_SIZE], PACKET_INT_SIZE);
+        memcpy(&pkt->packet_id, &_recv_buf[4*PACKET_INT_SIZE], PACKET_INT_SIZE);
         if (pkt->data_size != bytes_recv - PACKET_HEADER_SIZE)
         {
             traceerr("Error rcv packet fragmented or corrupted. Can't handle it!");
-	    Packet send_pkt = OG_STR::create(0, MSG_PACKET_FRAGMET);
+            Packet send_pkt = OG_STR::create(0, MSG_PACKET_FRAGMET);
             this->send(&send_pkt);
             this->disconnect();
             delete pkt;
@@ -107,12 +125,15 @@ void Socket::_onConnect()
 
     _connected = true;
 
-    iNetCore->addSocket(this);
     if (_owner)
-        _owner->_onPacketConnect(this);
+      _owner->_onPacketConnect(this);
+	
+    iNetCore->addSocket(this);
 }
 void Socket::_onDisconnect()
 {
+    if (!_connected)
+        return;
     _connected = false;
     /// remove from netcore
     iNetCore->removeSocket(this);
@@ -127,4 +148,5 @@ string Socket::getRemoteIP()
     else
         return string( "noip" );
 }
+
 

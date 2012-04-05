@@ -11,7 +11,7 @@ public:
     UserExt(uint32 uid, uint32 server_id);
     virtual ~UserExt();
 ///--------------SETTERS----------------
-    virtual void set(string key, Value &value) {};
+    virtual void set(string key, Value value) {};
 ///-------------GETTERS-----------------
     virtual Value get(string key){ return Value(Value::UNKNOWN); }
 private:

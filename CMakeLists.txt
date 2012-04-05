@@ -3,7 +3,7 @@ PROJECT(anima)
 cmake_minimum_required(VERSION 2.8)
 
 add_executable(
-anima_game 
+anima_game game_server/user/object.cpp 
 ./shared/net/netcore_worker_thread.h
 ./shared/net/netcore_worker_thread.cpp 
 ./game_server/main_game.cpp

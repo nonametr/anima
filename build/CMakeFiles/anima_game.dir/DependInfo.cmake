@@ -20,6 +20,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/nonametr/projects/anima/game_server/storage/storage.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o"
   "/home/nonametr/projects/anima/game_server/storage/storage_thread.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o"
   "/home/nonametr/projects/anima/game_server/storage/storage_timer.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o"
+  "/home/nonametr/projects/anima/game_server/user/object.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/game_server/user/object.cpp.o"
   "/home/nonametr/projects/anima/game_server/user/user.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/game_server/user/user.cpp.o"
   "/home/nonametr/projects/anima/game_server/user/user_ext.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o"
   "/home/nonametr/projects/anima/shared/common.cpp" "/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/shared/common.cpp.o"

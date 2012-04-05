@@ -75,6 +75,7 @@ void logTrace ( const char *str );
                                                                                             __FUNCTION__,			\
                                                                                             ## __VA_ARGS__ );		\
         perror(__BUF__);\
+        errno = 0;\
     }
 #define tracelog( LVL, S, ... ) 																	\
     {																	\
@@ -87,6 +88,7 @@ void logTrace ( const char *str );
                                                                                                     __FUNCTION__,		\
                                                                                                     ## __VA_ARGS__ );	\
                     perror(__BUF__);\
+                    errno = 0;\
             }																\
     }
 #else

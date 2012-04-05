@@ -69,7 +69,7 @@ void NetCoreWorkerThread::run()
 
     while ( _running )
     {
-        sock_count = epoll_wait ( _epoll_inst, _events, THREAD_EVENT_MAX_SIZE, 5000 );
+        sock_count = epoll_wait ( _epoll_inst, _events, THREAD_EVENT_MAX_SIZE, -1 );
         if (sock_count == -1)
             traceerr("%s", "Error on EPOLL_WAIT!");
         for ( int i = 0; i < sock_count; ++i )
@@ -80,8 +80,9 @@ void NetCoreWorkerThread::run()
                 continue;
             }
 
-            ptr = iNetCore->getSock ( _events[i].data.fd );
+            ptr = iNetCore->getSock ( _events[i].data.fd);
 
+	    traceerr("epoll sock = %u, tid = %u", _events[i].data.fd, getTid());
             if ( ptr == NULL )
             {
                 if ( _events[i].data.fd >= SOCKET_LISTEN_MAX_COUNT )
@@ -90,7 +91,9 @@ void NetCoreWorkerThread::run()
                     continue;
                 }
                 if ( ( ptr = ( ( ListenSocket* ) iNetCore->getListenSock ( _events[i].data.fd ) ) ) != NULL )
+		{
                     ( ( ListenSocket* ) ptr )->onAccept();
+		}
                 else
                     traceerr ( "Returned invalid sock obj (no pointer) of sock %u", _events[i].data.fd );
                 continue;

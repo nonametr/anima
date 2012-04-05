@@ -58,6 +58,7 @@ CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/storag
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: .././game_server/user/user_interface.h
@@ -96,6 +97,7 @@ CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: .././game_server/instan
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: .././game_server/user/user_interface.h
@@ -138,6 +140,7 @@ CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: .././g
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: .././game_server/user/user_interface.h
@@ -167,7 +170,12 @@ CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: ../gam
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: ../game_server/instance/ext_socket_instance.h
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: ../game_server/instance/instance.h
 
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: .././game_server/storage/storage.h
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: .././game_server/storage/storage_thread.h
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: .././game_server/user/user.h
+CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: .././game_server/user/user_interface.h
 CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: .././game_server/user/value.h
 CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: .././shared/common.h
@@ -196,6 +204,7 @@ CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: .././game_se
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: .././game_server/user/user_interface.h
@@ -228,6 +237,7 @@ CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: ../game_serv
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: .././game_server/user/user_interface.h
@@ -266,6 +276,7 @@ CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: .././game_server/instance
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: .././game_server/user/user_interface.h
@@ -303,6 +314,7 @@ CMakeFiles/anima_game.dir/game_server/server.cpp.o: .././game_server/instance/ma
 CMakeFiles/anima_game.dir/game_server/server.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/server.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/server.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/server.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/server.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/server.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/server.cpp.o: .././game_server/user/user_interface.h
@@ -345,6 +357,7 @@ CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: .././gam
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: .././game_server/user/user_interface.h
@@ -384,6 +397,7 @@ CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: .././game_server
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: .././game_server/user/user_interface.h
@@ -419,6 +433,7 @@ CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: .././game_server/in
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: .././game_server/instance/main_instance.h
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: .././game_server/server.h
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: .././game_server/sql_define.h
+CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: .././game_server/user/user_interface.h
@@ -450,6 +465,7 @@ CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: ../game_server/stor
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: ../game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: ../game_server/storage/storage_timer.h
 
+CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: .././game_server/user/user_interface.h
@@ -468,6 +484,7 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: ../game_serv
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: ../game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: ../game_server/storage/storage_timer.h
 
+CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: .././game_server/user/user_interface.h
@@ -486,6 +503,14 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: ../game_serve
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: ../game_server/storage/storage_timer.cpp
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: ../game_server/storage/storage_timer.h
 
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.o: .././shared/common.h
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.o: ../game_server/user/object.cpp
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.o: ../game_server/user/object.h
+
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././game_server/storage/storage.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././game_server/storage/storage_thread.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././game_server/user/user_ext.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/common.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/json.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/json_value.h
@@ -496,6 +521,8 @@ CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/packet_id
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/socket.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/socket_base.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/net/socket_operations.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: .././shared/singleton.h
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/user.cpp
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/user_interface.h
@@ -512,6 +539,7 @@ CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: .././game_server/stor
 CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: .././game_server/storage/storage.h
 CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: .././game_server/storage/storage_thread.h
 CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: .././game_server/storage/storage_timer.h
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: .././game_server/user/object.h
 CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: .././game_server/user/user.h
 CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: .././shared/callback.h
 CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: .././shared/common.h

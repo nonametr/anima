@@ -27,18 +27,30 @@ num_worker_threads, version_control_system_name, http_port FROM server_desc WHER
 #define DB_GET_TABLE_FORMAT SHOW COLUMNS FROM user_data;
 
 #define DB_GET_USER_DATA__UID "SELECT uid, social_id, social_net_id, first_name, last_name, nick_name, sex, money, gold, exp, lvl, music, sound, is_admin,\
-last_join_utime, registration_utime,language, invited_friends, friends_data, app_friends_data, avatar FROM user_data WHERE uid = %u"
+last_join_utime, registration_utime,language, invited_friends, friends_data, app_friends_data, avatar, max_energy_endtime, bullets FROM user_data WHERE uid =\
+%u"
 
 #define DB_RESET_ALL_USERS_IN_MEMORY__SERVER_ID "UPDATE logins SET online_server_id = 0 WHERE online_server_id = %u"
 ///--------------
-
+///---DICTIONARIES---
+#define DB_GET_DICT_BOSS "SELECT ml_name, ml_description, ml_image, hp, need_obj, give_obj FROM dict_boss"
+#define DB_GET_DICT_LANG "SELECT name_uniq, ru, eng FROM dict_lang"
+#define DB_GET_DICT_LOCATION "SELECT ml_name, ml_description, ml_image, time, need_obj, lose_reward_obj, win_reward_obj FROM dict_location"
+#define DB_GET_DICT_OBJECT "SELECT id, ml_name, ml_desc, ml_image, type FROM dict_object"
+#define DB_GET_DICT_PACK "SELECT pack, in_pack_obj, count, dict_pack.group FROM dict_pack"
+#define DB_GET_DICT_SHOP "SELECT object, exchange_obj, count, dict_shop.group FROM dict_shop"
+///---END---
 #define DB_GET_UID_FROM__SOC_ID_SOC_NET_NAME "SELECT uid FROM logins WHERE social_id = %llu and social_net_id = %u"
 ///---NEW USER---
+#define DB_USER_DATA_GET_NEW_USER_FOR_UPDATE "SELECT uid FROM user_data WHERE social_id = 0 LIMIT 1 FOR UPDATE"
+
+#define DB_USER_DATA_PRE_CREATE_NEW_USERS "CALL preCreateUsers()"
+
 #define DB_GET_NEW_USER_FOR_UPDATE "SELECT uid FROM logins WHERE db_id = 0 AND online_server_id = 0 LIMIT 1 FOR UPDATE"
 
 #define DB_UPDATE_LOCKED_FOR_UPDATE "UPDATE logins SET social_id = %llu, social_net_id = %u, db_id = %u, online_server_id = %u WHERE uid = %u"
 
-#define DB_CREATE_USER_GAME_DB__UID "INSERT INTO user_data(uid) VALUES(%u)"
+#define DB_USER_DATA_UPDATE_LOCKED_FOR_UPDATE__NEWUID_OLDUID "UPDATE user_data SET uid = %u WHERE uid = %u"
 
 #define DB_PRE_CREATE_NEW_USERS "CALL preCreateUsers()"
 ///---END---

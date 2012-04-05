@@ -17,7 +17,7 @@ void StorageThread::run()
         iStorage->_users_hash_lock[i].lock();
         for (auto it = iStorage->_users[i].begin(); it != iStorage->_users[i].end(); ++it)
         {
-            if ( (iStorage->getCurrentTime() - it->second->get("loading_time").toInt()) > UNLOAD_PERIOD )
+            if ( (iStorage->getCurrentTime() - it->second->getLastActivity()) > UNLOAD_PERIOD )
             {
                 iStorage->removeUser(it->first);
             }

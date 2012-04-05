@@ -12,7 +12,7 @@
 #define SOCKET_MAX_COUNT 32768	    /// This number dont need to be too big, otherwise it's gonna be eating
 /// memory. 32768 = 256KB, so thats no big issue for now
 
-//#define ANTI_DDOS 8//DONT WORK BEHIND PROXY SUCH AS NGINX
+// #define ANTI_DDOS 8//DONT WORK BEHIND PROXY SUCH AS NGINX
 
 class ListenSocket;
 class NetCoreWorkerThread;

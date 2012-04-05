@@ -20,7 +20,6 @@ public:
     Storage();
     virtual ~Storage();
     uint32 getCurrentTime(){ return _time; };
-    shared_ptr<User> createNewUser(long long int soc_id, uint32 soc_net_id);
     shared_ptr<User> getLocalUser(long long int soc_id, int soc_net_id);
     shared_ptr<User> getLocalUser(uint32 uid);
     shared_ptr<User> getOnlineUser(SOCKET sock);
@@ -33,6 +32,9 @@ private:
     void addUser(shared_ptr<User> user);
     shared_ptr<User> findUser(uint32 uid);
     void removeUser(uint32 uid);
+    shared_ptr<User> getNewUser(long long int soc_id, uint32 soc_net_id);
+    void createUserData(long long int soc_id, uint32 soc_net_id, uint32 uid);
+    uint32 createUserLogin(long long int soc_id, uint32 soc_net_id);
     
     associative_container< SOCKET, shared_ptr<User> > _online_users[ONLINE_USER_HASH_SIZE];
     Mutex _online_users_hash_lock[ONLINE_USER_HASH_SIZE];
