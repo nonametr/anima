@@ -39,7 +39,7 @@ bool ThreadCore::threadExit(ThreadController * t_control)
     /// enter the "suspended" pool
     _free_threads.insert(t_control);
 
-    tracelog(4,"Thread %u entered suspend state.", t_control->getId());
+//     tracelog(4,"Thread %u entered suspend state.", t_control->getId());
     _mutex.unlock();
     return false;
 }
@@ -101,7 +101,7 @@ ThreadController * ThreadCore::startThread(Thread * thread)
 
         /// resume the thread, and it should start working
         t_control->resume();
-        tracelog(4, "Precreated thread %u now in use", t_control->getId());
+//         tracelog(4, "Precreated thread %u now in use", t_control->getId());
     }
     else
     {

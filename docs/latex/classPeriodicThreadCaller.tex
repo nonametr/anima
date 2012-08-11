@@ -1,76 +1,57 @@
-\hypertarget{classPeriodicThreadCaller}{
-\section{PeriodicThreadCaller Class Reference}
-\label{classPeriodicThreadCaller}\index{PeriodicThreadCaller@{PeriodicThreadCaller}}
+\hypertarget{classPeriodicThreadCaller}{\section{\-Periodic\-Thread\-Caller \-Class \-Reference}
+\label{classPeriodicThreadCaller}\index{\-Periodic\-Thread\-Caller@{\-Periodic\-Thread\-Caller}}
 }
-Inheritance diagram for PeriodicThreadCaller:\begin{figure}[H]
+\-Inheritance diagram for \-Periodic\-Thread\-Caller\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classPeriodicThreadCaller}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classPeriodicThreadCaller_ae57ca10be27bf07f027364b1fb507403}{run} ()
+virtual void \hyperlink{classPeriodicThreadCaller_ae57ca10be27bf07f027364b1fb507403}{run} ()
 \item 
-void \hyperlink{classPeriodicThreadCaller_acef1ccc3857cabe56fd267fe986a13c7}{onShutdown} ()
+virtual void \hyperlink{classPeriodicThreadCaller_acef1ccc3857cabe56fd267fe986a13c7}{on\-Shutdown} ()
 \item 
-void \hyperlink{classPeriodicThreadCaller_a3acbf65dc952ad4f3ebf395c8fc262ce}{startPeriodicThread} (\hyperlink{classThread}{Thread} $\ast$thread, uint call\_\-interval)
+void \hyperlink{classPeriodicThreadCaller_af534285065e548ad5e0527620a39ea07}{start\-Periodic\-Thread} (\hyperlink{classThread}{\-Thread} $\ast$thread, uint32 call\-\_\-interval)
 \end{DoxyCompactItemize}
 
 
-\subsection{Member Function Documentation}
-\hypertarget{classPeriodicThreadCaller_acef1ccc3857cabe56fd267fe986a13c7}{
-\index{PeriodicThreadCaller@{PeriodicThreadCaller}!onShutdown@{onShutdown}}
-\index{onShutdown@{onShutdown}!PeriodicThreadCaller@{PeriodicThreadCaller}}
-\subsubsection[{onShutdown}]{\setlength{\rightskip}{0pt plus 5cm}void PeriodicThreadCaller::onShutdown (
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classPeriodicThreadCaller_acef1ccc3857cabe56fd267fe986a13c7}{\index{\-Periodic\-Thread\-Caller@{\-Periodic\-Thread\-Caller}!on\-Shutdown@{on\-Shutdown}}
+\index{on\-Shutdown@{on\-Shutdown}!PeriodicThreadCaller@{\-Periodic\-Thread\-Caller}}
+\subsubsection[{on\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Periodic\-Thread\-Caller\-::on\-Shutdown} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{classPeriodicThreadCaller_acef1ccc3857cabe56fd267fe986a13c7}
-
-
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classPeriodicThreadCaller_acef1ccc3857cabe56fd267fe986a13c7}
 waiking up periodic thread callback checks 
 
+\-Implements \hyperlink{classThread}{\-Thread}.
 
-
-Implements \hyperlink{classThread}{Thread}.
-
-\hypertarget{classPeriodicThreadCaller_ae57ca10be27bf07f027364b1fb507403}{
-\index{PeriodicThreadCaller@{PeriodicThreadCaller}!run@{run}}
-\index{run@{run}!PeriodicThreadCaller@{PeriodicThreadCaller}}
-\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void PeriodicThreadCaller::run (
+\hypertarget{classPeriodicThreadCaller_ae57ca10be27bf07f027364b1fb507403}{\index{\-Periodic\-Thread\-Caller@{\-Periodic\-Thread\-Caller}!run@{run}}
+\index{run@{run}!PeriodicThreadCaller@{\-Periodic\-Thread\-Caller}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Periodic\-Thread\-Caller\-::run} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{classPeriodicThreadCaller_ae57ca10be27bf07f027364b1fb507403}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classPeriodicThreadCaller_ae57ca10be27bf07f027364b1fb507403}
+its next exam\-\_\-time 
 
+\-Implements \hyperlink{classThread}{\-Thread}.
 
-its next exam\_\-time 
-
-
-
-Implements \hyperlink{classThread}{Thread}.
-
-\hypertarget{classPeriodicThreadCaller_a3acbf65dc952ad4f3ebf395c8fc262ce}{
-\index{PeriodicThreadCaller@{PeriodicThreadCaller}!startPeriodicThread@{startPeriodicThread}}
-\index{startPeriodicThread@{startPeriodicThread}!PeriodicThreadCaller@{PeriodicThreadCaller}}
-\subsubsection[{startPeriodicThread}]{\setlength{\rightskip}{0pt plus 5cm}void PeriodicThreadCaller::startPeriodicThread (
+\hypertarget{classPeriodicThreadCaller_af534285065e548ad5e0527620a39ea07}{\index{\-Periodic\-Thread\-Caller@{\-Periodic\-Thread\-Caller}!start\-Periodic\-Thread@{start\-Periodic\-Thread}}
+\index{start\-Periodic\-Thread@{start\-Periodic\-Thread}!PeriodicThreadCaller@{\-Periodic\-Thread\-Caller}}
+\subsubsection[{start\-Periodic\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Periodic\-Thread\-Caller\-::start\-Periodic\-Thread} (
 \begin{DoxyParamCaption}
-\item[{{\bf Thread} $\ast$}]{thread, }
-\item[{uint}]{call\_\-interval}
+\item[{{\bf \-Thread} $\ast$}]{thread, }
+\item[{uint32}]{call\-\_\-interval}
 \end{DoxyParamCaption}
-)}}
-\label{classPeriodicThreadCaller_a3acbf65dc952ad4f3ebf395c8fc262ce}
-
-
+)}}\label{classPeriodicThreadCaller_af534285065e548ad5e0527620a39ea07}
 waiking up periodic thread callback checks 
 
-
-
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/nonametr/projects/anima/shared/periodicthreadcaller.h\item 
-/home/nonametr/projects/anima/shared/periodicthreadcaller.cpp\end{DoxyCompactItemize}
+/home/nonametr/projects/voodoo/server/shared/mt/periodic\-\_\-thread\-\_\-caller.\-h\item 
+/home/nonametr/projects/voodoo/server/shared/mt/periodic\-\_\-thread\-\_\-caller.\-cpp\end{DoxyCompactItemize}

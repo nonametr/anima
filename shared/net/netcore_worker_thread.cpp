@@ -82,7 +82,6 @@ void NetCoreWorkerThread::run()
 
             ptr = iNetCore->getSock ( _events[i].data.fd);
 
-	    traceerr("epoll sock = %u, tid = %u", _events[i].data.fd, getTid());
             if ( ptr == NULL )
             {
                 if ( _events[i].data.fd >= SOCKET_LISTEN_MAX_COUNT )

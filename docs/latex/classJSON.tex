@@ -1,213 +1,346 @@
-\hypertarget{classJSON}{
-\section{JSON Class Reference}
-\label{classJSON}\index{JSON@{JSON}}
+\hypertarget{classJSON}{\section{\-J\-S\-O\-N \-Class \-Reference}
+\label{classJSON}\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}}
 }
-\subsection*{Static Public Member Functions}
+\subsection*{\-Static \-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classJSONValue}{JSONValue} $\ast$ \hyperlink{classJSON_a7f3d733e38c15aaeee7223831f9739a3}{Parse} (const char $\ast$data)
+static \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} $\ast$ \hyperlink{classJSON_a7f3d733e38c15aaeee7223831f9739a3}{\-Parse} (const char $\ast$data)
 \item 
-static std::string \hyperlink{classJSON_a599f5c5792e9995314da85d8ab8a83b9}{Stringify} (const \hyperlink{classJSONValue}{JSONValue} $\ast$value)
+static \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} $\ast$ \hyperlink{classJSON_ae0a007d45cbcbfabb54bce9a3c334fa3}{\-Parse} (const wchar\-\_\-t $\ast$data)
+\item 
+static std\-::wstring \hyperlink{classJSON_afccecef28adea5363fa0fe72ec6043d8}{\-Stringify} (const \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} $\ast$value)
+\item 
+static \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} $\ast$ \hyperlink{classJSON_acc96611fd417af5b65b79013948cede1}{parse} (const char $\ast$data)
+\item 
+static std\-::string \hyperlink{classJSON_ac8440fa6b1fcaf442a9e505dbe1cefd4}{stringify} (const \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} $\ast$value)
 \end{DoxyCompactItemize}
-\subsection*{Static Protected Member Functions}
+\subsection*{\-Static \-Protected \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-static bool \hyperlink{classJSON_a6101b573a904af0ea2fee028071814e9}{SkipWhitespace} (const char $\ast$$\ast$data)
+static bool \hyperlink{classJSON_af94562ab72cd8d95cb99d8b15475bdce}{\-Skip\-Whitespace} (const wchar\-\_\-t $\ast$$\ast$data)
 \item 
-static bool \hyperlink{classJSON_ac8f6350078266a15d18b685e06f58caa}{ExtractString} (const char $\ast$$\ast$data, std::string \&str)
+static bool \hyperlink{classJSON_a3d814fe0b0033824d17ed231d8c93f41}{\-Extract\-String} (const wchar\-\_\-t $\ast$$\ast$data, std\-::wstring \&str)
 \item 
-static double \hyperlink{classJSON_a470e922f11065159826bbd59d8b73889}{ParseInt} (const char $\ast$$\ast$data)
+static double \hyperlink{classJSON_a2461184d91fe6286b26d1e056fca6909}{\-Parse\-Int} (const wchar\-\_\-t $\ast$$\ast$data)
 \item 
-static double \hyperlink{classJSON_a6d4eb6810c7b29a21a6346dbb8edfd2e}{ParseDecimal} (const char $\ast$$\ast$data)
+static double \hyperlink{classJSON_af2d51873ecc483a21cf2d9fe16595495}{\-Parse\-Decimal} (const wchar\-\_\-t $\ast$$\ast$data)
+\item 
+static bool \hyperlink{classJSON_a6101b573a904af0ea2fee028071814e9}{\-Skip\-Whitespace} (const char $\ast$$\ast$data)
+\item 
+static bool \hyperlink{classJSON_a8c96fc1365d25ae19cb56d5ad7b9748d}{\-Extract\-String} (const char $\ast$$\ast$data, std\-::string \&str, bool default\-\_\-end=true)
+\item 
+static double \hyperlink{classJSON_a470e922f11065159826bbd59d8b73889}{\-Parse\-Int} (const char $\ast$$\ast$data)
+\item 
+static double \hyperlink{classJSON_a6d4eb6810c7b29a21a6346dbb8edfd2e}{\-Parse\-Decimal} (const char $\ast$$\ast$data)
 \end{DoxyCompactItemize}
-\subsection*{Friends}
+\subsection*{\-Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classJSON_ad2efeda1c797ac7a1371213b1b6ffdcf}{
-class \hyperlink{classJSON_ad2efeda1c797ac7a1371213b1b6ffdcf}{JSONValue}}
-\label{classJSON_ad2efeda1c797ac7a1371213b1b6ffdcf}
+\hypertarget{classJSON_a4d9fb3ea3c675bf521cf703ac0905813}{class {\bfseries \-J\-S\-O\-N\-Value}}\label{classJSON_a4d9fb3ea3c675bf521cf703ac0905813}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{Member Function Documentation}
-\hypertarget{classJSON_ac8f6350078266a15d18b685e06f58caa}{
-\index{JSON@{JSON}!ExtractString@{ExtractString}}
-\index{ExtractString@{ExtractString}!JSON@{JSON}}
-\subsubsection[{ExtractString}]{\setlength{\rightskip}{0pt plus 5cm}bool JSON::ExtractString (
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classJSON_a8c96fc1365d25ae19cb56d5ad7b9748d}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Extract\-String@{\-Extract\-String}}
+\index{\-Extract\-String@{\-Extract\-String}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Extract\-String}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-::\-Extract\-String} (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$$\ast$}]{data, }
-\item[{std::string \&}]{str}
+\item[{std\-::string \&}]{str, }
+\item[{bool}]{default\-\_\-end = {\ttfamily true}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{classJSON_ac8f6350078266a15d18b685e06f58caa}
-Extracts a \hyperlink{classJSON}{JSON} String as defined by the spec -\/ \char`\"{}$<$some chars$>$\char`\"{} Any escaped characters are swapped out for their unescaped values
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSON_a8c96fc1365d25ae19cb56d5ad7b9748d}
+\-Extracts a \hyperlink{classJSON}{\-J\-S\-O\-N} \-String as defined by the spec -\/ \char`\"{}$<$some chars$>$\char`\"{} \-Any escaped characters are swapped out for their unescaped values
 
 protected
 
 
-\begin{DoxyParams}{Parameters}
-{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{JSON} text \\
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$$\ast$} & data \-Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{\-J\-S\-O\-N} text \\
 \hline
-{\em std::string\&} & str Reference to a std::string to receive the extracted string\\
+{\em std\-::string\&} & str \-Reference to a std\-::string to receive the extracted string\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-bool Returns true on success, false on failure 
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true on success, false on failure 
 \end{DoxyReturn}
+\-Save the char so we can change it if need be
+
+\-Escaping something?
+
+\-Move over the escape char
+
+\-Deal with the escaped char
+
+\-We need 5 chars (4 hex + the 'u') or its not valid
+
+\-Deal with the chars
+
+\-Do it first to move off the 'u' and leave us on the final hex digit as we move on by one later on
+
+\-Parse the hex digit
+
+\-Invalid hex digit = invalid \hyperlink{classJSON}{\-J\-S\-O\-N}
+
+\-By the spec, only the above cases are allowed
+
+\-End of the string?
+
+\-Other end of the string
+
+\-Disallowed char?
+
+\-S\-P\-E\-C \-Violation\-: \-Allow tabs due to real world cases
+
+\-Add the next char
+
+\-Move on
+
+\-If we're here, the string ended incorrectly \hypertarget{classJSON_a3d814fe0b0033824d17ed231d8c93f41}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Extract\-String@{\-Extract\-String}}
+\index{\-Extract\-String@{\-Extract\-String}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Extract\-String}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-::\-Extract\-String} (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$$\ast$}]{data, }
+\item[{std\-::wstring \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSON_a3d814fe0b0033824d17ed231d8c93f41}
+\-Extracts a \hyperlink{classJSON}{\-J\-S\-O\-N} \-String as defined by the spec -\/ \char`\"{}$<$some chars$>$\char`\"{} \-Any escaped characters are swapped out for their unescaped values
+
+protected
 
 
-Save the char so we can change it if need be
-
-Escaping something?
-
-Move over the escape char
-
-Deal with the escaped char
-
-We need 5 chars (4 hex + the 'u') or its not valid
-
-Deal with the chars
-
-Do it first to move off the 'u' and leave us on the final hex digit as we move on by one later on
-
-Parse the hex digit
-
-Invalid hex digit = invalid \hyperlink{classJSON}{JSON}
-
-By the spec, only the above cases are allowed
-
-End of the string?
-
-Disallowed char?
-
-SPEC Violation: Allow tabs due to real world cases
-
-Add the next char
-
-Move on
-
-If we're here, the string ended incorrectly 
-
-\hypertarget{classJSON_a7f3d733e38c15aaeee7223831f9739a3}{
-\index{JSON@{JSON}!Parse@{Parse}}
-\index{Parse@{Parse}!JSON@{JSON}}
-\subsubsection[{Parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf JSONValue} $\ast$ JSON::Parse (
+\begin{DoxyParams}{\-Parameters}
+{\em wchar\-\_\-t$\ast$$\ast$} & data \-Pointer to a wchar\-\_\-t$\ast$ that contains the \hyperlink{classJSON}{\-J\-S\-O\-N} text \\
+\hline
+{\em std\-::wstring\&} & str \-Reference to a std\-::wstring to receive the extracted string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true on success, false on failure 
+\end{DoxyReturn}
+\hypertarget{classJSON_acc96611fd417af5b65b79013948cede1}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!parse@{parse}}
+\index{parse@{parse}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value} $\ast$ {\bf \-J\-S\-O\-N\-::parse} (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$}]{data}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{classJSON_a7f3d733e38c15aaeee7223831f9739a3}
-Parses a complete \hyperlink{classJSON}{JSON} encoded string
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classJSON_acc96611fd417af5b65b79013948cede1}
+\-Parses a complete \hyperlink{classJSON}{\-J\-S\-O\-N} encoded string
 
 public
 
 
-\begin{DoxyParams}{Parameters}
-{\em char$\ast$} & data The \hyperlink{classJSON}{JSON} text\\
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & data \-The \hyperlink{classJSON}{\-J\-S\-O\-N} text\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-JSONValue$\ast$ Returns a \hyperlink{classJSON}{JSON} Value representing the root, or NULL on error 
+\begin{DoxyReturn}{\-Returns}
+\-J\-S\-O\-N\-Value$\ast$ \-Returns a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} representing the root, or \-N\-U\-L\-L on error 
 \end{DoxyReturn}
+\-Skip any preceding whitespace, end of data = no \hyperlink{classJSON}{\-J\-S\-O\-N} = fail
 
+\-We need the start of a value here now...
 
-Skip any preceding whitespace, end of data = no \hyperlink{classJSON}{JSON} = fail
+\-Can be white space now and should be at the end of the string then...
 
-We need the start of a value here now...
-
-Can be white space now and should be at the end of the string then...
-
-We're now at the end of the string 
-
-\hypertarget{classJSON_a6d4eb6810c7b29a21a6346dbb8edfd2e}{
-\index{JSON@{JSON}!ParseDecimal@{ParseDecimal}}
-\index{ParseDecimal@{ParseDecimal}!JSON@{JSON}}
-\subsubsection[{ParseDecimal}]{\setlength{\rightskip}{0pt plus 5cm}double JSON::ParseDecimal (
+\-We're now at the end of the string \hypertarget{classJSON_a7f3d733e38c15aaeee7223831f9739a3}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Parse@{\-Parse}}
+\index{\-Parse@{\-Parse}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value} $\ast$ {\bf \-J\-S\-O\-N\-::\-Parse} (
 \begin{DoxyParamCaption}
-\item[{const char $\ast$$\ast$}]{data}
+\item[{const char $\ast$}]{data}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{classJSON_a6d4eb6810c7b29a21a6346dbb8edfd2e}
-Parses some text as though it is a decimal
-
-protected
-
-
-\begin{DoxyParams}{Parameters}
-{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{JSON} text\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-double Returns the double value of the decimal found 
-\end{DoxyReturn}
-\hypertarget{classJSON_a470e922f11065159826bbd59d8b73889}{
-\index{JSON@{JSON}!ParseInt@{ParseInt}}
-\index{ParseInt@{ParseInt}!JSON@{JSON}}
-\subsubsection[{ParseInt}]{\setlength{\rightskip}{0pt plus 5cm}double JSON::ParseInt (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$$\ast$}]{data}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{classJSON_a470e922f11065159826bbd59d8b73889}
-Parses some text as though it is an integer
-
-protected
-
-
-\begin{DoxyParams}{Parameters}
-{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{JSON} text\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-double Returns the double value of the number found 
-\end{DoxyReturn}
-\hypertarget{classJSON_a6101b573a904af0ea2fee028071814e9}{
-\index{JSON@{JSON}!SkipWhitespace@{SkipWhitespace}}
-\index{SkipWhitespace@{SkipWhitespace}!JSON@{JSON}}
-\subsubsection[{SkipWhitespace}]{\setlength{\rightskip}{0pt plus 5cm}bool JSON::SkipWhitespace (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$$\ast$}]{data}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{classJSON_a6101b573a904af0ea2fee028071814e9}
-Skips over any whitespace characters (space, tab,  or \par
-) defined by the \hyperlink{classJSON}{JSON} spec
-
-protected
-
-
-\begin{DoxyParams}{Parameters}
-{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{JSON} text\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-bool Returns true if there is more data, or false if the end of the text was reached 
-\end{DoxyReturn}
-\hypertarget{classJSON_a599f5c5792e9995314da85d8ab8a83b9}{
-\index{JSON@{JSON}!Stringify@{Stringify}}
-\index{Stringify@{Stringify}!JSON@{JSON}}
-\subsubsection[{Stringify}]{\setlength{\rightskip}{0pt plus 5cm}std::string JSON::Stringify (
-\begin{DoxyParamCaption}
-\item[{const {\bf JSONValue} $\ast$}]{value}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{classJSON_a599f5c5792e9995314da85d8ab8a83b9}
-Turns the passed in \hyperlink{classJSONValue}{JSONValue} into a \hyperlink{classJSON}{JSON} encode string
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classJSON_a7f3d733e38c15aaeee7223831f9739a3}
+\-Parses a complete \hyperlink{classJSON}{\-J\-S\-O\-N} encoded string \-This is just a wrapper around the \-U\-N\-I\-C\-O\-D\-E \hyperlink{classJSON_a7f3d733e38c15aaeee7223831f9739a3}{\-Parse()}.
 
 public
 
 
-\begin{DoxyParams}{Parameters}
-{\em JSONValue$\ast$} & value The root value\\
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & data \-The \hyperlink{classJSON}{\-J\-S\-O\-N} text\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-std::string Returns a \hyperlink{classJSON}{JSON} encoded string representation of the given value 
+\begin{DoxyReturn}{\-Returns}
+\-J\-S\-O\-N\-Value$\ast$ \-Returns a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} representing the root, or \-N\-U\-L\-L on error 
+\end{DoxyReturn}
+\hypertarget{classJSON_ae0a007d45cbcbfabb54bce9a3c334fa3}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Parse@{\-Parse}}
+\index{\-Parse@{\-Parse}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value} $\ast$ {\bf \-J\-S\-O\-N\-::\-Parse} (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classJSON_ae0a007d45cbcbfabb54bce9a3c334fa3}
+\-Parses a complete \hyperlink{classJSON}{\-J\-S\-O\-N} encoded string (\-U\-N\-I\-C\-O\-D\-E input version)
+
+public
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em wchar\-\_\-t$\ast$} & data \-The \hyperlink{classJSON}{\-J\-S\-O\-N} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-J\-S\-O\-N\-Value$\ast$ \-Returns a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} representing the root, or \-N\-U\-L\-L on error 
+\end{DoxyReturn}
+\hypertarget{classJSON_a6d4eb6810c7b29a21a6346dbb8edfd2e}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Parse\-Decimal@{\-Parse\-Decimal}}
+\index{\-Parse\-Decimal@{\-Parse\-Decimal}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Parse\-Decimal}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-J\-S\-O\-N\-::\-Parse\-Decimal} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSON_a6d4eb6810c7b29a21a6346dbb8edfd2e}
+\-Parses some text as though it is a decimal
+
+protected
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$$\ast$} & data \-Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{\-J\-S\-O\-N} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+double \-Returns the double value of the decimal found 
+\end{DoxyReturn}
+\hypertarget{classJSON_af2d51873ecc483a21cf2d9fe16595495}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Parse\-Decimal@{\-Parse\-Decimal}}
+\index{\-Parse\-Decimal@{\-Parse\-Decimal}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Parse\-Decimal}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-J\-S\-O\-N\-::\-Parse\-Decimal} (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSON_af2d51873ecc483a21cf2d9fe16595495}
+\-Parses some text as though it is a decimal
+
+protected
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em wchar\-\_\-t$\ast$$\ast$} & data \-Pointer to a wchar\-\_\-t$\ast$ that contains the \hyperlink{classJSON}{\-J\-S\-O\-N} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+double \-Returns the double value of the decimal found 
+\end{DoxyReturn}
+\hypertarget{classJSON_a470e922f11065159826bbd59d8b73889}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Parse\-Int@{\-Parse\-Int}}
+\index{\-Parse\-Int@{\-Parse\-Int}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Parse\-Int}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-J\-S\-O\-N\-::\-Parse\-Int} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSON_a470e922f11065159826bbd59d8b73889}
+\-Parses some text as though it is an integer
+
+protected
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$$\ast$} & data \-Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{\-J\-S\-O\-N} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+double \-Returns the double value of the number found 
+\end{DoxyReturn}
+\hypertarget{classJSON_a2461184d91fe6286b26d1e056fca6909}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Parse\-Int@{\-Parse\-Int}}
+\index{\-Parse\-Int@{\-Parse\-Int}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Parse\-Int}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-J\-S\-O\-N\-::\-Parse\-Int} (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSON_a2461184d91fe6286b26d1e056fca6909}
+\-Parses some text as though it is an integer
+
+protected
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em wchar\-\_\-t$\ast$$\ast$} & data \-Pointer to a wchar\-\_\-t$\ast$ that contains the \hyperlink{classJSON}{\-J\-S\-O\-N} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+double \-Returns the double value of the number found 
+\end{DoxyReturn}
+\hypertarget{classJSON_a6101b573a904af0ea2fee028071814e9}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Skip\-Whitespace@{\-Skip\-Whitespace}}
+\index{\-Skip\-Whitespace@{\-Skip\-Whitespace}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Skip\-Whitespace}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-::\-Skip\-Whitespace} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSON_a6101b573a904af0ea2fee028071814e9}
+\-Skips over any whitespace characters (space, tab,  or \par
+) defined by the \hyperlink{classJSON}{\-J\-S\-O\-N} spec
+
+protected
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$$\ast$} & data \-Pointer to a char$\ast$ that contains the \hyperlink{classJSON}{\-J\-S\-O\-N} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if there is more data, or false if the end of the text was reached 
+\end{DoxyReturn}
+\hypertarget{classJSON_af94562ab72cd8d95cb99d8b15475bdce}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Skip\-Whitespace@{\-Skip\-Whitespace}}
+\index{\-Skip\-Whitespace@{\-Skip\-Whitespace}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Skip\-Whitespace}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-::\-Skip\-Whitespace} (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSON_af94562ab72cd8d95cb99d8b15475bdce}
+\-Skips over any whitespace characters (space, tab,  or \par
+) defined by the \hyperlink{classJSON}{\-J\-S\-O\-N} spec
+
+protected
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em wchar\-\_\-t$\ast$$\ast$} & data \-Pointer to a wchar\-\_\-t$\ast$ that contains the \hyperlink{classJSON}{\-J\-S\-O\-N} text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if there is more data, or false if the end of the text was reached 
+\end{DoxyReturn}
+\hypertarget{classJSON_ac8440fa6b1fcaf442a9e505dbe1cefd4}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!stringify@{stringify}}
+\index{stringify@{stringify}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{stringify}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-J\-S\-O\-N\-::stringify} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-J\-S\-O\-N\-Value} $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classJSON_ac8440fa6b1fcaf442a9e505dbe1cefd4}
+\-Turns the passed in \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} into a \hyperlink{classJSON}{\-J\-S\-O\-N} encode string
+
+public
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-J\-S\-O\-N\-Value$\ast$} & value \-The root value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+std\-::string \-Returns a \hyperlink{classJSON}{\-J\-S\-O\-N} encoded string representation of the given value 
+\end{DoxyReturn}
+\hypertarget{classJSON_afccecef28adea5363fa0fe72ec6043d8}{\index{\-J\-S\-O\-N@{\-J\-S\-O\-N}!\-Stringify@{\-Stringify}}
+\index{\-Stringify@{\-Stringify}!JSON@{\-J\-S\-O\-N}}
+\subsubsection[{\-Stringify}]{\setlength{\rightskip}{0pt plus 5cm}std\-::wstring {\bf \-J\-S\-O\-N\-::\-Stringify} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-J\-S\-O\-N\-Value} $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classJSON_afccecef28adea5363fa0fe72ec6043d8}
+\-Turns the passed in \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} into a \hyperlink{classJSON}{\-J\-S\-O\-N} encode string
+
+public
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-J\-S\-O\-N\-Value$\ast$} & value \-The root value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+std\-::wstring \-Returns a \hyperlink{classJSON}{\-J\-S\-O\-N} encoded string representation of the given value 
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/nonametr/projects/anima/shared/json.h\item 
-/home/nonametr/projects/anima/shared/json.cpp\end{DoxyCompactItemize}
+/home/nonametr/projects/voodoo/server/shared/json/\-J\-S\-O\-N.\-h\item 
+/home/nonametr/projects/voodoo/server/shared/json.\-h\item 
+/home/nonametr/projects/voodoo/server/shared/json/\-J\-S\-O\-N.\-cpp\item 
+/home/nonametr/projects/voodoo/server/shared/json.\-cpp\end{DoxyCompactItemize}

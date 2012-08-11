@@ -2,116 +2,91 @@
 #include "socket.h"
 #include "packet_definitions.h"
 #include "common.h"
+#include "exeption.h"
 
-Packet CInt64::create(uint32 v_uid, uint64 v_iVal1, int packet_type)
+Packet CInt64::create ( uint32 v_uid, uint64 v_iVal1, int packet_type )
 {
     CInt64 cVal;
     cVal.iVal1 = v_iVal1;
 
     Packet pkt;
-    pkt.data_size = sizeof(CInt64);
     pkt.type = packet_type;
     pkt.crc32 = 0;
-    pkt.data = new char[sizeof(CInt64)];
-    memcpy(&pkt.data[0], &cVal, sizeof(CInt64));
-    pkt.total_size = pkt.data_size + PACKET_HEADER_SIZE;
+    char buf[8] = {"\0"};
+    memcpy ( &buf[0], &cVal, sizeof ( CInt64 ) );
+    pkt.data = buf;
+    pkt.data_size = pkt.data.size();
+    pkt.total_size = pkt.data.size() + PACKET_HEADER_SIZE;
     return pkt;
 }
-shared_ptr<CInt64> CInt64::decompress(Packet *pkt)
+shared_ptr<CInt64> CInt64::decompress ( Packet *pkt )
 {
-    shared_ptr<CInt64> ret_val(new CInt64);
-    if (sizeof(ret_val)!= pkt->data_size)
+    shared_ptr<CInt64> ret_val ( new CInt64 );
+    if ( sizeof ( ret_val ) != pkt->data.size() )
     {
-	Packet send_pkt = OG_STR::create(0, MSG_PACKET_WRONG_DATA_SIZE);
-        pkt->sock->send(&send_pkt);
+        Packet send_pkt = OG_ERROR::create ( 0, intToString ( MSG_PACKET_WRONG_DATA_SIZE ).c_str() );
+        pkt->sock->send ( &send_pkt );
         return shared_ptr<CInt64>();
     }
-    memcpy(&ret_val, pkt->data, pkt->data_size);
+    memcpy ( &ret_val, pkt->data.c_str(), pkt->data.size() );
     return ret_val;
 }
-Packet CInt32::create(uint32 v_uid, int v_iVal1, int packet_type)
+IG_2Int32 IG_2Int32::decompress ( Packet *pkt )
 {
-    CInt32 cVal;
-    cVal.iVal1 = v_iVal1;
-
-    Packet pkt;
-    pkt.data_size = sizeof(CInt32);
-    pkt.type = packet_type;
-    pkt.crc32 = 0;
-    pkt.data = new char[sizeof(CInt32)];
-    memcpy(&pkt.data[0], &cVal, sizeof(CInt32));
-    pkt.total_size = pkt.data_size + PACKET_HEADER_SIZE;
-    return pkt;
-}
-shared_ptr<CInt32> CInt32::decompress(Packet *pkt)
-{
-    shared_ptr<CInt32> ret_val(new CInt32);
-    if (sizeof(ret_val)!= pkt->data_size)
-    {
-	Packet send_pkt = OG_STR::create(0, MSG_PACKET_WRONG_DATA_SIZE);
-        pkt->sock->send(&send_pkt);
-        return shared_ptr<CInt32>();
-    }
-    memcpy(&ret_val, pkt->data, pkt->data_size);
+    IG_2Int32 ret_val;
+    if ( sizeof ( IG_2Int32 ) != pkt->data.size() )
+        ErrorExeption ( ErrorExeption::WRONG_PACKET_DATA, intToString ( __LINE__ ) +string ( " " ) + string ( __FUNCTION__ ) );
+    memcpy ( &ret_val, pkt->data.c_str(), pkt->data.size() );
     return ret_val;
 }
-Packet OG_STR::create(uint32 v_uid, const char* v_strVal1)
+IG_Int32 IG_Int32::decompress ( Packet *pkt )
 {
-    int len = strlen(v_strVal1);
-
-    Packet pkt;
-    pkt.data_size = len;
-    pkt.type = Packets::OG_STR;
-    pkt.crc32 = 0;
-    pkt.data = new char[len];
-    memset(pkt.data, 0, len);
-    memcpy(pkt.data, v_strVal1, len);
-    pkt.total_size = pkt.data_size + PACKET_HEADER_SIZE;
-
-    return pkt;
-}
-shared_ptr<OG_STR> OG_STR::decompress(Packet *pkt)
-{
-    shared_ptr<OG_STR> ret_val(new OG_STR);
+    IG_Int32 ret_val;
+    if ( sizeof ( IG_Int32 ) != pkt->data.size() )
+        ErrorExeption ( ErrorExeption::WRONG_PACKET_DATA, intToString ( __LINE__ ) +string ( " " ) + string ( __FUNCTION__ ) );
+    memcpy ( &ret_val, pkt->data.c_str(), pkt->data.size() );
     return ret_val;
 }
-Packet CInt32Int32::create(uint32 v_uid, int v_iVal1, int v_iVal2, int packet_type)
+IG_STR IG_STR::decompress ( Packet* pkt )
 {
-    Packet pkt;
-    return pkt;
-}
-shared_ptr<CInt32Int32> CInt32Int32::decompress(Packet *pkt)
-{
-    shared_ptr<CInt32Int32> ret_val(new CInt32Int32);
-    return ret_val;
-}
+    char *str = new char[pkt->data.size()];
+    memset ( str, 0, pkt->data.size() );
+    IG_STR val;
 
-
-
-
-
-shared_ptr<IG_JOIN> IG_JOIN::decompress(Packet* pkt)
-{
-    char social_id[64] = {"\0"};
-    shared_ptr<IG_JOIN> val(new IG_JOIN);
-    int soc_id_len = pkt->data_size - sizeof(val->time);
-    memcpy(social_id, pkt->data, soc_id_len);
-    val->soc_id = atoll(social_id);
-    memcpy(&val->time, &pkt->data[soc_id_len], sizeof(val->time));
+    memcpy ( str, pkt->data.c_str(), pkt->data.size() );
+    val.str = string ( str );
     return val;
 }
-Packet OG_USER_DATA::create(string &json)
+IG_JOIN IG_JOIN::decompress ( Packet* pkt )
 {
-    int len = json.length();
-
+    if ( pkt->data.size() >= 64 )
+        ErrorExeption ( ErrorExeption::WRONG_PACKET_DATA, intToString ( __LINE__ ) +string ( " " ) + string ( __FUNCTION__ ) );
+    char social_id[64] = {"\0"};
+    IG_JOIN val;
+    memcpy ( social_id, pkt->data.c_str(), pkt->data.size() );
+    val.soc_id = atoll ( social_id );
+    return val;
+}
+///------------OUTGOING_PACKET_DATA_TYPES------------------
+Packet OG_ERROR::create ( uint32 v_uid, const char* v_strVal1 )
+{
     Packet pkt;
-    pkt.data_size = len;
-    pkt.type = Packets::OG_USER_DATA;
+    pkt.type = Packets::OG_ERROR;
     pkt.crc32 = 0;
-    pkt.data = new char[len];
-    memset(pkt.data, 0, len);
-    memcpy(pkt.data, json.c_str(), len);
-    pkt.total_size = pkt.data_size + PACKET_HEADER_SIZE;
+    pkt.data = string ( "{\"msg\":\"" ) + string ( v_strVal1 ) + string ( "\"}" );
+    pkt.data_size = pkt.data.size();
+    pkt.total_size = pkt.data.size() + PACKET_HEADER_SIZE;
+
+    return pkt;
+}
+Packet OG_USER_JSON::create ( string &json )
+{
+    Packet pkt;
+    pkt.type = Packets::OG_USER_JSON;
+    pkt.crc32 = 0;
+    pkt.data = json;
+    pkt.data_size = pkt.data.size();
+    pkt.total_size = pkt.data.size() + PACKET_HEADER_SIZE;
 
     return pkt;
 }

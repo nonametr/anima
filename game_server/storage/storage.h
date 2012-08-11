@@ -14,35 +14,44 @@
 ///Shard data storage
 class Storage : public Singleton<Storage>
 {
+  friend class DictManager;
   friend class StorageThread;
   friend class StorageTimer;
 public:
     Storage();
     virtual ~Storage();
-    uint32 getCurrentTime(){ return _time; };
-    shared_ptr<User> getLocalUser(long long int soc_id, int soc_net_id);
-    shared_ptr<User> getLocalUser(uint32 uid);
-    shared_ptr<User> getOnlineUser(SOCKET sock);
-    void addOnlineUser(SOCKET sock, shared_ptr<User> user);
-    shared_ptr<UserExt> getExtUser(uint32 uid);
-    shared_ptr<UserInterface> getUser ( uint32 uid );
+    
+    User* loadLocalUser(SOCKET sock, long long int soc_id, int soc_net_id);
+    User* getOnlineUser(SOCKET sock);
+    User* getLocalUser(uint32 uid);
+    User* getLocalUser(long long int soc_id, int soc_net_id);
+    
+    static int getCurrentTime(){ return _time; };
     int getLocalUsersCount();
-private:
-    shared_ptr<User> loadUser(uint32 uid);
-    void addUser(shared_ptr<User> user);
-    shared_ptr<User> findUser(uint32 uid);
+private:    
+    void addOnlineUser(SOCKET sock, User* user);
+//     shared_ptr<UserExt> getExtUser(uint32 uid);
+//     shared_ptr<UserInterface> getUser ( uint32 uid );
+    
+    User* loadUser(uint32 uid);
+    void loadUserData(User* usr, shared_ptr<QueryResult> usr_qres);
+    void loadUserObjects(User* usr, shared_ptr<QueryResult> usr_qres);
+    void loadUserPrivateObjects(User* usr, shared_ptr<QueryResult> usr_qres);
+    
+    void addUser(User* user);
+    User* findUser(uint32 uid);
     void removeUser(uint32 uid);
-    shared_ptr<User> getNewUser(long long int soc_id, uint32 soc_net_id);
+    User* getNewUser(long long int soc_id, uint32 soc_net_id);
     void createUserData(long long int soc_id, uint32 soc_net_id, uint32 uid);
     uint32 createUserLogin(long long int soc_id, uint32 soc_net_id);
     
-    associative_container< SOCKET, shared_ptr<User> > _online_users[ONLINE_USER_HASH_SIZE];
+    associative_container< SOCKET, User* > _online_users[ONLINE_USER_HASH_SIZE];
     Mutex _online_users_hash_lock[ONLINE_USER_HASH_SIZE];
     
-    associative_container< uint, shared_ptr<User> > _users[USER_HASH_SIZE];
+    associative_container< uint, User* > _users[USER_HASH_SIZE];
     Mutex _users_hash_lock[USER_HASH_SIZE];
     
-    uint32 _time;
+    static int _time;
 };
 
 #define iStorage Storage::getSingletonPtr()

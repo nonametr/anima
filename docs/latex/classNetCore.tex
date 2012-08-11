@@ -1,77 +1,58 @@
-\hypertarget{classNetCore}{
-\section{NetCore Class Reference}
-\label{classNetCore}\index{NetCore@{NetCore}}
+\hypertarget{classNetCore}{\section{\-Net\-Core \-Class \-Reference}
+\label{classNetCore}\index{\-Net\-Core@{\-Net\-Core}}
 }
-Inheritance diagram for NetCore:\begin{figure}[H]
+\-Inheritance diagram for \-Net\-Core\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classNetCore}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classNetCore_ad10840be05aa99314c59ca10f067b2da}{NetCore} ()
+\hyperlink{classNetCore_ad10840be05aa99314c59ca10f067b2da}{\-Net\-Core} ()
 \item 
-void \hyperlink{classNetCore_a427f3577c790d9199e9e976172e32ea3}{addSocket} (\hyperlink{classSocket}{Socket} $\ast$s)
-\begin{DoxyCompactList}\small\item\em add a new socket to the r/w epoll set and to the sock mapping \item\end{DoxyCompactList}\item 
-\hypertarget{classNetCore_a017906522bcb380b937d3f6dfc780184}{
-void {\bfseries addListenSocket} (\hyperlink{classListenSocketBase}{ListenSocketBase} $\ast$s)}
-\label{classNetCore_a017906522bcb380b937d3f6dfc780184}
+void \hyperlink{classNetCore_a427f3577c790d9199e9e976172e32ea3}{add\-Socket} (\hyperlink{classSocket}{\-Socket} $\ast$s)
+\begin{DoxyCompactList}\small\item\em add a new socket to the r/w epoll set and to the sock mapping \end{DoxyCompactList}\item 
+\hypertarget{classNetCore_adae8b16fc82aed8f9b10ab4e431c886e}{void {\bfseries add\-Listen\-Socket} (\hyperlink{classListenSocket}{\-Listen\-Socket} $\ast$s)}\label{classNetCore_adae8b16fc82aed8f9b10ab4e431c886e}
 
 \end{DoxyCompactItemize}
-\subsection*{Friends}
+\subsection*{\-Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classNetCore_ae0585299ab7c2a563b1aeabf73ea2c21}{
-class \hyperlink{classNetCore_ae0585299ab7c2a563b1aeabf73ea2c21}{NetCoreWorkerThread}}
-\label{classNetCore_ae0585299ab7c2a563b1aeabf73ea2c21}
+\hypertarget{classNetCore_ae0585299ab7c2a563b1aeabf73ea2c21}{class {\bfseries \-Net\-Core\-Worker\-Thread}}\label{classNetCore_ae0585299ab7c2a563b1aeabf73ea2c21}
 
 \item 
-\hypertarget{classNetCore_ab510887d735ee73ab1cb598c66260e87}{
-class \hyperlink{classNetCore_ab510887d735ee73ab1cb598c66260e87}{Socket}}
-\label{classNetCore_ab510887d735ee73ab1cb598c66260e87}
+\hypertarget{classNetCore_ab510887d735ee73ab1cb598c66260e87}{class {\bfseries \-Socket}}\label{classNetCore_ab510887d735ee73ab1cb598c66260e87}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{classNetCore_ad10840be05aa99314c59ca10f067b2da}{
-\index{NetCore@{NetCore}!NetCore@{NetCore}}
-\index{NetCore@{NetCore}!NetCore@{NetCore}}
-\subsubsection[{NetCore}]{\setlength{\rightskip}{0pt plus 5cm}NetCore::NetCore (
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classNetCore_ad10840be05aa99314c59ca10f067b2da}{\index{\-Net\-Core@{\-Net\-Core}!\-Net\-Core@{\-Net\-Core}}
+\index{\-Net\-Core@{\-Net\-Core}!NetCore@{\-Net\-Core}}
+\subsubsection[{\-Net\-Core}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Net\-Core\-::\-Net\-Core} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}
-\label{classNetCore_ad10840be05aa99314c59ca10f067b2da}
-
-
+)}}\label{classNetCore_ad10840be05aa99314c59ca10f067b2da}
 null out the pointer array 
 
-
-
-\subsection{Member Function Documentation}
-\hypertarget{classNetCore_a427f3577c790d9199e9e976172e32ea3}{
-\index{NetCore@{NetCore}!addSocket@{addSocket}}
-\index{addSocket@{addSocket}!NetCore@{NetCore}}
-\subsubsection[{addSocket}]{\setlength{\rightskip}{0pt plus 5cm}void NetCore::addSocket (
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classNetCore_a427f3577c790d9199e9e976172e32ea3}{\index{\-Net\-Core@{\-Net\-Core}!add\-Socket@{add\-Socket}}
+\index{add\-Socket@{add\-Socket}!NetCore@{\-Net\-Core}}
+\subsubsection[{add\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Net\-Core\-::add\-Socket} (
 \begin{DoxyParamCaption}
-\item[{{\bf Socket} $\ast$}]{s}
+\item[{{\bf \-Socket} $\ast$}]{s}
 \end{DoxyParamCaption}
-)}}
-\label{classNetCore_a427f3577c790d9199e9e976172e32ea3}
+)}}\label{classNetCore_a427f3577c790d9199e9e976172e32ea3}
 
 
 add a new socket to the r/w epoll set and to the sock mapping 
 
+clearing old sock obj. we clear it only if system returns same desc(system nows that its not in use long time ago \-:) 
 
-
-clearing old sock obj. we clear it only if system returns same desc(system nows that its not in use long time ago :) 
-
-
-
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/nonametr/projects/anima/shared/netcore.h\item 
-/home/nonametr/projects/anima/shared/netcore.cpp\end{DoxyCompactItemize}
+/home/nonametr/projects/voodoo/server/shared/net/net\-\_\-core.\-h\item 
+/home/nonametr/projects/voodoo/server/shared/net/net\-\_\-core.\-cpp\end{DoxyCompactItemize}

@@ -1,9 +1,3 @@
-/*
-* It's part of the SimpleJSON Library - http://mjpa.in/json
-*
-* Copyright (C) 2010 Mike Anchor and modified by I.Kuruch
-*/
-
 #ifndef JSONVALUE_H
 #define JSONVALUE_H
 
@@ -37,7 +31,7 @@ public:
     bool isArray() const;
     bool isObject() const;
 
-    const std::string &asString() const;
+    const std::string &getString() const;
     bool asBool() const;
     double asNumber() const;
     const JSONArray &asArray() const;

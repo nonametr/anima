@@ -1,6 +1,5 @@
-\hypertarget{classConfig}{
-\section{Config Class Reference}
-\label{classConfig}\index{Config@{Config}}
+\hypertarget{classConfig}{\section{\-Config \-Class \-Reference}
+\label{classConfig}\index{\-Config@{\-Config}}
 }
 
 
@@ -9,156 +8,117 @@ server configuration data store
 
 
 
-{\ttfamily \#include $<$config.h$>$}
+{\ttfamily \#include $<$config.\-h$>$}
 
-Inheritance diagram for Config:\begin{figure}[H]
+\-Inheritance diagram for \-Config\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classConfig}
 \end{center}
 \end{figure}
-\subsection*{Public Types}
+\subsection*{\-Public \-Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{classConfig_a6d78e4d65fd44d149ad6facce11bc11e}{CONFIG\_\-PARAMS\_\-STR} \{ \par
-\hyperlink{classConfig_a6d78e4d65fd44d149ad6facce11bc11ea6614c7a3803a54c2a09068cbfbf6ec32}{LSD\_\-IP}, 
-{\bfseries LSD\_\-NAME}, 
-{\bfseries LSD\_\-USER}, 
-{\bfseries LSD\_\-PASSWORD}, 
-\par
-{\bfseries LSD\_\-CHARSET}, 
-{\bfseries LSD\_\-LOG\_\-PATH}, 
-\hyperlink{classConfig_a6d78e4d65fd44d149ad6facce11bc11eab960a98d195eb36210965ccbf3822b05}{LS\_\-IP}, 
-{\bfseries LS\_\-DEMON\_\-USER}, 
-\par
-{\bfseries LS\_\-DEMON\_\-DIR}, 
-{\bfseries LS\_\-ERROR\_\-LOG\_\-PATH}, 
-{\bfseries LS\_\-SRV\_\-LOG\_\-PATH}, 
-{\bfseries SIZE\_\-STR}
+enum \hyperlink{classConfig_a6d78e4d65fd44d149ad6facce11bc11e}{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-S\-T\-R} \{ \*
+\hyperlink{classConfig_a6d78e4d65fd44d149ad6facce11bc11eadb86d6ef5692400d4a3c0a2fe54dba3d}{\-S\-S\-D\-\_\-\-I\-P}, 
+{\bfseries \-S\-S\-D\-\_\-\-N\-A\-M\-E}, 
+{\bfseries \-S\-S\-D\-\_\-\-U\-S\-E\-R}, 
+{\bfseries \-S\-S\-D\-\_\-\-P\-A\-S\-S\-W\-O\-R\-D}, 
+\*
+{\bfseries \-S\-S\-D\-\_\-\-C\-H\-A\-R\-S\-E\-T}, 
+{\bfseries \-S\-I\-Z\-E\-\_\-\-S\-T\-R}
  \}
-\begin{DoxyCompactList}\small\item\em all string params of server configuration discribed in this enum \item\end{DoxyCompactList}\item 
-enum \hyperlink{classConfig_a0f80a094ada73f8574e85b160a5e47b7}{CONFIG\_\-PARAMS\_\-INT} \{ \par
-\hyperlink{classConfig_a0f80a094ada73f8574e85b160a5e47b7a08d4d5bb46c46b471b8af9328d91fa68}{LSD\_\-PORT}, 
-\hyperlink{classConfig_a0f80a094ada73f8574e85b160a5e47b7a06836aae25f712981143e4e3653521ff}{LS\_\-DBG\_\-LVL}, 
-{\bfseries LS\_\-PORT}, 
-{\bfseries LS\_\-NUM\_\-EPOLLS\_\-WORKER\_\-THREADS}, 
-\par
-{\bfseries LS\_\-NUM\_\-LOGIN\_\-PROCCESSING\_\-THREADS}, 
-{\bfseries SIZE\_\-INT}
+\begin{DoxyCompactList}\small\item\em all string params of server configuration discribed in this enum \end{DoxyCompactList}\item 
+enum \hyperlink{classConfig_a0f80a094ada73f8574e85b160a5e47b7}{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-I\-N\-T} \{ \hyperlink{classConfig_a0f80a094ada73f8574e85b160a5e47b7adcfee10d7cec219fc657459ee83d642f}{\-S\-S\-D\-\_\-\-P\-O\-R\-T}, 
+{\bfseries \-S\-I\-Z\-E\-\_\-\-I\-N\-T}
  \}
-\begin{DoxyCompactList}\small\item\em all int params of server configuration discribed in this enum \item\end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Public Member Functions}
+\begin{DoxyCompactList}\small\item\em all int params of server configuration discribed in this enum \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classConfig_abd0c571c116924871e30444b192b792a}{
-\hyperlink{classConfig_abd0c571c116924871e30444b192b792a}{Config} ()}
-\label{classConfig_abd0c571c116924871e30444b192b792a}
+\hypertarget{classConfig_abd0c571c116924871e30444b192b792a}{\hyperlink{classConfig_abd0c571c116924871e30444b192b792a}{\-Config} ()}\label{classConfig_abd0c571c116924871e30444b192b792a}
 
-\begin{DoxyCompactList}\small\item\em constructor performs loading all configurations params \item\end{DoxyCompactList}\item 
-void \hyperlink{classConfig_a0a2ae073a94b6d495a6113e01a0563db}{loadFromFile} (const char $\ast$cfg\_\-file)
-\begin{DoxyCompactList}\small\item\em performs loading base configuration data from config file \item\end{DoxyCompactList}\item 
-void \hyperlink{classConfig_a182d6c22c9a9e09b7a38b0339bc742b1}{loadFromDB} ()
-\begin{DoxyCompactList}\small\item\em performs loading configuration data from database \item\end{DoxyCompactList}\item 
-\hypertarget{classConfig_adb59977d3f13d7a1223e6c7523240c7b}{
-const int \& {\bfseries getParam} (\hyperlink{classConfig_a0f80a094ada73f8574e85b160a5e47b7}{CONFIG\_\-PARAMS\_\-INT} int\_\-param)}
-\label{classConfig_adb59977d3f13d7a1223e6c7523240c7b}
+\begin{DoxyCompactList}\small\item\em constructor performs loading all configurations params \end{DoxyCompactList}\item 
+void \hyperlink{classConfig_a0a2ae073a94b6d495a6113e01a0563db}{load\-From\-File} (const char $\ast$cfg\-\_\-file)
+\begin{DoxyCompactList}\small\item\em performs loading base configuration data from config file \end{DoxyCompactList}\item 
+void \hyperlink{classConfig_a182d6c22c9a9e09b7a38b0339bc742b1}{load\-From\-D\-B} ()
+\begin{DoxyCompactList}\small\item\em performs loading configuration data from database \end{DoxyCompactList}\item 
+\hypertarget{classConfig_adb59977d3f13d7a1223e6c7523240c7b}{const int \& {\bfseries get\-Param} (\hyperlink{classConfig_a0f80a094ada73f8574e85b160a5e47b7}{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-I\-N\-T} int\-\_\-param)}\label{classConfig_adb59977d3f13d7a1223e6c7523240c7b}
 
 \item 
-\hypertarget{classConfig_a8e5fe138e08e23bf25b118c0cfb948dc}{
-const std::string \& {\bfseries getParam} (\hyperlink{classConfig_a6d78e4d65fd44d149ad6facce11bc11e}{CONFIG\_\-PARAMS\_\-STR} str\_\-param)}
-\label{classConfig_a8e5fe138e08e23bf25b118c0cfb948dc}
+\hypertarget{classConfig_a8e5fe138e08e23bf25b118c0cfb948dc}{const std\-::string \& {\bfseries get\-Param} (\hyperlink{classConfig_a6d78e4d65fd44d149ad6facce11bc11e}{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-S\-T\-R} str\-\_\-param)}\label{classConfig_a8e5fe138e08e23bf25b118c0cfb948dc}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsection{\-Detailed \-Description}
 server configuration data store 
 
-\subsection{Member Enumeration Documentation}
-\hypertarget{classConfig_a0f80a094ada73f8574e85b160a5e47b7}{
-\index{Config@{Config}!CONFIG\_\-PARAMS\_\-INT@{CONFIG\_\-PARAMS\_\-INT}}
-\index{CONFIG\_\-PARAMS\_\-INT@{CONFIG\_\-PARAMS\_\-INT}!Config@{Config}}
-\subsubsection[{CONFIG\_\-PARAMS\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Config::CONFIG\_\-PARAMS\_\-INT}}}
-\label{classConfig_a0f80a094ada73f8574e85b160a5e47b7}
+\subsection{\-Member \-Enumeration \-Documentation}
+\hypertarget{classConfig_a0f80a094ada73f8574e85b160a5e47b7}{\index{\-Config@{\-Config}!\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-I\-N\-T@{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-I\-N\-T}}
+\index{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-I\-N\-T@{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-I\-N\-T}!Config@{\-Config}}
+\subsubsection[{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Config\-::\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-I\-N\-T}}}\label{classConfig_a0f80a094ada73f8574e85b160a5e47b7}
 
 
 all int params of server configuration discribed in this enum 
 
 \begin{Desc}
-\item[Enumerator: ]\par
+\item[\-Enumerator\-: ]\par
 \begin{description}
-\index{LSD\_\-PORT@{LSD\_\-PORT}!Config@{Config}}\index{Config@{Config}!LSD\_\-PORT@{LSD\_\-PORT}}\item[{\em 
-\hypertarget{classConfig_a0f80a094ada73f8574e85b160a5e47b7a08d4d5bb46c46b471b8af9328d91fa68}{
-LSD\_\-PORT}
-\label{classConfig_a0f80a094ada73f8574e85b160a5e47b7a08d4d5bb46c46b471b8af9328d91fa68}
-}]database connection configuration for login server. LSD = LOGIN SERVER DATABASE \index{LS\_\-DBG\_\-LVL@{LS\_\-DBG\_\-LVL}!Config@{Config}}\index{Config@{Config}!LS\_\-DBG\_\-LVL@{LS\_\-DBG\_\-LVL}}\item[{\em 
-\hypertarget{classConfig_a0f80a094ada73f8574e85b160a5e47b7a06836aae25f712981143e4e3653521ff}{
-LS\_\-DBG\_\-LVL}
-\label{classConfig_a0f80a094ada73f8574e85b160a5e47b7a06836aae25f712981143e4e3653521ff}
-}]login server general configuration, this configuration loads from LSD \end{description}
+\index{\-S\-S\-D\-\_\-\-P\-O\-R\-T@{\-S\-S\-D\-\_\-\-P\-O\-R\-T}!\-Config@{\-Config}}\index{\-Config@{\-Config}!\-S\-S\-D\-\_\-\-P\-O\-R\-T@{\-S\-S\-D\-\_\-\-P\-O\-R\-T}}\item[{\em 
+\hypertarget{classConfig_a0f80a094ada73f8574e85b160a5e47b7adcfee10d7cec219fc657459ee83d642f}{\-S\-S\-D\-\_\-\-P\-O\-R\-T}\label{classConfig_a0f80a094ada73f8574e85b160a5e47b7adcfee10d7cec219fc657459ee83d642f}
+}]database connection configuration for login server. \-L\-S\-D = \-L\-O\-G\-I\-N \-S\-E\-R\-V\-E\-R \-D\-A\-T\-A\-B\-A\-S\-E \end{description}
 \end{Desc}
 
-\hypertarget{classConfig_a6d78e4d65fd44d149ad6facce11bc11e}{
-\index{Config@{Config}!CONFIG\_\-PARAMS\_\-STR@{CONFIG\_\-PARAMS\_\-STR}}
-\index{CONFIG\_\-PARAMS\_\-STR@{CONFIG\_\-PARAMS\_\-STR}!Config@{Config}}
-\subsubsection[{CONFIG\_\-PARAMS\_\-STR}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Config::CONFIG\_\-PARAMS\_\-STR}}}
-\label{classConfig_a6d78e4d65fd44d149ad6facce11bc11e}
+\hypertarget{classConfig_a6d78e4d65fd44d149ad6facce11bc11e}{\index{\-Config@{\-Config}!\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-S\-T\-R@{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-S\-T\-R}}
+\index{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-S\-T\-R@{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-S\-T\-R}!Config@{\-Config}}
+\subsubsection[{\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-S\-T\-R}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Config\-::\-C\-O\-N\-F\-I\-G\-\_\-\-P\-A\-R\-A\-M\-S\-\_\-\-S\-T\-R}}}\label{classConfig_a6d78e4d65fd44d149ad6facce11bc11e}
 
 
 all string params of server configuration discribed in this enum 
 
 \begin{Desc}
-\item[Enumerator: ]\par
+\item[\-Enumerator\-: ]\par
 \begin{description}
-\index{LSD\_\-IP@{LSD\_\-IP}!Config@{Config}}\index{Config@{Config}!LSD\_\-IP@{LSD\_\-IP}}\item[{\em 
-\hypertarget{classConfig_a6d78e4d65fd44d149ad6facce11bc11ea6614c7a3803a54c2a09068cbfbf6ec32}{
-LSD\_\-IP}
-\label{classConfig_a6d78e4d65fd44d149ad6facce11bc11ea6614c7a3803a54c2a09068cbfbf6ec32}
-}]database connection configuration for login server. LSD = LOGIN SERVER DATABASE \index{LS\_\-IP@{LS\_\-IP}!Config@{Config}}\index{Config@{Config}!LS\_\-IP@{LS\_\-IP}}\item[{\em 
-\hypertarget{classConfig_a6d78e4d65fd44d149ad6facce11bc11eab960a98d195eb36210965ccbf3822b05}{
-LS\_\-IP}
-\label{classConfig_a6d78e4d65fd44d149ad6facce11bc11eab960a98d195eb36210965ccbf3822b05}
-}]login server general configuration, this configuration loads from LSD \end{description}
+\index{\-S\-S\-D\-\_\-\-I\-P@{\-S\-S\-D\-\_\-\-I\-P}!\-Config@{\-Config}}\index{\-Config@{\-Config}!\-S\-S\-D\-\_\-\-I\-P@{\-S\-S\-D\-\_\-\-I\-P}}\item[{\em 
+\hypertarget{classConfig_a6d78e4d65fd44d149ad6facce11bc11eadb86d6ef5692400d4a3c0a2fe54dba3d}{\-S\-S\-D\-\_\-\-I\-P}\label{classConfig_a6d78e4d65fd44d149ad6facce11bc11eadb86d6ef5692400d4a3c0a2fe54dba3d}
+}]database connection configuration for login server. \-L\-S\-D = \-L\-O\-G\-I\-N \-S\-E\-R\-V\-E\-R \-D\-A\-T\-A\-B\-A\-S\-E \end{description}
 \end{Desc}
 
 
 
-\subsection{Member Function Documentation}
-\hypertarget{classConfig_a182d6c22c9a9e09b7a38b0339bc742b1}{
-\index{Config@{Config}!loadFromDB@{loadFromDB}}
-\index{loadFromDB@{loadFromDB}!Config@{Config}}
-\subsubsection[{loadFromDB}]{\setlength{\rightskip}{0pt plus 5cm}void Config::loadFromDB (
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classConfig_a182d6c22c9a9e09b7a38b0339bc742b1}{\index{\-Config@{\-Config}!load\-From\-D\-B@{load\-From\-D\-B}}
+\index{load\-From\-D\-B@{load\-From\-D\-B}!Config@{\-Config}}
+\subsubsection[{load\-From\-D\-B}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Config\-::load\-From\-D\-B} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}
-\label{classConfig_a182d6c22c9a9e09b7a38b0339bc742b1}
+)}}\label{classConfig_a182d6c22c9a9e09b7a38b0339bc742b1}
 
 
 performs loading configuration data from database 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{\-Returns}
 void 
 \end{DoxyReturn}
-\hypertarget{classConfig_a0a2ae073a94b6d495a6113e01a0563db}{
-\index{Config@{Config}!loadFromFile@{loadFromFile}}
-\index{loadFromFile@{loadFromFile}!Config@{Config}}
-\subsubsection[{loadFromFile}]{\setlength{\rightskip}{0pt plus 5cm}void Config::loadFromFile (
+\hypertarget{classConfig_a0a2ae073a94b6d495a6113e01a0563db}{\index{\-Config@{\-Config}!load\-From\-File@{load\-From\-File}}
+\index{load\-From\-File@{load\-From\-File}!Config@{\-Config}}
+\subsubsection[{load\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Config\-::load\-From\-File} (
 \begin{DoxyParamCaption}
-\item[{const char $\ast$}]{cfg\_\-file}
+\item[{const char $\ast$}]{cfg\-\_\-file}
 \end{DoxyParamCaption}
-)}}
-\label{classConfig_a0a2ae073a94b6d495a6113e01a0563db}
+)}}\label{classConfig_a0a2ae073a94b6d495a6113e01a0563db}
 
 
 performs loading base configuration data from config file 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{\-Returns}
 void 
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/nonametr/projects/anima/shared/config.h\item 
-/home/nonametr/projects/anima/shared/config.cpp\end{DoxyCompactItemize}
+/home/nonametr/projects/voodoo/server/shared/config.\-h\item 
+/home/nonametr/projects/voodoo/server/shared/config.\-cpp\end{DoxyCompactItemize}

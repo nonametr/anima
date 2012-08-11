@@ -53,7 +53,7 @@ bool Config::parseFileData(const char* file_data)
         {
             second_value = it->second;
             ASSERT(second_value->isString());
-            _data_str[i] = second_value->asString();
+            _data_str[i] = second_value->getString();
             tracelog(OPTIMAL, "Loading configuration param \"%s\" ---> \"%s\"", str_config_params[i].c_str(), _data_str[i].c_str());
         }
         else

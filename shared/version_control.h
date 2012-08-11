@@ -25,7 +25,9 @@ class VersionControl : public Singleton<VersionControl>
 {
 public:
     VersionControl();
-    ~VersionControl(){ if(vc) delete vc; };
+    ~VersionControl() {
+        if (vc) delete vc;
+    };
     string getVersion();
 private:
     VCBase *vc;

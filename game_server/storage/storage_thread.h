@@ -5,7 +5,6 @@
 #include "common.h"
 #include "storage.h"
 
-#define UNLOAD_PERIOD 14400
 class StorageThread : public Thread
 {
 public:
@@ -13,6 +12,10 @@ public:
     virtual ~StorageThread();
     virtual void run();
     virtual void onShutdown(){};
+
+private:
+    uint _unload_period;
+    uint _save_period;
 };
 
 #endif // STORAGE_THREAD_H

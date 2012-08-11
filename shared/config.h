@@ -5,7 +5,7 @@
 #include "singleton.h"
 #include "common.h"
 
-#define DEFAULT_CONFIG_PATH "/home/nonametr/projects/anima/build/anima.cfg"
+#define DEFAULT_CONFIG_PATH "/home/nonametr/projects/voodoo/server/build/anima.cfg"
 /**
  * @brief server configuration data store
  **/

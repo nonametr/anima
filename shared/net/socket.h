@@ -7,7 +7,7 @@
 #include "thread.h"
 #include "packet_definitions.h"
 
-#define RECIVE_BUFFER_SIZE 65536
+#define RECIVE_BUFFER_SIZE 2048
 
 class ListenSocket;
 
@@ -58,7 +58,9 @@ private:
     void _onRead(Packet *pkt);
 
     char _recv_buf[RECIVE_BUFFER_SIZE];
+    string data;
 
+    uint content_length;
     ListenSocket *_owner;
     SockType _type;
     bool _connected;

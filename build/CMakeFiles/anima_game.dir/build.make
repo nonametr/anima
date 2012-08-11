@@ -4,7 +4,7 @@
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nonametr/projects/anima
+CMAKE_SOURCE_DIR = /home/nonametr/projects/voodoo/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nonametr/projects/anima/build
+CMAKE_BINARY_DIR = /home/nonametr/projects/voodoo/server/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/anima_game.dir/depend.make
@@ -46,42 +46,19 @@ include CMakeFiles/anima_game.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/anima_game.dir/flags.make
 
-CMakeFiles/anima_game.dir/game_server/user/object.cpp.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/user/object.cpp.o: ../game_server/user/object.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/object.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/object.cpp.o -c /home/nonametr/projects/anima/game_server/user/object.cpp
-
-CMakeFiles/anima_game.dir/game_server/user/object.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/object.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/user/object.cpp > CMakeFiles/anima_game.dir/game_server/user/object.cpp.i
-
-CMakeFiles/anima_game.dir/game_server/user/object.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/object.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/user/object.cpp -o CMakeFiles/anima_game.dir/game_server/user/object.cpp.s
-
-CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.requires
-
-CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.provides
-
-CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/object.cpp.o
-
 CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o: ../shared/net/netcore_worker_thread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o -c /home/nonametr/projects/anima/shared/net/netcore_worker_thread.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o -c /home/nonametr/projects/voodoo/server/shared/net/netcore_worker_thread.cpp
 
 CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/net/netcore_worker_thread.cpp > CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/net/netcore_worker_thread.cpp > CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.i
 
 CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/net/netcore_worker_thread.cpp -o CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/net/netcore_worker_thread.cpp -o CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.s
 
 CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o.requires
@@ -94,17 +71,17 @@ CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o.provides.build:
 
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o: ../game_server/main_game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/main_game.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/main_game.cpp.o -c /home/nonametr/projects/anima/game_server/main_game.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/main_game.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/main_game.cpp
 
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/main_game.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/main_game.cpp > CMakeFiles/anima_game.dir/game_server/main_game.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/main_game.cpp > CMakeFiles/anima_game.dir/game_server/main_game.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/main_game.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/main_game.cpp -o CMakeFiles/anima_game.dir/game_server/main_game.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/main_game.cpp -o CMakeFiles/anima_game.dir/game_server/main_game.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.requires
@@ -115,19 +92,42 @@ CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.provides: CMakeFiles/anima
 
 CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/main_game.cpp.o
 
+CMakeFiles/anima_game.dir/shared/exeption.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/exeption.cpp.o: ../shared/exeption.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/exeption.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/exeption.cpp.o -c /home/nonametr/projects/voodoo/server/shared/exeption.cpp
+
+CMakeFiles/anima_game.dir/shared/exeption.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/exeption.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/exeption.cpp > CMakeFiles/anima_game.dir/shared/exeption.cpp.i
+
+CMakeFiles/anima_game.dir/shared/exeption.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/exeption.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/exeption.cpp -o CMakeFiles/anima_game.dir/shared/exeption.cpp.s
+
+CMakeFiles/anima_game.dir/shared/exeption.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/exeption.cpp.o.requires
+
+CMakeFiles/anima_game.dir/shared/exeption.cpp.o.provides: CMakeFiles/anima_game.dir/shared/exeption.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/exeption.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/exeption.cpp.o.provides
+
+CMakeFiles/anima_game.dir/shared/exeption.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/exeption.cpp.o
+
 CMakeFiles/anima_game.dir/shared/common.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/common.cpp.o: ../shared/common.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/common.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/common.cpp.o -c /home/nonametr/projects/anima/shared/common.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/common.cpp.o -c /home/nonametr/projects/voodoo/server/shared/common.cpp
 
 CMakeFiles/anima_game.dir/shared/common.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/common.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/common.cpp > CMakeFiles/anima_game.dir/shared/common.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/common.cpp > CMakeFiles/anima_game.dir/shared/common.cpp.i
 
 CMakeFiles/anima_game.dir/shared/common.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/common.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/common.cpp -o CMakeFiles/anima_game.dir/shared/common.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/common.cpp -o CMakeFiles/anima_game.dir/shared/common.cpp.s
 
 CMakeFiles/anima_game.dir/shared/common.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/common.cpp.o.requires
@@ -138,19 +138,42 @@ CMakeFiles/anima_game.dir/shared/common.cpp.o.provides: CMakeFiles/anima_game.di
 
 CMakeFiles/anima_game.dir/shared/common.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/common.cpp.o
 
+CMakeFiles/anima_game.dir/shared/random.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/shared/random.cpp.o: ../shared/random.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/random.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/random.cpp.o -c /home/nonametr/projects/voodoo/server/shared/random.cpp
+
+CMakeFiles/anima_game.dir/shared/random.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/random.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/random.cpp > CMakeFiles/anima_game.dir/shared/random.cpp.i
+
+CMakeFiles/anima_game.dir/shared/random.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/random.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/random.cpp -o CMakeFiles/anima_game.dir/shared/random.cpp.s
+
+CMakeFiles/anima_game.dir/shared/random.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/shared/random.cpp.o.requires
+
+CMakeFiles/anima_game.dir/shared/random.cpp.o.provides: CMakeFiles/anima_game.dir/shared/random.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/shared/random.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/shared/random.cpp.o.provides
+
+CMakeFiles/anima_game.dir/shared/random.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/random.cpp.o
+
 CMakeFiles/anima_game.dir/shared/urlencode.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/urlencode.cpp.o: ../shared/urlencode.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/urlencode.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/urlencode.cpp.o -c /home/nonametr/projects/anima/shared/urlencode.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/urlencode.cpp.o -c /home/nonametr/projects/voodoo/server/shared/urlencode.cpp
 
 CMakeFiles/anima_game.dir/shared/urlencode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/urlencode.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/urlencode.cpp > CMakeFiles/anima_game.dir/shared/urlencode.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/urlencode.cpp > CMakeFiles/anima_game.dir/shared/urlencode.cpp.i
 
 CMakeFiles/anima_game.dir/shared/urlencode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/urlencode.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/urlencode.cpp -o CMakeFiles/anima_game.dir/shared/urlencode.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/urlencode.cpp -o CMakeFiles/anima_game.dir/shared/urlencode.cpp.s
 
 CMakeFiles/anima_game.dir/shared/urlencode.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/urlencode.cpp.o.requires
@@ -163,17 +186,17 @@ CMakeFiles/anima_game.dir/shared/urlencode.cpp.o.provides.build: CMakeFiles/anim
 
 CMakeFiles/anima_game.dir/shared/config.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/config.cpp.o: ../shared/config.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/config.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/config.cpp.o -c /home/nonametr/projects/anima/shared/config.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/config.cpp.o -c /home/nonametr/projects/voodoo/server/shared/config.cpp
 
 CMakeFiles/anima_game.dir/shared/config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/config.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/config.cpp > CMakeFiles/anima_game.dir/shared/config.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/config.cpp > CMakeFiles/anima_game.dir/shared/config.cpp.i
 
 CMakeFiles/anima_game.dir/shared/config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/config.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/config.cpp -o CMakeFiles/anima_game.dir/shared/config.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/config.cpp -o CMakeFiles/anima_game.dir/shared/config.cpp.s
 
 CMakeFiles/anima_game.dir/shared/config.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/config.cpp.o.requires
@@ -186,17 +209,17 @@ CMakeFiles/anima_game.dir/shared/config.cpp.o.provides.build: CMakeFiles/anima_g
 
 CMakeFiles/anima_game.dir/shared/net/socket.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/net/socket.cpp.o: ../shared/net/socket.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/net/socket.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/socket.cpp.o -c /home/nonametr/projects/anima/shared/net/socket.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/socket.cpp.o -c /home/nonametr/projects/voodoo/server/shared/net/socket.cpp
 
 CMakeFiles/anima_game.dir/shared/net/socket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/net/socket.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/net/socket.cpp > CMakeFiles/anima_game.dir/shared/net/socket.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/net/socket.cpp > CMakeFiles/anima_game.dir/shared/net/socket.cpp.i
 
 CMakeFiles/anima_game.dir/shared/net/socket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/net/socket.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/net/socket.cpp -o CMakeFiles/anima_game.dir/shared/net/socket.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/net/socket.cpp -o CMakeFiles/anima_game.dir/shared/net/socket.cpp.s
 
 CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.requires
@@ -209,17 +232,17 @@ CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.provides.build: CMakeFiles/ani
 
 CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o: ../shared/net/net_core.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o -c /home/nonametr/projects/anima/shared/net/net_core.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o -c /home/nonametr/projects/voodoo/server/shared/net/net_core.cpp
 
 CMakeFiles/anima_game.dir/shared/net/net_core.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/net/net_core.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/net/net_core.cpp > CMakeFiles/anima_game.dir/shared/net/net_core.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/net/net_core.cpp > CMakeFiles/anima_game.dir/shared/net/net_core.cpp.i
 
 CMakeFiles/anima_game.dir/shared/net/net_core.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/net/net_core.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/net/net_core.cpp -o CMakeFiles/anima_game.dir/shared/net/net_core.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/net/net_core.cpp -o CMakeFiles/anima_game.dir/shared/net/net_core.cpp.s
 
 CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.requires
@@ -232,17 +255,17 @@ CMakeFiles/anima_game.dir/shared/net/net_core.cpp.o.provides.build: CMakeFiles/a
 
 CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o: ../shared/net/command_structs.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o -c /home/nonametr/projects/anima/shared/net/command_structs.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o -c /home/nonametr/projects/voodoo/server/shared/net/command_structs.cpp
 
 CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/net/command_structs.cpp > CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/net/command_structs.cpp > CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.i
 
 CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/net/command_structs.cpp -o CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/net/command_structs.cpp -o CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.s
 
 CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.requires
@@ -255,17 +278,17 @@ CMakeFiles/anima_game.dir/shared/net/command_structs.cpp.o.provides.build: CMake
 
 CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o: ../shared/mt/thread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o -c /home/nonametr/projects/anima/shared/mt/thread.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o -c /home/nonametr/projects/voodoo/server/shared/mt/thread.cpp
 
 CMakeFiles/anima_game.dir/shared/mt/thread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mt/thread.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mt/thread.cpp > CMakeFiles/anima_game.dir/shared/mt/thread.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/mt/thread.cpp > CMakeFiles/anima_game.dir/shared/mt/thread.cpp.i
 
 CMakeFiles/anima_game.dir/shared/mt/thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mt/thread.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mt/thread.cpp -o CMakeFiles/anima_game.dir/shared/mt/thread.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/mt/thread.cpp -o CMakeFiles/anima_game.dir/shared/mt/thread.cpp.s
 
 CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.requires
@@ -278,17 +301,17 @@ CMakeFiles/anima_game.dir/shared/mt/thread.cpp.o.provides.build: CMakeFiles/anim
 
 CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o: ../shared/mt/thread_core.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o -c /home/nonametr/projects/anima/shared/mt/thread_core.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o -c /home/nonametr/projects/voodoo/server/shared/mt/thread_core.cpp
 
 CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mt/thread_core.cpp > CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/mt/thread_core.cpp > CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.i
 
 CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mt/thread_core.cpp -o CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/mt/thread_core.cpp -o CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.s
 
 CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.requires
@@ -301,17 +324,17 @@ CMakeFiles/anima_game.dir/shared/mt/thread_core.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o: ../shared/mt/periodic_thread_caller.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o -c /home/nonametr/projects/anima/shared/mt/periodic_thread_caller.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o -c /home/nonametr/projects/voodoo/server/shared/mt/periodic_thread_caller.cpp
 
 CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/mt/periodic_thread_caller.cpp > CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/mt/periodic_thread_caller.cpp > CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.i
 
 CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/mt/periodic_thread_caller.cpp -o CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/mt/periodic_thread_caller.cpp -o CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.s
 
 CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.requires
@@ -324,17 +347,17 @@ CMakeFiles/anima_game.dir/shared/mt/periodic_thread_caller.cpp.o.provides.build:
 
 CMakeFiles/anima_game.dir/shared/json.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/json.cpp.o: ../shared/json.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/json.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/json.cpp.o -c /home/nonametr/projects/anima/shared/json.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/json.cpp.o -c /home/nonametr/projects/voodoo/server/shared/json.cpp
 
 CMakeFiles/anima_game.dir/shared/json.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/json.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/json.cpp > CMakeFiles/anima_game.dir/shared/json.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/json.cpp > CMakeFiles/anima_game.dir/shared/json.cpp.i
 
 CMakeFiles/anima_game.dir/shared/json.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/json.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/json.cpp -o CMakeFiles/anima_game.dir/shared/json.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/json.cpp -o CMakeFiles/anima_game.dir/shared/json.cpp.s
 
 CMakeFiles/anima_game.dir/shared/json.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/json.cpp.o.requires
@@ -347,17 +370,17 @@ CMakeFiles/anima_game.dir/shared/json.cpp.o.provides.build: CMakeFiles/anima_gam
 
 CMakeFiles/anima_game.dir/shared/json_value.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/json_value.cpp.o: ../shared/json_value.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/json_value.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/json_value.cpp.o -c /home/nonametr/projects/anima/shared/json_value.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/json_value.cpp.o -c /home/nonametr/projects/voodoo/server/shared/json_value.cpp
 
 CMakeFiles/anima_game.dir/shared/json_value.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/json_value.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/json_value.cpp > CMakeFiles/anima_game.dir/shared/json_value.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/json_value.cpp > CMakeFiles/anima_game.dir/shared/json_value.cpp.i
 
 CMakeFiles/anima_game.dir/shared/json_value.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/json_value.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/json_value.cpp -o CMakeFiles/anima_game.dir/shared/json_value.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/json_value.cpp -o CMakeFiles/anima_game.dir/shared/json_value.cpp.s
 
 CMakeFiles/anima_game.dir/shared/json_value.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/json_value.cpp.o.requires
@@ -370,17 +393,17 @@ CMakeFiles/anima_game.dir/shared/json_value.cpp.o.provides.build: CMakeFiles/ani
 
 CMakeFiles/anima_game.dir/shared/version_control.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/version_control.cpp.o: ../shared/version_control.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/version_control.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/version_control.cpp.o -c /home/nonametr/projects/anima/shared/version_control.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/version_control.cpp.o -c /home/nonametr/projects/voodoo/server/shared/version_control.cpp
 
 CMakeFiles/anima_game.dir/shared/version_control.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/version_control.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/version_control.cpp > CMakeFiles/anima_game.dir/shared/version_control.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/version_control.cpp > CMakeFiles/anima_game.dir/shared/version_control.cpp.i
 
 CMakeFiles/anima_game.dir/shared/version_control.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/version_control.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/version_control.cpp -o CMakeFiles/anima_game.dir/shared/version_control.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/version_control.cpp -o CMakeFiles/anima_game.dir/shared/version_control.cpp.s
 
 CMakeFiles/anima_game.dir/shared/version_control.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/version_control.cpp.o.requires
@@ -393,17 +416,17 @@ CMakeFiles/anima_game.dir/shared/version_control.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/anima_game.dir/shared/db/database.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/db/database.cpp.o: ../shared/db/database.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/db/database.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/db/database.cpp.o -c /home/nonametr/projects/anima/shared/db/database.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/db/database.cpp.o -c /home/nonametr/projects/voodoo/server/shared/db/database.cpp
 
 CMakeFiles/anima_game.dir/shared/db/database.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/db/database.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/db/database.cpp > CMakeFiles/anima_game.dir/shared/db/database.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/db/database.cpp > CMakeFiles/anima_game.dir/shared/db/database.cpp.i
 
 CMakeFiles/anima_game.dir/shared/db/database.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/db/database.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/db/database.cpp -o CMakeFiles/anima_game.dir/shared/db/database.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/db/database.cpp -o CMakeFiles/anima_game.dir/shared/db/database.cpp.s
 
 CMakeFiles/anima_game.dir/shared/db/database.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/db/database.cpp.o.requires
@@ -416,17 +439,17 @@ CMakeFiles/anima_game.dir/shared/db/database.cpp.o.provides.build: CMakeFiles/an
 
 CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o: ../shared/db/mysql_database.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o -c /home/nonametr/projects/anima/shared/db/mysql_database.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o -c /home/nonametr/projects/voodoo/server/shared/db/mysql_database.cpp
 
 CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/shared/db/mysql_database.cpp > CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/shared/db/mysql_database.cpp > CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.i
 
 CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/shared/db/mysql_database.cpp -o CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/shared/db/mysql_database.cpp -o CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.s
 
 CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.requires
@@ -437,42 +460,88 @@ CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.provides: CMakeFiles/an
 
 CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.provides.build: CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o: ../game_server/login_socket.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_18)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o -c /home/nonametr/projects/anima/game_server/login_socket.cpp
+CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o: ../game_server/login/login_socket.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/login/login_socket.cpp
 
-CMakeFiles/anima_game.dir/game_server/login_socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/login_socket.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/login_socket.cpp > CMakeFiles/anima_game.dir/game_server/login_socket.cpp.i
+CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/login/login_socket.cpp > CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.i
 
-CMakeFiles/anima_game.dir/game_server/login_socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/login_socket.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/login_socket.cpp -o CMakeFiles/anima_game.dir/game_server/login_socket.cpp.s
+CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/login/login_socket.cpp -o CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.s
 
-CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o.requires
+CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o.requires
 
-CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o.provides
+CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o.provides
 
-CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o
+CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o: ../game_server/login/login_service.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/login/login_service.cpp
+
+CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/login/login_service.cpp > CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/login/login_service.cpp -o CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o: ../game_server/login/login_vk.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/login/login_vk.cpp
+
+CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/login/login_vk.cpp > CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/login/login_vk.cpp -o CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o
 
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o: ../game_server/game_server.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/game_server.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/game_server.cpp.o -c /home/nonametr/projects/anima/game_server/game_server.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/game_server.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/game_server.cpp
 
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/game_server.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/game_server.cpp > CMakeFiles/anima_game.dir/game_server/game_server.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/game_server.cpp > CMakeFiles/anima_game.dir/game_server/game_server.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/game_server.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/game_server.cpp -o CMakeFiles/anima_game.dir/game_server/game_server.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/game_server.cpp -o CMakeFiles/anima_game.dir/game_server/game_server.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.requires
@@ -485,17 +554,17 @@ CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o: ../game_server/game_socket.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o -c /home/nonametr/projects/anima/game_server/game_socket.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/game_socket.cpp
 
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/game_socket.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/game_socket.cpp > CMakeFiles/anima_game.dir/game_server/game_socket.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/game_socket.cpp > CMakeFiles/anima_game.dir/game_server/game_socket.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/game_socket.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/game_socket.cpp -o CMakeFiles/anima_game.dir/game_server/game_socket.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/game_socket.cpp -o CMakeFiles/anima_game.dir/game_server/game_socket.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.requires
@@ -508,17 +577,17 @@ CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/anima_game.dir/game_server/server.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/server.cpp.o: ../game_server/server.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/server.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/server.cpp.o -c /home/nonametr/projects/anima/game_server/server.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/server.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/server.cpp
 
 CMakeFiles/anima_game.dir/game_server/server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/server.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/server.cpp > CMakeFiles/anima_game.dir/game_server/server.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/server.cpp > CMakeFiles/anima_game.dir/game_server/server.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/server.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/server.cpp -o CMakeFiles/anima_game.dir/game_server/server.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/server.cpp -o CMakeFiles/anima_game.dir/game_server/server.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/server.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/server.cpp.o.requires
@@ -531,17 +600,17 @@ CMakeFiles/anima_game.dir/game_server/server.cpp.o.provides.build: CMakeFiles/an
 
 CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o: ../game_server/debug_update.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o -c /home/nonametr/projects/anima/game_server/debug_update.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/debug_update.cpp
 
 CMakeFiles/anima_game.dir/game_server/debug_update.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/debug_update.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/debug_update.cpp > CMakeFiles/anima_game.dir/game_server/debug_update.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/debug_update.cpp > CMakeFiles/anima_game.dir/game_server/debug_update.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/debug_update.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/debug_update.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/debug_update.cpp -o CMakeFiles/anima_game.dir/game_server/debug_update.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/debug_update.cpp -o CMakeFiles/anima_game.dir/game_server/debug_update.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o.requires
@@ -554,17 +623,17 @@ CMakeFiles/anima_game.dir/game_server/debug_update.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o: ../game_server/database_manager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o -c /home/nonametr/projects/anima/game_server/database_manager.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/database_manager.cpp
 
 CMakeFiles/anima_game.dir/game_server/database_manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/database_manager.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/database_manager.cpp > CMakeFiles/anima_game.dir/game_server/database_manager.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/database_manager.cpp > CMakeFiles/anima_game.dir/game_server/database_manager.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/database_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/database_manager.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/database_manager.cpp -o CMakeFiles/anima_game.dir/game_server/database_manager.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/database_manager.cpp -o CMakeFiles/anima_game.dir/game_server/database_manager.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.requires
@@ -577,17 +646,17 @@ CMakeFiles/anima_game.dir/game_server/database_manager.cpp.o.provides.build: CMa
 
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o: ../game_server/storage/storage_thread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o -c /home/nonametr/projects/anima/game_server/storage/storage_thread.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/storage/storage_thread.cpp
 
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/storage_thread.cpp > CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/storage/storage_thread.cpp > CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/storage_thread.cpp -o CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/storage/storage_thread.cpp -o CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o.requires
@@ -600,17 +669,17 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_thread.cpp.o.provides.buil
 
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o: ../game_server/storage/storage_timer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o -c /home/nonametr/projects/anima/game_server/storage/storage_timer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/storage/storage_timer.cpp
 
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/storage_timer.cpp > CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/storage/storage_timer.cpp > CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/storage_timer.cpp -o CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/storage/storage_timer.cpp -o CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o.requires
@@ -623,17 +692,17 @@ CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o.provides.build
 
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o: ../game_server/storage/ext_socket.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o -c /home/nonametr/projects/anima/game_server/storage/ext_socket.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/storage/ext_socket.cpp
 
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/ext_socket.cpp > CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/storage/ext_socket.cpp > CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/ext_socket.cpp -o CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/storage/ext_socket.cpp -o CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.requires
@@ -646,17 +715,17 @@ CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.provides.build: C
 
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o: ../game_server/storage/ext_server_manager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o -c /home/nonametr/projects/anima/game_server/storage/ext_server_manager.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/storage/ext_server_manager.cpp
 
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/ext_server_manager.cpp > CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/storage/ext_server_manager.cpp > CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/ext_server_manager.cpp -o CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/storage/ext_server_manager.cpp -o CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.requires
@@ -669,17 +738,17 @@ CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.provides.
 
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o: ../game_server/storage/storage.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o -c /home/nonametr/projects/anima/game_server/storage/storage.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/storage/storage.cpp
 
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/storage/storage.cpp > CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/storage/storage.cpp > CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/storage/storage.cpp -o CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/storage/storage.cpp -o CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.requires
@@ -690,65 +759,19 @@ CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.provides: CMakeFiles
 
 CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o
 
-CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/user.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_29)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/user.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/user.cpp.o -c /home/nonametr/projects/anima/game_server/user/user.cpp
-
-CMakeFiles/anima_game.dir/game_server/user/user.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/user.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/user/user.cpp > CMakeFiles/anima_game.dir/game_server/user/user.cpp.i
-
-CMakeFiles/anima_game.dir/game_server/user/user.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/user.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/user/user.cpp -o CMakeFiles/anima_game.dir/game_server/user/user.cpp.s
-
-CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires
-
-CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides
-
-CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o
-
-CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: CMakeFiles/anima_game.dir/flags.make
-CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: ../game_server/user/user_ext.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_30)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o -c /home/nonametr/projects/anima/game_server/user/user_ext.cpp
-
-CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/user/user_ext.cpp > CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.i
-
-CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/user/user_ext.cpp -o CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s
-
-CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires:
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires
-
-CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires
-	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides.build
-.PHONY : CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides
-
-CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o
-
 CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o: ../game_server/instance/instance.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o -c /home/nonametr/projects/anima/game_server/instance/instance.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/instance/instance.cpp
 
 CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/instance/instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/instance/instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/instance/instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/instance/instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.requires
@@ -761,17 +784,17 @@ CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.provides.build: CM
 
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o: ../game_server/instance/main_instance.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o -c /home/nonametr/projects/anima/game_server/instance/main_instance.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/instance/main_instance.cpp
 
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/instance/main_instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/instance/main_instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/instance/main_instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/instance/main_instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.requires
@@ -784,17 +807,17 @@ CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.provides.buil
 
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o: ../game_server/instance/ext_socket_instance.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o -c /home/nonametr/projects/anima/game_server/instance/ext_socket_instance.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/instance/ext_socket_instance.cpp
 
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/game_server/instance/ext_socket_instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/instance/ext_socket_instance.cpp > CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.i
 
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/game_server/instance/ext_socket_instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/instance/ext_socket_instance.cpp -o CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.s
 
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.requires
@@ -805,19 +828,249 @@ CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.provide
 
 CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o
 
+CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o: ../game_server/ratings/rating_manager.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_35)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/ratings/rating_manager.cpp
+
+CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/ratings/rating_manager.cpp > CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/ratings/rating_manager.cpp -o CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o: ../game_server/user/boss.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_36)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/user/boss.cpp
+
+CMakeFiles/anima_game.dir/game_server/user/boss.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/boss.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/user/boss.cpp > CMakeFiles/anima_game.dir/game_server/user/boss.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/user/boss.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/boss.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/user/boss.cpp -o CMakeFiles/anima_game.dir/game_server/user/boss.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/user/value.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/user/value.cpp.o: ../game_server/user/value.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_37)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/value.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/value.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/user/value.cpp
+
+CMakeFiles/anima_game.dir/game_server/user/value.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/value.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/user/value.cpp > CMakeFiles/anima_game.dir/game_server/user/value.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/user/value.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/value.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/user/value.cpp -o CMakeFiles/anima_game.dir/game_server/user/value.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/user/value.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/value.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/user/value.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/value.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/value.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/value.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/user/value.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/value.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o: ../game_server/user/object_list.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_38)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/user/object_list.cpp
+
+CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/user/object_list.cpp > CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/user/object_list.cpp -o CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/user/location.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/user/location.cpp.o: ../game_server/user/location.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_39)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/location.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/location.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/user/location.cpp
+
+CMakeFiles/anima_game.dir/game_server/user/location.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/location.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/user/location.cpp > CMakeFiles/anima_game.dir/game_server/user/location.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/user/location.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/location.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/user/location.cpp -o CMakeFiles/anima_game.dir/game_server/user/location.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/user/location.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/location.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/user/location.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/location.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/location.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/location.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/user/location.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/location.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o: ../game_server/user/user.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_40)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/user.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/user.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/user/user.cpp
+
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/user.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/user/user.cpp > CMakeFiles/anima_game.dir/game_server/user/user.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/user.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/user/user.cpp -o CMakeFiles/anima_game.dir/game_server/user/user.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o: ../game_server/user/user_ext.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_41)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/user/user_ext.cpp
+
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/user/user_ext.cpp > CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/user/user_ext.cpp -o CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.o: ../game_server/user/object.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_42)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/user/object.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/user/object.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/user/object.cpp
+
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/user/object.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/user/object.cpp > CMakeFiles/anima_game.dir/game_server/user/object.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/user/object.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/user/object.cpp -o CMakeFiles/anima_game.dir/game_server/user/object.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/user/object.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o: ../game_server/dict/dict_manager.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_43)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/dict/dict_manager.cpp
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/dict/dict_manager.cpp > CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/dict/dict_manager.cpp -o CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o: CMakeFiles/anima_game.dir/flags.make
+CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o: ../game_server/dict/dict_object.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_44)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o -c /home/nonametr/projects/voodoo/server/game_server/dict/dict_object.cpp
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/game_server/dict/dict_object.cpp > CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.i
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/game_server/dict/dict_object.cpp -o CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.s
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o.requires:
+.PHONY : CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o.requires
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o.provides: CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o.requires
+	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o.provides.build
+.PHONY : CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o.provides
+
+CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o.provides.build: CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o
+
 CMakeFiles/anima_game.dir/dict_json_generator.cpp.o: CMakeFiles/anima_game.dir/flags.make
 CMakeFiles/anima_game.dir/dict_json_generator.cpp.o: ../dict_json_generator.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles $(CMAKE_PROGRESS_45)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/anima_game.dir/dict_json_generator.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/dict_json_generator.cpp.o -c /home/nonametr/projects/anima/dict_json_generator.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/anima_game.dir/dict_json_generator.cpp.o -c /home/nonametr/projects/voodoo/server/dict_json_generator.cpp
 
 CMakeFiles/anima_game.dir/dict_json_generator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anima_game.dir/dict_json_generator.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/anima/dict_json_generator.cpp > CMakeFiles/anima_game.dir/dict_json_generator.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/nonametr/projects/voodoo/server/dict_json_generator.cpp > CMakeFiles/anima_game.dir/dict_json_generator.cpp.i
 
 CMakeFiles/anima_game.dir/dict_json_generator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anima_game.dir/dict_json_generator.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/anima/dict_json_generator.cpp -o CMakeFiles/anima_game.dir/dict_json_generator.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/nonametr/projects/voodoo/server/dict_json_generator.cpp -o CMakeFiles/anima_game.dir/dict_json_generator.cpp.s
 
 CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.requires:
 .PHONY : CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.requires
@@ -830,10 +1083,11 @@ CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.provides.build: CMakeFiles/a
 
 # Object files for target anima_game
 anima_game_OBJECTS = \
-"CMakeFiles/anima_game.dir/game_server/user/object.cpp.o" \
 "CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o" \
 "CMakeFiles/anima_game.dir/game_server/main_game.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/exeption.cpp.o" \
 "CMakeFiles/anima_game.dir/shared/common.cpp.o" \
+"CMakeFiles/anima_game.dir/shared/random.cpp.o" \
 "CMakeFiles/anima_game.dir/shared/urlencode.cpp.o" \
 "CMakeFiles/anima_game.dir/shared/config.cpp.o" \
 "CMakeFiles/anima_game.dir/shared/net/socket.cpp.o" \
@@ -847,7 +1101,9 @@ anima_game_OBJECTS = \
 "CMakeFiles/anima_game.dir/shared/version_control.cpp.o" \
 "CMakeFiles/anima_game.dir/shared/db/database.cpp.o" \
 "CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o" \
-"CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o" \
 "CMakeFiles/anima_game.dir/game_server/game_server.cpp.o" \
 "CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o" \
 "CMakeFiles/anima_game.dir/game_server/server.cpp.o" \
@@ -858,20 +1114,29 @@ anima_game_OBJECTS = \
 "CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o" \
 "CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o" \
 "CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o" \
-"CMakeFiles/anima_game.dir/game_server/user/user.cpp.o" \
-"CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o" \
 "CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o" \
 "CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o" \
 "CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/user/value.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/user/location.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/user/user.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/user/object.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o" \
+"CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o" \
 "CMakeFiles/anima_game.dir/dict_json_generator.cpp.o"
 
 # External object files for target anima_game
 anima_game_EXTERNAL_OBJECTS =
 
-anima_game: CMakeFiles/anima_game.dir/game_server/user/object.cpp.o
 anima_game: CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/main_game.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/exeption.cpp.o
 anima_game: CMakeFiles/anima_game.dir/shared/common.cpp.o
+anima_game: CMakeFiles/anima_game.dir/shared/random.cpp.o
 anima_game: CMakeFiles/anima_game.dir/shared/urlencode.cpp.o
 anima_game: CMakeFiles/anima_game.dir/shared/config.cpp.o
 anima_game: CMakeFiles/anima_game.dir/shared/net/socket.cpp.o
@@ -885,7 +1150,9 @@ anima_game: CMakeFiles/anima_game.dir/shared/json_value.cpp.o
 anima_game: CMakeFiles/anima_game.dir/shared/version_control.cpp.o
 anima_game: CMakeFiles/anima_game.dir/shared/db/database.cpp.o
 anima_game: CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o
-anima_game: CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/game_server.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/server.cpp.o
@@ -896,11 +1163,19 @@ anima_game: CMakeFiles/anima_game.dir/game_server/storage/storage_timer.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o
-anima_game: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o
-anima_game: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o
 anima_game: CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/user/value.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/user/location.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/user/object.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o
+anima_game: CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o
 anima_game: CMakeFiles/anima_game.dir/dict_json_generator.cpp.o
 anima_game: CMakeFiles/anima_game.dir/build.make
 anima_game: CMakeFiles/anima_game.dir/link.txt
@@ -911,10 +1186,11 @@ anima_game: CMakeFiles/anima_game.dir/link.txt
 CMakeFiles/anima_game.dir/build: anima_game
 .PHONY : CMakeFiles/anima_game.dir/build
 
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/net/netcore_worker_thread.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/main_game.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/exeption.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/common.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/random.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/urlencode.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/config.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/net/socket.cpp.o.requires
@@ -928,7 +1204,9 @@ CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/json_value.
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/version_control.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/db/database.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/shared/db/mysql_database.cpp.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/login_socket.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/login/login_socket.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/login/login_service.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/login/login_vk.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/game_server.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/game_socket.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/server.cpp.o.requires
@@ -939,11 +1217,19 @@ CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/storag
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/storage/ext_socket.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/storage/ext_server_manager.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/storage/storage.cpp.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires
-CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/instance/instance.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/instance/main_instance.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/instance/ext_socket_instance.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/ratings/rating_manager.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/boss.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/value.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/object_list.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/location.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/user.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/user_ext.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/user/object.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/dict/dict_manager.cpp.o.requires
+CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/game_server/dict/dict_object.cpp.o.requires
 CMakeFiles/anima_game.dir/requires: CMakeFiles/anima_game.dir/dict_json_generator.cpp.o.requires
 .PHONY : CMakeFiles/anima_game.dir/requires
 
@@ -952,6 +1238,6 @@ CMakeFiles/anima_game.dir/clean:
 .PHONY : CMakeFiles/anima_game.dir/clean
 
 CMakeFiles/anima_game.dir/depend:
-	cd /home/nonametr/projects/anima/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nonametr/projects/anima /home/nonametr/projects/anima /home/nonametr/projects/anima/build /home/nonametr/projects/anima/build /home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nonametr/projects/voodoo/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nonametr/projects/voodoo/server /home/nonametr/projects/voodoo/server /home/nonametr/projects/voodoo/server/build /home/nonametr/projects/voodoo/server/build /home/nonametr/projects/voodoo/server/build/CMakeFiles/anima_game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/anima_game.dir/depend
 

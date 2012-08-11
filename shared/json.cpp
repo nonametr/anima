@@ -1,9 +1,3 @@
-/*
-* It's part of the SimpleJSON Library - http://mjpa.in/json
-*
-* Copyright (C) 2010 Mike Anchor and modified by I.Kuruch
-*/
-
 #include "json.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -94,7 +88,7 @@ bool JSON::SkipWhitespace(const char **data)
 *
 * @return bool Returns true on success, false on failure
 */
-bool JSON::ExtractString(const char **data, std::string &str)
+bool JSON::ExtractString(const char **data, std::string &str, bool default_end)
 {
     str = "";
 
@@ -136,37 +130,37 @@ bool JSON::ExtractString(const char **data, std::string &str)
             case 't':
                 next_char = '\t';
                 break;
-            case 'u':
-            {
+//             case 'u':
+//             {
 /// We need 5 chars (4 hex + the 'u') or its not valid
-                if (!simplejson_wcsnlen(*data, 5))
-                    return false;
+//                 if (!simplejson_wcsnlen(*data, 5))
+//                     return false;
 
 /// Deal with the chars
-                next_char = 0;
-                for (int i = 0; i < 4; i++)
-                {
+//                 next_char = 0;
+//                 for (int i = 0; i < 4; i++)
+//                 {
 /// Do it first to move off the 'u' and leave us on the
 /// final hex digit as we move on by one later on
-                    (*data)++;
-
-                    next_char <<= 4;
+//                     (*data)++;
+// 
+//                     next_char <<= 4;
 
 /// Parse the hex digit
-                    if (**data >= '0' && **data <= '9')
-                        next_char |= (**data - '0');
-                    else if (**data >= 'A' && **data <= 'F')
-                        next_char |= (10 + (**data - 'A'));
-                    else if (**data >= 'a' && **data <= 'f')
-                        next_char |= (10 + (**data - 'a'));
-                    else
-                    {
+//                     if (**data >= '0' && **data <= '9')
+//                         next_char |= (**data - '0');
+//                     else if (**data >= 'A' && **data <= 'F')
+//                         next_char |= (10 + (**data - 'A'));
+//                     else if (**data >= 'a' && **data <= 'f')
+//                         next_char |= (10 + (**data - 'a'));
+//                     else
+//                     {
 /// Invalid hex digit = invalid JSON
-                        return false;
-                    }
-                }
-                break;
-            }
+//                         return false;
+//                     }
+//                 }
+//                 break;
+//             }
 
 /// By the spec, only the above cases are allowed
             default:
@@ -181,13 +175,22 @@ bool JSON::ExtractString(const char **data, std::string &str)
             str.reserve(); // Remove unused capacity
             return true;
         }
+        ///Other end of the string
+        else if(default_end == false)
+	{
+	    if (next_char == ':')
+	    {
+		str.reserve(); // Remove unused capacity
+		return true;
+	    }
+	}
 
 /// Disallowed char?
-        else if (next_char < ' ' && next_char != '\t')
-        {
+//         else if (next_char < ' ' && next_char != '\t')
+//         {
 /// SPEC Violation: Allow tabs due to real world cases
-            return false;
-        }
+//             return false;
+//         }
 
 /// Add the next char
         str += next_char;

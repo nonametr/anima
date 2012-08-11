@@ -1,4 +1,4 @@
 [Project]
-Name=anima
 Manager=KDevCMakeManager
+Name=server
 VersionControl=kdevgit

@@ -13,7 +13,7 @@ public:
 ///--------------SETTERS----------------
     virtual void set(string key, Value value) = 0;
 ///-------------GETTERS-----------------
-    virtual Value get(string key) = 0;
+    virtual Value* get(string key) = 0;
 };
 
 #endif // USER_INTERFACE_H

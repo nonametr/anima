@@ -16,7 +16,7 @@ preinstall:
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -44,10 +44,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nonametr/projects/anima
+CMAKE_SOURCE_DIR = /home/nonametr/projects/voodoo/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nonametr/projects/anima/build
+CMAKE_BINARY_DIR = /home/nonametr/projects/voodoo/server/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/anima_game.dir
@@ -56,7 +56,7 @@ CMAKE_BINARY_DIR = /home/nonametr/projects/anima/build
 CMakeFiles/anima_game.dir/all:
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/depend
 	$(MAKE) -f CMakeFiles/anima_game.dir/build.make CMakeFiles/anima_game.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/anima/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nonametr/projects/voodoo/server/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45
 	@echo "Built target anima_game"
 .PHONY : CMakeFiles/anima_game.dir/all
 
@@ -66,9 +66,9 @@ all: CMakeFiles/anima_game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/anima_game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/anima/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/voodoo/server/build/CMakeFiles 45
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/anima_game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/anima/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nonametr/projects/voodoo/server/build/CMakeFiles 0
 .PHONY : CMakeFiles/anima_game.dir/rule
 
 # Convenience name for target.
@@ -89,14 +89,23 @@ clean: CMakeFiles/anima_game.dir/clean
 
 # Convenience name for "all" pass in the directory.
 game_server/all: game_server/instance/all
+game_server/all: game_server/dict/all
+game_server/all: game_server/ratings/all
+game_server/all: game_server/login/all
 .PHONY : game_server/all
 
 # Convenience name for "clean" pass in the directory.
 game_server/clean: game_server/instance/clean
+game_server/clean: game_server/dict/clean
+game_server/clean: game_server/ratings/clean
+game_server/clean: game_server/login/clean
 .PHONY : game_server/clean
 
 # Convenience name for "preinstall" pass in the directory.
 game_server/preinstall: game_server/instance/preinstall
+game_server/preinstall: game_server/dict/preinstall
+game_server/preinstall: game_server/ratings/preinstall
+game_server/preinstall: game_server/login/preinstall
 .PHONY : game_server/preinstall
 
 #=============================================================================
@@ -113,6 +122,66 @@ game_server/instance/clean:
 # Convenience name for "preinstall" pass in the directory.
 game_server/instance/preinstall:
 .PHONY : game_server/instance/preinstall
+
+#=============================================================================
+# Directory level rules for directory game_server/dict
+
+# Convenience name for "all" pass in the directory.
+game_server/dict/all:
+.PHONY : game_server/dict/all
+
+# Convenience name for "clean" pass in the directory.
+game_server/dict/clean:
+.PHONY : game_server/dict/clean
+
+# Convenience name for "preinstall" pass in the directory.
+game_server/dict/preinstall:
+.PHONY : game_server/dict/preinstall
+
+#=============================================================================
+# Directory level rules for directory game_server/ratings
+
+# Convenience name for "all" pass in the directory.
+game_server/ratings/all:
+.PHONY : game_server/ratings/all
+
+# Convenience name for "clean" pass in the directory.
+game_server/ratings/clean:
+.PHONY : game_server/ratings/clean
+
+# Convenience name for "preinstall" pass in the directory.
+game_server/ratings/preinstall:
+.PHONY : game_server/ratings/preinstall
+
+#=============================================================================
+# Directory level rules for directory game_server/login
+
+# Convenience name for "all" pass in the directory.
+game_server/login/all:
+.PHONY : game_server/login/all
+
+# Convenience name for "clean" pass in the directory.
+game_server/login/clean:
+.PHONY : game_server/login/clean
+
+# Convenience name for "preinstall" pass in the directory.
+game_server/login/preinstall:
+.PHONY : game_server/login/preinstall
+
+#=============================================================================
+# Directory level rules for directory shared/json
+
+# Convenience name for "all" pass in the directory.
+shared/json/all:
+.PHONY : shared/json/all
+
+# Convenience name for "clean" pass in the directory.
+shared/json/clean:
+.PHONY : shared/json/clean
+
+# Convenience name for "preinstall" pass in the directory.
+shared/json/preinstall:
+.PHONY : shared/json/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.

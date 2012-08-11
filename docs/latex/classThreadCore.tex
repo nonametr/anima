@@ -1,57 +1,44 @@
-\hypertarget{classThreadCore}{
-\section{ThreadCore Class Reference}
-\label{classThreadCore}\index{ThreadCore@{ThreadCore}}
+\hypertarget{classThreadCore}{\section{\-Thread\-Core \-Class \-Reference}
+\label{classThreadCore}\index{\-Thread\-Core@{\-Thread\-Core}}
 }
-Inheritance diagram for ThreadCore:\begin{figure}[H]
+\-Inheritance diagram for \-Thread\-Core\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classThreadCore}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classThreadController}{ThreadController} $\ast$ \hyperlink{classThreadCore_acbbb91b15ac93fd819f0902383c212f8}{startThread} (\hyperlink{classThread}{Thread} $\ast$thread)
-\begin{DoxyCompactList}\small\item\em tries to use precreated thread, if not found free one than creates a new thread \item\end{DoxyCompactList}\item 
-\hypertarget{classThreadCore_a9ca50195858c2eb8b86e5fa00a7aba1a}{
-void {\bfseries startThreadNoDel} (\hyperlink{classThread}{Thread} $\ast$thread)}
-\label{classThreadCore_a9ca50195858c2eb8b86e5fa00a7aba1a}
+\hyperlink{classThreadController}{\-Thread\-Controller} $\ast$ \hyperlink{classThreadCore_acbbb91b15ac93fd819f0902383c212f8}{start\-Thread} (\hyperlink{classThread}{\-Thread} $\ast$thread)
+\begin{DoxyCompactList}\small\item\em tries to use precreated thread, if not found free one than creates a new thread \end{DoxyCompactList}\item 
+\hypertarget{classThreadCore_a9ca50195858c2eb8b86e5fa00a7aba1a}{void {\bfseries start\-Thread\-No\-Del} (\hyperlink{classThread}{\-Thread} $\ast$thread)}\label{classThreadCore_a9ca50195858c2eb8b86e5fa00a7aba1a}
 
 \item 
-bool \hyperlink{classThreadCore_a5dbcca9aafed540a2a07575e0ebe19a2}{threadExit} (\hyperlink{classThreadController}{ThreadController} $\ast$t\_\-control)
+bool \hyperlink{classThreadCore_a5dbcca9aafed540a2a07575e0ebe19a2}{thread\-Exit} (\hyperlink{classThreadController}{\-Thread\-Controller} $\ast$t\-\_\-control)
 \item 
 void \hyperlink{classThreadCore_a2144d2258b27e93b395b6108a52f03e0}{shutdown} ()
 \end{DoxyCompactItemize}
 
 
-\subsection{Member Function Documentation}
-\hypertarget{classThreadCore_a2144d2258b27e93b395b6108a52f03e0}{
-\index{ThreadCore@{ThreadCore}!shutdown@{shutdown}}
-\index{shutdown@{shutdown}!ThreadCore@{ThreadCore}}
-\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void ThreadCore::shutdown (
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classThreadCore_a2144d2258b27e93b395b6108a52f03e0}{\index{\-Thread\-Core@{\-Thread\-Core}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!ThreadCore@{\-Thread\-Core}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-Core\-::shutdown} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}
-\label{classThreadCore_a2144d2258b27e93b395b6108a52f03e0}
-
-
-if we are here then a thread in the free pool checked if it was being shut down just before \hyperlink{classThreadCore_a2144d2258b27e93b395b6108a52f03e0}{shutdown()} was called, but called suspend() just after killing free threads. All we need to do is to resume it. 
-
-\hypertarget{classThreadCore_acbbb91b15ac93fd819f0902383c212f8}{
-\index{ThreadCore@{ThreadCore}!startThread@{startThread}}
-\index{startThread@{startThread}!ThreadCore@{ThreadCore}}
-\subsubsection[{startThread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ThreadController} $\ast$ ThreadCore::startThread (
+)}}\label{classThreadCore_a2144d2258b27e93b395b6108a52f03e0}
+if we are here then a thread in the free pool checked if it was being shut down just before \hyperlink{classThreadCore_a2144d2258b27e93b395b6108a52f03e0}{shutdown()} was called, but called suspend() just after killing free threads. \-All we need to do is to resume it. \hypertarget{classThreadCore_acbbb91b15ac93fd819f0902383c212f8}{\index{\-Thread\-Core@{\-Thread\-Core}!start\-Thread@{start\-Thread}}
+\index{start\-Thread@{start\-Thread}!ThreadCore@{\-Thread\-Core}}
+\subsubsection[{start\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Thread\-Controller} $\ast$ {\bf \-Thread\-Core\-::start\-Thread} (
 \begin{DoxyParamCaption}
-\item[{{\bf Thread} $\ast$}]{thread}
+\item[{{\bf \-Thread} $\ast$}]{thread}
 \end{DoxyParamCaption}
-)}}
-\label{classThreadCore_acbbb91b15ac93fd819f0902383c212f8}
+)}}\label{classThreadCore_acbbb91b15ac93fd819f0902383c212f8}
 
 
 tries to use precreated thread, if not found free one than creates a new thread 
-
-
 
 grab one from the pool, if we have any
 
@@ -59,26 +46,18 @@ execute the task on this thread
 
 resume the thread, and it should start working
 
-creating a aditional new thread 
-
-\hypertarget{classThreadCore_a5dbcca9aafed540a2a07575e0ebe19a2}{
-\index{ThreadCore@{ThreadCore}!threadExit@{threadExit}}
-\index{threadExit@{threadExit}!ThreadCore@{ThreadCore}}
-\subsubsection[{threadExit}]{\setlength{\rightskip}{0pt plus 5cm}bool ThreadCore::threadExit (
+creating a aditional new thread \hypertarget{classThreadCore_a5dbcca9aafed540a2a07575e0ebe19a2}{\index{\-Thread\-Core@{\-Thread\-Core}!thread\-Exit@{thread\-Exit}}
+\index{thread\-Exit@{thread\-Exit}!ThreadCore@{\-Thread\-Core}}
+\subsubsection[{thread\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Thread\-Core\-::thread\-Exit} (
 \begin{DoxyParamCaption}
-\item[{{\bf ThreadController} $\ast$}]{t\_\-control}
+\item[{{\bf \-Thread\-Controller} $\ast$}]{t\-\_\-control}
 \end{DoxyParamCaption}
-)}}
-\label{classThreadCore_a5dbcca9aafed540a2a07575e0ebe19a2}
-
-
+)}}\label{classThreadCore_a5dbcca9aafed540a2a07575e0ebe19a2}
 we're definitely no longer active
 
 enter the \char`\"{}suspended\char`\"{} pool 
 
-
-
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/nonametr/projects/anima/shared/threadcore.h\item 
-/home/nonametr/projects/anima/shared/threadcore.cpp\end{DoxyCompactItemize}
+/home/nonametr/projects/voodoo/server/shared/mt/thread\-\_\-core.\-h\item 
+/home/nonametr/projects/voodoo/server/shared/mt/thread\-\_\-core.\-cpp\end{DoxyCompactItemize}

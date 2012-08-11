@@ -13,8 +13,8 @@ void DebugUpdate::run()
 {
     while (_running)
     {
-        sleep(1);
-	_ls->updateDb();
+        sleep(10);
+// 	_ls->updateDb();
     }
     _running = !_running;
 }

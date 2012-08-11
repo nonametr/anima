@@ -1,415 +1,633 @@
-\hypertarget{classJSONValue}{
-\section{JSONValue Class Reference}
-\label{classJSONValue}\index{JSONValue@{JSONValue}}
+\hypertarget{classJSONValue}{\section{\-J\-S\-O\-N\-Value \-Class \-Reference}
+\label{classJSONValue}\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
 }
-\subsection*{Public Member Functions}
+\subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classJSONValue_a53cb9b84540e492d5c8efb8d84906bd0}{JSONValue} ()
+\hyperlink{classJSONValue_a53cb9b84540e492d5c8efb8d84906bd0}{\-J\-S\-O\-N\-Value} ()
 \item 
-\hyperlink{classJSONValue_acf94f34e1fc0f01064951c17461d63c9}{JSONValue} (const char $\ast$m\_\-char\_\-value)
+\hyperlink{classJSONValue_ad0da2080179699cb02e133a9e041e0bd}{\-J\-S\-O\-N\-Value} (const wchar\-\_\-t $\ast$m\-\_\-char\-\_\-value)
 \item 
-\hyperlink{classJSONValue_a501f04137258c93343a0c6815c3ca96b}{JSONValue} (const std::string \&m\_\-string\_\-value)
+\hyperlink{classJSONValue_a7ae87cc00a8e5ed29fb1b6f5aaaaa77a}{\-J\-S\-O\-N\-Value} (const std\-::wstring \&m\-\_\-string\-\_\-value)
 \item 
-\hyperlink{classJSONValue_aafcc30e3701ee1d34d54793810929518}{JSONValue} (bool m\_\-bool\_\-value)
+\hyperlink{classJSONValue_aafcc30e3701ee1d34d54793810929518}{\-J\-S\-O\-N\-Value} (bool m\-\_\-bool\-\_\-value)
 \item 
-\hyperlink{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}{JSONValue} (double m\_\-number\_\-value)
+\hyperlink{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}{\-J\-S\-O\-N\-Value} (double m\-\_\-number\-\_\-value)
 \item 
-\hyperlink{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}{JSONValue} (const JSONArray \&m\_\-array\_\-value)
+\hyperlink{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}{\-J\-S\-O\-N\-Value} (const \-J\-S\-O\-N\-Array \&m\-\_\-array\-\_\-value)
 \item 
-\hyperlink{classJSONValue_a2f1580969809665bd204dca3774226f5}{JSONValue} (const JSONObject \&m\_\-object\_\-value)
+\hyperlink{classJSONValue_a2f1580969809665bd204dca3774226f5}{\-J\-S\-O\-N\-Value} (const \-J\-S\-O\-N\-Object \&m\-\_\-object\-\_\-value)
 \item 
-\hyperlink{classJSONValue_ae71766eb548ae78c060f0c308ceceb4b}{$\sim$JSONValue} ()
+\hyperlink{classJSONValue_ae71766eb548ae78c060f0c308ceceb4b}{$\sim$\-J\-S\-O\-N\-Value} ()
 \item 
-bool \hyperlink{classJSONValue_a0aee5e9041833102ace9c295c5ba04a1}{isNull} () const 
+bool \hyperlink{classJSONValue_aa1f82febbed62b4736fd22659deeff46}{\-Is\-Null} () const 
 \item 
-bool \hyperlink{classJSONValue_a7d55132933149e63e76a49c468142461}{isString} () const 
+bool \hyperlink{classJSONValue_ada29006af025a5959e79b373e31c5775}{\-Is\-String} () const 
 \item 
-bool \hyperlink{classJSONValue_aead35875f85ebe8218ae008bc94287d5}{isBool} () const 
+bool \hyperlink{classJSONValue_af1322cab379ad85f2adf1792b843b492}{\-Is\-Bool} () const 
 \item 
-bool \hyperlink{classJSONValue_ae18150f35323645dc3b1e6d1bc217196}{isNumber} () const 
+bool \hyperlink{classJSONValue_a37d949d2dcbe9ed9506bdaa74c2e7678}{\-Is\-Number} () const 
 \item 
-bool \hyperlink{classJSONValue_ae42e5a0a9a847948d88d21d904fa6ae2}{isArray} () const 
+bool \hyperlink{classJSONValue_ab1421cbcab766cd4632b2e768a5e2d26}{\-Is\-Array} () const 
 \item 
-bool \hyperlink{classJSONValue_a4f55c32b852110bb4fbf6ae1bceb572d}{isObject} () const 
+bool \hyperlink{classJSONValue_a82d2d60f92bb5d9803c40d51eb8749ff}{\-Is\-Object} () const 
 \item 
-const std::string \& \hyperlink{classJSONValue_a027350e28f091ad41fc537d965ed6b42}{asString} () const 
+const std\-::wstring \& \hyperlink{classJSONValue_ad8204ac1bb7b460706cc83664c049da1}{\-As\-String} () const 
 \item 
-bool \hyperlink{classJSONValue_a16a16d04c67898096289e3e2d07b4de4}{asBool} () const 
+bool \hyperlink{classJSONValue_a56af7863b4a860979259d9a426580b32}{\-As\-Bool} () const 
 \item 
-double \hyperlink{classJSONValue_a4e889d5fae91abbb951ae664b3d9db3e}{asNumber} () const 
+double \hyperlink{classJSONValue_ab0ff732d7c1c4017295313919fa571fa}{\-As\-Number} () const 
 \item 
-const JSONArray \& \hyperlink{classJSONValue_ae0f1cc305919d110eb34d41f40ae3d73}{asArray} () const 
+const \-J\-S\-O\-N\-Array \& \hyperlink{classJSONValue_a62f36548b0f0d25d72c41058d8216226}{\-As\-Array} () const 
 \item 
-const JSONObject \& \hyperlink{classJSONValue_a139ff1bf529945a0a9b8e243a2029867}{asObject} () const 
+const \-J\-S\-O\-N\-Object \& \hyperlink{classJSONValue_abaaba0f72daa1a4a75b07c4ba6d185fc}{\-As\-Object} () const 
 \item 
-std::string \hyperlink{classJSONValue_a05fdc2f472ead8269e6d10fd3fba4834}{stringify} () const 
+std\-::wstring \hyperlink{classJSONValue_a661d8d6eefb3e692c9f75dfb3e96e717}{\-Stringify} () const 
+\item 
+\hyperlink{classJSONValue_acf94f34e1fc0f01064951c17461d63c9}{\-J\-S\-O\-N\-Value} (const char $\ast$m\-\_\-char\-\_\-value)
+\item 
+\hyperlink{classJSONValue_a501f04137258c93343a0c6815c3ca96b}{\-J\-S\-O\-N\-Value} (const std\-::string \&m\-\_\-string\-\_\-value)
+\item 
+\hypertarget{classJSONValue_aafcc30e3701ee1d34d54793810929518}{{\bfseries \-J\-S\-O\-N\-Value} (bool m\-\_\-bool\-\_\-value)}\label{classJSONValue_aafcc30e3701ee1d34d54793810929518}
+
+\item 
+\hypertarget{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}{{\bfseries \-J\-S\-O\-N\-Value} (double m\-\_\-number\-\_\-value)}\label{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}
+
+\item 
+\hypertarget{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}{{\bfseries \-J\-S\-O\-N\-Value} (const \-J\-S\-O\-N\-Array \&m\-\_\-array\-\_\-value)}\label{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}
+
+\item 
+\hypertarget{classJSONValue_a2f1580969809665bd204dca3774226f5}{{\bfseries \-J\-S\-O\-N\-Value} (const \-J\-S\-O\-N\-Object \&m\-\_\-object\-\_\-value)}\label{classJSONValue_a2f1580969809665bd204dca3774226f5}
+
+\item 
+bool \hyperlink{classJSONValue_a0aee5e9041833102ace9c295c5ba04a1}{is\-Null} () const 
+\item 
+bool \hyperlink{classJSONValue_a7d55132933149e63e76a49c468142461}{is\-String} () const 
+\item 
+bool \hyperlink{classJSONValue_aead35875f85ebe8218ae008bc94287d5}{is\-Bool} () const 
+\item 
+bool \hyperlink{classJSONValue_ae18150f35323645dc3b1e6d1bc217196}{is\-Number} () const 
+\item 
+bool \hyperlink{classJSONValue_ae42e5a0a9a847948d88d21d904fa6ae2}{is\-Array} () const 
+\item 
+bool \hyperlink{classJSONValue_a4f55c32b852110bb4fbf6ae1bceb572d}{is\-Object} () const 
+\item 
+const std\-::string \& \hyperlink{classJSONValue_a63cfcf962505c1e0e8360d1a62487f73}{get\-String} () const 
+\item 
+bool \hyperlink{classJSONValue_a16a16d04c67898096289e3e2d07b4de4}{as\-Bool} () const 
+\item 
+double \hyperlink{classJSONValue_a4e889d5fae91abbb951ae664b3d9db3e}{as\-Number} () const 
+\item 
+const \-J\-S\-O\-N\-Array \& \hyperlink{classJSONValue_ae0f1cc305919d110eb34d41f40ae3d73}{as\-Array} () const 
+\item 
+const \-J\-S\-O\-N\-Object \& \hyperlink{classJSONValue_a139ff1bf529945a0a9b8e243a2029867}{as\-Object} () const 
+\item 
+std\-::string \hyperlink{classJSONValue_a05fdc2f472ead8269e6d10fd3fba4834}{stringify} () const 
 \end{DoxyCompactItemize}
-\subsection*{Static Protected Member Functions}
+\subsection*{\-Static \-Protected \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classJSONValue}{JSONValue} $\ast$ \hyperlink{classJSONValue_a07040bc6b1968981ab9afb43c7bf0afe}{Parse} (const char $\ast$$\ast$data)
+static \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} $\ast$ \hyperlink{classJSONValue_abfbaa2b86a6c0f5ea3d358077d653709}{\-Parse} (const wchar\-\_\-t $\ast$$\ast$data)
+\item 
+static \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} $\ast$ \hyperlink{classJSONValue_a07040bc6b1968981ab9afb43c7bf0afe}{\-Parse} (const char $\ast$$\ast$data)
 \end{DoxyCompactItemize}
-\subsection*{Friends}
+\subsection*{\-Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classJSONValue_a66fb0fb6ee611c3bdf28f6d2b3d90422}{
-class \hyperlink{classJSONValue_a66fb0fb6ee611c3bdf28f6d2b3d90422}{JSON}}
-\label{classJSONValue_a66fb0fb6ee611c3bdf28f6d2b3d90422}
+\hypertarget{classJSONValue_a728457b3a16eb0c54a04dbcdd6ae7baf}{class {\bfseries \-J\-S\-O\-N}}\label{classJSONValue_a728457b3a16eb0c54a04dbcdd6ae7baf}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{classJSONValue_a53cb9b84540e492d5c8efb8d84906bd0}{
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classJSONValue_a53cb9b84540e492d5c8efb8d84906bd0}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
+\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}
-\label{classJSONValue_a53cb9b84540e492d5c8efb8d84906bd0}
-Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type NULL
+)}}\label{classJSONValue_a53cb9b84540e492d5c8efb8d84906bd0}
+\-Basic constructor for creating a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} of type \-N\-U\-L\-L
 
-public \hypertarget{classJSONValue_acf94f34e1fc0f01064951c17461d63c9}{
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+public \hypertarget{classJSONValue_ad0da2080179699cb02e133a9e041e0bd}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
+\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
-\item[{const char $\ast$}]{m\_\-char\_\-value}
+\item[{const wchar\-\_\-t $\ast$}]{m\-\_\-char\-\_\-value}
 \end{DoxyParamCaption}
-)}}
-\label{classJSONValue_acf94f34e1fc0f01064951c17461d63c9}
-Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type String
+)}}\label{classJSONValue_ad0da2080179699cb02e133a9e041e0bd}
+\-Basic constructor for creating a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} of type \-String
 
 public
 
 
-\begin{DoxyParams}{Parameters}
-{\em char$\ast$} & m\_\-char\_\-value The string to use as the value \\
+\begin{DoxyParams}{\-Parameters}
+{\em wchar\-\_\-t$\ast$} & m\-\_\-char\-\_\-value \-The string to use as the value \\
 \hline
 \end{DoxyParams}
-\hypertarget{classJSONValue_a501f04137258c93343a0c6815c3ca96b}{
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\hypertarget{classJSONValue_a7ae87cc00a8e5ed29fb1b6f5aaaaa77a}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
+\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
-\item[{const std::string \&}]{m\_\-string\_\-value}
+\item[{const std\-::wstring \&}]{m\-\_\-string\-\_\-value}
 \end{DoxyParamCaption}
-)}}
-\label{classJSONValue_a501f04137258c93343a0c6815c3ca96b}
-Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type String
+)}}\label{classJSONValue_a7ae87cc00a8e5ed29fb1b6f5aaaaa77a}
+\-Basic constructor for creating a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} of type \-String
 
 public
 
 
-\begin{DoxyParams}{Parameters}
-{\em std::string} & m\_\-string\_\-value The string to use as the value \\
+\begin{DoxyParams}{\-Parameters}
+{\em std\-::wstring} & m\-\_\-string\-\_\-value \-The string to use as the value \\
 \hline
 \end{DoxyParams}
-\hypertarget{classJSONValue_aafcc30e3701ee1d34d54793810929518}{
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\hypertarget{classJSONValue_aafcc30e3701ee1d34d54793810929518}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
+\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
-\item[{bool}]{m\_\-bool\_\-value}
+\item[{bool}]{m\-\_\-bool\-\_\-value}
 \end{DoxyParamCaption}
-)}}
-\label{classJSONValue_aafcc30e3701ee1d34d54793810929518}
-Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type Bool
+)}}\label{classJSONValue_aafcc30e3701ee1d34d54793810929518}
+\-Basic constructor for creating a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} of type \-Bool
 
 public
 
 
-\begin{DoxyParams}{Parameters}
-{\em bool} & m\_\-bool\_\-value The bool to use as the value \\
+\begin{DoxyParams}{\-Parameters}
+{\em bool} & m\-\_\-bool\-\_\-value \-The bool to use as the value \\
 \hline
 \end{DoxyParams}
-\hypertarget{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}{
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\hypertarget{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
+\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
-\item[{double}]{m\_\-number\_\-value}
+\item[{double}]{m\-\_\-number\-\_\-value}
 \end{DoxyParamCaption}
-)}}
-\label{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}
-Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type Number
+)}}\label{classJSONValue_a07cea2c451d953c4e7767edc845cf6b1}
+\-Basic constructor for creating a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} of type \-Number
 
 public
 
 
-\begin{DoxyParams}{Parameters}
-{\em double} & m\_\-number\_\-value The number to use as the value \\
+\begin{DoxyParams}{\-Parameters}
+{\em double} & m\-\_\-number\-\_\-value \-The number to use as the value \\
 \hline
 \end{DoxyParams}
-\hypertarget{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}{
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\hypertarget{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
+\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
-\item[{const JSONArray \&}]{m\_\-array\_\-value}
+\item[{const \-J\-S\-O\-N\-Array \&}]{m\-\_\-array\-\_\-value}
 \end{DoxyParamCaption}
-)}}
-\label{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}
-Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type Array
+)}}\label{classJSONValue_a65bd13526af5f626d0c498109dcc52aa}
+\-Basic constructor for creating a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} of type \-Array
 
 public
 
 
-\begin{DoxyParams}{Parameters}
-{\em JSONArray} & m\_\-array\_\-value The JSONArray to use as the value \\
+\begin{DoxyParams}{\-Parameters}
+{\em \-J\-S\-O\-N\-Array} & m\-\_\-array\-\_\-value \-The \-J\-S\-O\-N\-Array to use as the value \\
 \hline
 \end{DoxyParams}
-\hypertarget{classJSONValue_a2f1580969809665bd204dca3774226f5}{
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\index{JSONValue@{JSONValue}!JSONValue@{JSONValue}}
-\subsubsection[{JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::JSONValue (
+\hypertarget{classJSONValue_a2f1580969809665bd204dca3774226f5}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
+\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
-\item[{const JSONObject \&}]{m\_\-object\_\-value}
+\item[{const \-J\-S\-O\-N\-Object \&}]{m\-\_\-object\-\_\-value}
 \end{DoxyParamCaption}
-)}}
-\label{classJSONValue_a2f1580969809665bd204dca3774226f5}
-Basic constructor for creating a \hyperlink{classJSON}{JSON} Value of type Object
+)}}\label{classJSONValue_a2f1580969809665bd204dca3774226f5}
+\-Basic constructor for creating a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} of type \hyperlink{classObject}{\-Object}
 
 public
 
 
-\begin{DoxyParams}{Parameters}
-{\em JSONObject} & m\_\-object\_\-value The JSONObject to use as the value \\
+\begin{DoxyParams}{\-Parameters}
+{\em \-J\-S\-O\-N\-Object} & m\-\_\-object\-\_\-value \-The \-J\-S\-O\-N\-Object to use as the value \\
 \hline
 \end{DoxyParams}
-\hypertarget{classJSONValue_ae71766eb548ae78c060f0c308ceceb4b}{
-\index{JSONValue@{JSONValue}!$\sim$JSONValue@{$\sim$JSONValue}}
-\index{$\sim$JSONValue@{$\sim$JSONValue}!JSONValue@{JSONValue}}
-\subsubsection[{$\sim$JSONValue}]{\setlength{\rightskip}{0pt plus 5cm}JSONValue::$\sim$JSONValue (
+\hypertarget{classJSONValue_ae71766eb548ae78c060f0c308ceceb4b}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!$\sim$\-J\-S\-O\-N\-Value@{$\sim$\-J\-S\-O\-N\-Value}}
+\index{$\sim$\-J\-S\-O\-N\-Value@{$\sim$\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{$\sim$\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::$\sim$\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}
-\label{classJSONValue_ae71766eb548ae78c060f0c308ceceb4b}
-The destructor for the \hyperlink{classJSON}{JSON} Value object Handles deleting the objects in the array or the object value
+)}}\label{classJSONValue_ae71766eb548ae78c060f0c308ceceb4b}
+\-The destructor for the \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} object \-Handles deleting the objects in the array or the object value
 
-public 
-
-\subsection{Member Function Documentation}
-\hypertarget{classJSONValue_ae0f1cc305919d110eb34d41f40ae3d73}{
-\index{JSONValue@{JSONValue}!asArray@{asArray}}
-\index{asArray@{asArray}!JSONValue@{JSONValue}}
-\subsubsection[{asArray}]{\setlength{\rightskip}{0pt plus 5cm}const JSONArray \& JSONValue::asArray (
+public \hypertarget{classJSONValue_acf94f34e1fc0f01064951c17461d63c9}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
+\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
-{}
+\item[{const char $\ast$}]{m\-\_\-char\-\_\-value}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_ae0f1cc305919d110eb34d41f40ae3d73}
-Retrieves the Array value of this \hyperlink{classJSONValue}{JSONValue} Use IsArray() before using this method.
+)}}\label{classJSONValue_acf94f34e1fc0f01064951c17461d63c9}
+\-Basic constructor for creating a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} of type \-String
 
 public
 
-\begin{DoxyReturn}{Returns}
-JSONArray Returns the array value 
-\end{DoxyReturn}
-\hypertarget{classJSONValue_a16a16d04c67898096289e3e2d07b4de4}{
-\index{JSONValue@{JSONValue}!asBool@{asBool}}
-\index{asBool@{asBool}!JSONValue@{JSONValue}}
-\subsubsection[{asBool}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::asBool (
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & m\-\_\-char\-\_\-value \-The string to use as the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classJSONValue_a501f04137258c93343a0c6815c3ca96b}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}}
+\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-J\-S\-O\-N\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value\-::\-J\-S\-O\-N\-Value} (
 \begin{DoxyParamCaption}
-{}
+\item[{const std\-::string \&}]{m\-\_\-string\-\_\-value}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_a16a16d04c67898096289e3e2d07b4de4}
-Retrieves the Bool value of this \hyperlink{classJSONValue}{JSONValue} Use IsBool() before using this method.
+)}}\label{classJSONValue_a501f04137258c93343a0c6815c3ca96b}
+\-Basic constructor for creating a \hyperlink{classJSON}{\-J\-S\-O\-N} \hyperlink{classValue}{\-Value} of type \-String
 
 public
 
-\begin{DoxyReturn}{Returns}
-bool Returns the bool value 
-\end{DoxyReturn}
-\hypertarget{classJSONValue_a4e889d5fae91abbb951ae664b3d9db3e}{
-\index{JSONValue@{JSONValue}!asNumber@{asNumber}}
-\index{asNumber@{asNumber}!JSONValue@{JSONValue}}
-\subsubsection[{asNumber}]{\setlength{\rightskip}{0pt plus 5cm}double JSONValue::asNumber (
+
+\begin{DoxyParams}{\-Parameters}
+{\em std\-::string} & m\-\_\-string\-\_\-value \-The string to use as the value \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classJSONValue_ae0f1cc305919d110eb34d41f40ae3d73}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!as\-Array@{as\-Array}}
+\index{as\-Array@{as\-Array}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{as\-Array}]{\setlength{\rightskip}{0pt plus 5cm}const \-J\-S\-O\-N\-Array \& {\bf \-J\-S\-O\-N\-Value\-::as\-Array} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_a4e889d5fae91abbb951ae664b3d9db3e}
-Retrieves the Number value of this \hyperlink{classJSONValue}{JSONValue} Use IsNumber() before using this method.
+) const}}\label{classJSONValue_ae0f1cc305919d110eb34d41f40ae3d73}
+\-Retrieves the \-Array value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_ab1421cbcab766cd4632b2e768a5e2d26}{\-Is\-Array()} before using this method.
 
 public
 
-\begin{DoxyReturn}{Returns}
-double Returns the number value 
+\begin{DoxyReturn}{\-Returns}
+\-J\-S\-O\-N\-Array \-Returns the array value 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_a139ff1bf529945a0a9b8e243a2029867}{
-\index{JSONValue@{JSONValue}!asObject@{asObject}}
-\index{asObject@{asObject}!JSONValue@{JSONValue}}
-\subsubsection[{asObject}]{\setlength{\rightskip}{0pt plus 5cm}const JSONObject \& JSONValue::asObject (
+\hypertarget{classJSONValue_a62f36548b0f0d25d72c41058d8216226}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-As\-Array@{\-As\-Array}}
+\index{\-As\-Array@{\-As\-Array}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-As\-Array}]{\setlength{\rightskip}{0pt plus 5cm}const \-J\-S\-O\-N\-Array \& {\bf \-J\-S\-O\-N\-Value\-::\-As\-Array} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_a139ff1bf529945a0a9b8e243a2029867}
-Retrieves the Object value of this \hyperlink{classJSONValue}{JSONValue} Use IsObject() before using this method.
+) const}}\label{classJSONValue_a62f36548b0f0d25d72c41058d8216226}
+\-Retrieves the \-Array value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_ab1421cbcab766cd4632b2e768a5e2d26}{\-Is\-Array()} before using this method.
 
 public
 
-\begin{DoxyReturn}{Returns}
-JSONObject Returns the object value 
+\begin{DoxyReturn}{\-Returns}
+\-J\-S\-O\-N\-Array \-Returns the array value 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_a027350e28f091ad41fc537d965ed6b42}{
-\index{JSONValue@{JSONValue}!asString@{asString}}
-\index{asString@{asString}!JSONValue@{JSONValue}}
-\subsubsection[{asString}]{\setlength{\rightskip}{0pt plus 5cm}const std::string \& JSONValue::asString (
+\hypertarget{classJSONValue_a16a16d04c67898096289e3e2d07b4de4}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!as\-Bool@{as\-Bool}}
+\index{as\-Bool@{as\-Bool}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{as\-Bool}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::as\-Bool} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_a027350e28f091ad41fc537d965ed6b42}
-Retrieves the String value of this \hyperlink{classJSONValue}{JSONValue} Use IsString() before using this method.
+) const}}\label{classJSONValue_a16a16d04c67898096289e3e2d07b4de4}
+\-Retrieves the \-Bool value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_af1322cab379ad85f2adf1792b843b492}{\-Is\-Bool()} before using this method.
 
 public
 
-\begin{DoxyReturn}{Returns}
-std::string Returns the string value 
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns the bool value 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_ae42e5a0a9a847948d88d21d904fa6ae2}{
-\index{JSONValue@{JSONValue}!isArray@{isArray}}
-\index{isArray@{isArray}!JSONValue@{JSONValue}}
-\subsubsection[{isArray}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isArray (
+\hypertarget{classJSONValue_a56af7863b4a860979259d9a426580b32}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-As\-Bool@{\-As\-Bool}}
+\index{\-As\-Bool@{\-As\-Bool}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-As\-Bool}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::\-As\-Bool} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_ae42e5a0a9a847948d88d21d904fa6ae2}
-Checks if the value is an Array
+) const}}\label{classJSONValue_a56af7863b4a860979259d9a426580b32}
+\-Retrieves the \-Bool value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_af1322cab379ad85f2adf1792b843b492}{\-Is\-Bool()} before using this method.
 
 public
 
-\begin{DoxyReturn}{Returns}
-bool Returns true if it is an Array value, false otherwise 
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns the bool value 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_aead35875f85ebe8218ae008bc94287d5}{
-\index{JSONValue@{JSONValue}!isBool@{isBool}}
-\index{isBool@{isBool}!JSONValue@{JSONValue}}
-\subsubsection[{isBool}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isBool (
+\hypertarget{classJSONValue_a4e889d5fae91abbb951ae664b3d9db3e}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!as\-Number@{as\-Number}}
+\index{as\-Number@{as\-Number}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{as\-Number}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-J\-S\-O\-N\-Value\-::as\-Number} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_aead35875f85ebe8218ae008bc94287d5}
-Checks if the value is a Bool
+) const}}\label{classJSONValue_a4e889d5fae91abbb951ae664b3d9db3e}
+\-Retrieves the \-Number value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_a37d949d2dcbe9ed9506bdaa74c2e7678}{\-Is\-Number()} before using this method.
 
 public
 
-\begin{DoxyReturn}{Returns}
-bool Returns true if it is a Bool value, false otherwise 
+\begin{DoxyReturn}{\-Returns}
+double \-Returns the number value 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_a0aee5e9041833102ace9c295c5ba04a1}{
-\index{JSONValue@{JSONValue}!isNull@{isNull}}
-\index{isNull@{isNull}!JSONValue@{JSONValue}}
-\subsubsection[{isNull}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isNull (
+\hypertarget{classJSONValue_ab0ff732d7c1c4017295313919fa571fa}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-As\-Number@{\-As\-Number}}
+\index{\-As\-Number@{\-As\-Number}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-As\-Number}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-J\-S\-O\-N\-Value\-::\-As\-Number} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_a0aee5e9041833102ace9c295c5ba04a1}
-Checks if the value is a NULL
+) const}}\label{classJSONValue_ab0ff732d7c1c4017295313919fa571fa}
+\-Retrieves the \-Number value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_a37d949d2dcbe9ed9506bdaa74c2e7678}{\-Is\-Number()} before using this method.
 
 public
 
-\begin{DoxyReturn}{Returns}
-bool Returns true if it is a NULL value, false otherwise 
+\begin{DoxyReturn}{\-Returns}
+double \-Returns the number value 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_ae18150f35323645dc3b1e6d1bc217196}{
-\index{JSONValue@{JSONValue}!isNumber@{isNumber}}
-\index{isNumber@{isNumber}!JSONValue@{JSONValue}}
-\subsubsection[{isNumber}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isNumber (
+\hypertarget{classJSONValue_a139ff1bf529945a0a9b8e243a2029867}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!as\-Object@{as\-Object}}
+\index{as\-Object@{as\-Object}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{as\-Object}]{\setlength{\rightskip}{0pt plus 5cm}const \-J\-S\-O\-N\-Object \& {\bf \-J\-S\-O\-N\-Value\-::as\-Object} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_ae18150f35323645dc3b1e6d1bc217196}
-Checks if the value is a Number
+) const}}\label{classJSONValue_a139ff1bf529945a0a9b8e243a2029867}
+\-Retrieves the \hyperlink{classObject}{\-Object} value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_a82d2d60f92bb5d9803c40d51eb8749ff}{\-Is\-Object()} before using this method.
 
 public
 
-\begin{DoxyReturn}{Returns}
-bool Returns true if it is a Number value, false otherwise 
+\begin{DoxyReturn}{\-Returns}
+\-J\-S\-O\-N\-Object \-Returns the object value 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_a4f55c32b852110bb4fbf6ae1bceb572d}{
-\index{JSONValue@{JSONValue}!isObject@{isObject}}
-\index{isObject@{isObject}!JSONValue@{JSONValue}}
-\subsubsection[{isObject}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isObject (
+\hypertarget{classJSONValue_abaaba0f72daa1a4a75b07c4ba6d185fc}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-As\-Object@{\-As\-Object}}
+\index{\-As\-Object@{\-As\-Object}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-As\-Object}]{\setlength{\rightskip}{0pt plus 5cm}const \-J\-S\-O\-N\-Object \& {\bf \-J\-S\-O\-N\-Value\-::\-As\-Object} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_a4f55c32b852110bb4fbf6ae1bceb572d}
-Checks if the value is an Object
+) const}}\label{classJSONValue_abaaba0f72daa1a4a75b07c4ba6d185fc}
+\-Retrieves the \hyperlink{classObject}{\-Object} value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_a82d2d60f92bb5d9803c40d51eb8749ff}{\-Is\-Object()} before using this method.
 
 public
 
-\begin{DoxyReturn}{Returns}
-bool Returns true if it is an Object value, false otherwise 
+\begin{DoxyReturn}{\-Returns}
+\-J\-S\-O\-N\-Object \-Returns the object value 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_a7d55132933149e63e76a49c468142461}{
-\index{JSONValue@{JSONValue}!isString@{isString}}
-\index{isString@{isString}!JSONValue@{JSONValue}}
-\subsubsection[{isString}]{\setlength{\rightskip}{0pt plus 5cm}bool JSONValue::isString (
+\hypertarget{classJSONValue_ad8204ac1bb7b460706cc83664c049da1}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-As\-String@{\-As\-String}}
+\index{\-As\-String@{\-As\-String}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-As\-String}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::wstring \& {\bf \-J\-S\-O\-N\-Value\-::\-As\-String} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_a7d55132933149e63e76a49c468142461}
-Checks if the value is a String
+) const}}\label{classJSONValue_ad8204ac1bb7b460706cc83664c049da1}
+\-Retrieves the \-String value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_ada29006af025a5959e79b373e31c5775}{\-Is\-String()} before using this method.
 
 public
 
-\begin{DoxyReturn}{Returns}
-bool Returns true if it is a String value, false otherwise 
+\begin{DoxyReturn}{\-Returns}
+std\-::wstring \-Returns the string value 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_a07040bc6b1968981ab9afb43c7bf0afe}{
-\index{JSONValue@{JSONValue}!Parse@{Parse}}
-\index{Parse@{Parse}!JSONValue@{JSONValue}}
-\subsubsection[{Parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf JSONValue} $\ast$ JSONValue::Parse (
+\hypertarget{classJSONValue_a63cfcf962505c1e0e8360d1a62487f73}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!get\-String@{get\-String}}
+\index{get\-String@{get\-String}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{get\-String}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string \& {\bf \-J\-S\-O\-N\-Value\-::get\-String} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_a63cfcf962505c1e0e8360d1a62487f73}
+\-Retrieves the \-String value of this \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} \-Use \hyperlink{classJSONValue_ada29006af025a5959e79b373e31c5775}{\-Is\-String()} before using this method.
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+std\-::string \-Returns the string value 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_ae42e5a0a9a847948d88d21d904fa6ae2}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!is\-Array@{is\-Array}}
+\index{is\-Array@{is\-Array}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{is\-Array}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::is\-Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_ae42e5a0a9a847948d88d21d904fa6ae2}
+\-Checks if the value is an \-Array
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is an \-Array value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_ab1421cbcab766cd4632b2e768a5e2d26}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-Is\-Array@{\-Is\-Array}}
+\index{\-Is\-Array@{\-Is\-Array}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-Is\-Array}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::\-Is\-Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_ab1421cbcab766cd4632b2e768a5e2d26}
+\-Checks if the value is an \-Array
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is an \-Array value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_aead35875f85ebe8218ae008bc94287d5}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!is\-Bool@{is\-Bool}}
+\index{is\-Bool@{is\-Bool}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{is\-Bool}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::is\-Bool} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_aead35875f85ebe8218ae008bc94287d5}
+\-Checks if the value is a \-Bool
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is a \-Bool value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_af1322cab379ad85f2adf1792b843b492}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-Is\-Bool@{\-Is\-Bool}}
+\index{\-Is\-Bool@{\-Is\-Bool}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-Is\-Bool}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::\-Is\-Bool} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_af1322cab379ad85f2adf1792b843b492}
+\-Checks if the value is a \-Bool
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is a \-Bool value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a0aee5e9041833102ace9c295c5ba04a1}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!is\-Null@{is\-Null}}
+\index{is\-Null@{is\-Null}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{is\-Null}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::is\-Null} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_a0aee5e9041833102ace9c295c5ba04a1}
+\-Checks if the value is a \-N\-U\-L\-L
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is a \-N\-U\-L\-L value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_aa1f82febbed62b4736fd22659deeff46}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-Is\-Null@{\-Is\-Null}}
+\index{\-Is\-Null@{\-Is\-Null}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-Is\-Null}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::\-Is\-Null} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_aa1f82febbed62b4736fd22659deeff46}
+\-Checks if the value is a \-N\-U\-L\-L
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is a \-N\-U\-L\-L value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_ae18150f35323645dc3b1e6d1bc217196}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!is\-Number@{is\-Number}}
+\index{is\-Number@{is\-Number}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{is\-Number}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::is\-Number} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_ae18150f35323645dc3b1e6d1bc217196}
+\-Checks if the value is a \-Number
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is a \-Number value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a37d949d2dcbe9ed9506bdaa74c2e7678}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-Is\-Number@{\-Is\-Number}}
+\index{\-Is\-Number@{\-Is\-Number}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-Is\-Number}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::\-Is\-Number} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_a37d949d2dcbe9ed9506bdaa74c2e7678}
+\-Checks if the value is a \-Number
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is a \-Number value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a4f55c32b852110bb4fbf6ae1bceb572d}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!is\-Object@{is\-Object}}
+\index{is\-Object@{is\-Object}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{is\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::is\-Object} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_a4f55c32b852110bb4fbf6ae1bceb572d}
+\-Checks if the value is an \hyperlink{classObject}{\-Object}
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is an \hyperlink{classObject}{\-Object} value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a82d2d60f92bb5d9803c40d51eb8749ff}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-Is\-Object@{\-Is\-Object}}
+\index{\-Is\-Object@{\-Is\-Object}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-Is\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::\-Is\-Object} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_a82d2d60f92bb5d9803c40d51eb8749ff}
+\-Checks if the value is an \hyperlink{classObject}{\-Object}
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is an \hyperlink{classObject}{\-Object} value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a7d55132933149e63e76a49c468142461}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!is\-String@{is\-String}}
+\index{is\-String@{is\-String}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{is\-String}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::is\-String} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_a7d55132933149e63e76a49c468142461}
+\-Checks if the value is a \-String
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is a \-String value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_ada29006af025a5959e79b373e31c5775}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-Is\-String@{\-Is\-String}}
+\index{\-Is\-String@{\-Is\-String}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-Is\-String}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-J\-S\-O\-N\-Value\-::\-Is\-String} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_ada29006af025a5959e79b373e31c5775}
+\-Checks if the value is a \-String
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+bool \-Returns true if it is a \-String value, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a07040bc6b1968981ab9afb43c7bf0afe}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-Parse@{\-Parse}}
+\index{\-Parse@{\-Parse}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-Parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value} $\ast$ {\bf \-J\-S\-O\-N\-Value\-::\-Parse} (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$$\ast$}]{data}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{classJSONValue_a07040bc6b1968981ab9afb43c7bf0afe}
-Parses a \hyperlink{classJSON}{JSON} encoded value to a \hyperlink{classJSONValue}{JSONValue} object
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSONValue_a07040bc6b1968981ab9afb43c7bf0afe}
+\-Parses a \hyperlink{classJSON}{\-J\-S\-O\-N} encoded value to a \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} object
 
 protected
 
 
-\begin{DoxyParams}{Parameters}
-{\em char$\ast$$\ast$} & data Pointer to a char$\ast$ that contains the data\\
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$$\ast$} & data \-Pointer to a char$\ast$ that contains the data\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-JSONValue$\ast$ Returns a pointer to a \hyperlink{classJSONValue}{JSONValue} object on success, NULL on error 
+\begin{DoxyReturn}{\-Returns}
+\-J\-S\-O\-N\-Value$\ast$ \-Returns a pointer to a \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} object on success, \-N\-U\-L\-L on error 
 \end{DoxyReturn}
-\hypertarget{classJSONValue_a05fdc2f472ead8269e6d10fd3fba4834}{
-\index{JSONValue@{JSONValue}!stringify@{stringify}}
-\index{stringify@{stringify}!JSONValue@{JSONValue}}
-\subsubsection[{stringify}]{\setlength{\rightskip}{0pt plus 5cm}std::string JSONValue::stringify (
+\hypertarget{classJSONValue_abfbaa2b86a6c0f5ea3d358077d653709}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-Parse@{\-Parse}}
+\index{\-Parse@{\-Parse}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-Parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-J\-S\-O\-N\-Value} $\ast$ {\bf \-J\-S\-O\-N\-Value\-::\-Parse} (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classJSONValue_abfbaa2b86a6c0f5ea3d358077d653709}
+\-Parses a \hyperlink{classJSON}{\-J\-S\-O\-N} encoded value to a \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} object
+
+protected
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em wchar\-\_\-t$\ast$$\ast$} & data \-Pointer to a wchar\-\_\-t$\ast$ that contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-J\-S\-O\-N\-Value$\ast$ \-Returns a pointer to a \hyperlink{classJSONValue}{\-J\-S\-O\-N\-Value} object on success, \-N\-U\-L\-L on error 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a05fdc2f472ead8269e6d10fd3fba4834}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!stringify@{stringify}}
+\index{stringify@{stringify}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{stringify}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-J\-S\-O\-N\-Value\-::stringify} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}
-\label{classJSONValue_a05fdc2f472ead8269e6d10fd3fba4834}
-Creates a \hyperlink{classJSON}{JSON} encoded string for the value with all necessary characters escaped
+) const}}\label{classJSONValue_a05fdc2f472ead8269e6d10fd3fba4834}
+\-Creates a \hyperlink{classJSON}{\-J\-S\-O\-N} encoded string for the value with all necessary characters escaped
 
 public
 
-\begin{DoxyReturn}{Returns}
-std::string Returns the \hyperlink{classJSON}{JSON} string 
+\begin{DoxyReturn}{\-Returns}
+std\-::string \-Returns the \hyperlink{classJSON}{\-J\-S\-O\-N} string 
+\end{DoxyReturn}
+\hypertarget{classJSONValue_a661d8d6eefb3e692c9f75dfb3e96e717}{\index{\-J\-S\-O\-N\-Value@{\-J\-S\-O\-N\-Value}!\-Stringify@{\-Stringify}}
+\index{\-Stringify@{\-Stringify}!JSONValue@{\-J\-S\-O\-N\-Value}}
+\subsubsection[{\-Stringify}]{\setlength{\rightskip}{0pt plus 5cm}std\-::wstring {\bf \-J\-S\-O\-N\-Value\-::\-Stringify} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classJSONValue_a661d8d6eefb3e692c9f75dfb3e96e717}
+\-Creates a \hyperlink{classJSON}{\-J\-S\-O\-N} encoded string for the value with all necessary characters escaped
+
+public
+
+\begin{DoxyReturn}{\-Returns}
+std\-::wstring \-Returns the \hyperlink{classJSON}{\-J\-S\-O\-N} string 
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/nonametr/projects/anima/shared/jsonvalue.h\item 
-/home/nonametr/projects/anima/shared/jsonvalue.cpp\end{DoxyCompactItemize}
+/home/nonametr/projects/voodoo/server/shared/json/\-J\-S\-O\-N\-Value.\-h\item 
+/home/nonametr/projects/voodoo/server/shared/json\-\_\-value.\-h\item 
+/home/nonametr/projects/voodoo/server/shared/json/\-J\-S\-O\-N\-Value.\-cpp\item 
+/home/nonametr/projects/voodoo/server/shared/json\-\_\-value.\-cpp\end{DoxyCompactItemize}

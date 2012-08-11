@@ -1,4 +1,4 @@
-# Install script for directory: /home/nonametr/projects/anima/game_server/instance
+# Install script for directory: /home/nonametr/projects/voodoo/server/game_server/instance
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -4,8 +4,11 @@
 #include <unistd.h>
 #include "server.h"
 #include "common.h"
+#include "json.h"
+#include "json_value.h"
 
 #include "game_server.h"
+
 // #include "dict_json_generator.h"
 
 Server* iServer;///extern global
@@ -56,7 +59,7 @@ char* getArgConfigPath ( int argc, char **argv )
 int main ( int argc, char **argv )
 {
     initGlobals();
-    
+
     uint32 pid;
     string work_dir ( get_current_dir_name() );
     new Config;
@@ -94,6 +97,8 @@ int main ( int argc, char **argv )
 //     DictJSONGenerator *djg = new DictJSONGenerator;
 //     delete djg;
 
+    try
+    {
     tracelog ( OPTIMAL, "Starting server" );
     while ( running )
     {
@@ -115,6 +120,11 @@ int main ( int argc, char **argv )
             new DatabaseManager(work_dir, pid);
             running = true;
         }
+    }
+    }
+    catch(int exeption)
+    {
+      traceerr("%s", "EXEPTION!!! HURA!");
     }
     destroyObjects();
     return EXIT_SUCCESS;

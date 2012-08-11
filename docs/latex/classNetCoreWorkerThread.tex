@@ -1,37 +1,60 @@
-\hypertarget{classNetCoreWorkerThread}{
-\section{NetCoreWorkerThread Class Reference}
-\label{classNetCoreWorkerThread}\index{NetCoreWorkerThread@{NetCoreWorkerThread}}
+\hypertarget{classNetCoreWorkerThread}{\section{\-Net\-Core\-Worker\-Thread \-Class \-Reference}
+\label{classNetCoreWorkerThread}\index{\-Net\-Core\-Worker\-Thread@{\-Net\-Core\-Worker\-Thread}}
 }
-Inheritance diagram for NetCoreWorkerThread:\begin{figure}[H]
+\-Inheritance diagram for \-Net\-Core\-Worker\-Thread\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classNetCoreWorkerThread}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classNetCoreWorkerThread_a743b906293b9ed2c3bfc1749e6257187}{
-void {\bfseries run} ()}
-\label{classNetCoreWorkerThread_a743b906293b9ed2c3bfc1749e6257187}
+\hypertarget{classNetCoreWorkerThread_a743b906293b9ed2c3bfc1749e6257187}{void {\bfseries run} ()}\label{classNetCoreWorkerThread_a743b906293b9ed2c3bfc1749e6257187}
 
 \item 
-\hypertarget{classNetCoreWorkerThread_a6ffdaca7b662d69cf305fbd8d9044222}{
-void {\bfseries onShutdown} ()}
-\label{classNetCoreWorkerThread_a6ffdaca7b662d69cf305fbd8d9044222}
+\hypertarget{classNetCoreWorkerThread_a6ffdaca7b662d69cf305fbd8d9044222}{void {\bfseries on\-Shutdown} ()}\label{classNetCoreWorkerThread_a6ffdaca7b662d69cf305fbd8d9044222}
 
+\item 
+void \hyperlink{classNetCoreWorkerThread_a26fec8097fb7527f7df92f79db7eed8c}{add\-To\-Epoll} (\-S\-O\-C\-K\-E\-T sock)
+\item 
+void \hyperlink{classNetCoreWorkerThread_a2853f664c9198eef3f39b42cb2a5c8f8}{remove\-From\-Epoll} (\-S\-O\-C\-K\-E\-T sock)
 \end{DoxyCompactItemize}
-\subsection*{Friends}
+\subsection*{\-Static \-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classNetCoreWorkerThread_ab3be64b93c69b019c9ecebf16700262d}{
-class \hyperlink{classNetCoreWorkerThread_ab3be64b93c69b019c9ecebf16700262d}{NetCore}}
-\label{classNetCoreWorkerThread_ab3be64b93c69b019c9ecebf16700262d}
+\hypertarget{classNetCoreWorkerThread_acc23f124f49ab8d395bca5c99068a5a4}{static void {\bfseries init} ()}\label{classNetCoreWorkerThread_acc23f124f49ab8d395bca5c99068a5a4}
+
+\item 
+\hypertarget{classNetCoreWorkerThread_ac0edd487f480a6c7c5ff283863ac004e}{static \hyperlink{classNetCoreWorkerThread}{\-Net\-Core\-Worker\-Thread} $\ast$ {\bfseries get\-Optimal} ()}\label{classNetCoreWorkerThread_ac0edd487f480a6c7c5ff283863ac004e}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetCoreWorkerThread_ab3be64b93c69b019c9ecebf16700262d}{class {\bfseries \-Net\-Core}}\label{classNetCoreWorkerThread_ab3be64b93c69b019c9ecebf16700262d}
 
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classNetCoreWorkerThread_a26fec8097fb7527f7df92f79db7eed8c}{\index{\-Net\-Core\-Worker\-Thread@{\-Net\-Core\-Worker\-Thread}!add\-To\-Epoll@{add\-To\-Epoll}}
+\index{add\-To\-Epoll@{add\-To\-Epoll}!NetCoreWorkerThread@{\-Net\-Core\-Worker\-Thread}}
+\subsubsection[{add\-To\-Epoll}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Net\-Core\-Worker\-Thread\-::add\-To\-Epoll} (
+\begin{DoxyParamCaption}
+\item[{\-S\-O\-C\-K\-E\-T}]{sock}
+\end{DoxyParamCaption}
+)}}\label{classNetCoreWorkerThread_a26fec8097fb7527f7df92f79db7eed8c}
+\-Add epoll event based on socket activity. \hypertarget{classNetCoreWorkerThread_a2853f664c9198eef3f39b42cb2a5c8f8}{\index{\-Net\-Core\-Worker\-Thread@{\-Net\-Core\-Worker\-Thread}!remove\-From\-Epoll@{remove\-From\-Epoll}}
+\index{remove\-From\-Epoll@{remove\-From\-Epoll}!NetCoreWorkerThread@{\-Net\-Core\-Worker\-Thread}}
+\subsubsection[{remove\-From\-Epoll}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Net\-Core\-Worker\-Thread\-::remove\-From\-Epoll} (
+\begin{DoxyParamCaption}
+\item[{\-S\-O\-C\-K\-E\-T}]{sock}
+\end{DoxyParamCaption}
+)}}\label{classNetCoreWorkerThread_a2853f664c9198eef3f39b42cb2a5c8f8}
+\-Remove from epoll list. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/nonametr/projects/anima/shared/netcore.h\item 
-/home/nonametr/projects/anima/shared/netcore.cpp\end{DoxyCompactItemize}
+/home/nonametr/projects/voodoo/server/shared/net/netcore\-\_\-worker\-\_\-thread.\-h\item 
+/home/nonametr/projects/voodoo/server/shared/net/netcore\-\_\-worker\-\_\-thread.\-cpp\end{DoxyCompactItemize}

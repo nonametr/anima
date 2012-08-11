@@ -13,7 +13,7 @@ public:
 ///--------------SETTERS----------------
     virtual void set(string key, Value value) {};
 ///-------------GETTERS-----------------
-    virtual Value get(string key){ return Value(Value::UNKNOWN); }
+    virtual Value* get(string key) { return new Value; }
 private:
     uint32 _uid;
     uint32 _server_id;

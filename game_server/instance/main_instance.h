@@ -13,7 +13,15 @@ public:
     MainInstance(GameSocket *owner);
     virtual void handlePacket(Packet* pkt);
 private:
-    void cJoin(Packet* pkt);
+    User* getUser(Packet* pkt);
+    void cJoin(User* usr, Packet* pkt);
+    void cGetLocationsInfo(User* usr, Packet* pkt);
+    void cStartLocation(User* usr, Packet* pkt);
+    void cFinishLocation(User* usr, Packet* pkt);
+    void cKickBoss(User* usr, Packet* pkt);
+    void cGetBossUpdate(User* usr, Packet* pkt);
+    void cExchange(User* usr, Packet* pkt);
+    void cReqColl(User* usr, Packet* pkt);
 
     GameSocket *owner_shard;
     PacketHandler<MainInstance> _shardPacketHandlers[Packets::IG_MAX_ID];

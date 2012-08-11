@@ -24,7 +24,7 @@ void ExtSocket::onPacketRead(Packet *pkt)
     }
     else
     {
-	Packet send_pkt = OG_STR::create(0, MSG_PACKET_WRONG_ID);
+	Packet send_pkt = OG_ERROR::create(0, intToString(MSG_PACKET_WRONG_ID).c_str());
 	pkt->sock->send(&send_pkt);
 	delete pkt;
     }

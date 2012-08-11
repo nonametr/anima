@@ -12,7 +12,11 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeSystem.cmake"
   "../game_server/CMakeLists.txt"
+  "../game_server/dict/CMakeLists.txt"
   "../game_server/instance/CMakeLists.txt"
+  "../game_server/login/CMakeLists.txt"
+  "../game_server/ratings/CMakeLists.txt"
+  "../shared/json/CMakeLists.txt"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake"
@@ -39,6 +43,10 @@ SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "game_server/CMakeFiles/CMakeDirectoryInformation.cmake"
   "game_server/instance/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "game_server/dict/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "game_server/ratings/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "game_server/login/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "shared/json/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

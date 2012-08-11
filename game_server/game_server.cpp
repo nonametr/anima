@@ -2,6 +2,8 @@
 #include "game_socket.h"
 #include "login_socket.h"
 #include "ext_socket.h"
+#include "dict_manager.h"
+#include "random.h"
 
 GameServer::GameServer()
 {
@@ -30,10 +32,12 @@ void _onGSSignal ( int s )
 }
 void GameServer::ininializeObjects()
 {
+    new Random;
     new NetCore;
     new VersionControl;
     new PeriodicThreadCaller;///no need to delete at exit - it's auto runing thread and as all threads its managed by ThreadCore
     new Storage;
+    new DictManager;
 
     /// hook signals
     tracelog ( OPTIMAL, "Hooking signals..." );
@@ -45,8 +49,10 @@ void GameServer::ininializeObjects()
 void GameServer::destroyObjects()
 {
     tracelog ( OPTIMAL, "Shutting down..." );
+    delete iRandom;
     delete iVersionControl;
     delete iStorage;
+    delete iDictManager;
 //     delete iNetCore;
     signal ( SIGINT, 0 );
     signal ( SIGTERM, 0 );

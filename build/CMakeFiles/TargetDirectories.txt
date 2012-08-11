@@ -1,1 +1,1 @@
-/home/nonametr/projects/anima/build/CMakeFiles/anima_game.dir
+/home/nonametr/projects/voodoo/server/build/CMakeFiles/anima_game.dir

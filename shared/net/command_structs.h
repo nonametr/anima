@@ -12,35 +12,38 @@ struct CInt64
     static shared_ptr<CInt64> decompress(Packet *pkt);
     uint64 iVal1;
 };
-struct CInt32
+struct IG_2Int32
 {
-    static Packet create(uint32 v_uid, int v_iVal1, int packet_type);
-    static shared_ptr<CInt32> decompress(Packet *pkt);
-    int iVal1;
-};
-struct OG_STR
-{
-    static Packet create(uint32 v_uid, const char* v_strVal1);
-    static shared_ptr<OG_STR> decompress(Packet *pkt);
-    char *strVal1;
-    int size;
-};
-struct CInt32Int32
-{
-    static Packet create(uint32 v_uid, int v_iVal1, int v_iVal2, int packet_type);
-    static shared_ptr<CInt32Int32> decompress(Packet *pkt);
+    static IG_2Int32 decompress(Packet *pkt);
     int iVal1;
     int iVal2;
 };
+
+
+struct IG_Int32
+{
+    IG_Int32():iVal1(0){}
+    static IG_Int32 decompress(Packet *pkt);
+    int iVal1;
+};
 struct IG_JOIN
 {
-    static shared_ptr<IG_JOIN> decompress(Packet *pkt);
-    public:
-      long long int soc_id;
-      int time;
+    IG_JOIN():soc_id(0){}
+    static IG_JOIN decompress(Packet *pkt);
+    long long int soc_id;
 };
-struct OG_USER_DATA
+struct IG_STR
+{
+    IG_STR(){}
+    static IG_STR decompress(Packet *pkt);
+    string str;
+};
+struct OG_USER_JSON
 {
     static Packet create(string &json);
+};
+struct OG_ERROR
+{
+    static Packet create(uint32 v_uid, const char* v_strVal1);
 };
 #endif

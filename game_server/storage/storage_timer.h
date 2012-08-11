@@ -5,7 +5,7 @@
 #include "storage.h"
 #include <time.h>
 
-#define TIME_UPDATE_PERIOD 10
+#define TIME_UPDATE_PERIOD 2
 
 class StorageTimer : public Thread
 {

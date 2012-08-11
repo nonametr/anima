@@ -36,7 +36,7 @@ void PeriodicThreadCaller::run()
             break;
         }
         _pt_mutex.lock();
-        current_time = getTickCount();
+        current_time = time(NULL);
         if (_periodic_threads.size())
         {
             it_exam = _periodic_threads.begin();
@@ -76,7 +76,7 @@ void PeriodicThreadCaller::onShutdown()
 }
 void PeriodicThreadCaller::startPeriodicThread(Thread * thread, uint32 call_interval)
 {
-    uint32 exam_time = getTickCount() + call_interval;
+    uint32 exam_time = time(NULL) + call_interval;
 
     PeriodicThread period_th;
     period_th.call_interval = call_interval;
@@ -90,5 +90,6 @@ void PeriodicThreadCaller::startPeriodicThread(Thread * thread, uint32 call_inte
     _pt_mutex.unlock();
     pthread_cond_signal( &_sleep_cond );///waiking up periodic thread callback checks
 }
+
 
 

@@ -1,9 +1,3 @@
-/*
-* It's part of the SimpleJSON Library - http://mjpa.in/json
-*
-* Copyright (C) 2010 Mike Anchor and modified by I.Kuruch
-*/
-
 #ifndef JSON_H
 #define JSON_H
 
@@ -12,7 +6,7 @@
 #include <map>
 
 /// Simple function to check a string 's' has at least 'n' characters
-static inline bool simplejson_wcsnlen(const char *s, size_t n) 
+static inline bool simplejson_wcsnlen(const char *s, size_t n)
 {
     if (s == 0)
         return false;
@@ -42,7 +36,7 @@ public:
     static std::string stringify(const JSONValue *value);
 protected:
     static bool SkipWhitespace(const char **data);
-    static bool ExtractString(const char **data, std::string &str);
+    static bool ExtractString(const char **data, std::string &str, bool default_end = true);
     static double ParseInt(const char **data);
     static double ParseDecimal(const char **data);
 private:

@@ -1,5 +1,11 @@
 #include "common.h"
 #include "config.h"
+
+string shrinkSpaces(string &str) 
+{
+   str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
+   return str;
+}
 /**
  * @brief converts decimal number to mask value.
  *
@@ -71,11 +77,59 @@ string floatToString ( float num )
     snprintf ( buf, 128, "%f",num );
     return buf;
 }
+uint strToInt ( const char *str )
+{
+    uint res;
+    sscanf ( str, "%u", &res );
+    return res;
+}
 string doubleToString ( double num )
 {
     char buf[128];
     snprintf ( buf, 128, "%f",num );
     return buf;
+}
+string getJsonParamStr ( string &data, string param )
+{
+    param += "\":\"";
+    std::size_t begin_pos = data.find ( param );
+    if ( begin_pos == string::npos )
+        return "";
+    begin_pos += param.length();
+    std::size_t end_pos = data.find ( "\",", begin_pos );
+    if ( end_pos == string::npos )
+        return "";
+    if ( end_pos - begin_pos >= 512 || ( end_pos - begin_pos ) <= 1 )
+        return "";
+    return data.substr ( begin_pos, end_pos - begin_pos );
+}
+string getJsonParamInt ( string &data, string param )
+{
+    param += "\":";
+    std::size_t begin_pos = data.find ( param );
+    if ( begin_pos == string::npos )
+        return "";
+    begin_pos += param.length();
+    std::size_t end_pos = data.find ( ",", begin_pos );
+    if ( end_pos == string::npos )
+        return "";
+    if ( end_pos - begin_pos >= 512 || ( end_pos - begin_pos ) <= 1 )
+        return "";
+    return data.substr ( begin_pos, end_pos - begin_pos );
+}
+string getParam ( string &data, string param )
+{
+    param += "=";
+    std::size_t begin_pos = data.find ( param );
+    if ( begin_pos == string::npos )
+        return "";
+    begin_pos += param.length();
+    std::size_t end_pos = data.find ( "&", begin_pos );
+    if ( end_pos == string::npos )
+        return "";
+    if ( end_pos - begin_pos >= 512 || ( end_pos - begin_pos ) < 1 )
+        return "";
+    return data.substr ( begin_pos, end_pos - begin_pos );
 }
 /**
  * @brief creating md5 from 'text'
@@ -83,14 +137,14 @@ string doubleToString ( double num )
  * @param value value to generate md5 from
  * @param hash md5'ed value
  **/
-void getMD5(char* text, char *hash)
+void getMD5 ( char* text, char *hash )
 {
     unsigned char md5digest[MD5_DIGEST_LENGTH];
-    MD5((unsigned char*)text, strlen(text), md5digest);
+    MD5 ( ( unsigned char* ) text, strlen ( text ), md5digest );
 
-    for (int i=0;i<MD5_DIGEST_LENGTH;i++)
+    for ( int i=0; i<MD5_DIGEST_LENGTH; i++ )
     {
-        sprintf(&hash[2*i], "%02x", md5digest[i]);
+        sprintf ( &hash[2*i], "%02x", md5digest[i] );
     }
 }
 /**

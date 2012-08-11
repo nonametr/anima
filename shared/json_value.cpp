@@ -1,16 +1,4 @@
-/*
-* It's part of the SimpleJSON Library - http://mjpa.in/json
-*
-* Copyright (C) 2010 Mike Anchor and modified by I.Kuruch
-*/
-
 #include "json_value.h"
-
-/*
-* File JSONValue.cpp part of the SimpleJSON Library - http://mjpa.in/json
-*
-* Copyright (C) 2010 Mike Anchor and modified by I.Kuruch
-*/
 
 #include <stdio.h>
 #include <string.h>
@@ -24,6 +12,7 @@
 // Macros to free an array/object
 #define FREE_ARRAY(x) { JSONArray::iterator iter; for (iter = x.begin(); iter != x.end(); iter++) { delete *iter; } }
 #define FREE_OBJECT(x) { JSONObject::iterator iter; for (iter = x.begin(); iter != x.end(); iter++) { delete (*iter).second; } }
+
 
 /**
 * Parses a JSON encoded value to a JSONValue object
@@ -124,15 +113,13 @@ JSONValue *JSONValue::Parse(const char **data)
 
         return new JSONValue(number);
     }
-
 // An object?
     else if (**data == '{')
     {
         JSONObject object;
 
         (*data)++;
-
-        while (**data != 0)
+        for (;**data != 0;)
         {
 // Whitespace at the start?
             if (!JSON::SkipWhitespace(data))
@@ -140,7 +127,6 @@ JSONValue *JSONValue::Parse(const char **data)
                 FREE_OBJECT(object);
                 return NULL;
             }
-
 // Special case - empty object
             if (object.size() == 0 && **data == '}')
             {
@@ -148,13 +134,25 @@ JSONValue *JSONValue::Parse(const char **data)
                 return new JSONValue(object);
             }
 
-// We want a string now...
-            std::string name;
-            if (!JSON::ExtractString(&(++(*data)), name))
-            {
-                FREE_OBJECT(object);
-                return NULL;
-            }
+            // We want a string now...
+	    std::string name;
+            if (**data == '"')	    
+	    {
+		++(*data);
+		if (!JSON::ExtractString(&((*data)), name))
+		{
+		    FREE_OBJECT(object);
+		    return NULL;
+		}
+	    }
+	    else
+	    {
+		if (!JSON::ExtractString(&((*data)), name, false))
+		{
+		    FREE_OBJECT(object);
+		    return NULL;
+		}
+	    }
 
 // More whitespace?
             if (!JSON::SkipWhitespace(data))
@@ -481,7 +479,7 @@ bool JSONValue::isObject() const
 *
 * @return std::string Returns the string value
 */
-const std::string &JSONValue::asString() const
+const std::string &JSONValue::getString() const
 {
     return string_value;
 }
@@ -659,19 +657,19 @@ std::string JSONValue::StringifyString(const std::string &str)
         {
             str_out += "\\t";
         }
-        else if (chr < ' ')
-        {
-            str_out += "\\u";
-            for (int i = 0; i < 4; i++)
-            {
-                int value = (chr >> 12) & 0xf;
-                if (value >= 0 && value <= 9)
-                    str_out += (char)('0' + value);
-                else if (value >= 10 && value <= 15)
-                    str_out += (char)('A' + (value - 10));
-                chr <<= 4;
-            }
-        }
+//         else if (chr < ' ')
+//         {
+//             str_out += "\\u";
+//             for (int i = 0; i < 4; i++)
+//             {
+//                 int value = (chr >> 12) & 0xf;
+//                 if (value >= 0 && value <= 9)
+//                     str_out += (char)('0' + value);
+//                 else if (value >= 10 && value <= 15)
+//                     str_out += (char)('A' + (value - 10));
+//                 chr <<= 4;
+//             }
+//         }
         else
         {
             str_out += chr;

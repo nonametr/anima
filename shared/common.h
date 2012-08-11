@@ -1,6 +1,7 @@
 #ifndef _COMMON_H
 #define _COMMON_H
 
+#include "exeption.h"
 #include <stdio.h>
 #include <iostream>
 #include <sys/time.h>
@@ -31,8 +32,10 @@
 
 #ifdef USE_STL_UNORDERED_MAP
 #define associative_container unordered_map
+#define associative_multi_container unordered_multimap
 #else
 #define associative_container map
+#define associative_multi_container multimap
 #endif
 
 #ifdef USE_STL_SHARED_PTR
@@ -41,6 +44,10 @@
 #include <boost/shared_ptr.hpp>
 #define shared_ptr boost::shared_ptr
 #endif
+
+#define MAX_PERCENT 10000
+#define emitExeption(code) ErrorExeption( code, string(__FILE__) + string(":") + intToString ( __LINE__ ) +string ( "[" )\
++ string ( __FUNCTION__ ) + string("]") )
 
 typedef unsigned long long uint64;
 typedef long long int64;
@@ -51,6 +58,10 @@ typedef short int int16;
 typedef unsigned char uint8;
 typedef char int8;
 
+enum OBJECT_TYPES {ITEM = 0, LOCATION, BOSS, BOSS_STRIKE, ITEM_PACK, BULLETS, EXP, GOLD, MONEY, LVL, ENERGY, COLLECTION, COLLECTION_PART, GLOBAL,
+OBJECT_TYPES_SIZE};
+static std::string object_types_str[OBJECT_TYPES_SIZE] = {"items", "locations", "bosses", "boss_strikes", "item_packs", "globals", "globals", "globals",
+"globals", "globals", "globals", "collections", "collections", "globals"};
 class Server;
 
 extern Server* iServer;
@@ -60,10 +71,10 @@ extern std::string srv_log_path;
 
 using namespace std;
 
-enum DBG_LVL { DISABLED = 0, VERY_LOW = 1, LOW = 2, MEDIUM = 3, OPTIMAL = 4, GOOD = 5, TOP = 6, EXTREAM = 7, CRAZY = 8, INSANE = 9, GODLIKE = 10  };
+        enum DBG_LVL { DISABLED = 0, VERY_LOW = 1, LOW = 2, MEDIUM = 3, OPTIMAL = 4, GOOD = 5, TOP = 6, EXTREAM = 7, CRAZY = 8, INSANE = 9, GODLIKE = 10  };
 
-void logError ( const char *str );
-void logTrace ( const char *str );
+                                        void logError ( string err_log_path, const char *str );
+                                        void logTrace ( string err_log_path, const char *str );
 
 #ifndef RELEASE
 #define traceerr( S, ... ) \
@@ -77,7 +88,7 @@ void logTrace ( const char *str );
         perror(__BUF__);\
         errno = 0;\
     }
-#define tracelog( LVL, S, ... ) 																	\
+#define tracelog( LVL, S, ... )\
     {																	\
             if( dbg_lvl >= LVL )							\
             {																\
@@ -102,7 +113,8 @@ void logTrace ( const char *str );
                                                                                             ## __VA_ARGS__ );		\
             logError( err_log_path, __BUF__ );											\
     }
-#define tracelog( LVL, S, ... ) 																	\
+#define tracelog( LVL, S, ... )
+\
     {																	\
             if( dbg_lvl >= LVL )											\
             {																\
@@ -124,8 +136,8 @@ void logTrace ( const char *str );
 #define ASSERT ASSERT_FAIL
 
 /**
- * @brief describes count of seconds in time unit
- **/
+  * @brief describes count of seconds in time unit
+  **/
 enum TimeVariables
 {
     TIME_SECOND = 1,
@@ -135,6 +147,8 @@ enum TimeVariables
     TIME_MONTH	= TIME_DAY * 30,
     TIME_YEAR	= TIME_MONTH * 12
 };
+string shrinkSpaces(string &str);
+
 /**
  * @brief fast int abs
  *
@@ -151,7 +165,7 @@ static inline int absi ( const int value )
  * @param value value to generate md5 from
  * @param hash md5'ed value
  **/
-void getMD5(char* text, char *hash);
+void getMD5 ( char* text, char *hash );
 /**
  * @brief fast int abs and recast to unsigned
  *
@@ -170,34 +184,38 @@ static inline uint32 absui ( const int value )
  **/
 static inline int float2int ( const float value )
 {
-    union { int asInt[2];
+    union
+    {
+        int getInt[2];
         double asDouble;
     } n;
     n.asDouble = value + 6755399441055744.0;
 
-    return n.asInt [0];
+                 return n.getInt [0];
 }
-/**
- * @brief Fastest Method of long2int32
- *
- * @param value value to convert
- * @return int
- **/
-static inline int long2int ( const double value )
+             /**
+              * @brief Fastest Method of long2int32
+              *
+              * @param value value to convert
+              * @return int
+              **/
+             static inline int long2int ( const double value )
 {
-    union { int asInt[2];
+    union
+    {
+        int getInt[2];
         double asDouble;
     } n;
     n.asDouble = value + 6755399441055744.0;
 
-    return n.asInt [0];
+                 return n.getInt [0];
 }
-/**
- * @brief return current precise time
- *
- * @return uint32
- **/
-inline uint32 getTickCount()
+             /**
+              * @brief return current precise time
+              *
+              * @return uint32
+              **/
+             inline uint32 getTickCount()
 {
     struct timeval tv;
     gettimeofday ( &tv, NULL );
@@ -243,6 +261,10 @@ void intToString ( char * buf, int num );
 string intToString ( int num );
 string int64ToString ( long long int num );
 string floatToString ( float num );
+uint strToInt ( const char *str );
 string doubleToString ( double num );
+string getJsonParamStr ( string &data, string param );
+string getJsonParamInt ( string &data, string param );
+string getParam ( string &data, string param );
 
 #endif

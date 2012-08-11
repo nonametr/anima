@@ -1,35 +1,38 @@
-\hypertarget{classListenSocket}{
-\section{ListenSocket$<$ SocketClass $>$ Class Template Reference}
-\label{classListenSocket}\index{ListenSocket@{ListenSocket}}
+\hypertarget{classListenSocket}{\section{\-Listen\-Socket \-Class \-Reference}
+\label{classListenSocket}\index{\-Listen\-Socket@{\-Listen\-Socket}}
 }
-Inheritance diagram for ListenSocket$<$ SocketClass $>$:\begin{figure}[H]
+\-Inheritance diagram for \-Listen\-Socket\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=5.000000cm]{classListenSocket}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classListenSocket_a88bc05466de1c71e9981b1664a0631dd}{
-{\bfseries ListenSocket} (const char $\ast$listen\_\-address, uint port)}
-\label{classListenSocket_a88bc05466de1c71e9981b1664a0631dd}
+\hypertarget{classListenSocket_abb668d9c5c3f1e34eed7ecd8f936b74c}{{\bfseries \-Listen\-Socket} (const char $\ast$listen\-\_\-address, uint32 port)}\label{classListenSocket_abb668d9c5c3f1e34eed7ecd8f936b74c}
 
 \item 
-\hypertarget{classListenSocket_ac62a573cd01cf0826e8d2a3872565e58}{
-void {\bfseries onAccept} ()}
-\label{classListenSocket_ac62a573cd01cf0826e8d2a3872565e58}
+\hypertarget{classListenSocket_a6e247371e58d132f8126ed0fca398c74}{virtual void {\bfseries on\-Packet\-Read} (\hyperlink{structPacket}{\-Packet} $\ast$pkt)=0}\label{classListenSocket_a6e247371e58d132f8126ed0fca398c74}
 
 \item 
-\hypertarget{classListenSocket_a611c169149189c64d3aa582806692350}{
-void {\bfseries close} ()}
-\label{classListenSocket_a611c169149189c64d3aa582806692350}
+\hypertarget{classListenSocket_a2e5ebc196501115b5ac907e26a01438f}{virtual void {\bfseries on\-Packet\-Disconnect} (\hyperlink{classSocket}{\-Socket} $\ast$sock)=0}\label{classListenSocket_a2e5ebc196501115b5ac907e26a01438f}
+
+\item 
+\hypertarget{classListenSocket_abf9cf3236b524d14998c893bd1b8365d}{virtual void {\bfseries on\-Packet\-Connect} (\hyperlink{classSocket}{\-Socket} $\ast$sock)=0}\label{classListenSocket_abf9cf3236b524d14998c893bd1b8365d}
 
 \end{DoxyCompactItemize}
-\subsubsection*{template$<$class SocketClass$>$ class ListenSocket$<$ SocketClass $>$}
-
-
-
-The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
 \item 
-/home/nonametr/projects/anima/shared/listensocket.h\end{DoxyCompactItemize}
+\hypertarget{classListenSocket_ab510887d735ee73ab1cb598c66260e87}{class {\bfseries \-Socket}}\label{classListenSocket_ab510887d735ee73ab1cb598c66260e87}
+
+\item 
+\hypertarget{classListenSocket_ae0585299ab7c2a563b1aeabf73ea2c21}{class {\bfseries \-Net\-Core\-Worker\-Thread}}\label{classListenSocket_ae0585299ab7c2a563b1aeabf73ea2c21}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/nonametr/projects/voodoo/server/shared/net/listen\-\_\-socket.\-h\end{DoxyCompactItemize}
